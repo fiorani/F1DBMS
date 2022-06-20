@@ -92,14 +92,50 @@ namespace F1DBMS
             EliminaTeamBox.Clear();
         }
 
-        private void garaGriglia_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void RegistraDipendente_Click(object sender, EventArgs e)
         {
-
+            var dipendente = new dipendenti();
+            dipendente.CF = CFBox.Text;
+            dipendente.nome = NomeBox.Text;
+            dipendente.cognome = CognomeBox.Text;
+            dipendente.luogoDiNascita = LuogoNascita.Text;
+            dipendente.dataNascita = DataNascita.Value;
+            dipendente.residenza = ResidenzaBox.Text;
+            var recapito = new recapiti_dipendenti();
+            recapito.CF = CFBox.Text;
+            recapito.Telefono = Tel1.Text;
+            dipendente.recapiti_dipendentis.Add(recapito);
+            if (Tel2.Text.Any())
+            {
+                var recapito2 = new recapiti_dipendenti();
+                recapito2.CF = CFBox.Text;
+                recapito2.Telefono = Tel2.Text;
+                dipendente.recapiti_dipendentis.Add(recapito2);
+            }
+            try
+            {
+                db.dipendentis.InsertOnSubmit(dipendente);
+                db.SubmitChanges();
+                MessageBox.Show("Dipendente inserito!");
+                CFBox.Clear();
+                NomeBox.Clear();
+                CognomeBox.Clear();
+                ResidenzaBox.Clear();
+                Tel1.Clear();
+                Tel2.Clear();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Errore: controlla campi!");
+            }
         }
 
-        private void label19_Click(object sender, EventArgs e)
+        private void MostraDipendenti_Click(object sender, EventArgs e)
         {
-
+            var res = from d in db.dipendentis
+                      select d;
+            gridDipendenti.DataSource = res;
         }
     }
 }
+

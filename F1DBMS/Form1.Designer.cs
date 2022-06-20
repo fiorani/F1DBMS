@@ -1112,7 +1112,6 @@ namespace F1DBMS
             this.garaGriglia.RowTemplate.Height = 28;
             this.garaGriglia.Size = new System.Drawing.Size(1922, 1499);
             this.garaGriglia.TabIndex = 6;
-            this.garaGriglia.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.garaGriglia_CellContentClick);
             // 
             // panel2
             // 
@@ -2058,7 +2057,6 @@ namespace F1DBMS
             this.data.Size = new System.Drawing.Size(44, 20);
             this.data.TabIndex = 21;
             this.data.Text = "Data";
-            this.data.Click += new System.EventHandler(this.label19_Click);
             // 
             // giri
             // 
