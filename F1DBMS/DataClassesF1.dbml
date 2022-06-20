@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="F1" Class="DataClassesF1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-P1RO4VI;Initial Catalog=F1;Integrated Security=True" SettingsObjectName="F1DBMS.Properties.Settings" SettingsPropertyName="F1ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="f1.vetture" Member="vettures">
+    <Type Name="vetture">
+      <Column Name="nome" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IDVettura" Type="System.String" DbType="NChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="annoProduzione" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDTeam" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Association Name="vetture_composizioni" Member="composizionis" ThisKey="IDVettura" OtherKey="IDVettura" Type="composizioni" />
+      <Association Name="vetture_partecipazioni_piloti" Member="partecipazioni_pilotis" ThisKey="IDVettura" OtherKey="IDVettura" Type="partecipazioni_piloti" />
+      <Association Name="team_vetture" Member="team" ThisKey="IDTeam" OtherKey="IDTeam" Type="team" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="f1.adesioni" Member="adesionis">
+    <Type Name="adesioni">
+      <Column Name="IDCampionato" Type="System.String" DbType="NChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDTeam" Type="System.String" DbType="NChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="campionati_adesioni" Member="campionati" ThisKey="IDCampionato" OtherKey="IDCampionato" Type="campionati" IsForeignKey="true" />
+      <Association Name="team_adesioni" Member="team" ThisKey="IDTeam" OtherKey="IDTeam" Type="team" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="f1.campionati" Member="campionatis">
+    <Type Name="campionati">
+      <Column Name="IDCampionato" Type="System.String" DbType="NChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="anno" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nome" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="descrizione" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Association Name="campionati_adesioni" Member="adesionis" ThisKey="IDCampionato" OtherKey="IDCampionato" Type="adesioni" />
+      <Association Name="campionati_gare" Member="gares" ThisKey="IDCampionato" OtherKey="IDCampionato" Type="gare" />
+      <Association Name="campionati_partecipazioni_piloti" Member="partecipazioni_pilotis" ThisKey="IDCampionato" OtherKey="IDCampionato" Type="partecipazioni_piloti" />
+    </Type>
+  </Table>
+  <Table Name="f1.circuiti" Member="circuitis">
+    <Type Name="circuiti">
+      <Column Name="IDCircuito" Type="System.String" DbType="NChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nome" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="stato" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="descrizione" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="lunghezza" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tipologia" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="numeroCurve" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="circuiti_gare" Member="gares" ThisKey="IDCircuito" OtherKey="IDCircuito" Type="gare" />
+    </Type>
+  </Table>
+  <Table Name="f1.classifiche_piloti" Member="classifiche_pilotis">
+    <Type Name="classifiche_piloti">
+      <Column Name="IDCampionato" Type="System.String" DbType="NChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDCircuito" Type="System.String" DbType="NChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CF" Type="System.String" DbType="NChar(16) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDVettura" Type="System.String" DbType="NChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="posizione" Type="System.String" DbType="NVarChar(3) NOT NULL" CanBeNull="false" />
+      <Association Name="gare_classifiche_piloti" Member="gare" ThisKey="IDCampionato,IDCircuito" OtherKey="IDCampionato,IDCircuito" Type="gare" IsForeignKey="true" />
+      <Association Name="partecipazioni_piloti_classifiche_piloti" Member="partecipazioni_piloti" ThisKey="CF,IDVettura" OtherKey="CF,IDVettura" Type="partecipazioni_piloti" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="f1.componenti" Member="componentis">
+    <Type Name="componenti">
+      <Column Name="IDComponente" Type="System.String" DbType="NChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Descrizione" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="PrezzoUnitario" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="componenti_composizioni" Member="composizionis" ThisKey="IDComponente" OtherKey="IDComponente" Type="composizioni" />
+    </Type>
+  </Table>
+  <Table Name="f1.composizioni" Member="composizionis">
+    <Type Name="composizioni">
+      <Column Name="IDVettura" Type="System.String" DbType="NChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDComponente" Type="System.String" DbType="NChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Quantita" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="componenti_composizioni" Member="componenti" ThisKey="IDComponente" OtherKey="IDComponente" Type="componenti" IsForeignKey="true" />
+      <Association Name="vetture_composizioni" Member="vetture" ThisKey="IDVettura" OtherKey="IDVettura" Type="vetture" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="f1.contratti" Member="contrattis">
+    <Type Name="contratti">
+      <Column Name="IDSponsor" Type="System.String" DbType="NChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="budget" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dataInizio" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="dataFine" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="IDTeam" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Association Name="sponsor_contratti" Member="sponsor" ThisKey="IDSponsor" OtherKey="IDSponsor" Type="sponsor" IsForeignKey="true" />
+      <Association Name="team_contratti" Member="team" ThisKey="IDTeam" OtherKey="IDTeam" Type="team" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="f1.dipendenti" Member="dipendentis">
+    <Type Name="dipendenti">
+      <Column Name="nome" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="cognome" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="dataNascita" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="luogoDiNascita" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CF" Type="System.String" DbType="NChar(16) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="residenza" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="dipendenti_incarichi_dipendenti" Member="incarichi_dipendentis" ThisKey="CF" OtherKey="CF" Type="incarichi_dipendenti" />
+      <Association Name="dipendenti_recapiti_dipendenti" Member="recapiti_dipendentis" ThisKey="CF" OtherKey="CF" Type="recapiti_dipendenti" />
+    </Type>
+  </Table>
+  <Table Name="f1.gare" Member="gares">
+    <Type Name="gare">
+      <Column Name="IDCircuito" Type="System.String" DbType="NChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDCampionato" Type="System.String" DbType="NChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="giri" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="gare_classifiche_piloti" Member="classifiche_pilotis" ThisKey="IDCampionato,IDCircuito" OtherKey="IDCampionato,IDCircuito" Type="classifiche_piloti" />
+      <Association Name="circuiti_gare" Member="circuiti" ThisKey="IDCircuito" OtherKey="IDCircuito" Type="circuiti" IsForeignKey="true" />
+      <Association Name="campionati_gare" Member="campionati" ThisKey="IDCampionato" OtherKey="IDCampionato" Type="campionati" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="f1.incarichi_dipendenti" Member="incarichi_dipendentis">
+    <Type Name="incarichi_dipendenti">
+      <Column Name="CF" Type="System.String" DbType="NChar(16) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="dataAssunzione" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="dataLicenziamento" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Ruolo" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="stipendio" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="IDTeam" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Association Name="dipendenti_incarichi_dipendenti" Member="dipendenti" ThisKey="CF" OtherKey="CF" Type="dipendenti" IsForeignKey="true" />
+      <Association Name="team_incarichi_dipendenti" Member="team" ThisKey="IDTeam" OtherKey="IDTeam" Type="team" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="f1.incarichi_piloti" Member="incarichi_pilotis">
+    <Type Name="incarichi_piloti">
+      <Column Name="CF" Type="System.String" DbType="NChar(16) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="dataAssunzione" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="dataLicenziamento" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="stipendio" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="IDTeam" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Association Name="piloti_incarichi_piloti" Member="piloti" ThisKey="CF" OtherKey="CF" Type="piloti" IsForeignKey="true" />
+      <Association Name="team_incarichi_piloti" Member="team" ThisKey="IDTeam" OtherKey="IDTeam" Type="team" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="f1.mail_sponsor" Member="mail_sponsors">
+    <Type Name="mail_sponsor">
+      <Column Name="Mail" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDSponsor" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Association Name="sponsor_mail_sponsor" Member="sponsor" ThisKey="IDSponsor" OtherKey="IDSponsor" Type="sponsor" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="f1.mail_team" Member="mail_teams">
+    <Type Name="mail_team">
+      <Column Name="Mail" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDTeam" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Association Name="team_mail_team" Member="team" ThisKey="IDTeam" OtherKey="IDTeam" Type="team" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="f1.partecipazioni_piloti" Member="partecipazioni_pilotis">
+    <Type Name="partecipazioni_piloti">
+      <Column Name="CF" Type="System.String" DbType="NChar(16) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDVettura" Type="System.String" DbType="NChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="numeroDiGara" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDCampionato" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="puntiAttuali" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="partecipazioni_piloti_classifiche_piloti" Member="classifiche_pilotis" ThisKey="CF,IDVettura" OtherKey="CF,IDVettura" Type="classifiche_piloti" />
+      <Association Name="vetture_partecipazioni_piloti" Member="vetture" ThisKey="IDVettura" OtherKey="IDVettura" Type="vetture" IsForeignKey="true" />
+      <Association Name="campionati_partecipazioni_piloti" Member="campionati" ThisKey="IDCampionato" OtherKey="IDCampionato" Type="campionati" IsForeignKey="true" />
+      <Association Name="piloti_partecipazioni_piloti" Member="piloti" ThisKey="CF" OtherKey="CF" Type="piloti" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="f1.piloti" Member="pilotis">
+    <Type Name="piloti">
+      <Column Name="nome" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="cognome" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="dataDiNascita" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="luogoDiNascita" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CF" Type="System.String" DbType="NChar(16) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="residenza" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gareVinte" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="campionatiVinti" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="numerodipresenze" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="piloti_incarichi_piloti" Member="incarichi_pilotis" ThisKey="CF" OtherKey="CF" Type="incarichi_piloti" />
+      <Association Name="piloti_partecipazioni_piloti" Member="partecipazioni_pilotis" ThisKey="CF" OtherKey="CF" Type="partecipazioni_piloti" />
+      <Association Name="piloti_recapiti_piloti" Member="recapiti_pilotis" ThisKey="CF" OtherKey="CF" Type="recapiti_piloti" />
+    </Type>
+  </Table>
+  <Table Name="f1.recapiti_dipendenti" Member="recapiti_dipendentis">
+    <Type Name="recapiti_dipendenti">
+      <Column Name="CF" Type="System.String" DbType="NChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.String" DbType="NVarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="dipendenti_recapiti_dipendenti" Member="dipendenti" ThisKey="CF" OtherKey="CF" Type="dipendenti" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="f1.recapiti_piloti" Member="recapiti_pilotis">
+    <Type Name="recapiti_piloti">
+      <Column Name="Telefono" Type="System.String" DbType="NChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CF" Type="System.String" DbType="NChar(16) NOT NULL" CanBeNull="false" />
+      <Association Name="piloti_recapiti_piloti" Member="piloti" ThisKey="CF" OtherKey="CF" Type="piloti" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="f1.recapiti_sponsor" Member="recapiti_sponsors">
+    <Type Name="recapiti_sponsor">
+      <Column Name="Telefono" Type="System.String" DbType="NChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDSponsor" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Association Name="sponsor_recapiti_sponsor" Member="sponsor" ThisKey="IDSponsor" OtherKey="IDSponsor" Type="sponsor" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="f1.recapiti_team" Member="recapiti_teams">
+    <Type Name="recapiti_team">
+      <Column Name="IDTeam" Type="System.String" DbType="NChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.String" DbType="NChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="team_recapiti_team" Member="team" ThisKey="IDTeam" OtherKey="IDTeam" Type="team" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="f1.sponsor" Member="sponsors">
+    <Type Name="sponsor">
+      <Column Name="IDSponsor" Type="System.String" DbType="NChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nome" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Stato" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="sponsor_contratti" Member="contrattis" ThisKey="IDSponsor" OtherKey="IDSponsor" Type="contratti" />
+      <Association Name="sponsor_mail_sponsor" Member="mail_sponsors" ThisKey="IDSponsor" OtherKey="IDSponsor" Type="mail_sponsor" />
+      <Association Name="sponsor_recapiti_sponsor" Member="recapiti_sponsors" ThisKey="IDSponsor" OtherKey="IDSponsor" Type="recapiti_sponsor" />
+    </Type>
+  </Table>
+  <Table Name="f1.team" Member="teams">
+    <Type Name="team">
+      <Column Name="IDTeam" Type="System.String" DbType="NChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nome" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sedeCentrale" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="dataEsordio" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="gareVinte" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="campionatiVinti" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="team_vetture" Member="vettures" ThisKey="IDTeam" OtherKey="IDTeam" Type="vetture" />
+      <Association Name="team_adesioni" Member="adesionis" ThisKey="IDTeam" OtherKey="IDTeam" Type="adesioni" />
+      <Association Name="team_contratti" Member="contrattis" ThisKey="IDTeam" OtherKey="IDTeam" Type="contratti" />
+      <Association Name="team_incarichi_dipendenti" Member="incarichi_dipendentis" ThisKey="IDTeam" OtherKey="IDTeam" Type="incarichi_dipendenti" />
+      <Association Name="team_incarichi_piloti" Member="incarichi_pilotis" ThisKey="IDTeam" OtherKey="IDTeam" Type="incarichi_piloti" />
+      <Association Name="team_mail_team" Member="mail_teams" ThisKey="IDTeam" OtherKey="IDTeam" Type="mail_team" />
+      <Association Name="team_recapiti_team" Member="recapiti_teams" ThisKey="IDTeam" OtherKey="IDTeam" Type="recapiti_team" />
+    </Type>
+  </Table>
+</Database>
