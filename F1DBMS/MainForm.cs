@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace F1DBMS
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         private readonly DataClassesF1DataContext db;
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             db = new DataClassesF1DataContext();
@@ -62,9 +62,6 @@ namespace F1DBMS
             var res = from t in db.teams
                       select new { t.IDTeam, t.nome, t.sedeCentrale, t.dataEsordio, t.recapiti_teams, t.mail_teams, t.gareVinte, t.campionatiVinti };
             gridTeam.DataSource = res;
-            foreach(var t in db.teams) {
-                Console.WriteLine(t.recapiti_teams.First().IDTeam + ", " + t.recapiti_teams.First().Telefono);
-            }
         }
 
         private void BottoneRicercaPerID_Click(object sender, EventArgs e)
@@ -186,6 +183,17 @@ namespace F1DBMS
                 MessageBox.Show("Dipendente eliminato correttamente!");
             }
             EliminaTeamBox.Clear();
+        }
+
+        private void AggiungiIncaricoBtn_Click(object sender, EventArgs e)
+        {
+            FormCreazioneIncarichi formIncarichi = new FormCreazioneIncarichi(db);
+            formIncarichi.Show();
+        }
+
+        private void MostraIncarichiDip_Click(object sender, EventArgs e)
+        {
+            IncarichiGridView.DataSource = db.incarichi_dipendentis;
         }
     }
 }
