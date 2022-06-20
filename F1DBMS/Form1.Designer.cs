@@ -63,7 +63,7 @@ namespace F1DBMS
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.Dipendenti = new System.Windows.Forms.TabPage();
             this.CFBox = new System.Windows.Forms.TextBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.gridDipendenti = new System.Windows.Forms.DataGridView();
             this.splitter2 = new System.Windows.Forms.Splitter();
             this.IncarichiDipendenti = new System.Windows.Forms.TabPage();
             this.Piloti = new System.Windows.Forms.TabPage();
@@ -84,11 +84,24 @@ namespace F1DBMS
             this.NomeBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.LuogoNascita = new System.Windows.Forms.TextBox();
+            this.DataNascita = new System.Windows.Forms.DateTimePicker();
+            this.DataLabel = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.ResidenzaBox = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.Tel1 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.Tel2 = new System.Windows.Forms.TextBox();
+            this.RegistraDipendente = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.MostraDipendenti = new System.Windows.Forms.Button();
             this.Team.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridTeam)).BeginInit();
             this.Dipendenti.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridDipendenti)).BeginInit();
             this.SuspendLayout();
             // 
             // Team
@@ -441,13 +454,26 @@ namespace F1DBMS
             // 
             // Dipendenti
             // 
+            this.Dipendenti.Controls.Add(this.MostraDipendenti);
+            this.Dipendenti.Controls.Add(this.label15);
+            this.Dipendenti.Controls.Add(this.RegistraDipendente);
+            this.Dipendenti.Controls.Add(this.label14);
+            this.Dipendenti.Controls.Add(this.Tel2);
+            this.Dipendenti.Controls.Add(this.label13);
+            this.Dipendenti.Controls.Add(this.Tel1);
+            this.Dipendenti.Controls.Add(this.label12);
+            this.Dipendenti.Controls.Add(this.ResidenzaBox);
+            this.Dipendenti.Controls.Add(this.DataLabel);
+            this.Dipendenti.Controls.Add(this.DataNascita);
+            this.Dipendenti.Controls.Add(this.label11);
+            this.Dipendenti.Controls.Add(this.LuogoNascita);
             this.Dipendenti.Controls.Add(this.label10);
             this.Dipendenti.Controls.Add(this.label9);
             this.Dipendenti.Controls.Add(this.NomeBox);
             this.Dipendenti.Controls.Add(this.CognomeBox);
             this.Dipendenti.Controls.Add(this.CFLabel);
             this.Dipendenti.Controls.Add(this.CFBox);
-            this.Dipendenti.Controls.Add(this.dataGridView2);
+            this.Dipendenti.Controls.Add(this.gridDipendenti);
             this.Dipendenti.Controls.Add(this.splitter2);
             this.Dipendenti.Location = new System.Drawing.Point(4, 22);
             this.Dipendenti.Name = "Dipendenti";
@@ -462,21 +488,21 @@ namespace F1DBMS
             this.CFBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CFBox.Location = new System.Drawing.Point(71, 22);
+            this.CFBox.Location = new System.Drawing.Point(98, 22);
             this.CFBox.Name = "CFBox";
-            this.CFBox.Size = new System.Drawing.Size(271, 20);
+            this.CFBox.Size = new System.Drawing.Size(244, 20);
             this.CFBox.TabIndex = 2;
             // 
-            // dataGridView2
+            // gridDipendenti
             // 
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gridDipendenti.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(360, 6);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1888, 965);
-            this.dataGridView2.TabIndex = 1;
+            this.gridDipendenti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridDipendenti.Location = new System.Drawing.Point(360, 6);
+            this.gridDipendenti.Name = "gridDipendenti";
+            this.gridDipendenti.Size = new System.Drawing.Size(1888, 965);
+            this.gridDipendenti.TabIndex = 1;
             // 
             // splitter2
             // 
@@ -617,7 +643,7 @@ namespace F1DBMS
             // CFLabel
             // 
             this.CFLabel.AutoSize = true;
-            this.CFLabel.Location = new System.Drawing.Point(42, 25);
+            this.CFLabel.Location = new System.Drawing.Point(69, 25);
             this.CFLabel.Name = "CFLabel";
             this.CFLabel.Size = new System.Drawing.Size(23, 13);
             this.CFLabel.TabIndex = 3;
@@ -628,9 +654,9 @@ namespace F1DBMS
             this.CognomeBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CognomeBox.Location = new System.Drawing.Point(71, 74);
+            this.CognomeBox.Location = new System.Drawing.Point(98, 74);
             this.CognomeBox.Name = "CognomeBox";
-            this.CognomeBox.Size = new System.Drawing.Size(271, 20);
+            this.CognomeBox.Size = new System.Drawing.Size(244, 20);
             this.CognomeBox.TabIndex = 4;
             // 
             // NomeBox
@@ -638,15 +664,15 @@ namespace F1DBMS
             this.NomeBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.NomeBox.Location = new System.Drawing.Point(71, 48);
+            this.NomeBox.Location = new System.Drawing.Point(98, 48);
             this.NomeBox.Name = "NomeBox";
-            this.NomeBox.Size = new System.Drawing.Size(271, 20);
+            this.NomeBox.Size = new System.Drawing.Size(244, 20);
             this.NomeBox.TabIndex = 5;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(27, 51);
+            this.label9.Location = new System.Drawing.Point(54, 51);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(38, 13);
             this.label9.TabIndex = 6;
@@ -655,11 +681,131 @@ namespace F1DBMS
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(10, 77);
+            this.label10.Location = new System.Drawing.Point(37, 77);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(55, 13);
             this.label10.TabIndex = 7;
             this.label10.Text = "Cognome:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(4, 103);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(88, 13);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "Luogo di nascita:";
+            // 
+            // LuogoNascita
+            // 
+            this.LuogoNascita.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LuogoNascita.Location = new System.Drawing.Point(98, 100);
+            this.LuogoNascita.Name = "LuogoNascita";
+            this.LuogoNascita.Size = new System.Drawing.Size(244, 20);
+            this.LuogoNascita.TabIndex = 8;
+            // 
+            // DataNascita
+            // 
+            this.DataNascita.Location = new System.Drawing.Point(98, 126);
+            this.DataNascita.Name = "DataNascita";
+            this.DataNascita.Size = new System.Drawing.Size(244, 20);
+            this.DataNascita.TabIndex = 10;
+            // 
+            // DataLabel
+            // 
+            this.DataLabel.AutoSize = true;
+            this.DataLabel.Location = new System.Drawing.Point(11, 132);
+            this.DataLabel.Name = "DataLabel";
+            this.DataLabel.Size = new System.Drawing.Size(81, 13);
+            this.DataLabel.TabIndex = 11;
+            this.DataLabel.Text = "Data di nascita:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(32, 155);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(60, 13);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "Residenza:";
+            // 
+            // ResidenzaBox
+            // 
+            this.ResidenzaBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ResidenzaBox.Location = new System.Drawing.Point(98, 152);
+            this.ResidenzaBox.Name = "ResidenzaBox";
+            this.ResidenzaBox.Size = new System.Drawing.Size(244, 20);
+            this.ResidenzaBox.TabIndex = 12;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(55, 181);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(37, 13);
+            this.label13.TabIndex = 15;
+            this.label13.Text = "Tel. 1:";
+            // 
+            // Tel1
+            // 
+            this.Tel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Tel1.Location = new System.Drawing.Point(98, 178);
+            this.Tel1.Name = "Tel1";
+            this.Tel1.Size = new System.Drawing.Size(244, 20);
+            this.Tel1.TabIndex = 14;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(55, 207);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(37, 13);
+            this.label14.TabIndex = 17;
+            this.label14.Text = "Tel. 2:";
+            // 
+            // Tel2
+            // 
+            this.Tel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Tel2.Location = new System.Drawing.Point(98, 204);
+            this.Tel2.Name = "Tel2";
+            this.Tel2.Size = new System.Drawing.Size(244, 20);
+            this.Tel2.TabIndex = 16;
+            // 
+            // RegistraDipendente
+            // 
+            this.RegistraDipendente.Location = new System.Drawing.Point(98, 239);
+            this.RegistraDipendente.Name = "RegistraDipendente";
+            this.RegistraDipendente.Size = new System.Drawing.Size(143, 23);
+            this.RegistraDipendente.TabIndex = 18;
+            this.RegistraDipendente.Text = "Registra Dipendente";
+            this.RegistraDipendente.UseVisualStyleBackColor = true;
+            this.RegistraDipendente.Click += new System.EventHandler(this.RegistraDipendente_Click);
+            // 
+            // label15
+            // 
+            this.label15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label15.Location = new System.Drawing.Point(14, 274);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(328, 2);
+            this.label15.TabIndex = 19;
+            // 
+            // MostraDipendenti
+            // 
+            this.MostraDipendenti.Location = new System.Drawing.Point(98, 289);
+            this.MostraDipendenti.Name = "MostraDipendenti";
+            this.MostraDipendenti.Size = new System.Drawing.Size(143, 23);
+            this.MostraDipendenti.TabIndex = 20;
+            this.MostraDipendenti.Text = "Mostra Dipendenti";
+            this.MostraDipendenti.UseVisualStyleBackColor = true;
+            this.MostraDipendenti.Click += new System.EventHandler(this.MostraDipendenti_Click);
             // 
             // Form1
             // 
@@ -675,7 +821,7 @@ namespace F1DBMS
             ((System.ComponentModel.ISupportInitialize)(this.gridTeam)).EndInit();
             this.Dipendenti.ResumeLayout(false);
             this.Dipendenti.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridDipendenti)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -705,7 +851,7 @@ namespace F1DBMS
         private System.Windows.Forms.Button RegistraTeamBtn;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox Mail1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView gridDipendenti;
         private System.Windows.Forms.Splitter splitter2;
         private System.Windows.Forms.TextBox CFBox;
         private System.Windows.Forms.Button showTeams;
@@ -737,6 +883,19 @@ namespace F1DBMS
         private System.Windows.Forms.TextBox NomeBox;
         private System.Windows.Forms.TextBox CognomeBox;
         private System.Windows.Forms.Label CFLabel;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox Tel2;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox Tel1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox ResidenzaBox;
+        private System.Windows.Forms.Label DataLabel;
+        private System.Windows.Forms.DateTimePicker DataNascita;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox LuogoNascita;
+        private System.Windows.Forms.Button RegistraDipendente;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button MostraDipendenti;
     }
 }
 
