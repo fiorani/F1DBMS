@@ -38,16 +38,16 @@ namespace F1DBMS
                 db.teams.InsertOnSubmit(newTeam);
                 db.SubmitChanges();
                 MessageBox.Show("Team registrato con successo!");
+                SedeCentrale.Clear();
+                NomeTeam.Clear();
+                Recapito1.Clear();
+                Mail1.Clear();
+                IDTeam.Clear();
             } catch (Exception)
             {
-                MessageBox.Show("Ricontrolla i campi!!!");
+                MessageBox.Show("Errore: Ricontrolla i campi!!!");
             }
             
-            SedeCentrale.Clear();
-            NomeTeam.Clear();
-            Recapito1.Clear();
-            Mail1.Clear();
-            IDTeam.Clear();
         }
 
         private void showTeams_Click(object sender, EventArgs e)
@@ -92,6 +92,7 @@ namespace F1DBMS
             EliminaTeamBox.Clear();
         }
 
+<<<<<<< HEAD
         private void garaGriglia_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -100,6 +101,50 @@ namespace F1DBMS
         private void label19_Click(object sender, EventArgs e)
         {
 
+=======
+        private void RegistraDipendente_Click(object sender, EventArgs e)
+        {
+            var dipendente = new dipendenti();
+            dipendente.CF = CFBox.Text;
+            dipendente.nome = NomeBox.Text;
+            dipendente.cognome = CognomeBox.Text;
+            dipendente.luogoDiNascita = LuogoNascita.Text;
+            dipendente.dataNascita = DataNascita.Value;
+            dipendente.residenza = ResidenzaBox.Text;
+            var recapito = new recapiti_dipendenti();
+            recapito.CF = CFBox.Text;
+            recapito.Telefono = Tel1.Text;
+            dipendente.recapiti_dipendentis.Add(recapito);
+            if (Tel2.Text.Any())
+            {
+                var recapito2 = new recapiti_dipendenti();
+                recapito2.CF = CFBox.Text;
+                recapito2.Telefono = Tel2.Text;
+                dipendente.recapiti_dipendentis.Add(recapito2);
+            }
+            try
+            {
+                db.dipendentis.InsertOnSubmit(dipendente);
+                db.SubmitChanges();
+                MessageBox.Show("Dipendente inserito!");
+                CFBox.Clear();
+                NomeBox.Clear();
+                CognomeBox.Clear();
+                ResidenzaBox.Clear();
+                Tel1.Clear();
+                Tel2.Clear();
+            } catch(Exception)
+            {
+                MessageBox.Show("Errore: controlla campi!");
+            }
+        }
+
+        private void MostraDipendenti_Click(object sender, EventArgs e)
+        {
+            var res = from d in db.dipendentis
+                      select d;
+            gridDipendenti.DataSource = res;
+>>>>>>> f0cfc2cb041f4c891666f9f81a8f410fc98cb369
         }
     }
 }
