@@ -92,5 +92,14 @@ namespace F1DBMS
             EliminaTeamBox.Clear();
         }
 
+        private void garaGriglia_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

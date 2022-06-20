@@ -195,6 +195,19 @@ namespace F1DBMS
             this.textBox61 = new System.Windows.Forms.TextBox();
             this.textBox62 = new System.Windows.Forms.TextBox();
             this.textBox63 = new System.Windows.Forms.TextBox();
+            this.data = new System.Windows.Forms.Label();
+            this.giri = new System.Windows.Forms.Label();
+            this.id = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
             this.Team.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridTeam)).BeginInit();
@@ -915,76 +928,76 @@ namespace F1DBMS
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(32, 482);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(45, 20);
+            this.label11.Size = new System.Drawing.Size(48, 20);
             this.label11.TabIndex = 26;
-            this.label11.Text = "stato";
+            this.label11.Text = "Stato";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(32, 324);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(49, 20);
+            this.label12.Size = new System.Drawing.Size(51, 20);
             this.label12.TabIndex = 25;
-            this.label12.Text = "nome";
+            this.label12.Text = "Nome";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(32, 201);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(83, 40);
+            this.label13.Size = new System.Drawing.Size(85, 40);
             this.label13.TabIndex = 24;
-            this.label13.Text = "numero di \r\ncurve";
+            this.label13.Text = "Numero di \r\ncurve";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(32, 165);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(68, 20);
+            this.label14.Size = new System.Drawing.Size(72, 20);
             this.label14.TabIndex = 23;
-            this.label14.Text = "tipologia";
+            this.label14.Text = "Tipologia";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(32, 135);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(82, 20);
+            this.label15.Size = new System.Drawing.Size(88, 20);
             this.label15.TabIndex = 22;
-            this.label15.Text = "lunghezza";
+            this.label15.Text = "Lunghezza";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(32, 98);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(89, 20);
+            this.label16.Size = new System.Drawing.Size(92, 20);
             this.label16.TabIndex = 21;
-            this.label16.Text = "descrizione";
+            this.label16.Text = "Descrizione";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(32, 62);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(45, 20);
+            this.label17.Size = new System.Drawing.Size(48, 20);
             this.label17.TabIndex = 20;
-            this.label17.Text = "stato";
+            this.label17.Text = "Stato";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(32, 20);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(49, 20);
+            this.label18.Size = new System.Drawing.Size(51, 20);
             this.label18.TabIndex = 19;
-            this.label18.Text = "nome";
+            this.label18.Text = "Nome";
             // 
             // tastoRicercaNomeCircuito
             // 
-            this.tastoRicercaNomeCircuito.Location = new System.Drawing.Point(177, 378);
+            this.tastoRicercaNomeCircuito.Location = new System.Drawing.Point(177, 358);
             this.tastoRicercaNomeCircuito.Name = "tastoRicercaNomeCircuito";
             this.tastoRicercaNomeCircuito.Size = new System.Drawing.Size(358, 50);
             this.tastoRicercaNomeCircuito.TabIndex = 18;
@@ -1003,7 +1016,7 @@ namespace F1DBMS
             // 
             // tastoRicercaStatoCircuito
             // 
-            this.tastoRicercaStatoCircuito.Location = new System.Drawing.Point(177, 526);
+            this.tastoRicercaStatoCircuito.Location = new System.Drawing.Point(177, 510);
             this.tastoRicercaStatoCircuito.Name = "tastoRicercaStatoCircuito";
             this.tastoRicercaStatoCircuito.Size = new System.Drawing.Size(358, 50);
             this.tastoRicercaStatoCircuito.TabIndex = 16;
@@ -1022,7 +1035,7 @@ namespace F1DBMS
             // 
             // registraCircuito
             // 
-            this.registraCircuito.Location = new System.Drawing.Point(177, 246);
+            this.registraCircuito.Location = new System.Drawing.Point(177, 235);
             this.registraCircuito.Name = "registraCircuito";
             this.registraCircuito.Size = new System.Drawing.Size(358, 50);
             this.registraCircuito.TabIndex = 14;
@@ -1099,9 +1112,17 @@ namespace F1DBMS
             this.garaGriglia.RowTemplate.Height = 28;
             this.garaGriglia.Size = new System.Drawing.Size(1922, 1499);
             this.garaGriglia.TabIndex = 6;
+            this.garaGriglia.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.garaGriglia_CellContentClick);
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label25);
+            this.panel2.Controls.Add(this.label24);
+            this.panel2.Controls.Add(this.label23);
+            this.panel2.Controls.Add(this.label22);
+            this.panel2.Controls.Add(this.id);
+            this.panel2.Controls.Add(this.giri);
+            this.panel2.Controls.Add(this.data);
             this.panel2.Controls.Add(this.garaTastoRicercaIdCircuito);
             this.panel2.Controls.Add(this.garaRicercaIdCircuito);
             this.panel2.Controls.Add(this.garaTastoRicercaData);
@@ -1120,7 +1141,7 @@ namespace F1DBMS
             // 
             // garaTastoRicercaIdCircuito
             // 
-            this.garaTastoRicercaIdCircuito.Location = new System.Drawing.Point(106, 533);
+            this.garaTastoRicercaIdCircuito.Location = new System.Drawing.Point(183, 523);
             this.garaTastoRicercaIdCircuito.Name = "garaTastoRicercaIdCircuito";
             this.garaTastoRicercaIdCircuito.Size = new System.Drawing.Size(358, 50);
             this.garaTastoRicercaIdCircuito.TabIndex = 20;
@@ -1131,15 +1152,15 @@ namespace F1DBMS
             // 
             this.garaRicercaIdCircuito.AccessibleDescription = "Nome";
             this.garaRicercaIdCircuito.AccessibleName = "Nome";
-            this.garaRicercaIdCircuito.Location = new System.Drawing.Point(15, 489);
+            this.garaRicercaIdCircuito.Location = new System.Drawing.Point(157, 489);
             this.garaRicercaIdCircuito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.garaRicercaIdCircuito.Name = "garaRicercaIdCircuito";
-            this.garaRicercaIdCircuito.Size = new System.Drawing.Size(569, 26);
+            this.garaRicercaIdCircuito.Size = new System.Drawing.Size(427, 26);
             this.garaRicercaIdCircuito.TabIndex = 19;
             // 
             // garaTastoRicercaData
             // 
-            this.garaTastoRicercaData.Location = new System.Drawing.Point(106, 300);
+            this.garaTastoRicercaData.Location = new System.Drawing.Point(183, 290);
             this.garaTastoRicercaData.Name = "garaTastoRicercaData";
             this.garaTastoRicercaData.Size = new System.Drawing.Size(358, 50);
             this.garaTastoRicercaData.TabIndex = 18;
@@ -1150,15 +1171,15 @@ namespace F1DBMS
             // 
             this.garaRicercaData.AccessibleDescription = "Nome";
             this.garaRicercaData.AccessibleName = "Nome";
-            this.garaRicercaData.Location = new System.Drawing.Point(15, 256);
+            this.garaRicercaData.Location = new System.Drawing.Point(157, 256);
             this.garaRicercaData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.garaRicercaData.Name = "garaRicercaData";
-            this.garaRicercaData.Size = new System.Drawing.Size(569, 26);
+            this.garaRicercaData.Size = new System.Drawing.Size(427, 26);
             this.garaRicercaData.TabIndex = 17;
             // 
             // garaTastoRicercaIdCampionato
             // 
-            this.garaTastoRicercaIdCampionato.Location = new System.Drawing.Point(106, 410);
+            this.garaTastoRicercaIdCampionato.Location = new System.Drawing.Point(183, 410);
             this.garaTastoRicercaIdCampionato.Name = "garaTastoRicercaIdCampionato";
             this.garaTastoRicercaIdCampionato.Size = new System.Drawing.Size(358, 50);
             this.garaTastoRicercaIdCampionato.TabIndex = 16;
@@ -1169,15 +1190,15 @@ namespace F1DBMS
             // 
             this.garaRicercaIdCampionato.AccessibleDescription = "Nome";
             this.garaRicercaIdCampionato.AccessibleName = "Nome";
-            this.garaRicercaIdCampionato.Location = new System.Drawing.Point(15, 376);
+            this.garaRicercaIdCampionato.Location = new System.Drawing.Point(157, 376);
             this.garaRicercaIdCampionato.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.garaRicercaIdCampionato.Name = "garaRicercaIdCampionato";
-            this.garaRicercaIdCampionato.Size = new System.Drawing.Size(569, 26);
+            this.garaRicercaIdCampionato.Size = new System.Drawing.Size(427, 26);
             this.garaRicercaIdCampionato.TabIndex = 15;
             // 
             // gararegistra
             // 
-            this.gararegistra.Location = new System.Drawing.Point(106, 183);
+            this.gararegistra.Location = new System.Drawing.Point(183, 163);
             this.gararegistra.Name = "gararegistra";
             this.gararegistra.Size = new System.Drawing.Size(358, 50);
             this.gararegistra.TabIndex = 14;
@@ -1189,40 +1210,40 @@ namespace F1DBMS
             this.garaData.AccessibleDescription = "Nome";
             this.garaData.AccessibleName = "nome";
             this.garaData.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.garaData.Location = new System.Drawing.Point(15, 20);
+            this.garaData.Location = new System.Drawing.Point(157, 20);
             this.garaData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.garaData.Name = "garaData";
-            this.garaData.Size = new System.Drawing.Size(569, 26);
+            this.garaData.Size = new System.Drawing.Size(427, 26);
             this.garaData.TabIndex = 9;
             // 
             // garaGiri
             // 
             this.garaGiri.AccessibleDescription = "Nome";
             this.garaGiri.AccessibleName = "Nome";
-            this.garaGiri.Location = new System.Drawing.Point(15, 56);
+            this.garaGiri.Location = new System.Drawing.Point(157, 56);
             this.garaGiri.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.garaGiri.Name = "garaGiri";
-            this.garaGiri.Size = new System.Drawing.Size(569, 26);
+            this.garaGiri.Size = new System.Drawing.Size(427, 26);
             this.garaGiri.TabIndex = 8;
             // 
             // garaIdCampionato
             // 
             this.garaIdCampionato.AccessibleDescription = "Nome";
             this.garaIdCampionato.AccessibleName = "Nome";
-            this.garaIdCampionato.Location = new System.Drawing.Point(15, 129);
+            this.garaIdCampionato.Location = new System.Drawing.Point(157, 129);
             this.garaIdCampionato.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.garaIdCampionato.Name = "garaIdCampionato";
-            this.garaIdCampionato.Size = new System.Drawing.Size(569, 26);
+            this.garaIdCampionato.Size = new System.Drawing.Size(427, 26);
             this.garaIdCampionato.TabIndex = 12;
             // 
             // garaIdCircuito
             // 
             this.garaIdCircuito.AccessibleDescription = "Nome";
             this.garaIdCircuito.AccessibleName = "Nome";
-            this.garaIdCircuito.Location = new System.Drawing.Point(15, 92);
+            this.garaIdCircuito.Location = new System.Drawing.Point(157, 92);
             this.garaIdCircuito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.garaIdCircuito.Name = "garaIdCircuito";
-            this.garaIdCircuito.Size = new System.Drawing.Size(569, 26);
+            this.garaIdCircuito.Size = new System.Drawing.Size(427, 26);
             this.garaIdCircuito.TabIndex = 10;
             // 
             // contrattiGriglia
@@ -1237,6 +1258,12 @@ namespace F1DBMS
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label28);
+            this.panel3.Controls.Add(this.label27);
+            this.panel3.Controls.Add(this.label26);
+            this.panel3.Controls.Add(this.label21);
+            this.panel3.Controls.Add(this.label20);
+            this.panel3.Controls.Add(this.label19);
             this.panel3.Controls.Add(this.contrattiTastoRicercaIdTeam);
             this.panel3.Controls.Add(this.contrattiRicercaIdTeam);
             this.panel3.Controls.Add(this.contrattiTastoRicercaIdSponsor);
@@ -1253,7 +1280,7 @@ namespace F1DBMS
             // 
             // contrattiTastoRicercaIdTeam
             // 
-            this.contrattiTastoRicercaIdTeam.Location = new System.Drawing.Point(106, 300);
+            this.contrattiTastoRicercaIdTeam.Location = new System.Drawing.Point(202, 290);
             this.contrattiTastoRicercaIdTeam.Name = "contrattiTastoRicercaIdTeam";
             this.contrattiTastoRicercaIdTeam.Size = new System.Drawing.Size(358, 50);
             this.contrattiTastoRicercaIdTeam.TabIndex = 18;
@@ -1264,15 +1291,15 @@ namespace F1DBMS
             // 
             this.contrattiRicercaIdTeam.AccessibleDescription = "Nome";
             this.contrattiRicercaIdTeam.AccessibleName = "Nome";
-            this.contrattiRicercaIdTeam.Location = new System.Drawing.Point(15, 256);
+            this.contrattiRicercaIdTeam.Location = new System.Drawing.Point(156, 256);
             this.contrattiRicercaIdTeam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.contrattiRicercaIdTeam.Name = "contrattiRicercaIdTeam";
-            this.contrattiRicercaIdTeam.Size = new System.Drawing.Size(569, 26);
+            this.contrattiRicercaIdTeam.Size = new System.Drawing.Size(428, 26);
             this.contrattiRicercaIdTeam.TabIndex = 17;
             // 
             // contrattiTastoRicercaIdSponsor
             // 
-            this.contrattiTastoRicercaIdSponsor.Location = new System.Drawing.Point(106, 410);
+            this.contrattiTastoRicercaIdSponsor.Location = new System.Drawing.Point(202, 410);
             this.contrattiTastoRicercaIdSponsor.Name = "contrattiTastoRicercaIdSponsor";
             this.contrattiTastoRicercaIdSponsor.Size = new System.Drawing.Size(358, 50);
             this.contrattiTastoRicercaIdSponsor.TabIndex = 16;
@@ -1283,15 +1310,15 @@ namespace F1DBMS
             // 
             this.contrattiRicercaIdSponsor.AccessibleDescription = "Nome";
             this.contrattiRicercaIdSponsor.AccessibleName = "Nome";
-            this.contrattiRicercaIdSponsor.Location = new System.Drawing.Point(15, 376);
+            this.contrattiRicercaIdSponsor.Location = new System.Drawing.Point(156, 376);
             this.contrattiRicercaIdSponsor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.contrattiRicercaIdSponsor.Name = "contrattiRicercaIdSponsor";
-            this.contrattiRicercaIdSponsor.Size = new System.Drawing.Size(569, 26);
+            this.contrattiRicercaIdSponsor.Size = new System.Drawing.Size(428, 26);
             this.contrattiRicercaIdSponsor.TabIndex = 15;
             // 
             // contrattiRegistra
             // 
-            this.contrattiRegistra.Location = new System.Drawing.Point(106, 183);
+            this.contrattiRegistra.Location = new System.Drawing.Point(202, 176);
             this.contrattiRegistra.Name = "contrattiRegistra";
             this.contrattiRegistra.Size = new System.Drawing.Size(358, 50);
             this.contrattiRegistra.TabIndex = 14;
@@ -1303,40 +1330,40 @@ namespace F1DBMS
             this.contrattiIdSponsor.AccessibleDescription = "Nome";
             this.contrattiIdSponsor.AccessibleName = "nome";
             this.contrattiIdSponsor.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.contrattiIdSponsor.Location = new System.Drawing.Point(15, 20);
+            this.contrattiIdSponsor.Location = new System.Drawing.Point(156, 20);
             this.contrattiIdSponsor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.contrattiIdSponsor.Name = "contrattiIdSponsor";
-            this.contrattiIdSponsor.Size = new System.Drawing.Size(569, 26);
+            this.contrattiIdSponsor.Size = new System.Drawing.Size(428, 26);
             this.contrattiIdSponsor.TabIndex = 9;
             // 
             // contrattiIdTeam
             // 
             this.contrattiIdTeam.AccessibleDescription = "Nome";
             this.contrattiIdTeam.AccessibleName = "Nome";
-            this.contrattiIdTeam.Location = new System.Drawing.Point(15, 56);
+            this.contrattiIdTeam.Location = new System.Drawing.Point(156, 56);
             this.contrattiIdTeam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.contrattiIdTeam.Name = "contrattiIdTeam";
-            this.contrattiIdTeam.Size = new System.Drawing.Size(569, 26);
+            this.contrattiIdTeam.Size = new System.Drawing.Size(428, 26);
             this.contrattiIdTeam.TabIndex = 8;
             // 
             // contrattiDataInizio
             // 
             this.contrattiDataInizio.AccessibleDescription = "Nome";
             this.contrattiDataInizio.AccessibleName = "Nome";
-            this.contrattiDataInizio.Location = new System.Drawing.Point(15, 129);
+            this.contrattiDataInizio.Location = new System.Drawing.Point(156, 129);
             this.contrattiDataInizio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.contrattiDataInizio.Name = "contrattiDataInizio";
-            this.contrattiDataInizio.Size = new System.Drawing.Size(569, 26);
+            this.contrattiDataInizio.Size = new System.Drawing.Size(428, 26);
             this.contrattiDataInizio.TabIndex = 12;
             // 
             // contrattiBudget
             // 
             this.contrattiBudget.AccessibleDescription = "Nome";
             this.contrattiBudget.AccessibleName = "Nome";
-            this.contrattiBudget.Location = new System.Drawing.Point(15, 92);
+            this.contrattiBudget.Location = new System.Drawing.Point(156, 92);
             this.contrattiBudget.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.contrattiBudget.Name = "contrattiBudget";
-            this.contrattiBudget.Size = new System.Drawing.Size(569, 26);
+            this.contrattiBudget.Size = new System.Drawing.Size(428, 26);
             this.contrattiBudget.TabIndex = 10;
             // 
             // sponsorGriglia
@@ -2023,6 +2050,124 @@ namespace F1DBMS
             this.textBox63.Size = new System.Drawing.Size(569, 26);
             this.textBox63.TabIndex = 10;
             // 
+            // data
+            // 
+            this.data.AutoSize = true;
+            this.data.Location = new System.Drawing.Point(44, 23);
+            this.data.Name = "data";
+            this.data.Size = new System.Drawing.Size(44, 20);
+            this.data.TabIndex = 21;
+            this.data.Text = "Data";
+            this.data.Click += new System.EventHandler(this.label19_Click);
+            // 
+            // giri
+            // 
+            this.giri.AutoSize = true;
+            this.giri.Location = new System.Drawing.Point(44, 62);
+            this.giri.Name = "giri";
+            this.giri.Size = new System.Drawing.Size(33, 20);
+            this.giri.TabIndex = 22;
+            this.giri.Text = "Giri";
+            // 
+            // id
+            // 
+            this.id.AutoSize = true;
+            this.id.Location = new System.Drawing.Point(44, 95);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(76, 20);
+            this.id.TabIndex = 23;
+            this.id.Text = "IdCircuito";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(44, 135);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(109, 20);
+            this.label22.TabIndex = 24;
+            this.label22.Text = "IdCampionato";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(44, 262);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(44, 20);
+            this.label23.TabIndex = 25;
+            this.label23.Text = "Data";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(44, 382);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(51, 20);
+            this.label24.TabIndex = 26;
+            this.label24.Text = "Nome";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(44, 495);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(76, 20);
+            this.label25.TabIndex = 27;
+            this.label25.Text = "IdCircuito";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(58, 382);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(44, 20);
+            this.label19.TabIndex = 22;
+            this.label19.Text = "Data";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(58, 256);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(44, 20);
+            this.label20.TabIndex = 23;
+            this.label20.Text = "Data";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(58, 135);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(44, 20);
+            this.label21.TabIndex = 24;
+            this.label21.Text = "Data";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(58, 92);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(44, 20);
+            this.label26.TabIndex = 25;
+            this.label26.Text = "Data";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(58, 62);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(44, 20);
+            this.label27.TabIndex = 26;
+            this.label27.Text = "Data";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(58, 26);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(69, 20);
+            this.label28.TabIndex = 27;
+            this.label28.Text = "Sponsor";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -2247,6 +2392,19 @@ namespace F1DBMS
         private System.Windows.Forms.TextBox lunghezzaCircuito;
         private System.Windows.Forms.TextBox descrizioneCircuito;
         private System.Windows.Forms.TextBox tipologiaCircuito;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label id;
+        private System.Windows.Forms.Label giri;
+        private System.Windows.Forms.Label data;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
     }
 }
 
