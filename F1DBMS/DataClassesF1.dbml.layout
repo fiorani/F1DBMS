@@ -128,10 +128,10 @@
         <elementListCompartment Id="746c0551-3051-4250-a32f-91d47add032a" absoluteBounds="19.64, 2.9600000000000009, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="d60fe40b-fd0f-47ad-af06-67ebac0bbda5" absoluteBounds="13.875, 2.125, 2, 1.9631982421874987">
+    <classShape Id="d60fe40b-fd0f-47ad-af06-67ebac0bbda5" absoluteBounds="13.875, 2.125, 2, 1.9631982421874996">
       <DataClassMoniker Name="/DataClassesF1DataContext/team" />
       <nestedChildShapes>
-        <elementListCompartment Id="68eb7b71-2832-433c-ab0a-7e271c8a0790" absoluteBounds="13.89, 2.5850000000000009, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="68eb7b71-2832-433c-ab0a-7e271c8a0790" absoluteBounds="13.89, 2.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <associationConnector edgePoints="[(15.1875 : 6.875); (15.1875 : 6.06899251302083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
