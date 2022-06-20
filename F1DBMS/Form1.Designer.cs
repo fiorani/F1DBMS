@@ -31,6 +31,10 @@ namespace F1DBMS
         {
             this.Team = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.EliminaTeamBtn = new System.Windows.Forms.Button();
+            this.EliminaTeamBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.RicercaTeamPerNomeBtn = new System.Windows.Forms.Button();
@@ -62,8 +66,13 @@ namespace F1DBMS
             this.NomeTeam = new System.Windows.Forms.TextBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.Dipendenti = new System.Windows.Forms.TabPage();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.NomeBox = new System.Windows.Forms.TextBox();
+            this.CognomeBox = new System.Windows.Forms.TextBox();
+            this.CFLabel = new System.Windows.Forms.Label();
             this.CFBox = new System.Windows.Forms.TextBox();
-            this.gridDipendenti = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.splitter2 = new System.Windows.Forms.Splitter();
             this.IncarichiDipendenti = new System.Windows.Forms.TabPage();
             this.Piloti = new System.Windows.Forms.TabPage();
@@ -75,28 +84,13 @@ namespace F1DBMS
             this.Contratti = new System.Windows.Forms.TabPage();
             this.Gare = new System.Windows.Forms.TabPage();
             this.Circuiti = new System.Windows.Forms.TabPage();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.EliminaTeamBtn = new System.Windows.Forms.Button();
-            this.EliminaTeamBox = new System.Windows.Forms.TextBox();
-            this.CFLabel = new System.Windows.Forms.Label();
-            this.CognomeBox = new System.Windows.Forms.TextBox();
-            this.NomeBox = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.grigliaCircuito = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
-            this.LuogoNascita = new System.Windows.Forms.TextBox();
-            this.DataNascita = new System.Windows.Forms.DateTimePicker();
-            this.DataLabel = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.ResidenzaBox = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.Tel1 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.Tel2 = new System.Windows.Forms.TextBox();
-            this.RegistraDipendente = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
-<<<<<<< HEAD
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -214,14 +208,38 @@ namespace F1DBMS
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-=======
-            this.MostraDipendenti = new System.Windows.Forms.Button();
->>>>>>> f0cfc2cb041f4c891666f9f81a8f410fc98cb369
             this.Team.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridTeam)).BeginInit();
             this.Dipendenti.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridDipendenti)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.Piloti.SuspendLayout();
+            this.IncarichiPIloti.SuspendLayout();
+            this.Vetture.SuspendLayout();
+            this.Componenti.SuspendLayout();
+            this.Campionati.SuspendLayout();
+            this.Sponsor.SuspendLayout();
+            this.Contratti.SuspendLayout();
+            this.Gare.SuspendLayout();
+            this.Circuiti.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grigliaCircuito)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.garaGriglia)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.contrattiGriglia)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sponsorGriglia)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
+            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // Team
@@ -238,10 +256,11 @@ namespace F1DBMS
             this.Team.Controls.Add(this.Contratti);
             this.Team.Controls.Add(this.Gare);
             this.Team.Controls.Add(this.Circuiti);
-            this.Team.Location = new System.Drawing.Point(1, -2);
+            this.Team.Location = new System.Drawing.Point(2, -3);
+            this.Team.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Team.Name = "Team";
             this.Team.SelectedIndex = 0;
-            this.Team.Size = new System.Drawing.Size(2262, 1003);
+            this.Team.Size = new System.Drawing.Size(3393, 1543);
             this.Team.TabIndex = 0;
             // 
             // tabPage2
@@ -280,470 +299,40 @@ namespace F1DBMS
             this.tabPage2.Controls.Add(this.SedeCentrale);
             this.tabPage2.Controls.Add(this.NomeTeam);
             this.tabPage2.Controls.Add(this.splitter1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(2254, 977);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPage2.Size = new System.Drawing.Size(3385, 1510);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Team";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label6
-            // 
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Location = new System.Drawing.Point(15, 417);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(495, 2);
-            this.label6.TabIndex = 31;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 350);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 13);
-            this.label5.TabIndex = 30;
-            this.label5.Text = "Nome:";
-            // 
-            // RicercaTeamPerNomeBtn
-            // 
-            this.RicercaTeamPerNomeBtn.Location = new System.Drawing.Point(180, 382);
-            this.RicercaTeamPerNomeBtn.Name = "RicercaTeamPerNomeBtn";
-            this.RicercaTeamPerNomeBtn.Size = new System.Drawing.Size(163, 23);
-            this.RicercaTeamPerNomeBtn.TabIndex = 29;
-            this.RicercaTeamPerNomeBtn.Text = "Cerca Team";
-            this.RicercaTeamPerNomeBtn.UseVisualStyleBackColor = true;
-            this.RicercaTeamPerNomeBtn.Click += new System.EventHandler(this.RicercaTeamPerNomeBtn_Click);
-            // 
-            // RicercaTeamPerNomeBox
-            // 
-            this.RicercaTeamPerNomeBox.AccessibleDescription = "ID Team";
-            this.RicercaTeamPerNomeBox.AccessibleName = "Nome";
-            this.RicercaTeamPerNomeBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.RicercaTeamPerNomeBox.Location = new System.Drawing.Point(66, 347);
-            this.RicercaTeamPerNomeBox.Name = "RicercaTeamPerNomeBox";
-            this.RicercaTeamPerNomeBox.Size = new System.Drawing.Size(444, 20);
-            this.RicercaTeamPerNomeBox.TabIndex = 28;
-            this.RicercaTeamPerNomeBox.Tag = "Nome team";
-            // 
-            // label4
-            // 
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Location = new System.Drawing.Point(15, 332);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(495, 2);
-            this.label4.TabIndex = 27;
-            // 
-            // BottoneRicercaPerID
-            // 
-            this.BottoneRicercaPerID.Location = new System.Drawing.Point(180, 299);
-            this.BottoneRicercaPerID.Name = "BottoneRicercaPerID";
-            this.BottoneRicercaPerID.Size = new System.Drawing.Size(163, 23);
-            this.BottoneRicercaPerID.TabIndex = 26;
-            this.BottoneRicercaPerID.Text = "Cerca Team";
-            this.BottoneRicercaPerID.UseVisualStyleBackColor = true;
-            this.BottoneRicercaPerID.Click += new System.EventHandler(this.BottoneRicercaPerID_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 267);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 13);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "ID Team:";
-            // 
-            // RicercaTeamPerID
-            // 
-            this.RicercaTeamPerID.AccessibleDescription = "ID Team";
-            this.RicercaTeamPerID.AccessibleName = "Nome";
-            this.RicercaTeamPerID.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.RicercaTeamPerID.Location = new System.Drawing.Point(66, 264);
-            this.RicercaTeamPerID.Name = "RicercaTeamPerID";
-            this.RicercaTeamPerID.Size = new System.Drawing.Size(444, 20);
-            this.RicercaTeamPerID.TabIndex = 24;
-            this.RicercaTeamPerID.Tag = "Nome team";
-            // 
-            // label2
-            // 
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Location = new System.Drawing.Point(15, 249);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(495, 2);
-            this.label2.TabIndex = 23;
-            // 
-            // label1
-            // 
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Location = new System.Drawing.Point(15, 199);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(495, 2);
-            this.label1.TabIndex = 22;
-            // 
-            // Tel1Label
-            // 
-            this.Tel1Label.AutoSize = true;
-            this.Tel1Label.Location = new System.Drawing.Point(23, 104);
-            this.Tel1Label.Name = "Tel1Label";
-            this.Tel1Label.Size = new System.Drawing.Size(34, 13);
-            this.Tel1Label.TabIndex = 21;
-            this.Tel1Label.Text = "Tel.1:";
-            // 
-            // Tel2Label
-            // 
-            this.Tel2Label.AutoSize = true;
-            this.Tel2Label.Location = new System.Drawing.Point(22, 130);
-            this.Tel2Label.Name = "Tel2Label";
-            this.Tel2Label.Size = new System.Drawing.Size(37, 13);
-            this.Tel2Label.TabIndex = 20;
-            this.Tel2Label.Text = "Tel. 2:";
-            // 
-            // Mail2Label
-            // 
-            this.Mail2Label.AutoSize = true;
-            this.Mail2Label.Location = new System.Drawing.Point(286, 130);
-            this.Mail2Label.Name = "Mail2Label";
-            this.Mail2Label.Size = new System.Drawing.Size(38, 13);
-            this.Mail2Label.TabIndex = 19;
-            this.Mail2Label.Text = "Mail 2:";
-            // 
-            // Mail1Label
-            // 
-            this.Mail1Label.AutoSize = true;
-            this.Mail1Label.Location = new System.Drawing.Point(286, 104);
-            this.Mail1Label.Name = "Mail1Label";
-            this.Mail1Label.Size = new System.Drawing.Size(38, 13);
-            this.Mail1Label.TabIndex = 18;
-            this.Mail1Label.Text = "Mail 1:";
-            // 
-            // DataEsordioLabel
-            // 
-            this.DataEsordioLabel.AutoSize = true;
-            this.DataEsordioLabel.Location = new System.Drawing.Point(254, 81);
-            this.DataEsordioLabel.Name = "DataEsordioLabel";
-            this.DataEsordioLabel.Size = new System.Drawing.Size(70, 13);
-            this.DataEsordioLabel.TabIndex = 17;
-            this.DataEsordioLabel.Text = "Data esordio:";
-            // 
-            // SedeLabel
-            // 
-            this.SedeLabel.AutoSize = true;
-            this.SedeLabel.Location = new System.Drawing.Point(25, 78);
-            this.SedeLabel.Name = "SedeLabel";
-            this.SedeLabel.Size = new System.Drawing.Size(35, 13);
-            this.SedeLabel.TabIndex = 16;
-            this.SedeLabel.Text = "Sede:";
-            // 
-            // Nome
-            // 
-            this.Nome.AutoSize = true;
-            this.Nome.Location = new System.Drawing.Point(22, 52);
-            this.Nome.Name = "Nome";
-            this.Nome.Size = new System.Drawing.Size(38, 13);
-            this.Nome.TabIndex = 15;
-            this.Nome.Text = "Nome:";
-            // 
-            // IDTeamLabel
-            // 
-            this.IDTeamLabel.AutoSize = true;
-            this.IDTeamLabel.Location = new System.Drawing.Point(12, 26);
-            this.IDTeamLabel.Name = "IDTeamLabel";
-            this.IDTeamLabel.Size = new System.Drawing.Size(51, 13);
-            this.IDTeamLabel.TabIndex = 14;
-            this.IDTeamLabel.Text = "ID Team:";
-            // 
-            // IDTeam
-            // 
-            this.IDTeam.AccessibleDescription = "ID Team";
-            this.IDTeam.AccessibleName = "Nome";
-            this.IDTeam.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.IDTeam.Location = new System.Drawing.Point(66, 23);
-            this.IDTeam.Name = "IDTeam";
-            this.IDTeam.Size = new System.Drawing.Size(444, 20);
-            this.IDTeam.TabIndex = 13;
-            this.IDTeam.Tag = "Nome team";
-            // 
-            // showTeams
-            // 
-            this.showTeams.Location = new System.Drawing.Point(180, 213);
-            this.showTeams.Name = "showTeams";
-            this.showTeams.Size = new System.Drawing.Size(163, 23);
-            this.showTeams.TabIndex = 12;
-            this.showTeams.Text = "Mostra Teams";
-            this.showTeams.UseVisualStyleBackColor = true;
-            this.showTeams.Click += new System.EventHandler(this.showTeams_Click);
-            // 
-            // gridTeam
-            // 
-            this.gridTeam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridTeam.Location = new System.Drawing.Point(530, 6);
-            this.gridTeam.Name = "gridTeam";
-            this.gridTeam.Size = new System.Drawing.Size(1718, 965);
-            this.gridTeam.TabIndex = 11;
-            // 
-            // RegistraTeamBtn
-            // 
-            this.RegistraTeamBtn.Location = new System.Drawing.Point(180, 164);
-            this.RegistraTeamBtn.Name = "RegistraTeamBtn";
-            this.RegistraTeamBtn.Size = new System.Drawing.Size(163, 23);
-            this.RegistraTeamBtn.TabIndex = 10;
-            this.RegistraTeamBtn.Text = "Registra Team";
-            this.RegistraTeamBtn.UseVisualStyleBackColor = true;
-            this.RegistraTeamBtn.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox6
-            // 
-            this.textBox6.AccessibleDescription = "Nome";
-            this.textBox6.AccessibleName = "Nome";
-            this.textBox6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.textBox6.Location = new System.Drawing.Point(330, 127);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(180, 20);
-            this.textBox6.TabIndex = 8;
-            this.textBox6.Tag = "Mail 2";
-            // 
-            // Mail1
-            // 
-            this.Mail1.AccessibleDescription = "Nome";
-            this.Mail1.AccessibleName = "Nome";
-            this.Mail1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Mail1.Location = new System.Drawing.Point(330, 101);
-            this.Mail1.Name = "Mail1";
-            this.Mail1.Size = new System.Drawing.Size(180, 20);
-            this.Mail1.TabIndex = 7;
-            this.Mail1.Tag = "Mail 1";
-            // 
-            // textBox3
-            // 
-            this.textBox3.AccessibleDescription = "Nome";
-            this.textBox3.AccessibleName = "Nome";
-            this.textBox3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.textBox3.Location = new System.Drawing.Point(66, 127);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(182, 20);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.Tag = "Recapito 2";
-            // 
-            // Recapito1
-            // 
-            this.Recapito1.AccessibleDescription = "Nome";
-            this.Recapito1.AccessibleName = "Nome";
-            this.Recapito1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Recapito1.Location = new System.Drawing.Point(66, 101);
-            this.Recapito1.Name = "Recapito1";
-            this.Recapito1.Size = new System.Drawing.Size(182, 20);
-            this.Recapito1.TabIndex = 4;
-            this.Recapito1.Tag = "Recapito";
-            // 
-            // DataEsordio
-            // 
-            this.DataEsordio.Location = new System.Drawing.Point(330, 75);
-            this.DataEsordio.Name = "DataEsordio";
-            this.DataEsordio.Size = new System.Drawing.Size(180, 20);
-            this.DataEsordio.TabIndex = 3;
-            // 
-            // SedeCentrale
-            // 
-            this.SedeCentrale.AccessibleDescription = "Nome";
-            this.SedeCentrale.AccessibleName = "Nome";
-            this.SedeCentrale.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.SedeCentrale.Location = new System.Drawing.Point(66, 75);
-            this.SedeCentrale.Name = "SedeCentrale";
-            this.SedeCentrale.Size = new System.Drawing.Size(182, 20);
-            this.SedeCentrale.TabIndex = 2;
-            this.SedeCentrale.Tag = "Sede team";
-            // 
-            // NomeTeam
-            // 
-            this.NomeTeam.AccessibleDescription = "Nome";
-            this.NomeTeam.AccessibleName = "Nome";
-            this.NomeTeam.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.NomeTeam.Location = new System.Drawing.Point(66, 49);
-            this.NomeTeam.Name = "NomeTeam";
-            this.NomeTeam.Size = new System.Drawing.Size(444, 20);
-            this.NomeTeam.TabIndex = 1;
-            this.NomeTeam.Tag = "Nome team";
-            // 
-            // splitter1
-            // 
-            this.splitter1.Location = new System.Drawing.Point(3, 3);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(521, 971);
-            this.splitter1.TabIndex = 0;
-            this.splitter1.TabStop = false;
-            // 
-            // Dipendenti
-            // 
-            this.Dipendenti.Controls.Add(this.MostraDipendenti);
-            this.Dipendenti.Controls.Add(this.label15);
-            this.Dipendenti.Controls.Add(this.RegistraDipendente);
-            this.Dipendenti.Controls.Add(this.label14);
-            this.Dipendenti.Controls.Add(this.Tel2);
-            this.Dipendenti.Controls.Add(this.label13);
-            this.Dipendenti.Controls.Add(this.Tel1);
-            this.Dipendenti.Controls.Add(this.label12);
-            this.Dipendenti.Controls.Add(this.ResidenzaBox);
-            this.Dipendenti.Controls.Add(this.DataLabel);
-            this.Dipendenti.Controls.Add(this.DataNascita);
-            this.Dipendenti.Controls.Add(this.label11);
-            this.Dipendenti.Controls.Add(this.LuogoNascita);
-            this.Dipendenti.Controls.Add(this.label10);
-            this.Dipendenti.Controls.Add(this.label9);
-            this.Dipendenti.Controls.Add(this.NomeBox);
-            this.Dipendenti.Controls.Add(this.CognomeBox);
-            this.Dipendenti.Controls.Add(this.CFLabel);
-            this.Dipendenti.Controls.Add(this.CFBox);
-            this.Dipendenti.Controls.Add(this.gridDipendenti);
-            this.Dipendenti.Controls.Add(this.splitter2);
-            this.Dipendenti.Location = new System.Drawing.Point(4, 22);
-            this.Dipendenti.Name = "Dipendenti";
-            this.Dipendenti.Padding = new System.Windows.Forms.Padding(3);
-            this.Dipendenti.Size = new System.Drawing.Size(2254, 977);
-            this.Dipendenti.TabIndex = 2;
-            this.Dipendenti.Text = "Dipendenti";
-            this.Dipendenti.UseVisualStyleBackColor = true;
-            // 
-            // CFBox
-            // 
-            this.CFBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CFBox.Location = new System.Drawing.Point(98, 22);
-            this.CFBox.Name = "CFBox";
-            this.CFBox.Size = new System.Drawing.Size(244, 20);
-            this.CFBox.TabIndex = 2;
-            // 
-            // gridDipendenti
-            // 
-            this.gridDipendenti.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridDipendenti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridDipendenti.Location = new System.Drawing.Point(360, 6);
-            this.gridDipendenti.Name = "gridDipendenti";
-            this.gridDipendenti.Size = new System.Drawing.Size(1888, 965);
-            this.gridDipendenti.TabIndex = 1;
-            // 
-            // splitter2
-            // 
-            this.splitter2.Location = new System.Drawing.Point(3, 3);
-            this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(351, 971);
-            this.splitter2.TabIndex = 0;
-            this.splitter2.TabStop = false;
-            // 
-            // IncarichiDipendenti
-            // 
-            this.IncarichiDipendenti.Location = new System.Drawing.Point(4, 22);
-            this.IncarichiDipendenti.Name = "IncarichiDipendenti";
-            this.IncarichiDipendenti.Size = new System.Drawing.Size(2254, 977);
-            this.IncarichiDipendenti.TabIndex = 3;
-            this.IncarichiDipendenti.Text = "Incarichi Dipendenti";
-            this.IncarichiDipendenti.UseVisualStyleBackColor = true;
-            // 
-            // Piloti
-            // 
-            this.Piloti.Location = new System.Drawing.Point(4, 22);
-            this.Piloti.Name = "Piloti";
-            this.Piloti.Size = new System.Drawing.Size(2254, 977);
-            this.Piloti.TabIndex = 4;
-            this.Piloti.Text = "Piloti";
-            this.Piloti.UseVisualStyleBackColor = true;
-            // 
-            // IncarichiPIloti
-            // 
-            this.IncarichiPIloti.Location = new System.Drawing.Point(4, 22);
-            this.IncarichiPIloti.Name = "IncarichiPIloti";
-            this.IncarichiPIloti.Size = new System.Drawing.Size(2254, 977);
-            this.IncarichiPIloti.TabIndex = 5;
-            this.IncarichiPIloti.Text = "Incarichi Piloti";
-            this.IncarichiPIloti.UseVisualStyleBackColor = true;
-            // 
-            // Vetture
-            // 
-            this.Vetture.Location = new System.Drawing.Point(4, 22);
-            this.Vetture.Name = "Vetture";
-            this.Vetture.Size = new System.Drawing.Size(2254, 977);
-            this.Vetture.TabIndex = 6;
-            this.Vetture.Text = "Vetture";
-            this.Vetture.UseVisualStyleBackColor = true;
-            // 
-            // Componenti
-            // 
-            this.Componenti.Location = new System.Drawing.Point(4, 22);
-            this.Componenti.Name = "Componenti";
-            this.Componenti.Size = new System.Drawing.Size(2254, 977);
-            this.Componenti.TabIndex = 7;
-            this.Componenti.Text = "Componenti";
-            this.Componenti.UseVisualStyleBackColor = true;
-            // 
-            // Campionati
-            // 
-            this.Campionati.Location = new System.Drawing.Point(4, 22);
-            this.Campionati.Name = "Campionati";
-            this.Campionati.Size = new System.Drawing.Size(2254, 977);
-            this.Campionati.TabIndex = 8;
-            this.Campionati.Text = "Campionati";
-            this.Campionati.UseVisualStyleBackColor = true;
-            // 
-            // Sponsor
-            // 
-            this.Sponsor.Location = new System.Drawing.Point(4, 22);
-            this.Sponsor.Name = "Sponsor";
-            this.Sponsor.Size = new System.Drawing.Size(2254, 977);
-            this.Sponsor.TabIndex = 9;
-            this.Sponsor.Text = "Sponsor";
-            this.Sponsor.UseVisualStyleBackColor = true;
-            // 
-            // Contratti
-            // 
-            this.Contratti.Location = new System.Drawing.Point(4, 22);
-            this.Contratti.Name = "Contratti";
-            this.Contratti.Size = new System.Drawing.Size(2254, 977);
-            this.Contratti.TabIndex = 10;
-            this.Contratti.Text = "Contratti";
-            this.Contratti.UseVisualStyleBackColor = true;
-            // 
-            // Gare
-            // 
-            this.Gare.Location = new System.Drawing.Point(4, 22);
-            this.Gare.Name = "Gare";
-            this.Gare.Size = new System.Drawing.Size(2254, 977);
-            this.Gare.TabIndex = 11;
-            this.Gare.Text = "Gare";
-            this.Gare.UseVisualStyleBackColor = true;
-            // 
-            // Circuiti
-            // 
-            this.Circuiti.Location = new System.Drawing.Point(4, 22);
-            this.Circuiti.Name = "Circuiti";
-            this.Circuiti.Size = new System.Drawing.Size(2254, 977);
-            this.Circuiti.TabIndex = 12;
-            this.Circuiti.Text = "Circuiti";
-            this.Circuiti.UseVisualStyleBackColor = true;
-            // 
             // label7
             // 
             this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label7.Location = new System.Drawing.Point(15, 501);
+            this.label7.Location = new System.Drawing.Point(22, 771);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(495, 2);
+            this.label7.Size = new System.Drawing.Size(742, 3);
             this.label7.TabIndex = 36;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 434);
+            this.label8.Location = new System.Drawing.Point(18, 668);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 13);
+            this.label8.Size = new System.Drawing.Size(74, 20);
             this.label8.TabIndex = 35;
             this.label8.Text = "ID Team:";
             // 
             // EliminaTeamBtn
             // 
-            this.EliminaTeamBtn.Location = new System.Drawing.Point(180, 466);
+            this.EliminaTeamBtn.Location = new System.Drawing.Point(270, 717);
+            this.EliminaTeamBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EliminaTeamBtn.Name = "EliminaTeamBtn";
-            this.EliminaTeamBtn.Size = new System.Drawing.Size(163, 23);
+            this.EliminaTeamBtn.Size = new System.Drawing.Size(244, 35);
             this.EliminaTeamBtn.TabIndex = 34;
             this.EliminaTeamBtn.Text = "Elimina Team";
             this.EliminaTeamBtn.UseVisualStyleBackColor = true;
@@ -754,191 +343,627 @@ namespace F1DBMS
             this.EliminaTeamBox.AccessibleDescription = "ID Team";
             this.EliminaTeamBox.AccessibleName = "Nome";
             this.EliminaTeamBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.EliminaTeamBox.Location = new System.Drawing.Point(66, 431);
+            this.EliminaTeamBox.Location = new System.Drawing.Point(99, 663);
+            this.EliminaTeamBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EliminaTeamBox.Name = "EliminaTeamBox";
-            this.EliminaTeamBox.Size = new System.Drawing.Size(444, 20);
+            this.EliminaTeamBox.Size = new System.Drawing.Size(664, 26);
             this.EliminaTeamBox.TabIndex = 33;
             this.EliminaTeamBox.Tag = "Nome team";
             // 
-            // CFLabel
+            // label6
             // 
-            this.CFLabel.AutoSize = true;
-            this.CFLabel.Location = new System.Drawing.Point(69, 25);
-            this.CFLabel.Name = "CFLabel";
-            this.CFLabel.Size = new System.Drawing.Size(23, 13);
-            this.CFLabel.TabIndex = 3;
-            this.CFLabel.Text = "CF:";
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label6.Location = new System.Drawing.Point(22, 642);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(742, 3);
+            this.label6.TabIndex = 31;
             // 
-            // CognomeBox
+            // label5
             // 
-            this.CognomeBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CognomeBox.Location = new System.Drawing.Point(98, 74);
-            this.CognomeBox.Name = "CognomeBox";
-            this.CognomeBox.Size = new System.Drawing.Size(244, 20);
-            this.CognomeBox.TabIndex = 4;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(33, 538);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 20);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "Nome:";
+            // 
+            // RicercaTeamPerNomeBtn
+            // 
+            this.RicercaTeamPerNomeBtn.Location = new System.Drawing.Point(270, 588);
+            this.RicercaTeamPerNomeBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.RicercaTeamPerNomeBtn.Name = "RicercaTeamPerNomeBtn";
+            this.RicercaTeamPerNomeBtn.Size = new System.Drawing.Size(244, 35);
+            this.RicercaTeamPerNomeBtn.TabIndex = 29;
+            this.RicercaTeamPerNomeBtn.Text = "Cerca Team";
+            this.RicercaTeamPerNomeBtn.UseVisualStyleBackColor = true;
+            this.RicercaTeamPerNomeBtn.Click += new System.EventHandler(this.RicercaTeamPerNomeBtn_Click);
+            // 
+            // RicercaTeamPerNomeBox
+            // 
+            this.RicercaTeamPerNomeBox.AccessibleDescription = "ID Team";
+            this.RicercaTeamPerNomeBox.AccessibleName = "Nome";
+            this.RicercaTeamPerNomeBox.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.RicercaTeamPerNomeBox.Location = new System.Drawing.Point(99, 534);
+            this.RicercaTeamPerNomeBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.RicercaTeamPerNomeBox.Name = "RicercaTeamPerNomeBox";
+            this.RicercaTeamPerNomeBox.Size = new System.Drawing.Size(664, 26);
+            this.RicercaTeamPerNomeBox.TabIndex = 28;
+            this.RicercaTeamPerNomeBox.Tag = "Nome team";
+            // 
+            // label4
+            // 
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label4.Location = new System.Drawing.Point(22, 511);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(742, 3);
+            this.label4.TabIndex = 27;
+            // 
+            // BottoneRicercaPerID
+            // 
+            this.BottoneRicercaPerID.Location = new System.Drawing.Point(270, 460);
+            this.BottoneRicercaPerID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BottoneRicercaPerID.Name = "BottoneRicercaPerID";
+            this.BottoneRicercaPerID.Size = new System.Drawing.Size(244, 35);
+            this.BottoneRicercaPerID.TabIndex = 26;
+            this.BottoneRicercaPerID.Text = "Cerca Team";
+            this.BottoneRicercaPerID.UseVisualStyleBackColor = true;
+            this.BottoneRicercaPerID.Click += new System.EventHandler(this.BottoneRicercaPerID_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(18, 411);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 20);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "ID Team:";
+            // 
+            // RicercaTeamPerID
+            // 
+            this.RicercaTeamPerID.AccessibleDescription = "ID Team";
+            this.RicercaTeamPerID.AccessibleName = "Nome";
+            this.RicercaTeamPerID.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.RicercaTeamPerID.Location = new System.Drawing.Point(99, 406);
+            this.RicercaTeamPerID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.RicercaTeamPerID.Name = "RicercaTeamPerID";
+            this.RicercaTeamPerID.Size = new System.Drawing.Size(664, 26);
+            this.RicercaTeamPerID.TabIndex = 24;
+            this.RicercaTeamPerID.Tag = "Nome team";
+            // 
+            // label2
+            // 
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.Location = new System.Drawing.Point(22, 383);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(742, 3);
+            this.label2.TabIndex = 23;
+            // 
+            // label1
+            // 
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Location = new System.Drawing.Point(22, 306);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(742, 3);
+            this.label1.TabIndex = 22;
+            // 
+            // Tel1Label
+            // 
+            this.Tel1Label.AutoSize = true;
+            this.Tel1Label.Location = new System.Drawing.Point(34, 160);
+            this.Tel1Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Tel1Label.Name = "Tel1Label";
+            this.Tel1Label.Size = new System.Drawing.Size(47, 20);
+            this.Tel1Label.TabIndex = 21;
+            this.Tel1Label.Text = "Tel.1:";
+            // 
+            // Tel2Label
+            // 
+            this.Tel2Label.AutoSize = true;
+            this.Tel2Label.Location = new System.Drawing.Point(33, 200);
+            this.Tel2Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Tel2Label.Name = "Tel2Label";
+            this.Tel2Label.Size = new System.Drawing.Size(51, 20);
+            this.Tel2Label.TabIndex = 20;
+            this.Tel2Label.Text = "Tel. 2:";
+            // 
+            // Mail2Label
+            // 
+            this.Mail2Label.AutoSize = true;
+            this.Mail2Label.Location = new System.Drawing.Point(429, 200);
+            this.Mail2Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Mail2Label.Name = "Mail2Label";
+            this.Mail2Label.Size = new System.Drawing.Size(54, 20);
+            this.Mail2Label.TabIndex = 19;
+            this.Mail2Label.Text = "Mail 2:";
+            // 
+            // Mail1Label
+            // 
+            this.Mail1Label.AutoSize = true;
+            this.Mail1Label.Location = new System.Drawing.Point(429, 160);
+            this.Mail1Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Mail1Label.Name = "Mail1Label";
+            this.Mail1Label.Size = new System.Drawing.Size(54, 20);
+            this.Mail1Label.TabIndex = 18;
+            this.Mail1Label.Text = "Mail 1:";
+            // 
+            // DataEsordioLabel
+            // 
+            this.DataEsordioLabel.AutoSize = true;
+            this.DataEsordioLabel.Location = new System.Drawing.Point(381, 125);
+            this.DataEsordioLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.DataEsordioLabel.Name = "DataEsordioLabel";
+            this.DataEsordioLabel.Size = new System.Drawing.Size(104, 20);
+            this.DataEsordioLabel.TabIndex = 17;
+            this.DataEsordioLabel.Text = "Data esordio:";
+            // 
+            // SedeLabel
+            // 
+            this.SedeLabel.AutoSize = true;
+            this.SedeLabel.Location = new System.Drawing.Point(38, 120);
+            this.SedeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.SedeLabel.Name = "SedeLabel";
+            this.SedeLabel.Size = new System.Drawing.Size(51, 20);
+            this.SedeLabel.TabIndex = 16;
+            this.SedeLabel.Text = "Sede:";
+            // 
+            // Nome
+            // 
+            this.Nome.AutoSize = true;
+            this.Nome.Location = new System.Drawing.Point(33, 80);
+            this.Nome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Nome.Name = "Nome";
+            this.Nome.Size = new System.Drawing.Size(55, 20);
+            this.Nome.TabIndex = 15;
+            this.Nome.Text = "Nome:";
+            // 
+            // IDTeamLabel
+            // 
+            this.IDTeamLabel.AutoSize = true;
+            this.IDTeamLabel.Location = new System.Drawing.Point(18, 40);
+            this.IDTeamLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.IDTeamLabel.Name = "IDTeamLabel";
+            this.IDTeamLabel.Size = new System.Drawing.Size(74, 20);
+            this.IDTeamLabel.TabIndex = 14;
+            this.IDTeamLabel.Text = "ID Team:";
+            // 
+            // IDTeam
+            // 
+            this.IDTeam.AccessibleDescription = "ID Team";
+            this.IDTeam.AccessibleName = "Nome";
+            this.IDTeam.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.IDTeam.Location = new System.Drawing.Point(99, 35);
+            this.IDTeam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.IDTeam.Name = "IDTeam";
+            this.IDTeam.Size = new System.Drawing.Size(664, 26);
+            this.IDTeam.TabIndex = 13;
+            this.IDTeam.Tag = "Nome team";
+            // 
+            // showTeams
+            // 
+            this.showTeams.Location = new System.Drawing.Point(270, 328);
+            this.showTeams.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.showTeams.Name = "showTeams";
+            this.showTeams.Size = new System.Drawing.Size(244, 35);
+            this.showTeams.TabIndex = 12;
+            this.showTeams.Text = "Mostra Teams";
+            this.showTeams.UseVisualStyleBackColor = true;
+            this.showTeams.Click += new System.EventHandler(this.showTeams_Click);
+            // 
+            // gridTeam
+            // 
+            this.gridTeam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridTeam.Location = new System.Drawing.Point(795, 9);
+            this.gridTeam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gridTeam.Name = "gridTeam";
+            this.gridTeam.RowHeadersWidth = 62;
+            this.gridTeam.Size = new System.Drawing.Size(2577, 1485);
+            this.gridTeam.TabIndex = 11;
+            // 
+            // RegistraTeamBtn
+            // 
+            this.RegistraTeamBtn.Location = new System.Drawing.Point(270, 252);
+            this.RegistraTeamBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.RegistraTeamBtn.Name = "RegistraTeamBtn";
+            this.RegistraTeamBtn.Size = new System.Drawing.Size(244, 35);
+            this.RegistraTeamBtn.TabIndex = 10;
+            this.RegistraTeamBtn.Text = "Registra Team";
+            this.RegistraTeamBtn.UseVisualStyleBackColor = true;
+            this.RegistraTeamBtn.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox6
+            // 
+            this.textBox6.AccessibleDescription = "Nome";
+            this.textBox6.AccessibleName = "Nome";
+            this.textBox6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.textBox6.Location = new System.Drawing.Point(495, 195);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(268, 26);
+            this.textBox6.TabIndex = 8;
+            this.textBox6.Tag = "Mail 2";
+            // 
+            // Mail1
+            // 
+            this.Mail1.AccessibleDescription = "Nome";
+            this.Mail1.AccessibleName = "Nome";
+            this.Mail1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Mail1.Location = new System.Drawing.Point(495, 155);
+            this.Mail1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Mail1.Name = "Mail1";
+            this.Mail1.Size = new System.Drawing.Size(268, 26);
+            this.Mail1.TabIndex = 7;
+            this.Mail1.Tag = "Mail 1";
+            // 
+            // textBox3
+            // 
+            this.textBox3.AccessibleDescription = "Nome";
+            this.textBox3.AccessibleName = "Nome";
+            this.textBox3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.textBox3.Location = new System.Drawing.Point(99, 195);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(271, 26);
+            this.textBox3.TabIndex = 5;
+            this.textBox3.Tag = "Recapito 2";
+            // 
+            // Recapito1
+            // 
+            this.Recapito1.AccessibleDescription = "Nome";
+            this.Recapito1.AccessibleName = "Nome";
+            this.Recapito1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Recapito1.Location = new System.Drawing.Point(99, 155);
+            this.Recapito1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Recapito1.Name = "Recapito1";
+            this.Recapito1.Size = new System.Drawing.Size(271, 26);
+            this.Recapito1.TabIndex = 4;
+            this.Recapito1.Tag = "Recapito";
+            // 
+            // DataEsordio
+            // 
+            this.DataEsordio.Location = new System.Drawing.Point(495, 115);
+            this.DataEsordio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DataEsordio.Name = "DataEsordio";
+            this.DataEsordio.Size = new System.Drawing.Size(268, 26);
+            this.DataEsordio.TabIndex = 3;
+            // 
+            // SedeCentrale
+            // 
+            this.SedeCentrale.AccessibleDescription = "Nome";
+            this.SedeCentrale.AccessibleName = "Nome";
+            this.SedeCentrale.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.SedeCentrale.Location = new System.Drawing.Point(99, 115);
+            this.SedeCentrale.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SedeCentrale.Name = "SedeCentrale";
+            this.SedeCentrale.Size = new System.Drawing.Size(271, 26);
+            this.SedeCentrale.TabIndex = 2;
+            this.SedeCentrale.Tag = "Sede team";
+            // 
+            // NomeTeam
+            // 
+            this.NomeTeam.AccessibleDescription = "Nome";
+            this.NomeTeam.AccessibleName = "Nome";
+            this.NomeTeam.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.NomeTeam.Location = new System.Drawing.Point(99, 75);
+            this.NomeTeam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.NomeTeam.Name = "NomeTeam";
+            this.NomeTeam.Size = new System.Drawing.Size(664, 26);
+            this.NomeTeam.TabIndex = 1;
+            this.NomeTeam.Tag = "Nome team";
+            // 
+            // splitter1
+            // 
+            this.splitter1.Location = new System.Drawing.Point(4, 5);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(782, 1500);
+            this.splitter1.TabIndex = 0;
+            this.splitter1.TabStop = false;
+            // 
+            // Dipendenti
+            // 
+            this.Dipendenti.Controls.Add(this.label10);
+            this.Dipendenti.Controls.Add(this.label9);
+            this.Dipendenti.Controls.Add(this.NomeBox);
+            this.Dipendenti.Controls.Add(this.CognomeBox);
+            this.Dipendenti.Controls.Add(this.CFLabel);
+            this.Dipendenti.Controls.Add(this.CFBox);
+            this.Dipendenti.Controls.Add(this.dataGridView2);
+            this.Dipendenti.Controls.Add(this.splitter2);
+            this.Dipendenti.Location = new System.Drawing.Point(4, 29);
+            this.Dipendenti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Dipendenti.Name = "Dipendenti";
+            this.Dipendenti.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Dipendenti.Size = new System.Drawing.Size(3385, 1510);
+            this.Dipendenti.TabIndex = 2;
+            this.Dipendenti.Text = "Dipendenti";
+            this.Dipendenti.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(15, 118);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(82, 20);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Cognome:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(40, 78);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(55, 20);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Nome:";
             // 
             // NomeBox
             // 
             this.NomeBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.NomeBox.Location = new System.Drawing.Point(98, 48);
+            this.NomeBox.Location = new System.Drawing.Point(106, 74);
+            this.NomeBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NomeBox.Name = "NomeBox";
-            this.NomeBox.Size = new System.Drawing.Size(244, 20);
+            this.NomeBox.Size = new System.Drawing.Size(404, 26);
             this.NomeBox.TabIndex = 5;
             // 
-            // label9
+            // CognomeBox
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(54, 51);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 13);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Nome:";
+            this.CognomeBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CognomeBox.Location = new System.Drawing.Point(106, 114);
+            this.CognomeBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CognomeBox.Name = "CognomeBox";
+            this.CognomeBox.Size = new System.Drawing.Size(404, 26);
+            this.CognomeBox.TabIndex = 4;
             // 
-            // label10
+            // CFLabel
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(37, 77);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 13);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "Cognome:";
+            this.CFLabel.AutoSize = true;
+            this.CFLabel.Location = new System.Drawing.Point(63, 38);
+            this.CFLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.CFLabel.Name = "CFLabel";
+            this.CFLabel.Size = new System.Drawing.Size(34, 20);
+            this.CFLabel.TabIndex = 3;
+            this.CFLabel.Text = "CF:";
+            // 
+            // CFBox
+            // 
+            this.CFBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CFBox.Location = new System.Drawing.Point(106, 34);
+            this.CFBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CFBox.Name = "CFBox";
+            this.CFBox.Size = new System.Drawing.Size(404, 26);
+            this.CFBox.TabIndex = 2;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(540, 9);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 62;
+            this.dataGridView2.Size = new System.Drawing.Size(2832, 1485);
+            this.dataGridView2.TabIndex = 1;
+            // 
+            // splitter2
+            // 
+            this.splitter2.Location = new System.Drawing.Point(4, 5);
+            this.splitter2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.splitter2.Name = "splitter2";
+            this.splitter2.Size = new System.Drawing.Size(526, 1500);
+            this.splitter2.TabIndex = 0;
+            this.splitter2.TabStop = false;
+            // 
+            // IncarichiDipendenti
+            // 
+            this.IncarichiDipendenti.Location = new System.Drawing.Point(4, 29);
+            this.IncarichiDipendenti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.IncarichiDipendenti.Name = "IncarichiDipendenti";
+            this.IncarichiDipendenti.Size = new System.Drawing.Size(3385, 1510);
+            this.IncarichiDipendenti.TabIndex = 3;
+            this.IncarichiDipendenti.Text = "Incarichi Dipendenti";
+            this.IncarichiDipendenti.UseVisualStyleBackColor = true;
+            // 
+            // Piloti
+            // 
+            this.Piloti.Controls.Add(this.dataGridView9);
+            this.Piloti.Controls.Add(this.panel9);
+            this.Piloti.Location = new System.Drawing.Point(4, 29);
+            this.Piloti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Piloti.Name = "Piloti";
+            this.Piloti.Size = new System.Drawing.Size(3385, 1510);
+            this.Piloti.TabIndex = 4;
+            this.Piloti.Text = "Piloti";
+            this.Piloti.UseVisualStyleBackColor = true;
+            // 
+            // IncarichiPIloti
+            // 
+            this.IncarichiPIloti.Controls.Add(this.dataGridView8);
+            this.IncarichiPIloti.Controls.Add(this.panel8);
+            this.IncarichiPIloti.Location = new System.Drawing.Point(4, 29);
+            this.IncarichiPIloti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.IncarichiPIloti.Name = "IncarichiPIloti";
+            this.IncarichiPIloti.Size = new System.Drawing.Size(3385, 1510);
+            this.IncarichiPIloti.TabIndex = 5;
+            this.IncarichiPIloti.Text = "Incarichi Piloti";
+            this.IncarichiPIloti.UseVisualStyleBackColor = true;
+            // 
+            // Vetture
+            // 
+            this.Vetture.Controls.Add(this.dataGridView7);
+            this.Vetture.Controls.Add(this.panel7);
+            this.Vetture.Location = new System.Drawing.Point(4, 29);
+            this.Vetture.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Vetture.Name = "Vetture";
+            this.Vetture.Size = new System.Drawing.Size(3385, 1510);
+            this.Vetture.TabIndex = 6;
+            this.Vetture.Text = "Vetture";
+            this.Vetture.UseVisualStyleBackColor = true;
+            // 
+            // Componenti
+            // 
+            this.Componenti.Controls.Add(this.dataGridView6);
+            this.Componenti.Controls.Add(this.panel6);
+            this.Componenti.Location = new System.Drawing.Point(4, 29);
+            this.Componenti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Componenti.Name = "Componenti";
+            this.Componenti.Size = new System.Drawing.Size(3385, 1510);
+            this.Componenti.TabIndex = 7;
+            this.Componenti.Text = "Componenti";
+            this.Componenti.UseVisualStyleBackColor = true;
+            // 
+            // Campionati
+            // 
+            this.Campionati.Controls.Add(this.dataGridView5);
+            this.Campionati.Controls.Add(this.panel5);
+            this.Campionati.Location = new System.Drawing.Point(4, 29);
+            this.Campionati.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Campionati.Name = "Campionati";
+            this.Campionati.Size = new System.Drawing.Size(3385, 1510);
+            this.Campionati.TabIndex = 8;
+            this.Campionati.Text = "Campionati";
+            this.Campionati.UseVisualStyleBackColor = true;
+            // 
+            // Sponsor
+            // 
+            this.Sponsor.Controls.Add(this.sponsorGriglia);
+            this.Sponsor.Controls.Add(this.panel4);
+            this.Sponsor.Location = new System.Drawing.Point(4, 29);
+            this.Sponsor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Sponsor.Name = "Sponsor";
+            this.Sponsor.Size = new System.Drawing.Size(3385, 1510);
+            this.Sponsor.TabIndex = 9;
+            this.Sponsor.Text = "Sponsor";
+            this.Sponsor.UseVisualStyleBackColor = true;
+            // 
+            // Contratti
+            // 
+            this.Contratti.Controls.Add(this.contrattiGriglia);
+            this.Contratti.Controls.Add(this.panel3);
+            this.Contratti.Location = new System.Drawing.Point(4, 29);
+            this.Contratti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Contratti.Name = "Contratti";
+            this.Contratti.Size = new System.Drawing.Size(3385, 1510);
+            this.Contratti.TabIndex = 10;
+            this.Contratti.Text = "Contratti";
+            this.Contratti.UseVisualStyleBackColor = true;
+            // 
+            // Gare
+            // 
+            this.Gare.Controls.Add(this.garaGriglia);
+            this.Gare.Controls.Add(this.panel2);
+            this.Gare.Location = new System.Drawing.Point(4, 29);
+            this.Gare.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Gare.Name = "Gare";
+            this.Gare.Size = new System.Drawing.Size(3385, 1510);
+            this.Gare.TabIndex = 11;
+            this.Gare.Text = "Gare";
+            this.Gare.UseVisualStyleBackColor = true;
+            // 
+            // Circuiti
+            // 
+            this.Circuiti.Controls.Add(this.grigliaCircuito);
+            this.Circuiti.Controls.Add(this.panel1);
+            this.Circuiti.Location = new System.Drawing.Point(4, 29);
+            this.Circuiti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Circuiti.Name = "Circuiti";
+            this.Circuiti.Size = new System.Drawing.Size(3385, 1510);
+            this.Circuiti.TabIndex = 12;
+            this.Circuiti.Text = "Circuiti";
+            this.Circuiti.UseVisualStyleBackColor = true;
+            // 
+            // grigliaCircuito
+            // 
+            this.grigliaCircuito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grigliaCircuito.Location = new System.Drawing.Point(629, 8);
+            this.grigliaCircuito.Name = "grigliaCircuito";
+            this.grigliaCircuito.RowHeadersWidth = 62;
+            this.grigliaCircuito.RowTemplate.Height = 28;
+            this.grigliaCircuito.Size = new System.Drawing.Size(1922, 1499);
+            this.grigliaCircuito.TabIndex = 4;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.label17);
+            this.panel1.Controls.Add(this.label18);
+            this.panel1.Controls.Add(this.tastoRicercaNomeCircuito);
+            this.panel1.Controls.Add(this.ricercaNomeCircuito);
+            this.panel1.Controls.Add(this.tastoRicercaStatoCircuito);
+            this.panel1.Controls.Add(this.ricercaStatoCircuito);
+            this.panel1.Controls.Add(this.registraCircuito);
+            this.panel1.Controls.Add(this.nomeCircuito);
+            this.panel1.Controls.Add(this.numDiCurveCircuito);
+            this.panel1.Controls.Add(this.statoCircuito);
+            this.panel1.Controls.Add(this.lunghezzaCircuito);
+            this.panel1.Controls.Add(this.descrizioneCircuito);
+            this.panel1.Controls.Add(this.tipologiaCircuito);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(609, 1496);
+            this.panel1.TabIndex = 3;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(4, 103);
+            this.label11.Location = new System.Drawing.Point(32, 482);
             this.label11.Name = "label11";
-<<<<<<< HEAD
             this.label11.Size = new System.Drawing.Size(48, 20);
             this.label11.TabIndex = 26;
             this.label11.Text = "Stato";
-=======
-            this.label11.Size = new System.Drawing.Size(88, 13);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "Luogo di nascita:";
-            // 
-            // LuogoNascita
-            // 
-            this.LuogoNascita.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LuogoNascita.Location = new System.Drawing.Point(98, 100);
-            this.LuogoNascita.Name = "LuogoNascita";
-            this.LuogoNascita.Size = new System.Drawing.Size(244, 20);
-            this.LuogoNascita.TabIndex = 8;
-            // 
-            // DataNascita
-            // 
-            this.DataNascita.Location = new System.Drawing.Point(98, 126);
-            this.DataNascita.Name = "DataNascita";
-            this.DataNascita.Size = new System.Drawing.Size(244, 20);
-            this.DataNascita.TabIndex = 10;
-            // 
-            // DataLabel
-            // 
-            this.DataLabel.AutoSize = true;
-            this.DataLabel.Location = new System.Drawing.Point(11, 132);
-            this.DataLabel.Name = "DataLabel";
-            this.DataLabel.Size = new System.Drawing.Size(81, 13);
-            this.DataLabel.TabIndex = 11;
-            this.DataLabel.Text = "Data di nascita:";
->>>>>>> f0cfc2cb041f4c891666f9f81a8f410fc98cb369
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(32, 155);
+            this.label12.Location = new System.Drawing.Point(32, 324);
             this.label12.Name = "label12";
-<<<<<<< HEAD
             this.label12.Size = new System.Drawing.Size(51, 20);
             this.label12.TabIndex = 25;
             this.label12.Text = "Nome";
-=======
-            this.label12.Size = new System.Drawing.Size(60, 13);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "Residenza:";
-            // 
-            // ResidenzaBox
-            // 
-            this.ResidenzaBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ResidenzaBox.Location = new System.Drawing.Point(98, 152);
-            this.ResidenzaBox.Name = "ResidenzaBox";
-            this.ResidenzaBox.Size = new System.Drawing.Size(244, 20);
-            this.ResidenzaBox.TabIndex = 12;
->>>>>>> f0cfc2cb041f4c891666f9f81a8f410fc98cb369
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(55, 181);
+            this.label13.Location = new System.Drawing.Point(32, 201);
             this.label13.Name = "label13";
-<<<<<<< HEAD
             this.label13.Size = new System.Drawing.Size(85, 40);
             this.label13.TabIndex = 24;
             this.label13.Text = "Numero di \r\ncurve";
-=======
-            this.label13.Size = new System.Drawing.Size(37, 13);
-            this.label13.TabIndex = 15;
-            this.label13.Text = "Tel. 1:";
-            // 
-            // Tel1
-            // 
-            this.Tel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Tel1.Location = new System.Drawing.Point(98, 178);
-            this.Tel1.Name = "Tel1";
-            this.Tel1.Size = new System.Drawing.Size(244, 20);
-            this.Tel1.TabIndex = 14;
->>>>>>> f0cfc2cb041f4c891666f9f81a8f410fc98cb369
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(55, 207);
+            this.label14.Location = new System.Drawing.Point(32, 165);
             this.label14.Name = "label14";
-<<<<<<< HEAD
             this.label14.Size = new System.Drawing.Size(72, 20);
             this.label14.TabIndex = 23;
             this.label14.Text = "Tipologia";
-=======
-            this.label14.Size = new System.Drawing.Size(37, 13);
-            this.label14.TabIndex = 17;
-            this.label14.Text = "Tel. 2:";
-            // 
-            // Tel2
-            // 
-            this.Tel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Tel2.Location = new System.Drawing.Point(98, 204);
-            this.Tel2.Name = "Tel2";
-            this.Tel2.Size = new System.Drawing.Size(244, 20);
-            this.Tel2.TabIndex = 16;
-            // 
-            // RegistraDipendente
-            // 
-            this.RegistraDipendente.Location = new System.Drawing.Point(98, 239);
-            this.RegistraDipendente.Name = "RegistraDipendente";
-            this.RegistraDipendente.Size = new System.Drawing.Size(143, 23);
-            this.RegistraDipendente.TabIndex = 18;
-            this.RegistraDipendente.Text = "Registra Dipendente";
-            this.RegistraDipendente.UseVisualStyleBackColor = true;
-            this.RegistraDipendente.Click += new System.EventHandler(this.RegistraDipendente_Click);
->>>>>>> f0cfc2cb041f4c891666f9f81a8f410fc98cb369
             // 
             // label15
             // 
-            this.label15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label15.Location = new System.Drawing.Point(14, 274);
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(32, 135);
             this.label15.Name = "label15";
-<<<<<<< HEAD
             this.label15.Size = new System.Drawing.Size(88, 20);
             this.label15.TabIndex = 22;
             this.label15.Text = "Lunghezza";
@@ -2024,20 +2049,6 @@ namespace F1DBMS
             this.textBox63.Name = "textBox63";
             this.textBox63.Size = new System.Drawing.Size(569, 26);
             this.textBox63.TabIndex = 10;
-=======
-            this.label15.Size = new System.Drawing.Size(328, 2);
-            this.label15.TabIndex = 19;
-            // 
-            // MostraDipendenti
-            // 
-            this.MostraDipendenti.Location = new System.Drawing.Point(98, 289);
-            this.MostraDipendenti.Name = "MostraDipendenti";
-            this.MostraDipendenti.Size = new System.Drawing.Size(143, 23);
-            this.MostraDipendenti.TabIndex = 20;
-            this.MostraDipendenti.Text = "Mostra Dipendenti";
-            this.MostraDipendenti.UseVisualStyleBackColor = true;
-            this.MostraDipendenti.Click += new System.EventHandler(this.MostraDipendenti_Click);
->>>>>>> f0cfc2cb041f4c891666f9f81a8f410fc98cb369
             // 
             // data
             // 
@@ -2159,10 +2170,11 @@ namespace F1DBMS
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2261, 999);
+            this.ClientSize = new System.Drawing.Size(2564, 1537);
             this.Controls.Add(this.Team);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Team.ResumeLayout(false);
@@ -2171,7 +2183,43 @@ namespace F1DBMS
             ((System.ComponentModel.ISupportInitialize)(this.gridTeam)).EndInit();
             this.Dipendenti.ResumeLayout(false);
             this.Dipendenti.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridDipendenti)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.Piloti.ResumeLayout(false);
+            this.IncarichiPIloti.ResumeLayout(false);
+            this.Vetture.ResumeLayout(false);
+            this.Componenti.ResumeLayout(false);
+            this.Campionati.ResumeLayout(false);
+            this.Sponsor.ResumeLayout(false);
+            this.Contratti.ResumeLayout(false);
+            this.Gare.ResumeLayout(false);
+            this.Circuiti.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grigliaCircuito)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.garaGriglia)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.contrattiGriglia)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sponsorGriglia)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2201,7 +2249,7 @@ namespace F1DBMS
         private System.Windows.Forms.Button RegistraTeamBtn;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox Mail1;
-        private System.Windows.Forms.DataGridView gridDipendenti;
+        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Splitter splitter2;
         private System.Windows.Forms.TextBox CFBox;
         private System.Windows.Forms.Button showTeams;
@@ -2233,19 +2281,103 @@ namespace F1DBMS
         private System.Windows.Forms.TextBox NomeBox;
         private System.Windows.Forms.TextBox CognomeBox;
         private System.Windows.Forms.Label CFLabel;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox Tel2;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox Tel1;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox ResidenzaBox;
-        private System.Windows.Forms.Label DataLabel;
-        private System.Windows.Forms.DateTimePicker DataNascita;
+        private System.Windows.Forms.DataGridView dataGridView9;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button button28;
+        private System.Windows.Forms.TextBox textBox60;
+        private System.Windows.Forms.Button button29;
+        private System.Windows.Forms.TextBox textBox59;
+        private System.Windows.Forms.TextBox textBox61;
+        private System.Windows.Forms.TextBox textBox62;
+        private System.Windows.Forms.TextBox textBox63;
+        private System.Windows.Forms.DataGridView dataGridView8;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.TextBox textBox58;
+        private System.Windows.Forms.TextBox textBox57;
+        private System.Windows.Forms.Button button25;
+        private System.Windows.Forms.TextBox textBox52;
+        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.TextBox textBox53;
+        private System.Windows.Forms.Button button27;
+        private System.Windows.Forms.TextBox textBox54;
+        private System.Windows.Forms.TextBox textBox55;
+        private System.Windows.Forms.TextBox textBox56;
+        private System.Windows.Forms.DataGridView dataGridView7;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.TextBox textBox50;
+        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.TextBox textBox51;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.TextBox textBox44;
+        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.TextBox textBox49;
+        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.TextBox textBox45;
+        private System.Windows.Forms.TextBox textBox46;
+        private System.Windows.Forms.TextBox textBox47;
+        private System.Windows.Forms.TextBox textBox48;
+        private System.Windows.Forms.DataGridView dataGridView6;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.TextBox textBox37;
+        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.TextBox textBox40;
+        private System.Windows.Forms.TextBox textBox41;
+        private System.Windows.Forms.TextBox textBox42;
+        private System.Windows.Forms.TextBox textBox43;
+        private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button campionatiTastoRicercaId;
+        private System.Windows.Forms.TextBox campionatiRicercaId;
+        private System.Windows.Forms.Button campionatiTastoRicercaAnno;
+        private System.Windows.Forms.TextBox campionatiRicercaAnno;
+        private System.Windows.Forms.Button campionatiRegistra;
+        private System.Windows.Forms.TextBox campionatiAnno;
+        private System.Windows.Forms.TextBox campionatiNome;
+        private System.Windows.Forms.TextBox campionatiDescrizione;
+        private System.Windows.Forms.DataGridView sponsorGriglia;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button sponsorTastoRicercaId;
+        private System.Windows.Forms.TextBox sponsorRicercaId;
+        private System.Windows.Forms.Button sponsorTastoRicercaNome;
+        private System.Windows.Forms.TextBox sponsorRicercaNome;
+        private System.Windows.Forms.Button sponsorRegistra;
+        private System.Windows.Forms.TextBox sponsorNome;
+        private System.Windows.Forms.TextBox sponsorStato;
+        private System.Windows.Forms.TextBox sponsorMail;
+        private System.Windows.Forms.TextBox sponsorTelefono;
+        private System.Windows.Forms.DataGridView contrattiGriglia;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button contrattiTastoRicercaIdTeam;
+        private System.Windows.Forms.TextBox contrattiRicercaIdTeam;
+        private System.Windows.Forms.Button contrattiTastoRicercaIdSponsor;
+        private System.Windows.Forms.TextBox contrattiRicercaIdSponsor;
+        private System.Windows.Forms.Button contrattiRegistra;
+        private System.Windows.Forms.TextBox contrattiIdSponsor;
+        private System.Windows.Forms.TextBox contrattiIdTeam;
+        private System.Windows.Forms.TextBox contrattiDataInizio;
+        private System.Windows.Forms.TextBox contrattiBudget;
+        private System.Windows.Forms.DataGridView garaGriglia;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button garaTastoRicercaIdCircuito;
+        private System.Windows.Forms.TextBox garaRicercaIdCircuito;
+        private System.Windows.Forms.Button garaTastoRicercaData;
+        private System.Windows.Forms.TextBox garaRicercaData;
+        private System.Windows.Forms.Button garaTastoRicercaIdCampionato;
+        private System.Windows.Forms.TextBox garaRicercaIdCampionato;
+        private System.Windows.Forms.Button gararegistra;
+        private System.Windows.Forms.TextBox garaData;
+        private System.Windows.Forms.TextBox garaGiri;
+        private System.Windows.Forms.TextBox garaIdCampionato;
+        private System.Windows.Forms.TextBox garaIdCircuito;
+        private System.Windows.Forms.DataGridView grigliaCircuito;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox LuogoNascita;
-        private System.Windows.Forms.Button RegistraDipendente;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-<<<<<<< HEAD
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
@@ -2273,9 +2405,6 @@ namespace F1DBMS
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
-=======
-        private System.Windows.Forms.Button MostraDipendenti;
->>>>>>> f0cfc2cb041f4c891666f9f81a8f410fc98cb369
     }
 }
 
