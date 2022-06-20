@@ -32,22 +32,23 @@ namespace F1DBMS
             newTeam.recapiti_teams.Add(recapitoTeam);
             var mailTeam = new mail_team();
             mailTeam.IDTeam = newTeam.IDTeam;
-            mailTeam.Mail = Mail1.Text;            
+            mailTeam.Mail = Mail1.Text;
             try
             {
                 db.teams.InsertOnSubmit(newTeam);
                 db.SubmitChanges();
                 MessageBox.Show("Team registrato con successo!");
-            } catch (Exception)
-            {
-                MessageBox.Show("Ricontrolla i campi!!!");
+                SedeCentrale.Clear();
+                NomeTeam.Clear();
+                Recapito1.Clear();
+                Mail1.Clear();
+                IDTeam.Clear();
             }
-            
-            SedeCentrale.Clear();
-            NomeTeam.Clear();
-            Recapito1.Clear();
-            Mail1.Clear();
-            IDTeam.Clear();
+            catch (Exception)
+            {
+                MessageBox.Show("Errore: Ricontrolla i campi!!!");
+            }
+
         }
 
         private void showTeams_Click(object sender, EventArgs e)
@@ -79,7 +80,7 @@ namespace F1DBMS
         {
             var teams = db.teams.Where(t => t.IDTeam.Equals(EliminaTeamBox.Text));
             var recapiti = db.recapiti_teams.Where(r => r.IDTeam.Equals(EliminaTeamBox.Text));
-            if(teams.Any())
+            if (teams.Any())
             {
                 if (recapiti.Any())
                 {
@@ -138,4 +139,3 @@ namespace F1DBMS
         }
     }
 }
-
