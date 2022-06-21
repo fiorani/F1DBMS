@@ -17,6 +17,10 @@ namespace F1DBMS
         {
             InitializeComponent();
             db = new DataClassesF1DataContext();
+            gridTeam.DataSource = db.teams;
+            gridDipendenti.DataSource = db.dipendentis;
+            GridIncarichiDip.DataSource = db.incarichi_dipendentis;
+            gridPiloti.DataSource = db.pilotis;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -193,7 +197,71 @@ namespace F1DBMS
 
         private void MostraIncarichiDip_Click(object sender, EventArgs e)
         {
-            IncarichiGridView.DataSource = db.incarichi_dipendentis;
+            GridIncarichiDip.DataSource = db.incarichi_dipendentis;
+        }
+
+        private void RevocaIncaricoBtn_Click(object sender, EventArgs e)
+        {
+            FormRevocaIncarico formRevoca = new FormRevocaIncarico(db);
+            formRevoca.Show();
+        }
+
+        private void MostraIncBtn_Click(object sender, EventArgs e)
+        {
+            var incarichiDip = from inc in db.incarichi_dipendentis
+                      where inc.CF.Equals(CFCercaIncDipBox.Text)
+                      select inc;
+            gridDipendenti.DataSource = incarichiDip;
+        }
+
+        private void regPilotaBtn_Click(object sender, EventArgs e)
+        {
+            var pilota = new piloti();
+            pilota.CF = CFPilotaBox.Text;
+            pilota.nome = NomePilotaBox.Text;
+            pilota.cognome = CognomePilotaBox.Text;
+            pilota.luogoDiNascita = LuogoNascitaPilotaBox.Text;
+            pilota.dataDiNascita = dataNascitaPilota.Value;
+            pilota.residenza = ResidenzaPilotaBox.Text;
+            var recapito = new recapiti_piloti();
+            recapito.CF = CFPilotaBox.Text;
+            recapito.Telefono = Tel1PilotaBox.Text;
+            pilota.recapiti_pilotis.Add(recapito);
+            if (Tel2.Text.Any())
+            {
+                var recapito2 = new recapiti_piloti();
+                recapito2.CF = CFPilotaBox.Text;
+                recapito2.Telefono = Tel2PilotaBox.Text;
+                pilota.recapiti_pilotis.Add(recapito2);
+            }
+            try
+            {
+                if (!CFPilotaBox.Text.Equals(String.Empty) && !NomePilotaBox.Text.Equals(String.Empty) && !CognomePilotaBox.Text.Equals(String.Empty) && !LuogoNascitaPilotaBox.Text.Equals(String.Empty) && !ResidenzaPilotaBox.Text.Equals(String.Empty) && !Tel1PilotaBox.Text.Equals(String.Empty))
+                {
+                    db.pilotis.InsertOnSubmit(pilota);
+                    db.SubmitChanges();
+                    MessageBox.Show("Pilota inserito!");
+                    CFBox.Clear();
+                    NomeBox.Clear();
+                    CognomeBox.Clear();
+                    ResidenzaBox.Clear();
+                    Tel1.Clear();
+                    Tel2.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Errore: controlla campi!");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Errore: controlla campi!");
+            }
+        }
+
+        private void MostraPilotiBtn_Click(object sender, EventArgs e)
+        {
+            gridPiloti.DataSource = db.pilotis;
         }
     }
 }
