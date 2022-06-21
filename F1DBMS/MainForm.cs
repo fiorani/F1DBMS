@@ -320,8 +320,13 @@ namespace F1DBMS
             var res = from incPil in db.incarichi_pilotis
                       select incPil;
             gridIncarichiPiloti.DataSource = res;
-        }
 
+        }
+        private void RevocaIncaricoPilBtn_Click(object sender, EventArgs e)
+        {
+            FormRevocaIncarichiPiloti revocaIncPil = new FormRevocaIncarichiPiloti(db);
+            revocaIncPil.Show();
+        }
         private void registraCircuito_Click(object sender, EventArgs e)
         {
             var newCircuiti = new circuiti();
@@ -632,5 +637,7 @@ namespace F1DBMS
                       select t;
             vettureGriglia.DataSource = res;
         }
+
+
     }
 }

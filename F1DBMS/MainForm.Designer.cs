@@ -3,15 +3,7 @@ namespace F1DBMS
 {
     partial class MainForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
-
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -299,6 +291,7 @@ namespace F1DBMS
             this.lunghezzaCircuito = new System.Windows.Forms.TextBox();
             this.descrizioneCircuito = new System.Windows.Forms.TextBox();
             this.tipologiaCircuito = new System.Windows.Forms.TextBox();
+            this.RevocaIncaricoPilBtn = new System.Windows.Forms.Button();
             this.Team.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridTeam)).BeginInit();
@@ -1726,7 +1719,7 @@ namespace F1DBMS
             // 
             // IncarichiPIloti
             // 
-            this.IncarichiPIloti.Controls.Add(this.button2);
+            this.IncarichiPIloti.Controls.Add(this.RevocaIncaricoPilBtn);
             this.IncarichiPIloti.Controls.Add(this.label7);
             this.IncarichiPIloti.Controls.Add(this.IncarichiPilBtn);
             this.IncarichiPIloti.Controls.Add(this.label45);
@@ -3271,6 +3264,16 @@ namespace F1DBMS
             this.tipologiaCircuito.Size = new System.Drawing.Size(449, 26);
             this.tipologiaCircuito.TabIndex = 11;
             // 
+            // RevocaIncaricoPilBtn
+            // 
+            this.RevocaIncaricoPilBtn.Location = new System.Drawing.Point(130, 137);
+            this.RevocaIncaricoPilBtn.Name = "RevocaIncaricoPilBtn";
+            this.RevocaIncaricoPilBtn.Size = new System.Drawing.Size(96, 23);
+            this.RevocaIncaricoPilBtn.TabIndex = 10;
+            this.RevocaIncaricoPilBtn.Text = "Revoca Incarico";
+            this.RevocaIncaricoPilBtn.UseVisualStyleBackColor = true;
+            this.RevocaIncaricoPilBtn.Click += new System.EventHandler(this.RevocaIncaricoPilBtn_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -3599,6 +3602,7 @@ namespace F1DBMS
         private System.Windows.Forms.TextBox lunghezzaCircuito;
         private System.Windows.Forms.TextBox descrizioneCircuito;
         private System.Windows.Forms.TextBox tipologiaCircuito;
+        private System.Windows.Forms.Button RevocaIncaricoPilBtn;
     }
 }
 
