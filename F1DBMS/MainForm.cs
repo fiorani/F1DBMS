@@ -21,6 +21,7 @@ namespace F1DBMS
             gridDipendenti.DataSource = db.dipendentis;
             GridIncarichiDip.DataSource = db.incarichi_dipendentis;
             gridPiloti.DataSource = db.pilotis;
+            girdIncarichiPiloti.DataSource = db.incarichi_pilotis;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -186,7 +187,7 @@ namespace F1DBMS
                 db.SubmitChanges();
                 MessageBox.Show("Dipendente eliminato correttamente!");
             }
-            EliminaTeamBox.Clear();
+            EliminaDipBox.Clear();
         }
 
         private void AggiungiIncaricoBtn_Click(object sender, EventArgs e)
@@ -264,6 +265,44 @@ namespace F1DBMS
             var res = from p in db.pilotis
                       select p;
             gridPiloti.DataSource = res;
+        }
+
+        private void ricercaPilCFBtn_Click(object sender, EventArgs e)
+        {
+            gridPiloti.DataSource = db.pilotis.Where(p => p.CF.Equals(RicercaPilCFBox.Text));
+        }
+
+        private void RicercaPilNomeCognomeBtn_Click(object sender, EventArgs e)
+        {
+            gridPiloti.DataSource = db.pilotis.Where(p => p.nome.Equals(ricercaPilNomeBox.Text) && p.cognome.Equals(RicercaPilCognomeBox.Text));
+        }
+
+        private void EliminaPilotaBtn_Click(object sender, EventArgs e)
+        {
+            var pil = db.pilotis.Where(p => p.CF.Equals(EliminaPilCFBox.Text));
+            var recapiti = db.recapiti_pilotis.Where(r => r.CF.Equals(EliminaPilCFBox.Text));
+            if (pil.Any())
+            {
+                if (recapiti.Any())
+                {
+                    db.recapiti_pilotis.DeleteAllOnSubmit(recapiti);
+                }
+                db.pilotis.DeleteAllOnSubmit(pil);
+                db.SubmitChanges();
+                MessageBox.Show("Pilota eliminato correttamente!");
+            }
+            EliminaPilCFBox.Clear();
+        }
+
+        private void RicercaIncarichiPilBtn_Click(object sender, EventArgs e)
+        {
+            gridPiloti.DataSource = db.incarichi_pilotis.Where(inc => inc.CF.Equals(RicercaIncarichiPilBox));
+        }
+
+        private void InserisciIncaricoPilBtn_Click(object sender, EventArgs e)
+        {
+            FormCreazioneIncaichiPiloti creaIncaricoPil = new FormCreazioneIncaichiPiloti(db);
+            creaIncaricoPil.Show();
         }
     }
 }

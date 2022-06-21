@@ -31,7 +31,6 @@ namespace F1DBMS
         {
             this.Team = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.EliminaTeamBtn = new System.Windows.Forms.Button();
             this.EliminaTeamBox = new System.Windows.Forms.TextBox();
@@ -114,6 +113,19 @@ namespace F1DBMS
             this.AggiungiIncaricoBtn = new System.Windows.Forms.Button();
             this.splitter3 = new System.Windows.Forms.Splitter();
             this.Piloti = new System.Windows.Forms.TabPage();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.RicercaPilNomeCognomeBtn = new System.Windows.Forms.Button();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.ricercaPilNomeBox = new System.Windows.Forms.TextBox();
+            this.RicercaPilCognomeBox = new System.Windows.Forms.TextBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.ricercaPilCFBtn = new System.Windows.Forms.Button();
+            this.label40 = new System.Windows.Forms.Label();
+            this.RicercaPilCFBox = new System.Windows.Forms.TextBox();
+            this.dataNascitaPilota = new System.Windows.Forms.DateTimePicker();
+            this.MostraPilotiBtn = new System.Windows.Forms.Button();
             this.label35 = new System.Windows.Forms.Label();
             this.regPilotaBtn = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
@@ -141,8 +153,16 @@ namespace F1DBMS
             this.Contratti = new System.Windows.Forms.TabPage();
             this.Gare = new System.Windows.Forms.TabPage();
             this.Circuiti = new System.Windows.Forms.TabPage();
-            this.MostraPilotiBtn = new System.Windows.Forms.Button();
-            this.dataNascitaPilota = new System.Windows.Forms.DateTimePicker();
+            this.EliminaPilotaBtn = new System.Windows.Forms.Button();
+            this.label42 = new System.Windows.Forms.Label();
+            this.EliminaPilCFBox = new System.Windows.Forms.TextBox();
+            this.RicercaIncarichiPilBtn = new System.Windows.Forms.Button();
+            this.label43 = new System.Windows.Forms.Label();
+            this.RicercaIncarichiPilBox = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.splitter5 = new System.Windows.Forms.Splitter();
+            this.girdIncarichiPiloti = new System.Windows.Forms.DataGridView();
+            this.InserisciIncaricoPilBtn = new System.Windows.Forms.Button();
             this.Team.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridTeam)).BeginInit();
@@ -152,6 +172,8 @@ namespace F1DBMS
             ((System.ComponentModel.ISupportInitialize)(this.GridIncarichiDip)).BeginInit();
             this.Piloti.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridPiloti)).BeginInit();
+            this.IncarichiPIloti.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.girdIncarichiPiloti)).BeginInit();
             this.SuspendLayout();
             // 
             // Team
@@ -176,7 +198,6 @@ namespace F1DBMS
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.EliminaTeamBtn);
             this.tabPage2.Controls.Add(this.EliminaTeamBox);
@@ -217,14 +238,6 @@ namespace F1DBMS
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Team";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label7.Location = new System.Drawing.Point(15, 501);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(326, 2);
-            this.label7.TabIndex = 36;
             // 
             // label8
             // 
@@ -1032,6 +1045,24 @@ namespace F1DBMS
             // 
             // Piloti
             // 
+            this.Piloti.Controls.Add(this.RicercaIncarichiPilBtn);
+            this.Piloti.Controls.Add(this.label43);
+            this.Piloti.Controls.Add(this.RicercaIncarichiPilBox);
+            this.Piloti.Controls.Add(this.label44);
+            this.Piloti.Controls.Add(this.EliminaPilotaBtn);
+            this.Piloti.Controls.Add(this.label42);
+            this.Piloti.Controls.Add(this.EliminaPilCFBox);
+            this.Piloti.Controls.Add(this.label41);
+            this.Piloti.Controls.Add(this.label36);
+            this.Piloti.Controls.Add(this.RicercaPilNomeCognomeBtn);
+            this.Piloti.Controls.Add(this.label37);
+            this.Piloti.Controls.Add(this.label38);
+            this.Piloti.Controls.Add(this.ricercaPilNomeBox);
+            this.Piloti.Controls.Add(this.RicercaPilCognomeBox);
+            this.Piloti.Controls.Add(this.label39);
+            this.Piloti.Controls.Add(this.ricercaPilCFBtn);
+            this.Piloti.Controls.Add(this.label40);
+            this.Piloti.Controls.Add(this.RicercaPilCFBox);
             this.Piloti.Controls.Add(this.dataNascitaPilota);
             this.Piloti.Controls.Add(this.MostraPilotiBtn);
             this.Piloti.Controls.Add(this.label35);
@@ -1059,6 +1090,124 @@ namespace F1DBMS
             this.Piloti.TabIndex = 4;
             this.Piloti.Text = "Piloti";
             this.Piloti.UseVisualStyleBackColor = true;
+            // 
+            // label41
+            // 
+            this.label41.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label41.Location = new System.Drawing.Point(24, 326);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(328, 2);
+            this.label41.TabIndex = 42;
+            // 
+            // label36
+            // 
+            this.label36.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label36.Location = new System.Drawing.Point(28, 528);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(328, 2);
+            this.label36.TabIndex = 41;
+            // 
+            // RicercaPilNomeCognomeBtn
+            // 
+            this.RicercaPilNomeCognomeBtn.Location = new System.Drawing.Point(112, 493);
+            this.RicercaPilNomeCognomeBtn.Name = "RicercaPilNomeCognomeBtn";
+            this.RicercaPilNomeCognomeBtn.Size = new System.Drawing.Size(143, 23);
+            this.RicercaPilNomeCognomeBtn.TabIndex = 40;
+            this.RicercaPilNomeCognomeBtn.Text = "Ricerca Pilota";
+            this.RicercaPilNomeCognomeBtn.UseVisualStyleBackColor = true;
+            this.RicercaPilNomeCognomeBtn.Click += new System.EventHandler(this.RicercaPilNomeCognomeBtn_Click);
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(51, 460);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(55, 13);
+            this.label37.TabIndex = 39;
+            this.label37.Text = "Cognome:";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(68, 434);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(38, 13);
+            this.label38.TabIndex = 38;
+            this.label38.Text = "Nome:";
+            // 
+            // ricercaPilNomeBox
+            // 
+            this.ricercaPilNomeBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ricercaPilNomeBox.Location = new System.Drawing.Point(112, 431);
+            this.ricercaPilNomeBox.Name = "ricercaPilNomeBox";
+            this.ricercaPilNomeBox.Size = new System.Drawing.Size(240, 20);
+            this.ricercaPilNomeBox.TabIndex = 37;
+            // 
+            // RicercaPilCognomeBox
+            // 
+            this.RicercaPilCognomeBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RicercaPilCognomeBox.Location = new System.Drawing.Point(112, 457);
+            this.RicercaPilCognomeBox.Name = "RicercaPilCognomeBox";
+            this.RicercaPilCognomeBox.Size = new System.Drawing.Size(240, 20);
+            this.RicercaPilCognomeBox.TabIndex = 36;
+            // 
+            // label39
+            // 
+            this.label39.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label39.Location = new System.Drawing.Point(28, 416);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(328, 2);
+            this.label39.TabIndex = 35;
+            // 
+            // ricercaPilCFBtn
+            // 
+            this.ricercaPilCFBtn.Location = new System.Drawing.Point(112, 380);
+            this.ricercaPilCFBtn.Name = "ricercaPilCFBtn";
+            this.ricercaPilCFBtn.Size = new System.Drawing.Size(143, 23);
+            this.ricercaPilCFBtn.TabIndex = 34;
+            this.ricercaPilCFBtn.Text = "Ricerca Pilota";
+            this.ricercaPilCFBtn.UseVisualStyleBackColor = true;
+            this.ricercaPilCFBtn.Click += new System.EventHandler(this.ricercaPilCFBtn_Click);
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(83, 348);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(23, 13);
+            this.label40.TabIndex = 33;
+            this.label40.Text = "CF:";
+            // 
+            // RicercaPilCFBox
+            // 
+            this.RicercaPilCFBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RicercaPilCFBox.Location = new System.Drawing.Point(112, 345);
+            this.RicercaPilCFBox.Name = "RicercaPilCFBox";
+            this.RicercaPilCFBox.Size = new System.Drawing.Size(240, 20);
+            this.RicercaPilCFBox.TabIndex = 32;
+            // 
+            // dataNascitaPilota
+            // 
+            this.dataNascitaPilota.Location = new System.Drawing.Point(112, 133);
+            this.dataNascitaPilota.Name = "dataNascitaPilota";
+            this.dataNascitaPilota.Size = new System.Drawing.Size(240, 20);
+            this.dataNascitaPilota.TabIndex = 29;
+            // 
+            // MostraPilotiBtn
+            // 
+            this.MostraPilotiBtn.Location = new System.Drawing.Point(123, 300);
+            this.MostraPilotiBtn.Name = "MostraPilotiBtn";
+            this.MostraPilotiBtn.Size = new System.Drawing.Size(98, 23);
+            this.MostraPilotiBtn.TabIndex = 28;
+            this.MostraPilotiBtn.Text = "Mostra Piloti";
+            this.MostraPilotiBtn.UseVisualStyleBackColor = true;
+            this.MostraPilotiBtn.Click += new System.EventHandler(this.MostraPilotiBtn_Click);
             // 
             // label35
             // 
@@ -1226,6 +1375,9 @@ namespace F1DBMS
             // 
             // IncarichiPIloti
             // 
+            this.IncarichiPIloti.Controls.Add(this.InserisciIncaricoPilBtn);
+            this.IncarichiPIloti.Controls.Add(this.girdIncarichiPiloti);
+            this.IncarichiPIloti.Controls.Add(this.splitter5);
             this.IncarichiPIloti.Location = new System.Drawing.Point(4, 22);
             this.IncarichiPIloti.Name = "IncarichiPIloti";
             this.IncarichiPIloti.Size = new System.Drawing.Size(2254, 977);
@@ -1296,22 +1448,97 @@ namespace F1DBMS
             this.Circuiti.Text = "Circuiti";
             this.Circuiti.UseVisualStyleBackColor = true;
             // 
-            // MostraPilotiBtn
+            // EliminaPilotaBtn
             // 
-            this.MostraPilotiBtn.Location = new System.Drawing.Point(123, 300);
-            this.MostraPilotiBtn.Name = "MostraPilotiBtn";
-            this.MostraPilotiBtn.Size = new System.Drawing.Size(98, 23);
-            this.MostraPilotiBtn.TabIndex = 28;
-            this.MostraPilotiBtn.Text = "Mostra Piloti";
-            this.MostraPilotiBtn.UseVisualStyleBackColor = true;
-            this.MostraPilotiBtn.Click += new System.EventHandler(this.MostraPilotiBtn_Click);
+            this.EliminaPilotaBtn.Location = new System.Drawing.Point(112, 582);
+            this.EliminaPilotaBtn.Name = "EliminaPilotaBtn";
+            this.EliminaPilotaBtn.Size = new System.Drawing.Size(143, 23);
+            this.EliminaPilotaBtn.TabIndex = 45;
+            this.EliminaPilotaBtn.Text = "Elimina Pilota";
+            this.EliminaPilotaBtn.UseVisualStyleBackColor = true;
+            this.EliminaPilotaBtn.Click += new System.EventHandler(this.EliminaPilotaBtn_Click);
             // 
-            // dataNascitaPilota
+            // label42
             // 
-            this.dataNascitaPilota.Location = new System.Drawing.Point(112, 133);
-            this.dataNascitaPilota.Name = "dataNascitaPilota";
-            this.dataNascitaPilota.Size = new System.Drawing.Size(240, 20);
-            this.dataNascitaPilota.TabIndex = 29;
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(83, 550);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(23, 13);
+            this.label42.TabIndex = 44;
+            this.label42.Text = "CF:";
+            // 
+            // EliminaPilCFBox
+            // 
+            this.EliminaPilCFBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.EliminaPilCFBox.Location = new System.Drawing.Point(112, 547);
+            this.EliminaPilCFBox.Name = "EliminaPilCFBox";
+            this.EliminaPilCFBox.Size = new System.Drawing.Size(240, 20);
+            this.EliminaPilCFBox.TabIndex = 43;
+            // 
+            // RicercaIncarichiPilBtn
+            // 
+            this.RicercaIncarichiPilBtn.Location = new System.Drawing.Point(112, 674);
+            this.RicercaIncarichiPilBtn.Name = "RicercaIncarichiPilBtn";
+            this.RicercaIncarichiPilBtn.Size = new System.Drawing.Size(143, 23);
+            this.RicercaIncarichiPilBtn.TabIndex = 49;
+            this.RicercaIncarichiPilBtn.Text = "Mostra incarichi pilota";
+            this.RicercaIncarichiPilBtn.UseVisualStyleBackColor = true;
+            this.RicercaIncarichiPilBtn.Click += new System.EventHandler(this.RicercaIncarichiPilBtn_Click);
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(83, 642);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(23, 13);
+            this.label43.TabIndex = 48;
+            this.label43.Text = "CF:";
+            // 
+            // RicercaIncarichiPilBox
+            // 
+            this.RicercaIncarichiPilBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RicercaIncarichiPilBox.Location = new System.Drawing.Point(112, 639);
+            this.RicercaIncarichiPilBox.Name = "RicercaIncarichiPilBox";
+            this.RicercaIncarichiPilBox.Size = new System.Drawing.Size(240, 20);
+            this.RicercaIncarichiPilBox.TabIndex = 47;
+            // 
+            // label44
+            // 
+            this.label44.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label44.Location = new System.Drawing.Point(28, 620);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(328, 2);
+            this.label44.TabIndex = 46;
+            // 
+            // splitter5
+            // 
+            this.splitter5.Location = new System.Drawing.Point(0, 0);
+            this.splitter5.Name = "splitter5";
+            this.splitter5.Size = new System.Drawing.Size(365, 977);
+            this.splitter5.TabIndex = 0;
+            this.splitter5.TabStop = false;
+            // 
+            // girdIncarichiPiloti
+            // 
+            this.girdIncarichiPiloti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.girdIncarichiPiloti.Location = new System.Drawing.Point(371, 3);
+            this.girdIncarichiPiloti.Name = "girdIncarichiPiloti";
+            this.girdIncarichiPiloti.Size = new System.Drawing.Size(1880, 971);
+            this.girdIncarichiPiloti.TabIndex = 1;
+            // 
+            // InserisciIncaricoPilBtn
+            // 
+            this.InserisciIncaricoPilBtn.Location = new System.Drawing.Point(130, 33);
+            this.InserisciIncaricoPilBtn.Name = "InserisciIncaricoPilBtn";
+            this.InserisciIncaricoPilBtn.Size = new System.Drawing.Size(96, 23);
+            this.InserisciIncaricoPilBtn.TabIndex = 2;
+            this.InserisciIncaricoPilBtn.Text = "Aggiungi incarico";
+            this.InserisciIncaricoPilBtn.UseVisualStyleBackColor = true;
+            this.InserisciIncaricoPilBtn.Click += new System.EventHandler(this.InserisciIncaricoPilBtn_Click);
             // 
             // MainForm
             // 
@@ -1333,6 +1560,8 @@ namespace F1DBMS
             this.Piloti.ResumeLayout(false);
             this.Piloti.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridPiloti)).EndInit();
+            this.IncarichiPIloti.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.girdIncarichiPiloti)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1385,7 +1614,6 @@ namespace F1DBMS
         private System.Windows.Forms.TextBox RicercaTeamPerNomeBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button EliminaTeamBtn;
         private System.Windows.Forms.TextBox EliminaTeamBox;
@@ -1453,6 +1681,27 @@ namespace F1DBMS
         private System.Windows.Forms.TextBox LuogoNascitaPilotaBox;
         private System.Windows.Forms.Button MostraPilotiBtn;
         private System.Windows.Forms.DateTimePicker dataNascitaPilota;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Button RicercaPilNomeCognomeBtn;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.TextBox ricercaPilNomeBox;
+        private System.Windows.Forms.TextBox RicercaPilCognomeBox;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Button ricercaPilCFBtn;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.TextBox RicercaPilCFBox;
+        private System.Windows.Forms.Button EliminaPilotaBtn;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.TextBox EliminaPilCFBox;
+        private System.Windows.Forms.Button RicercaIncarichiPilBtn;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.TextBox RicercaIncarichiPilBox;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Button InserisciIncaricoPilBtn;
+        private System.Windows.Forms.DataGridView girdIncarichiPiloti;
+        private System.Windows.Forms.Splitter splitter5;
     }
 }
 
