@@ -304,5 +304,306 @@ namespace F1DBMS
             FormCreazioneIncaichiPiloti creaIncaricoPil = new FormCreazioneIncaichiPiloti(db);
             creaIncaricoPil.Show();
         }
+
+        private void registraCircuito_Click(object sender, EventArgs e)
+        {
+            var newCircuiti = new circuiti();
+            newCircuiti.IDCircuito = idCircuitoCircuito.Text;
+            newCircuiti.nome = nomeCircuito.Text;
+            newCircuiti.stato = statoCircuito.Text;
+            newCircuiti.descrizione = descrizioneCircuito.Text;
+            newCircuiti.lunghezza = 11;
+            newCircuiti.tipologia = tipologiaCircuito.Text;
+            newCircuiti.numeroCurve = 11;
+
+            try
+            {
+                db.circuitis.InsertOnSubmit(newCircuiti);
+                db.SubmitChanges();
+                MessageBox.Show("Team registrato con successo!");
+                var res = from t in db.circuitis
+                          select new { t.IDCircuito, t.nome, t.stato, t.descrizione, t.lunghezza, t.tipologia, t.numeroCurve };
+                grigliaCircuito.DataSource = res;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ricontrolla i campi!!!");
+            }
+
+        }
+        private void tastoRicercaNomeCircuito_Click(object sender, EventArgs e)
+        {
+            var res = from t in db.circuitis
+                      where t.nome.Equals(ricercaNomeCircuito.Text)
+                      select t;
+            grigliaCircuito.DataSource = res;
+        }
+
+        private void tastoRicercaStatoCircuito_Click(object sender, EventArgs e)
+        {
+            var res = from t in db.circuitis
+                      where t.nome.Equals(ricercaStatoCircuito.Text)
+                      select t;
+            grigliaCircuito.DataSource = res;
+        }
+
+        private void gararegistra_Click(object sender, EventArgs e)
+        {
+            var newGare = new gare();
+            newGare.IDCircuito = garaIdCircuito.Text;
+            newGare.IDCampionato = garaIdCampionato.Text;
+            newGare.data = garaData.Value.Date;
+            newGare.giri = 10;
+
+            try
+            {
+                db.gares.InsertOnSubmit(newGare);
+                db.SubmitChanges();
+                MessageBox.Show("Team registrato con successo!");
+                var res = from t in db.gares
+                          select new { t.IDCircuito, t.IDCampionato, t.data, t.giri };
+                garaGriglia.DataSource = res;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ricontrolla i campi!!!");
+            }
+        }
+
+
+        private void garaTastoRicercaData_Click(object sender, EventArgs e)
+        {
+            var res = from t in db.gares
+                      where t.data.Equals(garaRicercaData.Text)
+                      select t;
+            garaGriglia.DataSource = res;
+        }
+
+        private void garaTastoRicercaIdCampionato_Click(object sender, EventArgs e)
+        {
+
+            var res = from t in db.gares
+                      where t.IDCampionato.Equals(garaRicercaIdCampionato.Text)
+                      select t;
+            garaGriglia.DataSource = res;
+        }
+
+        private void garaTastoRicercaIdCircuito_Click(object sender, EventArgs e)
+        {
+
+            var res = from t in db.gares
+                      where t.IDCircuito.Equals(garaRicercaIdCircuito.Text)
+                      select t;
+            garaGriglia.DataSource = res;
+        }
+
+        private void contrattiRegistra_Click(object sender, EventArgs e)
+        {
+            var newContratti = new contratti();
+            newContratti.IDSponsor = contrattiIdSponsor.Text;
+            newContratti.IDTeam = contrattiIdTeam.Text;
+            newContratti.budget = 10;
+            newContratti.dataInizio = contrattiData.Value.Date;
+
+            try
+            {
+                db.contrattis.InsertOnSubmit(newContratti);
+                db.SubmitChanges();
+                MessageBox.Show("Team registrato con successo!");
+                var res = from t in db.contrattis
+                          select new { t.IDSponsor, t.IDTeam, t.budget, t.dataInizio };
+                contrattiGriglia.DataSource = res;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ricontrolla i campi!!!");
+            }
+        }
+
+        private void contrattiTastoRicercaIdTeam_Click(object sender, EventArgs e)
+        {
+            var res = from t in db.contrattis
+                      where t.IDTeam.Equals(contrattiRicercaIdTeam.Text)
+                      select t;
+            contrattiGriglia.DataSource = res;
+        }
+
+        private void contrattiTastoRicercaIdSponsor_Click(object sender, EventArgs e)
+        {
+            var res = from t in db.contrattis
+                      where t.IDSponsor.Equals(contrattiRicercaIdSponsor.Text)
+                      select t;
+            contrattiGriglia.DataSource = res;
+        }
+
+        private void sponsorRegistra_Click(object sender, EventArgs e)
+        {
+            var newSponsor = new sponsor();
+            newSponsor.IDSponsor = sponsorIdSponsor.Text;
+            newSponsor.Nome = sponsorNome.Text;
+            newSponsor.Stato = sponsorStato.Text;
+            var recapitoSponsor = new recapiti_sponsor();
+            recapitoSponsor.IDSponsor = newSponsor.IDSponsor;
+            recapitoSponsor.Telefono = sponsorTelefono.Text;
+            newSponsor.recapiti_sponsors.Add(recapitoSponsor);
+            var mailSponsor = new mail_sponsor();
+            mailSponsor.IDSponsor = newSponsor.IDSponsor;
+            mailSponsor.Mail = sponsorMail.Text;
+
+            try
+            {
+                db.sponsors.InsertOnSubmit(newSponsor);
+                db.SubmitChanges();
+                MessageBox.Show("Team registrato con successo!");
+                var res = from t in db.sponsors
+                          select new { t.IDSponsor, t.Nome, t.Stato, t.recapiti_sponsors, t.mail_sponsors };
+                sponsorGriglia.DataSource = res;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ricontrolla i campi!!!");
+            }
+        }
+
+        private void sponsorTastoRicercaId_Click(object sender, EventArgs e)
+        {
+            var res = from t in db.sponsors
+                      where t.IDSponsor.Equals(sponsorRicercaIdSponsor.Text)
+                      select t;
+            sponsorGriglia.DataSource = res;
+        }
+
+        private void sponsorTastoRicercaNome_Click(object sender, EventArgs e)
+        {
+            var res = from t in db.sponsors
+                      where t.Nome.Equals(sponsorRicercaNome.Text)
+                      select t;
+            sponsorGriglia.DataSource = res;
+        }
+
+        private void campionatiRegistra_Click(object sender, EventArgs e)
+        {
+            var newCampionati = new campionati();
+            newCampionati.IDCampionato = campionatoIdCampionato.Text;
+            newCampionati.anno = 2000;
+            newCampionati.nome = campionatiNome.Text;
+            newCampionati.descrizione = campionatiDescrizione.Text;
+
+            try
+            {
+                db.campionatis.InsertOnSubmit(newCampionati);
+                db.SubmitChanges();
+                MessageBox.Show("Team registrato con successo!");
+                var res = from t in db.campionatis
+                          select new { t.IDCampionato, t.anno, t.nome, t.descrizione };
+                campionatiGriglia.DataSource = res;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ricontrolla i campi!!!");
+            }
+        }
+
+        private void campionatiTastoRicercaId_Click(object sender, EventArgs e)
+        {
+            var res = from t in db.campionatis
+                      where t.IDCampionato.Equals(campionatiRicercaIdCampionato.Text)
+                      select t;
+            campionatiGriglia.DataSource = res;
+        }
+
+        private void campionatiTastoRicercaAnno_Click(object sender, EventArgs e)
+        {
+            var res = from t in db.campionatis
+                      where t.anno.Equals(campionatiRicercaAnno.Text)
+                      select t;
+            campionatiGriglia.DataSource = res;
+        }
+
+        private void componentiRegistra_Click(object sender, EventArgs e)
+        {
+            var newComponenti = new componenti();
+            newComponenti.IDComponente = componentiIdComponente.Text;
+            newComponenti.Descrizione = componenteDescrizione.Text;
+            newComponenti.PrezzoUnitario = componentePrezzo.Text;
+
+            try
+            {
+                db.componentis.InsertOnSubmit(newComponenti);
+                db.SubmitChanges();
+                MessageBox.Show("Team registrato con successo!");
+                var res = from t in db.componentis
+                          select new { t.IDComponente, t.Descrizione, t.PrezzoUnitario };
+                componentiGriglia.DataSource = res;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ricontrolla i campi!!!");
+            }
+        }
+
+        private void componenteRicercaIdVettura_Click(object sender, EventArgs e)
+        {
+            var res = from t in db.componentis
+                      where t.IDComponente.Equals(componenteRicercaIdComponente.Text)
+                      select t;
+            componentiGriglia.DataSource = res;
+        }
+
+        private void vettureRegistra_Click(object sender, EventArgs e)
+        {
+            var newVetture = new vetture();
+            newVetture.IDVettura = vettureIdVettura.Text;
+            newVetture.annoProduzione = 2000;
+            newVetture.nome = vetturenome.Text;
+            newVetture.IDTeam = vettureidteam.Text;
+
+
+            try
+            {
+                db.vettures.InsertOnSubmit(newVetture);
+                db.SubmitChanges();
+                MessageBox.Show("Team registrato con successo!");
+                var res = from t in db.vettures
+                          select new { t.IDVettura, t.annoProduzione, t.nome, t.IDTeam };
+                vettureGriglia.DataSource = res;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ricontrolla i campi!!!");
+            }
+        }
+
+        private void vettureTastoRicercaIdVettura_Click(object sender, EventArgs e)
+        {
+            var res = from t in db.vettures
+                      where t.IDVettura.Equals(vetturericercaIdVettura.Text)
+                      select t;
+            vettureGriglia.DataSource = res;
+        }
+
+        private void vettureTastoRicercaIdTeam_Click(object sender, EventArgs e)
+        {
+            var res = from t in db.vettures
+                      where t.IDTeam.Equals(vettureRicercaIdteam.Text)
+                      select t;
+            vettureGriglia.DataSource = res;
+        }
+
+        private void vetturaTastoRicercaAnno_Click(object sender, EventArgs e)
+        {
+            var res = from t in db.vettures
+                      where t.annoProduzione.Equals(vettureRicercaAnno.Text)
+                      select t;
+            vettureGriglia.DataSource = res;
+        }
+
+        private void vettureTastoRicercaNome_Click(object sender, EventArgs e)
+        {
+            var res = from t in db.vettures
+                      where t.nome.Equals(VettureRicercaNome.Text)
+                      select t;
+            vettureGriglia.DataSource = res;
+        }
     }
 }
