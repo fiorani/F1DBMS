@@ -31,7 +31,7 @@ namespace F1DBMS
                 incarichi_dipendenti newIncarico = new incarichi_dipendenti();
                 newIncarico.CF = SelezionaDipPerIncarico.Rows[rigaTabellaDipendente].Cells["CF"].Value.ToString();
                 newIncarico.IDTeam = SelezionaTeamPerInc.Rows[rigaTabellaTeam].Cells["IDTeam"].Value.ToString();
-                newIncarico.dataAssunzione = dataInizioIncarico.Value;
+                newIncarico.dataAssunzione = dataInizioIncarico.Value.Date;
                 newIncarico.Ruolo = RuoloComboBox.SelectedItem.ToString();
                 newIncarico.stipendio = StipendioBox.Text;
                 newIncarico.dataLicenziamento = null;
