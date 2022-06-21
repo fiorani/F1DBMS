@@ -580,26 +580,7 @@ namespace F1DBMS
 
         private void vettureRegistra_Click(object sender, EventArgs e)
         {
-            var newVetture = new vetture();
-            newVetture.IDVettura = vettureIdVettura.Text;
-            newVetture.annoProduzione = Convert.ToInt32(vettureanno);
-            newVetture.nome = vetturenome.Text;
-            newVetture.IDTeam = vettureidteam.Text;
-
-
-            try
-            {
-                db.vettures.InsertOnSubmit(newVetture);
-                db.SubmitChanges();
-                MessageBox.Show("Team registrato con successo!");
-                var res = from t in db.vettures
-                          select new { t.IDVettura, t.annoProduzione, t.nome, t.IDTeam };
-                vettureGriglia.DataSource = res;
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ricontrolla i campi!!!");
-            }
+            new FormInserimentoVettura(db).Show();
         }
 
         private void vettureTastoRicercaIdVettura_Click(object sender, EventArgs e)
