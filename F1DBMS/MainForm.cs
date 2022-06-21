@@ -22,6 +22,14 @@ namespace F1DBMS
             GridIncarichiDip.DataSource = db.incarichi_dipendentis;
             gridPiloti.DataSource = db.pilotis;
             gridIncarichiPiloti.DataSource = db.incarichi_pilotis;
+            vettureGriglia.DataSource = db.vettures;
+            componentiGriglia.DataSource = db.componentis;
+            campionatiGriglia.DataSource = db.campionatis;
+            sponsorGriglia.DataSource = db.sponsors;
+            contrattiGriglia.DataSource = db.contrattis;
+            garaGriglia.DataSource = db.gares;
+            grigliaCircuito.DataSource = db.circuitis;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -312,9 +320,9 @@ namespace F1DBMS
             newCircuiti.nome = nomeCircuito.Text;
             newCircuiti.stato = statoCircuito.Text;
             newCircuiti.descrizione = descrizioneCircuito.Text;
-            newCircuiti.lunghezza = 11;
+            newCircuiti.lunghezza = Convert.ToInt32(lunghezzaCircuito);
             newCircuiti.tipologia = tipologiaCircuito.Text;
-            newCircuiti.numeroCurve = 11;
+            newCircuiti.numeroCurve = Convert.ToInt32(numDiCurveCircuito);
 
             try
             {
@@ -353,7 +361,7 @@ namespace F1DBMS
             newGare.IDCircuito = garaIdCircuito.Text;
             newGare.IDCampionato = garaIdCampionato.Text;
             newGare.data = garaData.Value.Date;
-            newGare.giri = 10;
+            newGare.giri = Convert.ToInt32(garaGiri);
 
             try
             {
@@ -402,7 +410,7 @@ namespace F1DBMS
             var newContratti = new contratti();
             newContratti.IDSponsor = contrattiIdSponsor.Text;
             newContratti.IDTeam = contrattiIdTeam.Text;
-            newContratti.budget = 10;
+            newContratti.budget = Convert.ToInt32(contrattiBudget);
             newContratti.dataInizio = contrattiData.Value.Date;
 
             try
@@ -485,7 +493,7 @@ namespace F1DBMS
         {
             var newCampionati = new campionati();
             newCampionati.IDCampionato = campionatoIdCampionato.Text;
-            newCampionati.anno = 2000;
+            newCampionati.anno = Convert.ToInt32(campionatiAnno);
             newCampionati.nome = campionatiNome.Text;
             newCampionati.descrizione = campionatiDescrizione.Text;
 
@@ -554,7 +562,7 @@ namespace F1DBMS
         {
             var newVetture = new vetture();
             newVetture.IDVettura = vettureIdVettura.Text;
-            newVetture.annoProduzione = 2000;
+            newVetture.annoProduzione = Convert.ToInt32(vettureanno);
             newVetture.nome = vetturenome.Text;
             newVetture.IDTeam = vettureidteam.Text;
 
