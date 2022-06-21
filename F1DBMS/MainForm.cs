@@ -21,7 +21,7 @@ namespace F1DBMS
             gridDipendenti.DataSource = db.dipendentis;
             GridIncarichiDip.DataSource = db.incarichi_dipendentis;
             gridPiloti.DataSource = db.pilotis;
-            girdIncarichiPiloti.DataSource = db.incarichi_pilotis;
+            gridIncarichiPiloti.DataSource = db.incarichi_pilotis;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -290,13 +290,13 @@ namespace F1DBMS
                 db.pilotis.DeleteAllOnSubmit(pil);
                 db.SubmitChanges();
                 MessageBox.Show("Pilota eliminato correttamente!");
-            }
+            } 
             EliminaPilCFBox.Clear();
         }
 
         private void RicercaIncarichiPilBtn_Click(object sender, EventArgs e)
         {
-            gridPiloti.DataSource = db.incarichi_pilotis.Where(inc => inc.CF.Equals(RicercaIncarichiPilBox));
+            gridPiloti.DataSource = db.incarichi_pilotis.Where(inc => inc.CF.Equals(RicercaIncarichiPilBox.Text));
         }
 
         private void InserisciIncaricoPilBtn_Click(object sender, EventArgs e)
@@ -604,6 +604,13 @@ namespace F1DBMS
                       where t.nome.Equals(VettureRicercaNome.Text)
                       select t;
             vettureGriglia.DataSource = res;
+        }
+
+        private void IncarichiPilBtn_Click(object sender, EventArgs e)
+        {
+            var res = from incPil in db.incarichi_pilotis
+                      select incPil;
+            gridIncarichiPiloti.DataSource = res;
         }
     }
 }
