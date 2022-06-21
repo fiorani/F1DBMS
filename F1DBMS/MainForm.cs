@@ -22,6 +22,14 @@ namespace F1DBMS
             GridIncarichiDip.DataSource = db.incarichi_dipendentis;
             gridPiloti.DataSource = db.pilotis;
             gridIncarichiPiloti.DataSource = db.incarichi_pilotis;
+            vettureGriglia.DataSource = db.vettures;
+            componentiGriglia.DataSource = db.componentis;
+            campionatiGriglia.DataSource = db.campionatis;
+            sponsorGriglia.DataSource = db.sponsors;
+            contrattiGriglia.DataSource = db.contrattis;
+            garaGriglia.DataSource = db.gares;
+            grigliaCircuito.DataSource = db.circuitis;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
