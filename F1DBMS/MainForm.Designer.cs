@@ -611,7 +611,7 @@ namespace F1DBMS
             this.gridTeam.Location = new System.Drawing.Point(361, 6);
             this.gridTeam.Name = "gridTeam";
             this.gridTeam.RowHeadersWidth = 62;
-            this.gridTeam.Size = new System.Drawing.Size(1887, 965);
+            this.gridTeam.Size = new System.Drawing.Size(1338, 895);
             this.gridTeam.TabIndex = 11;
             // 
             // RegistraTeamBtn
