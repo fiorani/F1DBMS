@@ -241,12 +241,12 @@ namespace F1DBMS
                     db.pilotis.InsertOnSubmit(pilota);
                     db.SubmitChanges();
                     MessageBox.Show("Pilota inserito!");
-                    CFBox.Clear();
-                    NomeBox.Clear();
-                    CognomeBox.Clear();
-                    ResidenzaBox.Clear();
-                    Tel1.Clear();
-                    Tel2.Clear();
+                    CFPilotaBox.Clear();
+                    NomePilotaBox.Clear();
+                    CognomePilotaBox.Clear();
+                    ResidenzaPilotaBox.Clear();
+                    Tel1PilotaBox.Clear();
+                    Tel2PilotaBox.Clear();
                 }
                 else
                 {
@@ -261,7 +261,9 @@ namespace F1DBMS
 
         private void MostraPilotiBtn_Click(object sender, EventArgs e)
         {
-            gridPiloti.DataSource = db.pilotis;
+            var res = from p in db.pilotis
+                      select p;
+            gridPiloti.DataSource = res;
         }
     }
 }
