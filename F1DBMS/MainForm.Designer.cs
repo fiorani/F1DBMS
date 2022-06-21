@@ -295,7 +295,7 @@ namespace F1DBMS
             this.lunghezzaCircuito = new System.Windows.Forms.TextBox();
             this.descrizioneCircuito = new System.Windows.Forms.TextBox();
             this.tipologiaCircuito = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.RevocaIncaricoPilBtn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.IncarichiPilBtn = new System.Windows.Forms.Button();
             this.label45 = new System.Windows.Forms.Label();
@@ -1603,7 +1603,7 @@ namespace F1DBMS
             // 
             // IncarichiPIloti
             // 
-            this.IncarichiPIloti.Controls.Add(this.button2);
+            this.IncarichiPIloti.Controls.Add(this.RevocaIncaricoPilBtn);
             this.IncarichiPIloti.Controls.Add(this.label7);
             this.IncarichiPIloti.Controls.Add(this.IncarichiPilBtn);
             this.IncarichiPIloti.Controls.Add(this.label45);
@@ -3111,14 +3111,15 @@ namespace F1DBMS
             this.tipologiaCircuito.Size = new System.Drawing.Size(301, 20);
             this.tipologiaCircuito.TabIndex = 11;
             // 
-            // button2
+            // RevocaIncaricoPilBtn
             // 
-            this.button2.Location = new System.Drawing.Point(130, 137);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 23);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Revoca Incarico";
-            this.button2.UseVisualStyleBackColor = true;
+            this.RevocaIncaricoPilBtn.Location = new System.Drawing.Point(130, 137);
+            this.RevocaIncaricoPilBtn.Name = "RevocaIncaricoPilBtn";
+            this.RevocaIncaricoPilBtn.Size = new System.Drawing.Size(96, 23);
+            this.RevocaIncaricoPilBtn.TabIndex = 10;
+            this.RevocaIncaricoPilBtn.Text = "Revoca Incarico";
+            this.RevocaIncaricoPilBtn.UseVisualStyleBackColor = true;
+            this.RevocaIncaricoPilBtn.Click += new System.EventHandler(this.RevocaIncaricoPilBtn_Click);
             // 
             // label7
             // 
@@ -3469,7 +3470,7 @@ namespace F1DBMS
         private System.Windows.Forms.TextBox lunghezzaCircuito;
         private System.Windows.Forms.TextBox descrizioneCircuito;
         private System.Windows.Forms.TextBox tipologiaCircuito;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button RevocaIncaricoPilBtn;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button IncarichiPilBtn;
         private System.Windows.Forms.Label label45;

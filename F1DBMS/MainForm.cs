@@ -612,5 +612,11 @@ namespace F1DBMS
                       select incPil;
             gridIncarichiPiloti.DataSource = res;
         }
+
+        private void RevocaIncaricoPilBtn_Click(object sender, EventArgs e)
+        {
+            FormRevocaIncarichiPiloti revocaIncPil = new FormRevocaIncarichiPiloti(db);
+            revocaIncPil.Show();
+        }
     }
 }
