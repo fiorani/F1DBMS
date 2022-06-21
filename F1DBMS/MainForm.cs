@@ -313,6 +313,15 @@ namespace F1DBMS
             creaIncaricoPil.Show();
         }
 
+
+
+        private void IncarichiPilBtn_Click(object sender, EventArgs e)
+        {
+            var res = from incPil in db.incarichi_pilotis
+                      select incPil;
+            gridIncarichiPiloti.DataSource = res;
+        }
+
         private void registraCircuito_Click(object sender, EventArgs e)
         {
             var newCircuiti = new circuiti();
@@ -337,8 +346,8 @@ namespace F1DBMS
             {
                 MessageBox.Show("Ricontrolla i campi!!!");
             }
-
         }
+
         private void tastoRicercaNomeCircuito_Click(object sender, EventArgs e)
         {
             var res = from t in db.circuitis
@@ -378,9 +387,9 @@ namespace F1DBMS
             }
         }
 
-
         private void garaTastoRicercaData_Click(object sender, EventArgs e)
         {
+
             var res = from t in db.gares
                       where t.data.Equals(garaRicercaData.Text)
                       select t;
@@ -430,6 +439,7 @@ namespace F1DBMS
 
         private void contrattiTastoRicercaIdTeam_Click(object sender, EventArgs e)
         {
+
             var res = from t in db.contrattis
                       where t.IDTeam.Equals(contrattiRicercaIdTeam.Text)
                       select t;
@@ -438,6 +448,7 @@ namespace F1DBMS
 
         private void contrattiTastoRicercaIdSponsor_Click(object sender, EventArgs e)
         {
+
             var res = from t in db.contrattis
                       where t.IDSponsor.Equals(contrattiRicercaIdSponsor.Text)
                       select t;
@@ -473,8 +484,9 @@ namespace F1DBMS
             }
         }
 
-        private void sponsorTastoRicercaId_Click(object sender, EventArgs e)
+        private void sponsorTastoRicercaIdSponsor_Click(object sender, EventArgs e)
         {
+
             var res = from t in db.sponsors
                       where t.IDSponsor.Equals(sponsorRicercaIdSponsor.Text)
                       select t;
@@ -483,6 +495,7 @@ namespace F1DBMS
 
         private void sponsorTastoRicercaNome_Click(object sender, EventArgs e)
         {
+
             var res = from t in db.sponsors
                       where t.Nome.Equals(sponsorRicercaNome.Text)
                       select t;
@@ -514,6 +527,7 @@ namespace F1DBMS
 
         private void campionatiTastoRicercaId_Click(object sender, EventArgs e)
         {
+
             var res = from t in db.campionatis
                       where t.IDCampionato.Equals(campionatiRicercaIdCampionato.Text)
                       select t;
@@ -552,6 +566,7 @@ namespace F1DBMS
 
         private void componenteRicercaIdVettura_Click(object sender, EventArgs e)
         {
+
             var res = from t in db.componentis
                       where t.IDComponente.Equals(componenteRicercaIdComponente.Text)
                       select t;
@@ -584,6 +599,7 @@ namespace F1DBMS
 
         private void vettureTastoRicercaIdVettura_Click(object sender, EventArgs e)
         {
+
             var res = from t in db.vettures
                       where t.IDVettura.Equals(vetturericercaIdVettura.Text)
                       select t;
@@ -592,6 +608,7 @@ namespace F1DBMS
 
         private void vettureTastoRicercaIdTeam_Click(object sender, EventArgs e)
         {
+
             var res = from t in db.vettures
                       where t.IDTeam.Equals(vettureRicercaIdteam.Text)
                       select t;
@@ -600,6 +617,7 @@ namespace F1DBMS
 
         private void vetturaTastoRicercaAnno_Click(object sender, EventArgs e)
         {
+
             var res = from t in db.vettures
                       where t.annoProduzione.Equals(vettureRicercaAnno.Text)
                       select t;
@@ -608,17 +626,11 @@ namespace F1DBMS
 
         private void vettureTastoRicercaNome_Click(object sender, EventArgs e)
         {
+
             var res = from t in db.vettures
                       where t.nome.Equals(VettureRicercaNome.Text)
                       select t;
             vettureGriglia.DataSource = res;
-        }
-
-        private void IncarichiPilBtn_Click(object sender, EventArgs e)
-        {
-            var res = from incPil in db.incarichi_pilotis
-                      select incPil;
-            gridIncarichiPiloti.DataSource = res;
         }
     }
 }
