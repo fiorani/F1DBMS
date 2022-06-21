@@ -92,7 +92,7 @@ namespace F1DBMS
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SelezionaIncRevoca);
             this.Name = "FormRevocaIncarico";
-            this.Text = "Form1";
+            this.Text = "Revoca incarico Dipendente";
             ((System.ComponentModel.ISupportInitialize)(this.SelezionaIncRevoca)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
