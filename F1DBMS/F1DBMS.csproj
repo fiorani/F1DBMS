@@ -55,6 +55,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClassesF1.dbml</DependentUpon>
     </Compile>
+    <Compile Include="FormInserimentoComponentiVettura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInserimentoComponentiVettura.Designer.cs">
+      <DependentUpon>FormInserimentoComponentiVettura.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormInserimentoVettura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormInserimentoComponentiVettura.resx">
+      <DependentUpon>FormInserimentoComponentiVettura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormInserimentoVettura.resx">
       <DependentUpon>FormInserimentoVettura.cs</DependentUpon>
     </EmbeddedResource>
