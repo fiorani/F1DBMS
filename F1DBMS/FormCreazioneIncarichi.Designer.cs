@@ -176,7 +176,7 @@ namespace F1DBMS
             this.Controls.Add(this.SelezionaDipPerIncarico);
             this.Controls.Add(this.splitter1);
             this.Name = "FormCreazioneIncarichi";
-            this.Text = "Form2";
+            this.Text = "Crea incarichi dipendenti";
             ((System.ComponentModel.ISupportInitialize)(this.SelezionaDipPerIncarico)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SelezionaTeamPerInc)).EndInit();
             this.ResumeLayout(false);
