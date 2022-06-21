@@ -55,6 +55,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClassesF1.dbml</DependentUpon>
     </Compile>
+    <Compile Include="FormRevocaIncarichiPiloti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRevocaIncarichiPiloti.Designer.cs">
+      <DependentUpon>FormRevocaIncarichiPiloti.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCreazioneIncaichiPiloti.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormRevocaIncarichiPiloti.resx">
+      <DependentUpon>FormRevocaIncarichiPiloti.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCreazioneIncaichiPiloti.resx">
       <DependentUpon>FormCreazioneIncaichiPiloti.cs</DependentUpon>
     </EmbeddedResource>

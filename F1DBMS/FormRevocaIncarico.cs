@@ -13,14 +13,15 @@ namespace F1DBMS
     public partial class FormRevocaIncarico : Form
     {
         private readonly DataClassesF1DataContext db;
-        private int rigaTabellaIncarico = -1;
+        private int rigaTabellaIncarico;
         
         public FormRevocaIncarico(DataClassesF1DataContext originDb)
         {
             InitializeComponent();
             db = originDb;
-            SelezionaIncRevoca.DataSource = db.incarichi_dipendentis;
-
+            SelezionaIncRevoca.DataSource = from incDip in db.incarichi_dipendentis
+                                            select incDip;
+            rigaTabellaIncarico = -1;
         }
 
         private void revocaIncBtn_Click(object sender, EventArgs e)
@@ -31,11 +32,11 @@ namespace F1DBMS
                                 where inc.CF.Equals(SelezionaIncRevoca.Rows[rigaTabellaIncarico].Cells["CF"].Value)
                                 && inc.dataAssunzione.Equals(SelezionaIncRevoca.Rows[rigaTabellaIncarico].Cells["dataAssunzione"].Value)
                                 && !inc.dataLicenziamento.HasValue
-                                && inc.dataAssunzione <= DataLicenziamento.Value
+                                && inc.dataAssunzione <= DataLicenziamento.Value.Date
                                 select inc).SingleOrDefault();
                 if(incarico != null)
                 {
-                    incarico.dataLicenziamento = DataLicenziamento.Value;
+                    incarico.dataLicenziamento = DataLicenziamento.Value.Date;
                     db.SubmitChanges();
                     MessageBox.Show("Incarico revocato!");
                     this.Close();
@@ -54,5 +55,6 @@ namespace F1DBMS
         {
             rigaTabellaIncarico = e.RowIndex;
         }
+        
     }
 }
