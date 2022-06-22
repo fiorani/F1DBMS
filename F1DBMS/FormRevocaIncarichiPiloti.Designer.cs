@@ -79,7 +79,7 @@ namespace F1DBMS
             this.gridIncaricoPilRevoca.Name = "gridIncaricoPilRevoca";
             this.gridIncaricoPilRevoca.Size = new System.Drawing.Size(534, 353);
             this.gridIncaricoPilRevoca.TabIndex = 5;
-            this.gridIncaricoPilRevoca.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridIncaricoPilRevoca_CellContentClick);
+            this.gridIncaricoPilRevoca.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridIncaricoPilRevoca_CellClick);
             // 
             // FormRevocaIncarichiPiloti
             // 

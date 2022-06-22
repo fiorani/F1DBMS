@@ -20,8 +20,10 @@ namespace F1DBMS
         {
             InitializeComponent();
             db = originDb;
-            gridSelezionaPilIncarico.DataSource = db.pilotis;
-            gridTeamIncaricoPil.DataSource = db.teams;
+            gridSelezionaPilIncarico.DataSource = from pil in db.pilotis
+                                                  select pil;
+            gridTeamIncaricoPil.DataSource = from team in db.teams
+                                             select team;
         }
 
         private void SottoscriviIncPilBtn_Click(object sender, EventArgs e)
@@ -50,12 +52,12 @@ namespace F1DBMS
             }
         }
 
-        private void gridSelezionaPilIncarico_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void gridSelezionaPilIncarico_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             rigaGridPilota = e.RowIndex;
         }
 
-        private void gridTeamIncaricoPil_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void gridTeamIncaricoPil_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             rigaGridTeam = e.RowIndex;
         }

@@ -40,12 +40,13 @@
             // 
             // gridComponente
             // 
+            this.gridComponente.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.gridComponente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridComponente.Location = new System.Drawing.Point(13, 27);
             this.gridComponente.Name = "gridComponente";
             this.gridComponente.Size = new System.Drawing.Size(501, 267);
             this.gridComponente.TabIndex = 0;
-            this.gridComponente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridComponente_CellContentClick);
+            this.gridComponente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridComponente_CellClick);
             // 
             // label1
             // 

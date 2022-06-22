@@ -23,7 +23,7 @@ namespace F1DBMS
             _RigaGridTeam = -1;
         }
 
-        private void gridTeamVettura_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void gridTeamVettura_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             _RigaGridTeam = e.RowIndex;
         }

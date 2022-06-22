@@ -25,9 +25,10 @@ namespace F1DBMS
             _IdVettura = idVettura; 
         }
 
-        private void gridComponente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void gridComponente_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             _ComponentiIndex = e.RowIndex;
+            Console.Write(_ComponentiIndex);
         }
 
         private void InserisciCompBtn_Click(object sender, EventArgs e)

@@ -51,7 +51,7 @@ namespace F1DBMS
             }
         }
 
-        private void SelezionaIncRevoca_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void SelezionaIncRevoca_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             rigaTabellaIncarico = e.RowIndex;
         }

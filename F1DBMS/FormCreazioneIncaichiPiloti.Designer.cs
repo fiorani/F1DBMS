@@ -49,7 +49,7 @@ namespace F1DBMS
             this.gridSelezionaPilIncarico.Name = "gridSelezionaPilIncarico";
             this.gridSelezionaPilIncarico.Size = new System.Drawing.Size(534, 353);
             this.gridSelezionaPilIncarico.TabIndex = 0;
-            this.gridSelezionaPilIncarico.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSelezionaPilIncarico_CellContentClick);
+            this.gridSelezionaPilIncarico.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSelezionaPilIncarico_CellClick);
             // 
             // gridTeamIncaricoPil
             // 
@@ -58,7 +58,7 @@ namespace F1DBMS
             this.gridTeamIncaricoPil.Name = "gridTeamIncaricoPil";
             this.gridTeamIncaricoPil.Size = new System.Drawing.Size(534, 353);
             this.gridTeamIncaricoPil.TabIndex = 1;
-            this.gridTeamIncaricoPil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridTeamIncaricoPil_CellContentClick);
+            this.gridTeamIncaricoPil.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridTeamIncaricoPil_CellClick);
             // 
             // label1
             // 

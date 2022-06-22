@@ -44,7 +44,7 @@ namespace F1DBMS
             this.SelezionaIncRevoca.Name = "SelezionaIncRevoca";
             this.SelezionaIncRevoca.Size = new System.Drawing.Size(534, 353);
             this.SelezionaIncRevoca.TabIndex = 0;
-            this.SelezionaIncRevoca.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SelezionaIncRevoca_CellContentClick);
+            this.SelezionaIncRevoca.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SelezionaIncRevoca_CellClick);
             // 
             // label1
             // 

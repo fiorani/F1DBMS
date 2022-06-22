@@ -49,7 +49,7 @@ namespace F1DBMS
             }
         }
 
-        private void gridIncaricoPilRevoca_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void gridIncaricoPilRevoca_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             tabellaIncarichiPilIndex = e.RowIndex;
         }

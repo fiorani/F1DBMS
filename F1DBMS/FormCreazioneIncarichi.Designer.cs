@@ -60,7 +60,7 @@ namespace F1DBMS
             this.SelezionaDipPerIncarico.Name = "SelezionaDipPerIncarico";
             this.SelezionaDipPerIncarico.Size = new System.Drawing.Size(534, 353);
             this.SelezionaDipPerIncarico.TabIndex = 1;
-            this.SelezionaDipPerIncarico.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SelezionaDipPerIncarico_CellContentClick);
+            this.SelezionaDipPerIncarico.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SelezionaDipPerIncarico_CellClick);
             // 
             // SelezionaTeamPerInc
             // 
@@ -69,7 +69,7 @@ namespace F1DBMS
             this.SelezionaTeamPerInc.Name = "SelezionaTeamPerInc";
             this.SelezionaTeamPerInc.Size = new System.Drawing.Size(534, 353);
             this.SelezionaTeamPerInc.TabIndex = 2;
-            this.SelezionaTeamPerInc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SelezionaTeamPerInc_CellContentClick);
+            this.SelezionaTeamPerInc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SelezionaTeamPerInc_CellClick);
             // 
             // label1
             // 

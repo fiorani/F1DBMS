@@ -20,8 +20,10 @@ namespace F1DBMS
         {
             InitializeComponent();
             db = originDb;
-            SelezionaDipPerIncarico.DataSource = db.dipendentis;
-            SelezionaTeamPerInc.DataSource = db.teams;
+            SelezionaDipPerIncarico.DataSource = from dip in db.dipendentis 
+                                                 select dip;
+            SelezionaTeamPerInc.DataSource = from team in db.teams
+                                             select team;
         }
 
         private void SottoscriviIncaricoBtn_Click(object sender, EventArgs e)
@@ -52,12 +54,12 @@ namespace F1DBMS
             }
         }
 
-        private void SelezionaDipPerIncarico_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void SelezionaDipPerIncarico_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             rigaTabellaDipendente = e.RowIndex;
         }
 
-        private void SelezionaTeamPerInc_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void SelezionaTeamPerInc_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             rigaTabellaTeam = e.RowIndex;
         }
