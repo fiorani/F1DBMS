@@ -17,18 +17,30 @@ namespace F1DBMS
         {
             InitializeComponent();
             db = new DataClassesF1DataContext();
-            gridTeam.DataSource = db.teams;
-            gridDipendenti.DataSource = db.dipendentis;
-            GridIncarichiDip.DataSource = db.incarichi_dipendentis;
-            gridPiloti.DataSource = db.pilotis;
-            gridIncarichiPiloti.DataSource = db.incarichi_pilotis;
-            vettureGriglia.DataSource = db.vettures;
-            componentiGriglia.DataSource = db.componentis;
-            campionatiGriglia.DataSource = db.campionatis;
-            sponsorGriglia.DataSource = db.sponsors;
-            contrattiGriglia.DataSource = db.contrattis;
-            garaGriglia.DataSource = db.gares;
-            grigliaCircuito.DataSource = db.circuitis;
+            gridTeam.DataSource = from team in db.teams
+                                  select team;
+            gridDipendenti.DataSource = from dip in db.dipendentis
+                                        select dip;
+            GridIncarichiDip.DataSource = from incDip in db.incarichi_dipendentis
+                                          select incDip;
+            gridPiloti.DataSource = from pil in db.pilotis
+                                    select pil;
+            gridIncarichiPiloti.DataSource = from incPil in db.incarichi_pilotis
+                                             select incPil;
+            vettureGriglia.DataSource = from vet in db.vettures
+                                        select vet;
+            componentiGriglia.DataSource = from comp in db.componentis
+                                           select comp;
+            campionatiGriglia.DataSource = from camp in db.campionatis
+                                           select camp;
+            sponsorGriglia.DataSource = from spons in db.sponsors
+                                        select spons;
+            contrattiGriglia.DataSource = from contr in db.contrattis
+                                          select contr;
+            garaGriglia.DataSource = from gare in db.gares
+                                     select gare;
+            grigliaCircuito.DataSource = from circ in db.circuitis
+                                         select circ;
 
         }
 
@@ -123,7 +135,7 @@ namespace F1DBMS
             dipendente.CF = CFBox.Text;
             dipendente.nome = NomeBox.Text;
             dipendente.cognome = CognomeBox.Text;
-            dipendente.luogoDiNascita = LuogoNascita.Text;
+            dipendente.luogoDiNascita = LuogoNascitaBox.Text;
             dipendente.dataNascita = DataNascita.Value;
             dipendente.residenza = ResidenzaBox.Text;
             var recapito = new recapiti_dipendenti();
@@ -139,7 +151,7 @@ namespace F1DBMS
             }
             try
             {
-                if (!CFBox.Text.Equals(String.Empty) && !NomeBox.Text.Equals(String.Empty) && !CognomeBox.Text.Equals(String.Empty) && !LuogoNascita.Text.Equals(String.Empty) && !ResidenzaBox.Text.Equals(String.Empty) && !Tel1.Text.Equals(String.Empty))
+                if (!CFBox.Text.Equals(String.Empty) && !NomeBox.Text.Equals(String.Empty) && !CognomeBox.Text.Equals(String.Empty) && !LuogoNascitaBox.Text.Equals(String.Empty) && !ResidenzaBox.Text.Equals(String.Empty) && !Tel1.Text.Equals(String.Empty))
                 {
                     db.dipendentis.InsertOnSubmit(dipendente);
                     db.SubmitChanges();
@@ -148,6 +160,7 @@ namespace F1DBMS
                     NomeBox.Clear();
                     CognomeBox.Clear();
                     ResidenzaBox.Clear();
+                    LuogoNascitaBox.Clear();
                     Tel1.Clear();
                     Tel2.Clear();
                 } else
@@ -618,7 +631,6 @@ namespace F1DBMS
                       select t;
             vettureGriglia.DataSource = res;
         }
-
 
     }
 }
