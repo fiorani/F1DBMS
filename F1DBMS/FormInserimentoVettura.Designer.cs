@@ -107,7 +107,7 @@ namespace F1DBMS
             this.gridTeamVettura.Name = "gridTeamVettura";
             this.gridTeamVettura.Size = new System.Drawing.Size(501, 267);
             this.gridTeamVettura.TabIndex = 56;
-            this.gridTeamVettura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridTeamVettura_CellContentClick);
+            this.gridTeamVettura.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridTeamVettura_CellClick);
             // 
             // label1
             // 
