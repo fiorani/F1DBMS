@@ -61,6 +61,12 @@
     <Compile Include="FormInserimentoComponentiVettura.Designer.cs">
       <DependentUpon>FormInserimentoComponentiVettura.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormInserimentoGara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInserimentoGara.Designer.cs">
+      <DependentUpon>FormInserimentoGara.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormInserimentoVettura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormInserimentoComponentiVettura.resx">
       <DependentUpon>FormInserimentoComponentiVettura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInserimentoGara.resx">
+      <DependentUpon>FormInserimentoGara.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInserimentoVettura.resx">
       <DependentUpon>FormInserimentoVettura.cs</DependentUpon>
