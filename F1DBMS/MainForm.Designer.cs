@@ -170,6 +170,7 @@ namespace F1DBMS
             this.Componenti = new System.Windows.Forms.TabPage();
             this.componentiGriglia = new System.Windows.Forms.DataGridView();
             this.componentipanel = new System.Windows.Forms.Panel();
+            this.label50 = new System.Windows.Forms.Label();
             this.componentelabelidcomponente2 = new System.Windows.Forms.Label();
             this.componentilabelidcomponente = new System.Windows.Forms.Label();
             this.componentelabeldescrizione = new System.Windows.Forms.Label();
@@ -183,6 +184,8 @@ namespace F1DBMS
             this.Campionati = new System.Windows.Forms.TabPage();
             this.campionatiGriglia = new System.Windows.Forms.DataGridView();
             this.campionatipanel = new System.Windows.Forms.Panel();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
             this.campionatolabelidcampionato = new System.Windows.Forms.Label();
             this.campionatoIdCampionato = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -738,14 +741,14 @@ namespace F1DBMS
             // label26
             // 
             this.label26.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label26.Location = new System.Drawing.Point(14, 611);
+            this.label26.Location = new System.Drawing.Point(14, 568);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(328, 2);
             this.label26.TabIndex = 38;
             // 
             // MostraIncBtn
             // 
-            this.MostraIncBtn.Location = new System.Drawing.Point(98, 666);
+            this.MostraIncBtn.Location = new System.Drawing.Point(98, 610);
             this.MostraIncBtn.Name = "MostraIncBtn";
             this.MostraIncBtn.Size = new System.Drawing.Size(152, 23);
             this.MostraIncBtn.TabIndex = 37;
@@ -756,7 +759,7 @@ namespace F1DBMS
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(69, 634);
+            this.label25.Location = new System.Drawing.Point(69, 587);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(23, 13);
             this.label25.TabIndex = 36;
@@ -767,14 +770,14 @@ namespace F1DBMS
             this.CFCercaIncDipBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CFCercaIncDipBox.Location = new System.Drawing.Point(98, 631);
+            this.CFCercaIncDipBox.Location = new System.Drawing.Point(98, 584);
             this.CFCercaIncDipBox.Name = "CFCercaIncDipBox";
             this.CFCercaIncDipBox.Size = new System.Drawing.Size(244, 20);
             this.CFCercaIncDipBox.TabIndex = 35;
             // 
             // EliminaDipBtn
             // 
-            this.EliminaDipBtn.Location = new System.Drawing.Point(98, 572);
+            this.EliminaDipBtn.Location = new System.Drawing.Point(98, 533);
             this.EliminaDipBtn.Name = "EliminaDipBtn";
             this.EliminaDipBtn.Size = new System.Drawing.Size(152, 23);
             this.EliminaDipBtn.TabIndex = 34;
@@ -785,7 +788,7 @@ namespace F1DBMS
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(69, 540);
+            this.label22.Location = new System.Drawing.Point(69, 510);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(23, 13);
             this.label22.TabIndex = 33;
@@ -796,7 +799,7 @@ namespace F1DBMS
             this.EliminaDipBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.EliminaDipBox.Location = new System.Drawing.Point(98, 537);
+            this.EliminaDipBox.Location = new System.Drawing.Point(98, 507);
             this.EliminaDipBox.Name = "EliminaDipBox";
             this.EliminaDipBox.Size = new System.Drawing.Size(244, 20);
             this.EliminaDipBox.TabIndex = 32;
@@ -804,14 +807,14 @@ namespace F1DBMS
             // label21
             // 
             this.label21.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label21.Location = new System.Drawing.Point(14, 523);
+            this.label21.Location = new System.Drawing.Point(14, 493);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(328, 2);
             this.label21.TabIndex = 31;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(98, 488);
+            this.button1.Location = new System.Drawing.Point(98, 458);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(152, 23);
             this.button1.TabIndex = 30;
@@ -822,7 +825,7 @@ namespace F1DBMS
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(37, 455);
+            this.label19.Location = new System.Drawing.Point(37, 435);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(55, 13);
             this.label19.TabIndex = 29;
@@ -831,7 +834,7 @@ namespace F1DBMS
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(54, 429);
+            this.label20.Location = new System.Drawing.Point(54, 409);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(38, 13);
             this.label20.TabIndex = 28;
@@ -842,7 +845,7 @@ namespace F1DBMS
             this.RicercaDipNomeBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.RicercaDipNomeBox.Location = new System.Drawing.Point(98, 426);
+            this.RicercaDipNomeBox.Location = new System.Drawing.Point(98, 406);
             this.RicercaDipNomeBox.Name = "RicercaDipNomeBox";
             this.RicercaDipNomeBox.Size = new System.Drawing.Size(244, 20);
             this.RicercaDipNomeBox.TabIndex = 27;
@@ -852,7 +855,7 @@ namespace F1DBMS
             this.RicercaDipCognomeBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.RicercaDipCognomeBox.Location = new System.Drawing.Point(98, 452);
+            this.RicercaDipCognomeBox.Location = new System.Drawing.Point(98, 432);
             this.RicercaDipCognomeBox.Name = "RicercaDipCognomeBox";
             this.RicercaDipCognomeBox.Size = new System.Drawing.Size(244, 20);
             this.RicercaDipCognomeBox.TabIndex = 26;
@@ -860,14 +863,14 @@ namespace F1DBMS
             // label18
             // 
             this.label18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label18.Location = new System.Drawing.Point(14, 411);
+            this.label18.Location = new System.Drawing.Point(14, 391);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(328, 2);
             this.label18.TabIndex = 25;
             // 
             // RicercaDipCFBtn
             // 
-            this.RicercaDipCFBtn.Location = new System.Drawing.Point(98, 375);
+            this.RicercaDipCFBtn.Location = new System.Drawing.Point(98, 356);
             this.RicercaDipCFBtn.Name = "RicercaDipCFBtn";
             this.RicercaDipCFBtn.Size = new System.Drawing.Size(152, 23);
             this.RicercaDipCFBtn.TabIndex = 24;
@@ -878,7 +881,7 @@ namespace F1DBMS
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(69, 343);
+            this.label17.Location = new System.Drawing.Point(69, 333);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(23, 13);
             this.label17.TabIndex = 23;
@@ -889,7 +892,7 @@ namespace F1DBMS
             this.BoxRicercaDipendenteCF.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BoxRicercaDipendenteCF.Location = new System.Drawing.Point(98, 340);
+            this.BoxRicercaDipendenteCF.Location = new System.Drawing.Point(98, 330);
             this.BoxRicercaDipendenteCF.Name = "BoxRicercaDipendenteCF";
             this.BoxRicercaDipendenteCF.Size = new System.Drawing.Size(244, 20);
             this.BoxRicercaDipendenteCF.TabIndex = 22;
@@ -1705,9 +1708,9 @@ namespace F1DBMS
             this.vetturalabelidvettura2.Location = new System.Drawing.Point(43, 93);
             this.vetturalabelidvettura2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.vetturalabelidvettura2.Name = "vetturalabelidvettura2";
-            this.vetturalabelidvettura2.Size = new System.Drawing.Size(56, 13);
+            this.vetturalabelidvettura2.Size = new System.Drawing.Size(58, 13);
             this.vetturalabelidvettura2.TabIndex = 42;
-            this.vetturalabelidvettura2.Text = "Id Vettura:";
+            this.vetturalabelidvettura2.Text = "ID Vettura:";
             // 
             // vetturelabelidteam2
             // 
@@ -1715,9 +1718,9 @@ namespace F1DBMS
             this.vetturelabelidteam2.Location = new System.Drawing.Point(50, 169);
             this.vetturelabelidteam2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.vetturelabelidteam2.Name = "vetturelabelidteam2";
-            this.vetturelabelidteam2.Size = new System.Drawing.Size(49, 13);
+            this.vetturelabelidteam2.Size = new System.Drawing.Size(51, 13);
             this.vetturelabelidteam2.TabIndex = 41;
-            this.vetturelabelidteam2.Text = "Id Team:";
+            this.vetturelabelidteam2.Text = "ID Team:";
             // 
             // vetturelabelanno2
             // 
@@ -1746,7 +1749,7 @@ namespace F1DBMS
             this.vetturaTastoRicercaAnno.Name = "vetturaTastoRicercaAnno";
             this.vetturaTastoRicercaAnno.Size = new System.Drawing.Size(152, 23);
             this.vetturaTastoRicercaAnno.TabIndex = 22;
-            this.vetturaTastoRicercaAnno.Text = "ricerca vetture";
+            this.vetturaTastoRicercaAnno.Text = "Ricerca vetture";
             this.vetturaTastoRicercaAnno.UseVisualStyleBackColor = true;
             this.vetturaTastoRicercaAnno.Click += new System.EventHandler(this.vetturaTastoRicercaAnno_Click);
             // 
@@ -1766,7 +1769,7 @@ namespace F1DBMS
             this.vettureTastoRicercaNome.Name = "vettureTastoRicercaNome";
             this.vettureTastoRicercaNome.Size = new System.Drawing.Size(152, 23);
             this.vettureTastoRicercaNome.TabIndex = 20;
-            this.vettureTastoRicercaNome.Text = "ricerca vetture";
+            this.vettureTastoRicercaNome.Text = "Ricerca vetture";
             this.vettureTastoRicercaNome.UseVisualStyleBackColor = true;
             this.vettureTastoRicercaNome.Click += new System.EventHandler(this.vettureTastoRicercaNome_Click);
             // 
@@ -1786,7 +1789,7 @@ namespace F1DBMS
             this.vettureTastoRicercaIdVettura.Name = "vettureTastoRicercaIdVettura";
             this.vettureTastoRicercaIdVettura.Size = new System.Drawing.Size(152, 23);
             this.vettureTastoRicercaIdVettura.TabIndex = 18;
-            this.vettureTastoRicercaIdVettura.Text = "ricerca vettura";
+            this.vettureTastoRicercaIdVettura.Text = "Ricerca vettura";
             this.vettureTastoRicercaIdVettura.UseVisualStyleBackColor = true;
             this.vettureTastoRicercaIdVettura.Click += new System.EventHandler(this.vettureTastoRicercaIdVettura_Click);
             // 
@@ -1806,7 +1809,7 @@ namespace F1DBMS
             this.vettureTastoRicercaIdTeam.Name = "vettureTastoRicercaIdTeam";
             this.vettureTastoRicercaIdTeam.Size = new System.Drawing.Size(152, 23);
             this.vettureTastoRicercaIdTeam.TabIndex = 16;
-            this.vettureTastoRicercaIdTeam.Text = "ricerca vetture";
+            this.vettureTastoRicercaIdTeam.Text = "Ricerca vetture";
             this.vettureTastoRicercaIdTeam.UseVisualStyleBackColor = true;
             this.vettureTastoRicercaIdTeam.Click += new System.EventHandler(this.vettureTastoRicercaIdTeam_Click);
             // 
@@ -1826,7 +1829,7 @@ namespace F1DBMS
             this.vettureRegistra.Name = "vettureRegistra";
             this.vettureRegistra.Size = new System.Drawing.Size(152, 23);
             this.vettureRegistra.TabIndex = 14;
-            this.vettureRegistra.Text = "registra vetture";
+            this.vettureRegistra.Text = "Registra vettura";
             this.vettureRegistra.UseVisualStyleBackColor = true;
             this.vettureRegistra.Click += new System.EventHandler(this.vettureRegistra_Click);
             // 
@@ -1854,6 +1857,7 @@ namespace F1DBMS
             // 
             // componentipanel
             // 
+            this.componentipanel.Controls.Add(this.label50);
             this.componentipanel.Controls.Add(this.componentelabelidcomponente2);
             this.componentipanel.Controls.Add(this.componentilabelidcomponente);
             this.componentipanel.Controls.Add(this.componentelabeldescrizione);
@@ -1870,15 +1874,23 @@ namespace F1DBMS
             this.componentipanel.Size = new System.Drawing.Size(406, 972);
             this.componentipanel.TabIndex = 11;
             // 
+            // label50
+            // 
+            this.label50.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label50.Location = new System.Drawing.Point(26, 119);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(315, 2);
+            this.label50.TabIndex = 49;
+            // 
             // componentelabelidcomponente2
             // 
             this.componentelabelidcomponente2.AutoSize = true;
-            this.componentelabelidcomponente2.Location = new System.Drawing.Point(13, 142);
+            this.componentelabelidcomponente2.Location = new System.Drawing.Point(10, 138);
             this.componentelabelidcomponente2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.componentelabelidcomponente2.Name = "componentelabelidcomponente2";
-            this.componentelabelidcomponente2.Size = new System.Drawing.Size(76, 13);
+            this.componentelabelidcomponente2.Size = new System.Drawing.Size(84, 13);
             this.componentelabelidcomponente2.TabIndex = 40;
-            this.componentelabelidcomponente2.Text = "IdComponente";
+            this.componentelabelidcomponente2.Text = "ID Componente:";
             // 
             // componentilabelidcomponente
             // 
@@ -1915,9 +1927,9 @@ namespace F1DBMS
             this.componenteRicercaIdVettura.Location = new System.Drawing.Point(101, 160);
             this.componenteRicercaIdVettura.Margin = new System.Windows.Forms.Padding(2);
             this.componenteRicercaIdVettura.Name = "componenteRicercaIdVettura";
-            this.componenteRicercaIdVettura.Size = new System.Drawing.Size(246, 32);
+            this.componenteRicercaIdVettura.Size = new System.Drawing.Size(152, 23);
             this.componenteRicercaIdVettura.TabIndex = 18;
-            this.componenteRicercaIdVettura.Text = "ricerca componenti";
+            this.componenteRicercaIdVettura.Text = "Ricerca componente";
             this.componenteRicercaIdVettura.UseVisualStyleBackColor = true;
             this.componenteRicercaIdVettura.Click += new System.EventHandler(this.componenteRicercaIdVettura_Click);
             // 
@@ -1925,9 +1937,9 @@ namespace F1DBMS
             // 
             this.componenteRicercaIdComponente.AccessibleDescription = "Nome";
             this.componenteRicercaIdComponente.AccessibleName = "Nome";
-            this.componenteRicercaIdComponente.Location = new System.Drawing.Point(101, 138);
+            this.componenteRicercaIdComponente.Location = new System.Drawing.Point(101, 135);
             this.componenteRicercaIdComponente.Name = "componenteRicercaIdComponente";
-            this.componenteRicercaIdComponente.Size = new System.Drawing.Size(247, 20);
+            this.componenteRicercaIdComponente.Size = new System.Drawing.Size(240, 20);
             this.componenteRicercaIdComponente.TabIndex = 17;
             // 
             // componentiRegistra
@@ -1937,7 +1949,7 @@ namespace F1DBMS
             this.componentiRegistra.Name = "componentiRegistra";
             this.componentiRegistra.Size = new System.Drawing.Size(152, 23);
             this.componentiRegistra.TabIndex = 14;
-            this.componentiRegistra.Text = "registra componenti";
+            this.componentiRegistra.Text = "Registra componente";
             this.componentiRegistra.UseVisualStyleBackColor = true;
             this.componentiRegistra.Click += new System.EventHandler(this.componentiRegistra_Click);
             // 
@@ -1993,6 +2005,8 @@ namespace F1DBMS
             // 
             // campionatipanel
             // 
+            this.campionatipanel.Controls.Add(this.label52);
+            this.campionatipanel.Controls.Add(this.label51);
             this.campionatipanel.Controls.Add(this.campionatolabelidcampionato);
             this.campionatipanel.Controls.Add(this.campionatoIdCampionato);
             this.campionatipanel.Controls.Add(this.dataGridView1);
@@ -2015,15 +2029,31 @@ namespace F1DBMS
             this.campionatipanel.Size = new System.Drawing.Size(406, 972);
             this.campionatipanel.TabIndex = 11;
             // 
+            // label52
+            // 
+            this.label52.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label52.Location = new System.Drawing.Point(31, 226);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(315, 2);
+            this.label52.TabIndex = 50;
+            // 
+            // label51
+            // 
+            this.label51.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label51.Location = new System.Drawing.Point(31, 153);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(315, 2);
+            this.label51.TabIndex = 50;
+            // 
             // campionatolabelidcampionato
             // 
             this.campionatolabelidcampionato.AutoSize = true;
-            this.campionatolabelidcampionato.Location = new System.Drawing.Point(26, 23);
+            this.campionatolabelidcampionato.Location = new System.Drawing.Point(21, 23);
             this.campionatolabelidcampionato.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.campionatolabelidcampionato.Name = "campionatolabelidcampionato";
-            this.campionatolabelidcampionato.Size = new System.Drawing.Size(72, 13);
+            this.campionatolabelidcampionato.Size = new System.Drawing.Size(80, 13);
             this.campionatolabelidcampionato.TabIndex = 34;
-            this.campionatolabelidcampionato.Text = "IdCampionato";
+            this.campionatolabelidcampionato.Text = "ID Campionato:";
             // 
             // campionatoIdCampionato
             // 
@@ -2032,7 +2062,7 @@ namespace F1DBMS
             this.campionatoIdCampionato.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.campionatoIdCampionato.Location = new System.Drawing.Point(106, 23);
             this.campionatoIdCampionato.Name = "campionatoIdCampionato";
-            this.campionatoIdCampionato.Size = new System.Drawing.Size(244, 20);
+            this.campionatoIdCampionato.Size = new System.Drawing.Size(240, 20);
             this.campionatoIdCampionato.TabIndex = 33;
             // 
             // dataGridView1
@@ -2049,61 +2079,61 @@ namespace F1DBMS
             // campionatilabelanno
             // 
             this.campionatilabelanno.AutoSize = true;
-            this.campionatilabelanno.Location = new System.Drawing.Point(26, 47);
+            this.campionatilabelanno.Location = new System.Drawing.Point(66, 47);
             this.campionatilabelanno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.campionatilabelanno.Name = "campionatilabelanno";
-            this.campionatilabelanno.Size = new System.Drawing.Size(32, 13);
+            this.campionatilabelanno.Size = new System.Drawing.Size(35, 13);
             this.campionatilabelanno.TabIndex = 32;
-            this.campionatilabelanno.Text = "Anno";
+            this.campionatilabelanno.Text = "Anno:";
             // 
             // campionatilabelnome
             // 
             this.campionatilabelnome.AutoSize = true;
-            this.campionatilabelnome.Location = new System.Drawing.Point(26, 74);
+            this.campionatilabelnome.Location = new System.Drawing.Point(63, 73);
             this.campionatilabelnome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.campionatilabelnome.Name = "campionatilabelnome";
-            this.campionatilabelnome.Size = new System.Drawing.Size(35, 13);
+            this.campionatilabelnome.Size = new System.Drawing.Size(38, 13);
             this.campionatilabelnome.TabIndex = 31;
-            this.campionatilabelnome.Text = "Nome";
+            this.campionatilabelnome.Text = "Nome:";
             // 
             // campionatilabeldescrizione
             // 
             this.campionatilabeldescrizione.AutoSize = true;
-            this.campionatilabeldescrizione.Location = new System.Drawing.Point(26, 97);
+            this.campionatilabeldescrizione.Location = new System.Drawing.Point(36, 97);
             this.campionatilabeldescrizione.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.campionatilabeldescrizione.Name = "campionatilabeldescrizione";
-            this.campionatilabeldescrizione.Size = new System.Drawing.Size(62, 13);
+            this.campionatilabeldescrizione.Size = new System.Drawing.Size(65, 13);
             this.campionatilabeldescrizione.TabIndex = 30;
-            this.campionatilabeldescrizione.Text = "Descrizione";
+            this.campionatilabeldescrizione.Text = "Descrizione:";
             // 
             // campionatolabelidcampionato2
             // 
             this.campionatolabelidcampionato2.AutoSize = true;
-            this.campionatolabelidcampionato2.Location = new System.Drawing.Point(26, 170);
+            this.campionatolabelidcampionato2.Location = new System.Drawing.Point(21, 170);
             this.campionatolabelidcampionato2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.campionatolabelidcampionato2.Name = "campionatolabelidcampionato2";
-            this.campionatolabelidcampionato2.Size = new System.Drawing.Size(72, 13);
+            this.campionatolabelidcampionato2.Size = new System.Drawing.Size(80, 13);
             this.campionatolabelidcampionato2.TabIndex = 29;
-            this.campionatolabelidcampionato2.Text = "IdCampionato";
+            this.campionatolabelidcampionato2.Text = "ID Campionato:";
             // 
             // campionatolabelanno2
             // 
             this.campionatolabelanno2.AutoSize = true;
-            this.campionatolabelanno2.Location = new System.Drawing.Point(26, 252);
+            this.campionatolabelanno2.Location = new System.Drawing.Point(66, 243);
             this.campionatolabelanno2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.campionatolabelanno2.Name = "campionatolabelanno2";
-            this.campionatolabelanno2.Size = new System.Drawing.Size(32, 13);
+            this.campionatolabelanno2.Size = new System.Drawing.Size(35, 13);
             this.campionatolabelanno2.TabIndex = 28;
-            this.campionatolabelanno2.Text = "Anno";
+            this.campionatolabelanno2.Text = "Anno:";
             // 
             // campionatiTastoRicercaId
             // 
-            this.campionatiTastoRicercaId.Location = new System.Drawing.Point(106, 201);
+            this.campionatiTastoRicercaId.Location = new System.Drawing.Point(106, 192);
             this.campionatiTastoRicercaId.Margin = new System.Windows.Forms.Padding(2);
             this.campionatiTastoRicercaId.Name = "campionatiTastoRicercaId";
-            this.campionatiTastoRicercaId.Size = new System.Drawing.Size(243, 32);
+            this.campionatiTastoRicercaId.Size = new System.Drawing.Size(152, 23);
             this.campionatiTastoRicercaId.TabIndex = 18;
-            this.campionatiTastoRicercaId.Text = "ricerca campionati";
+            this.campionatiTastoRicercaId.Text = "ricerca campionato";
             this.campionatiTastoRicercaId.UseVisualStyleBackColor = true;
             this.campionatiTastoRicercaId.Click += new System.EventHandler(this.campionatiTastoRicercaId_Click);
             // 
@@ -2111,19 +2141,19 @@ namespace F1DBMS
             // 
             this.campionatiRicercaIdCampionato.AccessibleDescription = "Nome";
             this.campionatiRicercaIdCampionato.AccessibleName = "Nome";
-            this.campionatiRicercaIdCampionato.Location = new System.Drawing.Point(106, 170);
+            this.campionatiRicercaIdCampionato.Location = new System.Drawing.Point(106, 167);
             this.campionatiRicercaIdCampionato.Name = "campionatiRicercaIdCampionato";
-            this.campionatiRicercaIdCampionato.Size = new System.Drawing.Size(244, 20);
+            this.campionatiRicercaIdCampionato.Size = new System.Drawing.Size(240, 20);
             this.campionatiRicercaIdCampionato.TabIndex = 17;
             // 
             // campionatiTastoRicercaAnno
             // 
-            this.campionatiTastoRicercaAnno.Location = new System.Drawing.Point(106, 270);
+            this.campionatiTastoRicercaAnno.Location = new System.Drawing.Point(106, 265);
             this.campionatiTastoRicercaAnno.Margin = new System.Windows.Forms.Padding(2);
             this.campionatiTastoRicercaAnno.Name = "campionatiTastoRicercaAnno";
-            this.campionatiTastoRicercaAnno.Size = new System.Drawing.Size(243, 32);
+            this.campionatiTastoRicercaAnno.Size = new System.Drawing.Size(152, 23);
             this.campionatiTastoRicercaAnno.TabIndex = 16;
-            this.campionatiTastoRicercaAnno.Text = "ricerca campionati";
+            this.campionatiTastoRicercaAnno.Text = "ricerca campionato";
             this.campionatiTastoRicercaAnno.UseVisualStyleBackColor = true;
             this.campionatiTastoRicercaAnno.Click += new System.EventHandler(this.campionatiTastoRicercaAnno_Click);
             // 
@@ -2131,19 +2161,19 @@ namespace F1DBMS
             // 
             this.campionatiRicercaAnno.AccessibleDescription = "Nome";
             this.campionatiRicercaAnno.AccessibleName = "Nome";
-            this.campionatiRicercaAnno.Location = new System.Drawing.Point(106, 248);
+            this.campionatiRicercaAnno.Location = new System.Drawing.Point(106, 240);
             this.campionatiRicercaAnno.Name = "campionatiRicercaAnno";
-            this.campionatiRicercaAnno.Size = new System.Drawing.Size(244, 20);
+            this.campionatiRicercaAnno.Size = new System.Drawing.Size(240, 20);
             this.campionatiRicercaAnno.TabIndex = 15;
             // 
             // campionatiRegistra
             // 
-            this.campionatiRegistra.Location = new System.Drawing.Point(106, 123);
+            this.campionatiRegistra.Location = new System.Drawing.Point(106, 119);
             this.campionatiRegistra.Margin = new System.Windows.Forms.Padding(2);
             this.campionatiRegistra.Name = "campionatiRegistra";
-            this.campionatiRegistra.Size = new System.Drawing.Size(243, 32);
+            this.campionatiRegistra.Size = new System.Drawing.Size(152, 23);
             this.campionatiRegistra.TabIndex = 14;
-            this.campionatiRegistra.Text = "registra campionati";
+            this.campionatiRegistra.Text = "registra campionato";
             this.campionatiRegistra.UseVisualStyleBackColor = true;
             this.campionatiRegistra.Click += new System.EventHandler(this.campionatiRegistra_Click);
             // 
@@ -2154,7 +2184,7 @@ namespace F1DBMS
             this.campionatiAnno.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.campionatiAnno.Location = new System.Drawing.Point(106, 47);
             this.campionatiAnno.Name = "campionatiAnno";
-            this.campionatiAnno.Size = new System.Drawing.Size(244, 20);
+            this.campionatiAnno.Size = new System.Drawing.Size(240, 20);
             this.campionatiAnno.TabIndex = 9;
             // 
             // campionatiNome
@@ -2163,7 +2193,7 @@ namespace F1DBMS
             this.campionatiNome.AccessibleName = "Nome";
             this.campionatiNome.Location = new System.Drawing.Point(106, 70);
             this.campionatiNome.Name = "campionatiNome";
-            this.campionatiNome.Size = new System.Drawing.Size(244, 20);
+            this.campionatiNome.Size = new System.Drawing.Size(240, 20);
             this.campionatiNome.TabIndex = 8;
             // 
             // campionatiDescrizione
@@ -2172,7 +2202,7 @@ namespace F1DBMS
             this.campionatiDescrizione.AccessibleName = "Nome";
             this.campionatiDescrizione.Location = new System.Drawing.Point(106, 94);
             this.campionatiDescrizione.Name = "campionatiDescrizione";
-            this.campionatiDescrizione.Size = new System.Drawing.Size(244, 20);
+            this.campionatiDescrizione.Size = new System.Drawing.Size(240, 20);
             this.campionatiDescrizione.TabIndex = 10;
             // 
             // Sponsor
@@ -3389,6 +3419,9 @@ namespace F1DBMS
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label51;
     }
 }
 

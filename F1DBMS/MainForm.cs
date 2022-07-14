@@ -342,27 +342,34 @@ namespace F1DBMS
         }
         private void registraCircuito_Click(object sender, EventArgs e)
         {
-            var newCircuiti = new circuiti();
-            newCircuiti.IDCircuito = idCircuitoCircuito.Text;
-            newCircuiti.nome = nomeCircuito.Text;
-            newCircuiti.stato = statoCircuito.Text;
-            newCircuiti.descrizione = descrizioneCircuito.Text;
-            newCircuiti.lunghezza = Convert.ToInt32(lunghezzaCircuito);
-            newCircuiti.tipologia = tipologiaCircuito.Text;
-            newCircuiti.numeroCurve = Convert.ToInt32(numDiCurveCircuito);
-
             try
             {
+                var newCircuiti = new circuiti();
+                newCircuiti.IDCircuito = idCircuitoCircuito.Text ?? throw new Exception();
+                newCircuiti.nome = nomeCircuito.Text ?? throw new Exception();
+                newCircuiti.stato = statoCircuito.Text ?? throw new Exception();
+                newCircuiti.descrizione = descrizioneCircuito.Text ?? throw new Exception();
+                newCircuiti.lunghezza = Convert.ToInt32(lunghezzaCircuito.Text);
+                newCircuiti.tipologia = tipologiaCircuito.Text ?? throw new Exception();
+                newCircuiti.numeroCurve = Convert.ToInt32(numDiCurveCircuito.Text);
+
                 db.circuitis.InsertOnSubmit(newCircuiti);
                 db.SubmitChanges();
-                MessageBox.Show("Team registrato con successo!");
+                MessageBox.Show("Circuito registrato con successo!");
                 var res = from t in db.circuitis
                           select new { t.IDCircuito, t.nome, t.stato, t.descrizione, t.lunghezza, t.tipologia, t.numeroCurve };
                 grigliaCircuito.DataSource = res;
+                idCircuitoCircuito.Clear();
+                nomeCircuito.Clear();
+                statoCircuito.Clear();
+                descrizioneCircuito.Clear();
+                lunghezzaCircuito.Clear();
+                tipologiaCircuito.Clear();
+                numDiCurveCircuito.Clear();
             }
-            catch (Exception)
+            catch (Exception) 
             {
-                MessageBox.Show("Ricontrolla i campi!!!");
+                MessageBox.Show("Ricontrolla i Dati!!!");
             }
         }
 
@@ -384,25 +391,9 @@ namespace F1DBMS
 
         private void gararegistra_Click(object sender, EventArgs e)
         {
-            var newGare = new gare();
-            newGare.IDCircuito = garaIdCircuito.Text;
-            newGare.IDCampionato = garaIdCampionato.Text;
-            newGare.data = garaData.Value.Date;
-            newGare.giri = Convert.ToInt32(garaGiri);
-
-            try
-            {
-                db.gares.InsertOnSubmit(newGare);
-                db.SubmitChanges();
-                MessageBox.Show("Team registrato con successo!");
-                var res = from t in db.gares
-                          select new { t.IDCircuito, t.IDCampionato, t.data, t.giri };
-                garaGriglia.DataSource = res;
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ricontrolla i campi!!!");
-            }
+            new FormInserimentoGara(db).Show();
+            garaGriglia.DataSource = from g in db.gares
+                                     select g;
         }
 
         private void garaTastoRicercaData_Click(object sender, EventArgs e)
@@ -442,6 +433,10 @@ namespace F1DBMS
 
             try
             {
+                if(newContratti.IDSponsor.Equals(String.Empty) || newContratti.IDTeam.Equals(String.Empty) || newContratti.budget == 0 || newContratti.dataInizio == null)
+                {
+                    throw new Exception();
+                }
                 db.contrattis.InsertOnSubmit(newContratti);
                 db.SubmitChanges();
                 MessageBox.Show("Team registrato con successo!");
@@ -522,14 +517,13 @@ namespace F1DBMS
 
         private void campionatiRegistra_Click(object sender, EventArgs e)
         {
-            var newCampionati = new campionati();
-            newCampionati.IDCampionato = campionatoIdCampionato.Text;
-            newCampionati.anno = Convert.ToInt32(campionatiAnno);
-            newCampionati.nome = campionatiNome.Text;
-            newCampionati.descrizione = campionatiDescrizione.Text;
-
             try
             {
+                var newCampionati = new campionati();
+                newCampionati.IDCampionato = campionatoIdCampionato.Text ?? throw new Exception();
+                newCampionati.anno = Convert.ToInt32(campionatiAnno.Text);
+                newCampionati.nome = campionatiNome.Text ?? throw new Exception();
+                newCampionati.descrizione = campionatiDescrizione.Text ?? throw new Exception();
                 db.campionatis.InsertOnSubmit(newCampionati);
                 db.SubmitChanges();
                 MessageBox.Show("Team registrato con successo!");
