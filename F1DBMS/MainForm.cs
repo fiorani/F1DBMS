@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace F1DBMS
@@ -84,26 +79,23 @@ namespace F1DBMS
 
         private void showTeams_Click(object sender, EventArgs e)
         {
-            var res = from t in db.teams
-                      select new { t.IDTeam, t.nome, t.sedeCentrale, t.dataEsordio, t.recapiti_teams, t.mail_teams, t.gareVinte, t.campionatiVinti };
-            gridTeam.DataSource = res;
+            gridTeam.DataSource = from t in db.teams
+                                  select new { t.IDTeam, t.nome, t.sedeCentrale, t.dataEsordio, t.recapiti_teams, t.mail_teams, t.gareVinte, t.campionatiVinti };
         }
 
         private void BottoneRicercaPerID_Click(object sender, EventArgs e)
         {
-            var res = from t in db.teams
-                      where t.IDTeam.Equals(RicercaTeamPerID.Text)
-                      select t;
-            gridTeam.DataSource = res;
+            gridTeam.DataSource = from t in db.teams
+                                  where t.IDTeam.Equals(RicercaTeamPerID.Text)
+                                  select t; 
             RicercaTeamPerID.Clear();
         }
 
         private void RicercaTeamPerNomeBtn_Click(object sender, EventArgs e)
         {
-            var res = from t in db.teams
-                      where t.nome.Equals(RicercaTeamPerNomeBox.Text)
-                      select t;
-            gridTeam.DataSource = res;
+            gridTeam.DataSource = from t in db.teams
+                                  where t.nome.Equals(RicercaTeamPerNomeBox.Text)
+                                  select t; 
             RicercaTeamPerNomeBox.Clear();
         }
 
@@ -176,22 +168,19 @@ namespace F1DBMS
 
         private void MostraDipendenti_Click(object sender, EventArgs e)
         {
-            var res = from d in db.dipendentis
-                      select d;
-            gridDipendenti.DataSource = res;
+            gridDipendenti.DataSource = from d in db.dipendentis
+                                        select d;
         }
 
         private void RicercaDipCFBtn_Click(object sender, EventArgs e)
         {
-            var res = db.dipendentis.Where(d => d.CF.Equals(BoxRicercaDipendenteCF.Text));
-            gridDipendenti.DataSource = res;
+            gridDipendenti.DataSource = db.dipendentis.Where(d => d.CF.Equals(BoxRicercaDipendenteCF.Text));
 
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            var res = db.dipendentis.Where(d => d.nome.Equals(RicercaDipNomeBox.Text) && d.cognome.Equals(RicercaDipCognomeBox.Text));
-            gridDipendenti.DataSource = res;
+            gridDipendenti.DataSource = db.dipendentis.Where(d => d.nome.Equals(RicercaDipNomeBox.Text) && d.cognome.Equals(RicercaDipCognomeBox.Text));
         }
 
         private void EliminaDipBtn_Click(object sender, EventArgs e)
@@ -230,10 +219,9 @@ namespace F1DBMS
 
         private void MostraIncBtn_Click(object sender, EventArgs e)
         {
-            var incarichiDip = from inc in db.incarichi_dipendentis
-                      where inc.CF.Equals(CFCercaIncDipBox.Text)
-                      select inc;
-            gridDipendenti.DataSource = incarichiDip;
+            gridDipendenti.DataSource = from inc in db.incarichi_dipendentis
+                                        where inc.CF.Equals(CFCercaIncDipBox.Text)
+                                        select inc;
         }
 
         private void regPilotaBtn_Click(object sender, EventArgs e)
@@ -283,9 +271,8 @@ namespace F1DBMS
 
         private void MostraPilotiBtn_Click(object sender, EventArgs e)
         {
-            var res = from p in db.pilotis
-                      select p;
-            gridPiloti.DataSource = res;
+            gridPiloti.DataSource = from p in db.pilotis
+                                    select p;
         }
 
         private void ricercaPilCFBtn_Click(object sender, EventArgs e)
@@ -375,18 +362,16 @@ namespace F1DBMS
 
         private void tastoRicercaNomeCircuito_Click(object sender, EventArgs e)
         {
-            var res = from t in db.circuitis
-                      where t.nome.Equals(ricercaNomeCircuito.Text)
-                      select t;
-            grigliaCircuito.DataSource = res;
+            grigliaCircuito.DataSource = from t in db.circuitis
+                                         where t.nome.Equals(ricercaNomeCircuito.Text)
+                                         select t;
         }
 
         private void tastoRicercaStatoCircuito_Click(object sender, EventArgs e)
         {
-            var res = from t in db.circuitis
-                      where t.nome.Equals(ricercaStatoCircuito.Text)
-                      select t;
-            grigliaCircuito.DataSource = res;
+            grigliaCircuito.DataSource = from t in db.circuitis
+                                         where t.nome.Equals(ricercaStatoCircuito.Text)
+                                         select t;
         }
 
         private void gararegistra_Click(object sender, EventArgs e)
@@ -398,29 +383,23 @@ namespace F1DBMS
 
         private void garaTastoRicercaData_Click(object sender, EventArgs e)
         {
-
-            var res = from t in db.gares
-                      where t.data.Equals(garaRicercaData.Text)
-                      select t;
-            garaGriglia.DataSource = res;
+            garaGriglia.DataSource = from t in db.gares 
+                                     where t.data.Equals(dataGara.Value.Date)
+                                     select t;          
         }
 
         private void garaTastoRicercaIdCampionato_Click(object sender, EventArgs e)
         {
-
-            var res = from t in db.gares
-                      where t.IDCampionato.Equals(garaRicercaIdCampionato.Text)
-                      select t;
-            garaGriglia.DataSource = res;
+            garaGriglia.DataSource = from t in db.gares
+                                     where t.IDCampionato.Equals(garaRicercaIdCampionato.Text)
+                                     select t;
         }
 
         private void garaTastoRicercaIdCircuito_Click(object sender, EventArgs e)
         {
-
-            var res = from t in db.gares
-                      where t.IDCircuito.Equals(garaRicercaIdCircuito.Text)
-                      select t;
-            garaGriglia.DataSource = res;
+            garaGriglia.DataSource = from t in db.gares
+                                     where t.IDCircuito.Equals(garaRicercaIdCircuito.Text)
+                                     select t;
         }
 
         private void contrattiRegistra_Click(object sender, EventArgs e)
@@ -440,9 +419,8 @@ namespace F1DBMS
                 db.contrattis.InsertOnSubmit(newContratti);
                 db.SubmitChanges();
                 MessageBox.Show("Team registrato con successo!");
-                var res = from t in db.contrattis
-                          select new { t.IDSponsor, t.IDTeam, t.budget, t.dataInizio };
-                contrattiGriglia.DataSource = res;
+                contrattiGriglia.DataSource = from t in db.contrattis
+                                              select new { t.IDSponsor, t.IDTeam, t.budget, t.dataInizio };
             }
             catch (Exception)
             {
@@ -452,20 +430,16 @@ namespace F1DBMS
 
         private void contrattiTastoRicercaIdTeam_Click(object sender, EventArgs e)
         {
-
-            var res = from t in db.contrattis
-                      where t.IDTeam.Equals(contrattiRicercaIdTeam.Text)
-                      select t;
-            contrattiGriglia.DataSource = res;
+            contrattiGriglia.DataSource = from t in db.contrattis
+                                          where t.IDTeam.Equals(contrattiRicercaIdTeam.Text)
+                                          select t;
         }
 
         private void contrattiTastoRicercaIdSponsor_Click(object sender, EventArgs e)
         {
-
-            var res = from t in db.contrattis
-                      where t.IDSponsor.Equals(contrattiRicercaIdSponsor.Text)
-                      select t;
-            contrattiGriglia.DataSource = res;
+            contrattiGriglia.DataSource = from t in db.contrattis
+                                          where t.IDSponsor.Equals(contrattiRicercaIdSponsor.Text)
+                                          select t;
         }
 
         private void sponsorRegistra_Click(object sender, EventArgs e)
@@ -487,9 +461,8 @@ namespace F1DBMS
                 db.sponsors.InsertOnSubmit(newSponsor);
                 db.SubmitChanges();
                 MessageBox.Show("Team registrato con successo!");
-                var res = from t in db.sponsors
-                          select new { t.IDSponsor, t.Nome, t.Stato, t.recapiti_sponsors, t.mail_sponsors };
-                sponsorGriglia.DataSource = res;
+                sponsorGriglia.DataSource = from t in db.sponsors
+                                            select new { t.IDSponsor, t.Nome, t.Stato, t.recapiti_sponsors, t.mail_sponsors };
             }
             catch (Exception)
             {
@@ -499,20 +472,16 @@ namespace F1DBMS
 
         private void sponsorTastoRicercaIdSponsor_Click(object sender, EventArgs e)
         {
-
-            var res = from t in db.sponsors
-                      where t.IDSponsor.Equals(sponsorRicercaIdSponsor.Text)
-                      select t;
-            sponsorGriglia.DataSource = res;
+            sponsorGriglia.DataSource = from t in db.sponsors
+                                        where t.IDSponsor.Equals(sponsorRicercaIdSponsor.Text)
+                                        select t;
         }
 
         private void sponsorTastoRicercaNome_Click(object sender, EventArgs e)
         {
-
-            var res = from t in db.sponsors
-                      where t.Nome.Equals(sponsorRicercaNome.Text)
-                      select t;
-            sponsorGriglia.DataSource = res;
+            sponsorGriglia.DataSource = from t in db.sponsors
+                                        where t.Nome.Equals(sponsorRicercaNome.Text)
+                                        select t;
         }
 
         private void campionatiRegistra_Click(object sender, EventArgs e)
@@ -527,9 +496,8 @@ namespace F1DBMS
                 db.campionatis.InsertOnSubmit(newCampionati);
                 db.SubmitChanges();
                 MessageBox.Show("Team registrato con successo!");
-                var res = from t in db.campionatis
-                          select new { t.IDCampionato, t.anno, t.nome, t.descrizione };
-                campionatiGriglia.DataSource = res;
+                campionatiGriglia.DataSource = from t in db.campionatis
+                                               select new { t.IDCampionato, t.anno, t.nome, t.descrizione };
             }
             catch (Exception)
             {
@@ -539,19 +507,16 @@ namespace F1DBMS
 
         private void campionatiTastoRicercaId_Click(object sender, EventArgs e)
         {
-
-            var res = from t in db.campionatis
-                      where t.IDCampionato.Equals(campionatiRicercaIdCampionato.Text)
-                      select t;
-            campionatiGriglia.DataSource = res;
+            campionatiGriglia.DataSource = from t in db.campionatis
+                                           where t.IDCampionato.Equals(campionatiRicercaIdCampionato.Text)
+                                           select t;
         }
 
         private void campionatiTastoRicercaAnno_Click(object sender, EventArgs e)
         {
-            var res = from t in db.campionatis
-                      where t.anno.Equals(campionatiRicercaAnno.Text)
-                      select t;
-            campionatiGriglia.DataSource = res;
+            campionatiGriglia.DataSource = from t in db.campionatis
+                                           where t.anno.Equals(campionatiRicercaAnno.Text)
+                                           select t;
         }
 
         private void componentiRegistra_Click(object sender, EventArgs e)
@@ -566,9 +531,8 @@ namespace F1DBMS
                 db.componentis.InsertOnSubmit(newComponenti);
                 db.SubmitChanges();
                 MessageBox.Show("Team registrato con successo!");
-                var res = from t in db.componentis
-                          select new { t.IDComponente, t.Descrizione, t.PrezzoUnitario };
-                componentiGriglia.DataSource = res;
+                componentiGriglia.DataSource = from t in db.componentis
+                                               select new { t.IDComponente, t.Descrizione, t.PrezzoUnitario };
             }
             catch (Exception)
             {
@@ -578,11 +542,9 @@ namespace F1DBMS
 
         private void componenteRicercaIdVettura_Click(object sender, EventArgs e)
         {
-
-            var res = from t in db.componentis
-                      where t.IDComponente.Equals(componenteRicercaIdComponente.Text)
-                      select t;
-            componentiGriglia.DataSource = res;
+            componentiGriglia.DataSource = from t in db.componentis
+                                           where t.IDComponente.Equals(componenteRicercaIdComponente.Text)
+                                           select t;
         }
 
         private void vettureRegistra_Click(object sender, EventArgs e)
@@ -592,39 +554,30 @@ namespace F1DBMS
 
         private void vettureTastoRicercaIdVettura_Click(object sender, EventArgs e)
         {
-
-            var res = from t in db.vettures
-                      where t.IDVettura.Equals(vetturericercaIdVettura.Text)
-                      select t;
-            vettureGriglia.DataSource = res;
+            vettureGriglia.DataSource = from t in db.vettures
+                                        where t.IDVettura.Equals(vetturericercaIdVettura.Text)
+                                        select t;
         }
 
         private void vettureTastoRicercaIdTeam_Click(object sender, EventArgs e)
         {
-
-            var res = from t in db.vettures
-                      where t.IDTeam.Equals(vettureRicercaIdteam.Text)
-                      select t;
-            vettureGriglia.DataSource = res;
+            vettureGriglia.DataSource = from t in db.vettures
+                                        where t.IDTeam.Equals(vettureRicercaIdteam.Text)
+                                        select t;
         }
 
         private void vetturaTastoRicercaAnno_Click(object sender, EventArgs e)
         {
-
-            var res = from t in db.vettures
-                      where t.annoProduzione.Equals(vettureRicercaAnno.Text)
-                      select t;
-            vettureGriglia.DataSource = res;
+            vettureGriglia.DataSource = from t in db.vettures
+                                        where t.annoProduzione.Equals(vettureRicercaAnno.Text)
+                                        select t;
         }
 
         private void vettureTastoRicercaNome_Click(object sender, EventArgs e)
         {
-
-            var res = from t in db.vettures
-                      where t.nome.Equals(VettureRicercaNome.Text)
-                      select t;
-            vettureGriglia.DataSource = res;
+            vettureGriglia.DataSource = from t in db.vettures
+                                        where t.nome.Equals(VettureRicercaNome.Text)
+                                        select t;
         }
-
     }
 }

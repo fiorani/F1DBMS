@@ -225,6 +225,7 @@ namespace F1DBMS
             this.Contratti = new System.Windows.Forms.TabPage();
             this.contrattiGriglia = new System.Windows.Forms.DataGridView();
             this.contrattipanel = new System.Windows.Forms.Panel();
+            this.label56 = new System.Windows.Forms.Label();
             this.contrattiData = new System.Windows.Forms.DateTimePicker();
             this.contrattilabelidsponsor = new System.Windows.Forms.Label();
             this.contrattilabelidteam = new System.Windows.Forms.Label();
@@ -243,24 +244,19 @@ namespace F1DBMS
             this.Gare = new System.Windows.Forms.TabPage();
             this.garaGriglia = new System.Windows.Forms.DataGridView();
             this.garepanel = new System.Windows.Forms.Panel();
-            this.garalabeldata = new System.Windows.Forms.Label();
-            this.garaData = new System.Windows.Forms.DateTimePicker();
+            this.dataGara = new System.Windows.Forms.DateTimePicker();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
             this.garalabelidcircuito2 = new System.Windows.Forms.Label();
             this.garalabelidcampionato = new System.Windows.Forms.Label();
             this.garalabeldata2 = new System.Windows.Forms.Label();
-            this.garalabelidcamionato = new System.Windows.Forms.Label();
-            this.garalabelidcircuito = new System.Windows.Forms.Label();
-            this.garalabelgiri = new System.Windows.Forms.Label();
             this.garaTastoRicercaIdCircuito = new System.Windows.Forms.Button();
             this.garaRicercaIdCircuito = new System.Windows.Forms.TextBox();
             this.garaTastoRicercaData = new System.Windows.Forms.Button();
-            this.garaRicercaData = new System.Windows.Forms.TextBox();
             this.garaTastoRicercaIdCampionato = new System.Windows.Forms.Button();
             this.garaRicercaIdCampionato = new System.Windows.Forms.TextBox();
             this.gararegistra = new System.Windows.Forms.Button();
-            this.garaGiri = new System.Windows.Forms.TextBox();
-            this.garaIdCampionato = new System.Windows.Forms.TextBox();
-            this.garaIdCircuito = new System.Windows.Forms.TextBox();
             this.Circuiti = new System.Windows.Forms.TabPage();
             this.grigliaCircuito = new System.Windows.Forms.DataGridView();
             this.panelcircuito = new System.Windows.Forms.Panel();
@@ -286,6 +282,11 @@ namespace F1DBMS
             this.descrizioneCircuito = new System.Windows.Forms.TextBox();
             this.tipologiaCircuito = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
             this.Team.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridTeam)).BeginInit();
@@ -1569,7 +1570,7 @@ namespace F1DBMS
             // 
             // RevocaIncaricoPilBtn
             // 
-            this.RevocaIncaricoPilBtn.Location = new System.Drawing.Point(99, 135);
+            this.RevocaIncaricoPilBtn.Location = new System.Drawing.Point(110, 135);
             this.RevocaIncaricoPilBtn.Margin = new System.Windows.Forms.Padding(2);
             this.RevocaIncaricoPilBtn.Name = "RevocaIncaricoPilBtn";
             this.RevocaIncaricoPilBtn.Size = new System.Drawing.Size(152, 23);
@@ -1588,7 +1589,7 @@ namespace F1DBMS
             // 
             // IncarichiPilBtn
             // 
-            this.IncarichiPilBtn.Location = new System.Drawing.Point(99, 81);
+            this.IncarichiPilBtn.Location = new System.Drawing.Point(110, 81);
             this.IncarichiPilBtn.Name = "IncarichiPilBtn";
             this.IncarichiPilBtn.Size = new System.Drawing.Size(152, 23);
             this.IncarichiPilBtn.TabIndex = 8;
@@ -1606,7 +1607,7 @@ namespace F1DBMS
             // 
             // InserisciIncaricoPilBtn
             // 
-            this.InserisciIncaricoPilBtn.Location = new System.Drawing.Point(99, 27);
+            this.InserisciIncaricoPilBtn.Location = new System.Drawing.Point(110, 27);
             this.InserisciIncaricoPilBtn.Name = "InserisciIncaricoPilBtn";
             this.InserisciIncaricoPilBtn.Size = new System.Drawing.Size(152, 23);
             this.InserisciIncaricoPilBtn.TabIndex = 2;
@@ -2229,6 +2230,8 @@ namespace F1DBMS
             // 
             // sponsorpanel
             // 
+            this.sponsorpanel.Controls.Add(this.label59);
+            this.sponsorpanel.Controls.Add(this.label58);
             this.sponsorpanel.Controls.Add(this.IdSponsor);
             this.sponsorpanel.Controls.Add(this.sponsorIdSponsor);
             this.sponsorpanel.Controls.Add(this.sponsorlabelstato);
@@ -2255,7 +2258,7 @@ namespace F1DBMS
             // IdSponsor
             // 
             this.IdSponsor.AutoSize = true;
-            this.IdSponsor.Location = new System.Drawing.Point(35, 33);
+            this.IdSponsor.Location = new System.Drawing.Point(34, 33);
             this.IdSponsor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.IdSponsor.Name = "IdSponsor";
             this.IdSponsor.Size = new System.Drawing.Size(55, 13);
@@ -2267,15 +2270,15 @@ namespace F1DBMS
             this.sponsorIdSponsor.AccessibleDescription = "Nome";
             this.sponsorIdSponsor.AccessibleName = "nome";
             this.sponsorIdSponsor.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.sponsorIdSponsor.Location = new System.Drawing.Point(117, 30);
+            this.sponsorIdSponsor.Location = new System.Drawing.Point(94, 30);
             this.sponsorIdSponsor.Name = "sponsorIdSponsor";
-            this.sponsorIdSponsor.Size = new System.Drawing.Size(233, 20);
+            this.sponsorIdSponsor.Size = new System.Drawing.Size(240, 20);
             this.sponsorIdSponsor.TabIndex = 26;
             // 
             // sponsorlabelstato
             // 
             this.sponsorlabelstato.AutoSize = true;
-            this.sponsorlabelstato.Location = new System.Drawing.Point(35, 81);
+            this.sponsorlabelstato.Location = new System.Drawing.Point(57, 77);
             this.sponsorlabelstato.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.sponsorlabelstato.Name = "sponsorlabelstato";
             this.sponsorlabelstato.Size = new System.Drawing.Size(32, 13);
@@ -2285,7 +2288,7 @@ namespace F1DBMS
             // sponsorlabeltelefono
             // 
             this.sponsorlabeltelefono.AutoSize = true;
-            this.sponsorlabeltelefono.Location = new System.Drawing.Point(35, 102);
+            this.sponsorlabeltelefono.Location = new System.Drawing.Point(44, 103);
             this.sponsorlabeltelefono.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.sponsorlabeltelefono.Name = "sponsorlabeltelefono";
             this.sponsorlabeltelefono.Size = new System.Drawing.Size(45, 13);
@@ -2295,7 +2298,7 @@ namespace F1DBMS
             // sponsorlabelmail
             // 
             this.sponsorlabelmail.AutoSize = true;
-            this.sponsorlabelmail.Location = new System.Drawing.Point(35, 128);
+            this.sponsorlabelmail.Location = new System.Drawing.Point(63, 127);
             this.sponsorlabelmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.sponsorlabelmail.Name = "sponsorlabelmail";
             this.sponsorlabelmail.Size = new System.Drawing.Size(26, 13);
@@ -2305,7 +2308,7 @@ namespace F1DBMS
             // sponsorlabelidsponsor
             // 
             this.sponsorlabelidsponsor.AutoSize = true;
-            this.sponsorlabelidsponsor.Location = new System.Drawing.Point(35, 211);
+            this.sponsorlabelidsponsor.Location = new System.Drawing.Point(35, 200);
             this.sponsorlabelidsponsor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.sponsorlabelidsponsor.Name = "sponsorlabelidsponsor";
             this.sponsorlabelidsponsor.Size = new System.Drawing.Size(55, 13);
@@ -2315,7 +2318,7 @@ namespace F1DBMS
             // sponsorlabelnome2
             // 
             this.sponsorlabelnome2.AutoSize = true;
-            this.sponsorlabelnome2.Location = new System.Drawing.Point(35, 289);
+            this.sponsorlabelnome2.Location = new System.Drawing.Point(54, 273);
             this.sponsorlabelnome2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.sponsorlabelnome2.Name = "sponsorlabelnome2";
             this.sponsorlabelnome2.Size = new System.Drawing.Size(35, 13);
@@ -2325,7 +2328,7 @@ namespace F1DBMS
             // sponsorlabelnome
             // 
             this.sponsorlabelnome.AutoSize = true;
-            this.sponsorlabelnome.Location = new System.Drawing.Point(35, 57);
+            this.sponsorlabelnome.Location = new System.Drawing.Point(54, 53);
             this.sponsorlabelnome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.sponsorlabelnome.Name = "sponsorlabelnome";
             this.sponsorlabelnome.Size = new System.Drawing.Size(35, 13);
@@ -2334,10 +2337,10 @@ namespace F1DBMS
             // 
             // sponsorTastoRicercaIdSponsor
             // 
-            this.sponsorTastoRicercaIdSponsor.Location = new System.Drawing.Point(117, 229);
+            this.sponsorTastoRicercaIdSponsor.Location = new System.Drawing.Point(94, 222);
             this.sponsorTastoRicercaIdSponsor.Margin = new System.Windows.Forms.Padding(2);
             this.sponsorTastoRicercaIdSponsor.Name = "sponsorTastoRicercaIdSponsor";
-            this.sponsorTastoRicercaIdSponsor.Size = new System.Drawing.Size(231, 32);
+            this.sponsorTastoRicercaIdSponsor.Size = new System.Drawing.Size(152, 23);
             this.sponsorTastoRicercaIdSponsor.TabIndex = 18;
             this.sponsorTastoRicercaIdSponsor.Text = "ricerca sponsor";
             this.sponsorTastoRicercaIdSponsor.UseVisualStyleBackColor = true;
@@ -2347,17 +2350,17 @@ namespace F1DBMS
             // 
             this.sponsorRicercaIdSponsor.AccessibleDescription = "Nome";
             this.sponsorRicercaIdSponsor.AccessibleName = "Nome";
-            this.sponsorRicercaIdSponsor.Location = new System.Drawing.Point(117, 207);
+            this.sponsorRicercaIdSponsor.Location = new System.Drawing.Point(94, 197);
             this.sponsorRicercaIdSponsor.Name = "sponsorRicercaIdSponsor";
-            this.sponsorRicercaIdSponsor.Size = new System.Drawing.Size(233, 20);
+            this.sponsorRicercaIdSponsor.Size = new System.Drawing.Size(240, 20);
             this.sponsorRicercaIdSponsor.TabIndex = 17;
             // 
             // sponsorTastoRicercaNome
             // 
-            this.sponsorTastoRicercaNome.Location = new System.Drawing.Point(117, 307);
+            this.sponsorTastoRicercaNome.Location = new System.Drawing.Point(94, 295);
             this.sponsorTastoRicercaNome.Margin = new System.Windows.Forms.Padding(2);
             this.sponsorTastoRicercaNome.Name = "sponsorTastoRicercaNome";
-            this.sponsorTastoRicercaNome.Size = new System.Drawing.Size(231, 32);
+            this.sponsorTastoRicercaNome.Size = new System.Drawing.Size(152, 23);
             this.sponsorTastoRicercaNome.TabIndex = 16;
             this.sponsorTastoRicercaNome.Text = "ricerca sponsor";
             this.sponsorTastoRicercaNome.UseVisualStyleBackColor = true;
@@ -2367,17 +2370,17 @@ namespace F1DBMS
             // 
             this.sponsorRicercaNome.AccessibleDescription = "Nome";
             this.sponsorRicercaNome.AccessibleName = "Nome";
-            this.sponsorRicercaNome.Location = new System.Drawing.Point(117, 285);
+            this.sponsorRicercaNome.Location = new System.Drawing.Point(94, 270);
             this.sponsorRicercaNome.Name = "sponsorRicercaNome";
-            this.sponsorRicercaNome.Size = new System.Drawing.Size(233, 20);
+            this.sponsorRicercaNome.Size = new System.Drawing.Size(240, 20);
             this.sponsorRicercaNome.TabIndex = 15;
             // 
             // sponsorRegistra
             // 
-            this.sponsorRegistra.Location = new System.Drawing.Point(117, 146);
+            this.sponsorRegistra.Location = new System.Drawing.Point(94, 149);
             this.sponsorRegistra.Margin = new System.Windows.Forms.Padding(2);
             this.sponsorRegistra.Name = "sponsorRegistra";
-            this.sponsorRegistra.Size = new System.Drawing.Size(231, 32);
+            this.sponsorRegistra.Size = new System.Drawing.Size(152, 23);
             this.sponsorRegistra.TabIndex = 14;
             this.sponsorRegistra.Text = "registra sponsor";
             this.sponsorRegistra.UseVisualStyleBackColor = true;
@@ -2388,36 +2391,36 @@ namespace F1DBMS
             this.sponsorNome.AccessibleDescription = "Nome";
             this.sponsorNome.AccessibleName = "nome";
             this.sponsorNome.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.sponsorNome.Location = new System.Drawing.Point(117, 53);
+            this.sponsorNome.Location = new System.Drawing.Point(94, 53);
             this.sponsorNome.Name = "sponsorNome";
-            this.sponsorNome.Size = new System.Drawing.Size(233, 20);
+            this.sponsorNome.Size = new System.Drawing.Size(240, 20);
             this.sponsorNome.TabIndex = 9;
             // 
             // sponsorStato
             // 
             this.sponsorStato.AccessibleDescription = "Nome";
             this.sponsorStato.AccessibleName = "Nome";
-            this.sponsorStato.Location = new System.Drawing.Point(117, 77);
+            this.sponsorStato.Location = new System.Drawing.Point(94, 77);
             this.sponsorStato.Name = "sponsorStato";
-            this.sponsorStato.Size = new System.Drawing.Size(233, 20);
+            this.sponsorStato.Size = new System.Drawing.Size(240, 20);
             this.sponsorStato.TabIndex = 8;
             // 
             // sponsorMail
             // 
             this.sponsorMail.AccessibleDescription = "Nome";
             this.sponsorMail.AccessibleName = "Nome";
-            this.sponsorMail.Location = new System.Drawing.Point(117, 124);
+            this.sponsorMail.Location = new System.Drawing.Point(94, 124);
             this.sponsorMail.Name = "sponsorMail";
-            this.sponsorMail.Size = new System.Drawing.Size(233, 20);
+            this.sponsorMail.Size = new System.Drawing.Size(240, 20);
             this.sponsorMail.TabIndex = 12;
             // 
             // sponsorTelefono
             // 
             this.sponsorTelefono.AccessibleDescription = "Nome";
             this.sponsorTelefono.AccessibleName = "Nome";
-            this.sponsorTelefono.Location = new System.Drawing.Point(117, 100);
+            this.sponsorTelefono.Location = new System.Drawing.Point(94, 98);
             this.sponsorTelefono.Name = "sponsorTelefono";
-            this.sponsorTelefono.Size = new System.Drawing.Size(233, 20);
+            this.sponsorTelefono.Size = new System.Drawing.Size(240, 20);
             this.sponsorTelefono.TabIndex = 10;
             // 
             // Contratti
@@ -2444,6 +2447,8 @@ namespace F1DBMS
             // 
             // contrattipanel
             // 
+            this.contrattipanel.Controls.Add(this.label57);
+            this.contrattipanel.Controls.Add(this.label56);
             this.contrattipanel.Controls.Add(this.contrattiData);
             this.contrattipanel.Controls.Add(this.contrattilabelidsponsor);
             this.contrattipanel.Controls.Add(this.contrattilabelidteam);
@@ -2465,17 +2470,25 @@ namespace F1DBMS
             this.contrattipanel.Size = new System.Drawing.Size(406, 972);
             this.contrattipanel.TabIndex = 9;
             // 
+            // label56
+            // 
+            this.label56.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label56.Location = new System.Drawing.Point(27, 148);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(315, 2);
+            this.label56.TabIndex = 30;
+            // 
             // contrattiData
             // 
             this.contrattiData.Location = new System.Drawing.Point(104, 88);
             this.contrattiData.Name = "contrattiData";
-            this.contrattiData.Size = new System.Drawing.Size(238, 20);
+            this.contrattiData.Size = new System.Drawing.Size(240, 20);
             this.contrattiData.TabIndex = 29;
             // 
             // contrattilabelidsponsor
             // 
             this.contrattilabelidsponsor.AutoSize = true;
-            this.contrattilabelidsponsor.Location = new System.Drawing.Point(39, 17);
+            this.contrattilabelidsponsor.Location = new System.Drawing.Point(46, 16);
             this.contrattilabelidsponsor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.contrattilabelidsponsor.Name = "contrattilabelidsponsor";
             this.contrattilabelidsponsor.Size = new System.Drawing.Size(55, 13);
@@ -2485,7 +2498,7 @@ namespace F1DBMS
             // contrattilabelidteam
             // 
             this.contrattilabelidteam.AutoSize = true;
-            this.contrattilabelidteam.Location = new System.Drawing.Point(39, 40);
+            this.contrattilabelidteam.Location = new System.Drawing.Point(56, 39);
             this.contrattilabelidteam.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.contrattilabelidteam.Name = "contrattilabelidteam";
             this.contrattilabelidteam.Size = new System.Drawing.Size(43, 13);
@@ -2495,7 +2508,7 @@ namespace F1DBMS
             // contrattilabelbudget
             // 
             this.contrattilabelbudget.AutoSize = true;
-            this.contrattilabelbudget.Location = new System.Drawing.Point(39, 60);
+            this.contrattilabelbudget.Location = new System.Drawing.Point(58, 63);
             this.contrattilabelbudget.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.contrattilabelbudget.Name = "contrattilabelbudget";
             this.contrattilabelbudget.Size = new System.Drawing.Size(41, 13);
@@ -2505,7 +2518,7 @@ namespace F1DBMS
             // contrattilabeldatainizio
             // 
             this.contrattilabeldatainizio.AutoSize = true;
-            this.contrattilabeldatainizio.Location = new System.Drawing.Point(39, 88);
+            this.contrattilabeldatainizio.Location = new System.Drawing.Point(44, 94);
             this.contrattilabeldatainizio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.contrattilabeldatainizio.Name = "contrattilabeldatainizio";
             this.contrattilabeldatainizio.Size = new System.Drawing.Size(57, 13);
@@ -2515,7 +2528,7 @@ namespace F1DBMS
             // contrattilabelidteam2
             // 
             this.contrattilabelidteam2.AutoSize = true;
-            this.contrattilabelidteam2.Location = new System.Drawing.Point(39, 166);
+            this.contrattilabelidteam2.Location = new System.Drawing.Point(56, 170);
             this.contrattilabelidteam2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.contrattilabelidteam2.Name = "contrattilabelidteam2";
             this.contrattilabelidteam2.Size = new System.Drawing.Size(43, 13);
@@ -2525,7 +2538,7 @@ namespace F1DBMS
             // contrattilabelidsponsor2
             // 
             this.contrattilabelidsponsor2.AutoSize = true;
-            this.contrattilabelidsponsor2.Location = new System.Drawing.Point(39, 248);
+            this.contrattilabelidsponsor2.Location = new System.Drawing.Point(46, 243);
             this.contrattilabelidsponsor2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.contrattilabelidsponsor2.Name = "contrattilabelidsponsor2";
             this.contrattilabelidsponsor2.Size = new System.Drawing.Size(55, 13);
@@ -2537,7 +2550,7 @@ namespace F1DBMS
             this.contrattiTastoRicercaIdTeam.Location = new System.Drawing.Point(104, 188);
             this.contrattiTastoRicercaIdTeam.Margin = new System.Windows.Forms.Padding(2);
             this.contrattiTastoRicercaIdTeam.Name = "contrattiTastoRicercaIdTeam";
-            this.contrattiTastoRicercaIdTeam.Size = new System.Drawing.Size(237, 32);
+            this.contrattiTastoRicercaIdTeam.Size = new System.Drawing.Size(152, 23);
             this.contrattiTastoRicercaIdTeam.TabIndex = 18;
             this.contrattiTastoRicercaIdTeam.Text = "ricerca contratti";
             this.contrattiTastoRicercaIdTeam.UseVisualStyleBackColor = true;
@@ -2547,17 +2560,17 @@ namespace F1DBMS
             // 
             this.contrattiRicercaIdTeam.AccessibleDescription = "Nome";
             this.contrattiRicercaIdTeam.AccessibleName = "Nome";
-            this.contrattiRicercaIdTeam.Location = new System.Drawing.Point(104, 166);
+            this.contrattiRicercaIdTeam.Location = new System.Drawing.Point(104, 163);
             this.contrattiRicercaIdTeam.Name = "contrattiRicercaIdTeam";
-            this.contrattiRicercaIdTeam.Size = new System.Drawing.Size(238, 20);
+            this.contrattiRicercaIdTeam.Size = new System.Drawing.Size(240, 20);
             this.contrattiRicercaIdTeam.TabIndex = 17;
             // 
             // contrattiTastoRicercaIdSponsor
             // 
-            this.contrattiTastoRicercaIdSponsor.Location = new System.Drawing.Point(104, 266);
+            this.contrattiTastoRicercaIdSponsor.Location = new System.Drawing.Point(104, 265);
             this.contrattiTastoRicercaIdSponsor.Margin = new System.Windows.Forms.Padding(2);
             this.contrattiTastoRicercaIdSponsor.Name = "contrattiTastoRicercaIdSponsor";
-            this.contrattiTastoRicercaIdSponsor.Size = new System.Drawing.Size(237, 32);
+            this.contrattiTastoRicercaIdSponsor.Size = new System.Drawing.Size(152, 23);
             this.contrattiTastoRicercaIdSponsor.TabIndex = 16;
             this.contrattiTastoRicercaIdSponsor.Text = "ricerca contratti";
             this.contrattiTastoRicercaIdSponsor.UseVisualStyleBackColor = true;
@@ -2567,9 +2580,9 @@ namespace F1DBMS
             // 
             this.contrattiRicercaIdSponsor.AccessibleDescription = "Nome";
             this.contrattiRicercaIdSponsor.AccessibleName = "Nome";
-            this.contrattiRicercaIdSponsor.Location = new System.Drawing.Point(104, 244);
+            this.contrattiRicercaIdSponsor.Location = new System.Drawing.Point(104, 240);
             this.contrattiRicercaIdSponsor.Name = "contrattiRicercaIdSponsor";
-            this.contrattiRicercaIdSponsor.Size = new System.Drawing.Size(238, 20);
+            this.contrattiRicercaIdSponsor.Size = new System.Drawing.Size(240, 20);
             this.contrattiRicercaIdSponsor.TabIndex = 15;
             // 
             // contrattiRegistra
@@ -2577,7 +2590,7 @@ namespace F1DBMS
             this.contrattiRegistra.Location = new System.Drawing.Point(104, 114);
             this.contrattiRegistra.Margin = new System.Windows.Forms.Padding(2);
             this.contrattiRegistra.Name = "contrattiRegistra";
-            this.contrattiRegistra.Size = new System.Drawing.Size(237, 32);
+            this.contrattiRegistra.Size = new System.Drawing.Size(152, 23);
             this.contrattiRegistra.TabIndex = 14;
             this.contrattiRegistra.Text = "registra contratti";
             this.contrattiRegistra.UseVisualStyleBackColor = true;
@@ -2590,7 +2603,7 @@ namespace F1DBMS
             this.contrattiIdSponsor.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.contrattiIdSponsor.Location = new System.Drawing.Point(104, 13);
             this.contrattiIdSponsor.Name = "contrattiIdSponsor";
-            this.contrattiIdSponsor.Size = new System.Drawing.Size(238, 20);
+            this.contrattiIdSponsor.Size = new System.Drawing.Size(240, 20);
             this.contrattiIdSponsor.TabIndex = 9;
             // 
             // contrattiIdTeam
@@ -2599,7 +2612,7 @@ namespace F1DBMS
             this.contrattiIdTeam.AccessibleName = "Nome";
             this.contrattiIdTeam.Location = new System.Drawing.Point(104, 36);
             this.contrattiIdTeam.Name = "contrattiIdTeam";
-            this.contrattiIdTeam.Size = new System.Drawing.Size(238, 20);
+            this.contrattiIdTeam.Size = new System.Drawing.Size(240, 20);
             this.contrattiIdTeam.TabIndex = 8;
             // 
             // contrattiBudget
@@ -2608,7 +2621,7 @@ namespace F1DBMS
             this.contrattiBudget.AccessibleName = "Nome";
             this.contrattiBudget.Location = new System.Drawing.Point(104, 60);
             this.contrattiBudget.Name = "contrattiBudget";
-            this.contrattiBudget.Size = new System.Drawing.Size(238, 20);
+            this.contrattiBudget.Size = new System.Drawing.Size(240, 20);
             this.contrattiBudget.TabIndex = 10;
             // 
             // Gare
@@ -2635,50 +2648,60 @@ namespace F1DBMS
             // 
             // garepanel
             // 
-            this.garepanel.Controls.Add(this.garalabeldata);
-            this.garepanel.Controls.Add(this.garaData);
+            this.garepanel.Controls.Add(this.dataGara);
+            this.garepanel.Controls.Add(this.label55);
+            this.garepanel.Controls.Add(this.label54);
+            this.garepanel.Controls.Add(this.label53);
             this.garepanel.Controls.Add(this.garalabelidcircuito2);
             this.garepanel.Controls.Add(this.garalabelidcampionato);
             this.garepanel.Controls.Add(this.garalabeldata2);
-            this.garepanel.Controls.Add(this.garalabelidcamionato);
-            this.garepanel.Controls.Add(this.garalabelidcircuito);
-            this.garepanel.Controls.Add(this.garalabelgiri);
             this.garepanel.Controls.Add(this.garaTastoRicercaIdCircuito);
             this.garepanel.Controls.Add(this.garaRicercaIdCircuito);
             this.garepanel.Controls.Add(this.garaTastoRicercaData);
-            this.garepanel.Controls.Add(this.garaRicercaData);
             this.garepanel.Controls.Add(this.garaTastoRicercaIdCampionato);
             this.garepanel.Controls.Add(this.garaRicercaIdCampionato);
             this.garepanel.Controls.Add(this.gararegistra);
-            this.garepanel.Controls.Add(this.garaGiri);
-            this.garepanel.Controls.Add(this.garaIdCampionato);
-            this.garepanel.Controls.Add(this.garaIdCircuito);
             this.garepanel.Location = new System.Drawing.Point(2, 2);
             this.garepanel.Margin = new System.Windows.Forms.Padding(2);
             this.garepanel.Name = "garepanel";
             this.garepanel.Size = new System.Drawing.Size(406, 972);
             this.garepanel.TabIndex = 7;
             // 
-            // garalabeldata
+            // dataGara
             // 
-            this.garalabeldata.AutoSize = true;
-            this.garalabeldata.Location = new System.Drawing.Point(29, 16);
-            this.garalabeldata.Name = "garalabeldata";
-            this.garalabeldata.Size = new System.Drawing.Size(30, 13);
-            this.garalabeldata.TabIndex = 29;
-            this.garalabeldata.Text = "Data";
+            this.dataGara.Location = new System.Drawing.Point(106, 87);
+            this.dataGara.Name = "dataGara";
+            this.dataGara.Size = new System.Drawing.Size(239, 20);
+            this.dataGara.TabIndex = 31;
             // 
-            // garaData
+            // label55
             // 
-            this.garaData.Location = new System.Drawing.Point(105, 13);
-            this.garaData.Name = "garaData";
-            this.garaData.Size = new System.Drawing.Size(241, 20);
-            this.garaData.TabIndex = 28;
+            this.label55.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label55.Location = new System.Drawing.Point(30, 219);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(315, 2);
+            this.label55.TabIndex = 30;
+            // 
+            // label54
+            // 
+            this.label54.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label54.Location = new System.Drawing.Point(30, 146);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(315, 2);
+            this.label54.TabIndex = 29;
+            // 
+            // label53
+            // 
+            this.label53.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label53.Location = new System.Drawing.Point(30, 73);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(315, 2);
+            this.label53.TabIndex = 28;
             // 
             // garalabelidcircuito2
             // 
             this.garalabelidcircuito2.AutoSize = true;
-            this.garalabelidcircuito2.Location = new System.Drawing.Point(29, 322);
+            this.garalabelidcircuito2.Location = new System.Drawing.Point(50, 236);
             this.garalabelidcircuito2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.garalabelidcircuito2.Name = "garalabelidcircuito2";
             this.garalabelidcircuito2.Size = new System.Drawing.Size(51, 13);
@@ -2688,7 +2711,7 @@ namespace F1DBMS
             // garalabelidcampionato
             // 
             this.garalabelidcampionato.AutoSize = true;
-            this.garalabelidcampionato.Location = new System.Drawing.Point(29, 248);
+            this.garalabelidcampionato.Location = new System.Drawing.Point(29, 163);
             this.garalabelidcampionato.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.garalabelidcampionato.Name = "garalabelidcampionato";
             this.garalabelidcampionato.Size = new System.Drawing.Size(72, 13);
@@ -2698,51 +2721,21 @@ namespace F1DBMS
             // garalabeldata2
             // 
             this.garalabeldata2.AutoSize = true;
-            this.garalabeldata2.Location = new System.Drawing.Point(29, 170);
+            this.garalabeldata2.Location = new System.Drawing.Point(70, 90);
             this.garalabeldata2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.garalabeldata2.Name = "garalabeldata2";
             this.garalabeldata2.Size = new System.Drawing.Size(30, 13);
             this.garalabeldata2.TabIndex = 25;
             this.garalabeldata2.Text = "Data";
             // 
-            // garalabelidcamionato
-            // 
-            this.garalabelidcamionato.AutoSize = true;
-            this.garalabelidcamionato.Location = new System.Drawing.Point(29, 88);
-            this.garalabelidcamionato.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.garalabelidcamionato.Name = "garalabelidcamionato";
-            this.garalabelidcamionato.Size = new System.Drawing.Size(72, 13);
-            this.garalabelidcamionato.TabIndex = 24;
-            this.garalabelidcamionato.Text = "IdCampionato";
-            // 
-            // garalabelidcircuito
-            // 
-            this.garalabelidcircuito.AutoSize = true;
-            this.garalabelidcircuito.Location = new System.Drawing.Point(29, 62);
-            this.garalabelidcircuito.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.garalabelidcircuito.Name = "garalabelidcircuito";
-            this.garalabelidcircuito.Size = new System.Drawing.Size(51, 13);
-            this.garalabelidcircuito.TabIndex = 23;
-            this.garalabelidcircuito.Text = "IdCircuito";
-            // 
-            // garalabelgiri
-            // 
-            this.garalabelgiri.AutoSize = true;
-            this.garalabelgiri.Location = new System.Drawing.Point(29, 40);
-            this.garalabelgiri.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.garalabelgiri.Name = "garalabelgiri";
-            this.garalabelgiri.Size = new System.Drawing.Size(22, 13);
-            this.garalabelgiri.TabIndex = 22;
-            this.garalabelgiri.Text = "Giri";
-            // 
             // garaTastoRicercaIdCircuito
             // 
-            this.garaTastoRicercaIdCircuito.Location = new System.Drawing.Point(105, 340);
+            this.garaTastoRicercaIdCircuito.Location = new System.Drawing.Point(105, 258);
             this.garaTastoRicercaIdCircuito.Margin = new System.Windows.Forms.Padding(2);
             this.garaTastoRicercaIdCircuito.Name = "garaTastoRicercaIdCircuito";
-            this.garaTastoRicercaIdCircuito.Size = new System.Drawing.Size(240, 32);
+            this.garaTastoRicercaIdCircuito.Size = new System.Drawing.Size(152, 23);
             this.garaTastoRicercaIdCircuito.TabIndex = 20;
-            this.garaTastoRicercaIdCircuito.Text = "registra gare";
+            this.garaTastoRicercaIdCircuito.Text = "Ricerca gare";
             this.garaTastoRicercaIdCircuito.UseVisualStyleBackColor = true;
             this.garaTastoRicercaIdCircuito.Click += new System.EventHandler(this.garaTastoRicercaIdCircuito_Click);
             // 
@@ -2750,39 +2743,30 @@ namespace F1DBMS
             // 
             this.garaRicercaIdCircuito.AccessibleDescription = "Nome";
             this.garaRicercaIdCircuito.AccessibleName = "Nome";
-            this.garaRicercaIdCircuito.Location = new System.Drawing.Point(105, 318);
+            this.garaRicercaIdCircuito.Location = new System.Drawing.Point(105, 233);
             this.garaRicercaIdCircuito.Name = "garaRicercaIdCircuito";
-            this.garaRicercaIdCircuito.Size = new System.Drawing.Size(241, 20);
+            this.garaRicercaIdCircuito.Size = new System.Drawing.Size(240, 20);
             this.garaRicercaIdCircuito.TabIndex = 19;
             // 
             // garaTastoRicercaData
             // 
-            this.garaTastoRicercaData.Location = new System.Drawing.Point(105, 188);
+            this.garaTastoRicercaData.Location = new System.Drawing.Point(105, 112);
             this.garaTastoRicercaData.Margin = new System.Windows.Forms.Padding(2);
             this.garaTastoRicercaData.Name = "garaTastoRicercaData";
-            this.garaTastoRicercaData.Size = new System.Drawing.Size(240, 32);
+            this.garaTastoRicercaData.Size = new System.Drawing.Size(152, 23);
             this.garaTastoRicercaData.TabIndex = 18;
-            this.garaTastoRicercaData.Text = "ricerca gare";
+            this.garaTastoRicercaData.Text = "Ricerca gara";
             this.garaTastoRicercaData.UseVisualStyleBackColor = true;
             this.garaTastoRicercaData.Click += new System.EventHandler(this.garaTastoRicercaData_Click);
             // 
-            // garaRicercaData
-            // 
-            this.garaRicercaData.AccessibleDescription = "Nome";
-            this.garaRicercaData.AccessibleName = "Nome";
-            this.garaRicercaData.Location = new System.Drawing.Point(105, 166);
-            this.garaRicercaData.Name = "garaRicercaData";
-            this.garaRicercaData.Size = new System.Drawing.Size(241, 20);
-            this.garaRicercaData.TabIndex = 17;
-            // 
             // garaTastoRicercaIdCampionato
             // 
-            this.garaTastoRicercaIdCampionato.Location = new System.Drawing.Point(105, 266);
+            this.garaTastoRicercaIdCampionato.Location = new System.Drawing.Point(105, 185);
             this.garaTastoRicercaIdCampionato.Margin = new System.Windows.Forms.Padding(2);
             this.garaTastoRicercaIdCampionato.Name = "garaTastoRicercaIdCampionato";
-            this.garaTastoRicercaIdCampionato.Size = new System.Drawing.Size(240, 32);
+            this.garaTastoRicercaIdCampionato.Size = new System.Drawing.Size(152, 23);
             this.garaTastoRicercaIdCampionato.TabIndex = 16;
-            this.garaTastoRicercaIdCampionato.Text = "ricerca gare";
+            this.garaTastoRicercaIdCampionato.Text = "Ricerca gare";
             this.garaTastoRicercaIdCampionato.UseVisualStyleBackColor = true;
             this.garaTastoRicercaIdCampionato.Click += new System.EventHandler(this.garaTastoRicercaIdCampionato_Click);
             // 
@@ -2790,48 +2774,21 @@ namespace F1DBMS
             // 
             this.garaRicercaIdCampionato.AccessibleDescription = "Nome";
             this.garaRicercaIdCampionato.AccessibleName = "Nome";
-            this.garaRicercaIdCampionato.Location = new System.Drawing.Point(105, 244);
+            this.garaRicercaIdCampionato.Location = new System.Drawing.Point(105, 160);
             this.garaRicercaIdCampionato.Name = "garaRicercaIdCampionato";
-            this.garaRicercaIdCampionato.Size = new System.Drawing.Size(241, 20);
+            this.garaRicercaIdCampionato.Size = new System.Drawing.Size(240, 20);
             this.garaRicercaIdCampionato.TabIndex = 15;
             // 
             // gararegistra
             // 
-            this.gararegistra.Location = new System.Drawing.Point(105, 106);
+            this.gararegistra.Location = new System.Drawing.Point(105, 39);
             this.gararegistra.Margin = new System.Windows.Forms.Padding(2);
             this.gararegistra.Name = "gararegistra";
-            this.gararegistra.Size = new System.Drawing.Size(240, 32);
+            this.gararegistra.Size = new System.Drawing.Size(152, 23);
             this.gararegistra.TabIndex = 14;
             this.gararegistra.Text = "registra gare";
             this.gararegistra.UseVisualStyleBackColor = true;
             this.gararegistra.Click += new System.EventHandler(this.gararegistra_Click);
-            // 
-            // garaGiri
-            // 
-            this.garaGiri.AccessibleDescription = "Nome";
-            this.garaGiri.AccessibleName = "Nome";
-            this.garaGiri.Location = new System.Drawing.Point(105, 36);
-            this.garaGiri.Name = "garaGiri";
-            this.garaGiri.Size = new System.Drawing.Size(241, 20);
-            this.garaGiri.TabIndex = 8;
-            // 
-            // garaIdCampionato
-            // 
-            this.garaIdCampionato.AccessibleDescription = "Nome";
-            this.garaIdCampionato.AccessibleName = "Nome";
-            this.garaIdCampionato.Location = new System.Drawing.Point(105, 84);
-            this.garaIdCampionato.Name = "garaIdCampionato";
-            this.garaIdCampionato.Size = new System.Drawing.Size(241, 20);
-            this.garaIdCampionato.TabIndex = 12;
-            // 
-            // garaIdCircuito
-            // 
-            this.garaIdCircuito.AccessibleDescription = "Nome";
-            this.garaIdCircuito.AccessibleName = "Nome";
-            this.garaIdCircuito.Location = new System.Drawing.Point(105, 60);
-            this.garaIdCircuito.Name = "garaIdCircuito";
-            this.garaIdCircuito.Size = new System.Drawing.Size(241, 20);
-            this.garaIdCircuito.TabIndex = 10;
             // 
             // Circuiti
             // 
@@ -2857,6 +2814,8 @@ namespace F1DBMS
             // 
             // panelcircuito
             // 
+            this.panelcircuito.Controls.Add(this.label61);
+            this.panelcircuito.Controls.Add(this.label60);
             this.panelcircuito.Controls.Add(this.idcircuitolabel);
             this.panelcircuito.Controls.Add(this.idCircuitoCircuito);
             this.panelcircuito.Controls.Add(this.stato2labelcircuito);
@@ -2901,13 +2860,13 @@ namespace F1DBMS
             this.idCircuitoCircuito.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.idCircuitoCircuito.Location = new System.Drawing.Point(90, 31);
             this.idCircuitoCircuito.Name = "idCircuitoCircuito";
-            this.idCircuitoCircuito.Size = new System.Drawing.Size(253, 20);
+            this.idCircuitoCircuito.Size = new System.Drawing.Size(240, 20);
             this.idCircuitoCircuito.TabIndex = 27;
             // 
             // stato2labelcircuito
             // 
             this.stato2labelcircuito.AutoSize = true;
-            this.stato2labelcircuito.Location = new System.Drawing.Point(21, 355);
+            this.stato2labelcircuito.Location = new System.Drawing.Point(50, 318);
             this.stato2labelcircuito.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.stato2labelcircuito.Name = "stato2labelcircuito";
             this.stato2labelcircuito.Size = new System.Drawing.Size(32, 13);
@@ -2917,7 +2876,7 @@ namespace F1DBMS
             // nome2labelcircuito
             // 
             this.nome2labelcircuito.AutoSize = true;
-            this.nome2labelcircuito.Location = new System.Drawing.Point(21, 252);
+            this.nome2labelcircuito.Location = new System.Drawing.Point(47, 245);
             this.nome2labelcircuito.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.nome2labelcircuito.Name = "nome2labelcircuito";
             this.nome2labelcircuito.Size = new System.Drawing.Size(35, 13);
@@ -2986,10 +2945,10 @@ namespace F1DBMS
             // 
             // tastoRicercaNomeCircuito
             // 
-            this.tastoRicercaNomeCircuito.Location = new System.Drawing.Point(87, 274);
+            this.tastoRicercaNomeCircuito.Location = new System.Drawing.Point(90, 267);
             this.tastoRicercaNomeCircuito.Margin = new System.Windows.Forms.Padding(2);
             this.tastoRicercaNomeCircuito.Name = "tastoRicercaNomeCircuito";
-            this.tastoRicercaNomeCircuito.Size = new System.Drawing.Size(255, 32);
+            this.tastoRicercaNomeCircuito.Size = new System.Drawing.Size(152, 23);
             this.tastoRicercaNomeCircuito.TabIndex = 18;
             this.tastoRicercaNomeCircuito.Text = "ricerca circuito";
             this.tastoRicercaNomeCircuito.UseVisualStyleBackColor = true;
@@ -2999,17 +2958,17 @@ namespace F1DBMS
             // 
             this.ricercaNomeCircuito.AccessibleDescription = "Nome";
             this.ricercaNomeCircuito.AccessibleName = "Nome";
-            this.ricercaNomeCircuito.Location = new System.Drawing.Point(87, 252);
+            this.ricercaNomeCircuito.Location = new System.Drawing.Point(90, 242);
             this.ricercaNomeCircuito.Name = "ricercaNomeCircuito";
-            this.ricercaNomeCircuito.Size = new System.Drawing.Size(255, 20);
+            this.ricercaNomeCircuito.Size = new System.Drawing.Size(240, 20);
             this.ricercaNomeCircuito.TabIndex = 17;
             // 
             // tastoRicercaStatoCircuito
             // 
-            this.tastoRicercaStatoCircuito.Location = new System.Drawing.Point(87, 373);
+            this.tastoRicercaStatoCircuito.Location = new System.Drawing.Point(90, 340);
             this.tastoRicercaStatoCircuito.Margin = new System.Windows.Forms.Padding(2);
             this.tastoRicercaStatoCircuito.Name = "tastoRicercaStatoCircuito";
-            this.tastoRicercaStatoCircuito.Size = new System.Drawing.Size(255, 32);
+            this.tastoRicercaStatoCircuito.Size = new System.Drawing.Size(152, 23);
             this.tastoRicercaStatoCircuito.TabIndex = 16;
             this.tastoRicercaStatoCircuito.Text = "ricerca circuito";
             this.tastoRicercaStatoCircuito.UseVisualStyleBackColor = true;
@@ -3019,17 +2978,17 @@ namespace F1DBMS
             // 
             this.ricercaStatoCircuito.AccessibleDescription = "Nome";
             this.ricercaStatoCircuito.AccessibleName = "Nome";
-            this.ricercaStatoCircuito.Location = new System.Drawing.Point(87, 351);
+            this.ricercaStatoCircuito.Location = new System.Drawing.Point(90, 315);
             this.ricercaStatoCircuito.Name = "ricercaStatoCircuito";
-            this.ricercaStatoCircuito.Size = new System.Drawing.Size(255, 20);
+            this.ricercaStatoCircuito.Size = new System.Drawing.Size(240, 20);
             this.ricercaStatoCircuito.TabIndex = 15;
             // 
             // registraCircuito
             // 
-            this.registraCircuito.Location = new System.Drawing.Point(87, 194);
+            this.registraCircuito.Location = new System.Drawing.Point(90, 197);
             this.registraCircuito.Margin = new System.Windows.Forms.Padding(2);
             this.registraCircuito.Name = "registraCircuito";
-            this.registraCircuito.Size = new System.Drawing.Size(255, 32);
+            this.registraCircuito.Size = new System.Drawing.Size(152, 23);
             this.registraCircuito.TabIndex = 14;
             this.registraCircuito.Text = "registra circuito";
             this.registraCircuito.UseVisualStyleBackColor = true;
@@ -3042,7 +3001,7 @@ namespace F1DBMS
             this.nomeCircuito.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.nomeCircuito.Location = new System.Drawing.Point(90, 55);
             this.nomeCircuito.Name = "nomeCircuito";
-            this.nomeCircuito.Size = new System.Drawing.Size(253, 20);
+            this.nomeCircuito.Size = new System.Drawing.Size(240, 20);
             this.nomeCircuito.TabIndex = 9;
             // 
             // numDiCurveCircuito
@@ -3051,7 +3010,7 @@ namespace F1DBMS
             this.numDiCurveCircuito.AccessibleName = "Nome";
             this.numDiCurveCircuito.Location = new System.Drawing.Point(90, 172);
             this.numDiCurveCircuito.Name = "numDiCurveCircuito";
-            this.numDiCurveCircuito.Size = new System.Drawing.Size(253, 20);
+            this.numDiCurveCircuito.Size = new System.Drawing.Size(240, 20);
             this.numDiCurveCircuito.TabIndex = 13;
             // 
             // statoCircuito
@@ -3060,7 +3019,7 @@ namespace F1DBMS
             this.statoCircuito.AccessibleName = "Nome";
             this.statoCircuito.Location = new System.Drawing.Point(90, 78);
             this.statoCircuito.Name = "statoCircuito";
-            this.statoCircuito.Size = new System.Drawing.Size(253, 20);
+            this.statoCircuito.Size = new System.Drawing.Size(240, 20);
             this.statoCircuito.TabIndex = 8;
             // 
             // lunghezzaCircuito
@@ -3069,7 +3028,7 @@ namespace F1DBMS
             this.lunghezzaCircuito.AccessibleName = "Nome";
             this.lunghezzaCircuito.Location = new System.Drawing.Point(90, 125);
             this.lunghezzaCircuito.Name = "lunghezzaCircuito";
-            this.lunghezzaCircuito.Size = new System.Drawing.Size(253, 20);
+            this.lunghezzaCircuito.Size = new System.Drawing.Size(240, 20);
             this.lunghezzaCircuito.TabIndex = 12;
             // 
             // descrizioneCircuito
@@ -3078,7 +3037,7 @@ namespace F1DBMS
             this.descrizioneCircuito.AccessibleName = "Nome";
             this.descrizioneCircuito.Location = new System.Drawing.Point(90, 101);
             this.descrizioneCircuito.Name = "descrizioneCircuito";
-            this.descrizioneCircuito.Size = new System.Drawing.Size(253, 20);
+            this.descrizioneCircuito.Size = new System.Drawing.Size(240, 20);
             this.descrizioneCircuito.TabIndex = 10;
             // 
             // tipologiaCircuito
@@ -3087,7 +3046,7 @@ namespace F1DBMS
             this.tipologiaCircuito.AccessibleName = "Nome";
             this.tipologiaCircuito.Location = new System.Drawing.Point(90, 149);
             this.tipologiaCircuito.Name = "tipologiaCircuito";
-            this.tipologiaCircuito.Size = new System.Drawing.Size(253, 20);
+            this.tipologiaCircuito.Size = new System.Drawing.Size(240, 20);
             this.tipologiaCircuito.TabIndex = 11;
             // 
             // button2
@@ -3099,6 +3058,46 @@ namespace F1DBMS
             this.button2.TabIndex = 10;
             this.button2.Text = "Revoca Incarico";
             this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label57
+            // 
+            this.label57.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label57.Location = new System.Drawing.Point(27, 222);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(315, 2);
+            this.label57.TabIndex = 31;
+            // 
+            // label58
+            // 
+            this.label58.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label58.Location = new System.Drawing.Point(29, 183);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(328, 2);
+            this.label58.TabIndex = 28;
+            // 
+            // label59
+            // 
+            this.label59.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label59.Location = new System.Drawing.Point(29, 256);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(328, 2);
+            this.label59.TabIndex = 29;
+            // 
+            // label60
+            // 
+            this.label60.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label60.Location = new System.Drawing.Point(24, 228);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(315, 2);
+            this.label60.TabIndex = 51;
+            // 
+            // label61
+            // 
+            this.label61.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label61.Location = new System.Drawing.Point(24, 301);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(315, 2);
+            this.label61.TabIndex = 52;
             // 
             // MainForm
             // 
@@ -3359,24 +3358,15 @@ namespace F1DBMS
         private System.Windows.Forms.TextBox contrattiBudget;
         private System.Windows.Forms.DataGridView garaGriglia;
         private System.Windows.Forms.Panel garepanel;
-        private System.Windows.Forms.Label garalabeldata;
-        private System.Windows.Forms.DateTimePicker garaData;
         private System.Windows.Forms.Label garalabelidcircuito2;
         private System.Windows.Forms.Label garalabelidcampionato;
         private System.Windows.Forms.Label garalabeldata2;
-        private System.Windows.Forms.Label garalabelidcamionato;
-        private System.Windows.Forms.Label garalabelidcircuito;
-        private System.Windows.Forms.Label garalabelgiri;
         private System.Windows.Forms.Button garaTastoRicercaIdCircuito;
         private System.Windows.Forms.TextBox garaRicercaIdCircuito;
         private System.Windows.Forms.Button garaTastoRicercaData;
-        private System.Windows.Forms.TextBox garaRicercaData;
         private System.Windows.Forms.Button garaTastoRicercaIdCampionato;
         private System.Windows.Forms.TextBox garaRicercaIdCampionato;
         private System.Windows.Forms.Button gararegistra;
-        private System.Windows.Forms.TextBox garaGiri;
-        private System.Windows.Forms.TextBox garaIdCampionato;
-        private System.Windows.Forms.TextBox garaIdCircuito;
         private System.Windows.Forms.DataGridView grigliaCircuito;
         private System.Windows.Forms.Panel panelcircuito;
         private System.Windows.Forms.Label idcircuitolabel;
@@ -3422,6 +3412,16 @@ namespace F1DBMS
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.DateTimePicker dataGara;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label60;
     }
 }
 
