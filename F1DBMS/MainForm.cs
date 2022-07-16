@@ -39,22 +39,27 @@ namespace F1DBMS
 
         }
 
+        private String assignValue(TextBox textBox)
+        {
+            return String.IsNullOrEmpty(textBox.Text) ? throw new Exception() : textBox.Text;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
                 var newTeam = new team();
-                newTeam.IDTeam = IDTeam.Text ?? throw new Exception();
-                newTeam.nome = NomeTeam.Text ?? throw new Exception();
-                newTeam.sedeCentrale = SedeCentrale.Text ?? throw new Exception();
+                newTeam.IDTeam = assignValue(IDTeam);
+                newTeam.nome = assignValue(NomeTeam);
+                newTeam.sedeCentrale = assignValue(SedeCentrale);
                 newTeam.dataEsordio = DataEsordio.Value.Date;
                 var recapitoTeam = new recapiti_team();
                 recapitoTeam.IDTeam = newTeam.IDTeam;
-                recapitoTeam.Telefono = Recapito1.Text ?? throw new Exception();
+                recapitoTeam.Telefono = assignValue(Recapito1);
                 newTeam.recapiti_teams.Add(recapitoTeam);
                 var mailTeam = new mail_team();
                 mailTeam.IDTeam = newTeam.IDTeam;
-                mailTeam.Mail = Mail1.Text ?? throw new Exception();
+                mailTeam.Mail = assignValue(Mail1);
                 
                 db.teams.InsertOnSubmit(newTeam);
                 db.SubmitChanges();
@@ -121,20 +126,20 @@ namespace F1DBMS
             try
             {
                 var dipendente = new dipendenti();
-                dipendente.CF = CFBox.Text ?? throw new Exception();
-                dipendente.nome = NomeBox.Text ?? throw new Exception();
-                dipendente.cognome = CognomeBox.Text ?? throw new Exception();
-                dipendente.luogoDiNascita = LuogoNascitaBox.Text ?? throw new Exception();
+                dipendente.CF = assignValue(CFBox);
+                dipendente.nome = assignValue(NomeBox);
+                dipendente.cognome = assignValue(CognomeBox);
+                dipendente.luogoDiNascita = assignValue(LuogoNascitaBox);
                 dipendente.dataNascita = DataNascita.Value;
-                dipendente.residenza = ResidenzaBox.Text ?? throw new Exception();
+                dipendente.residenza = assignValue(ResidenzaBox);
                 var recapito = new recapiti_dipendenti();
-                recapito.CF = CFBox.Text ?? throw new Exception();
-                recapito.Telefono = Tel1.Text ?? throw new Exception();
+                recapito.CF = assignValue(CFBox);
+                recapito.Telefono = assignValue(Tel1);
                 dipendente.recapiti_dipendentis.Add(recapito);
                 if (Tel2.Text.Any())
                 {
                     var recapito2 = new recapiti_dipendenti();
-                    recapito2.CF = CFBox.Text;
+                    recapito2.CF = assignValue(CFBox);
                     recapito2.Telefono = Tel2.Text;
                     dipendente.recapiti_dipendentis.Add(recapito2);
                 }
@@ -218,20 +223,20 @@ namespace F1DBMS
             try
             {
                 var pilota = new piloti();
-                pilota.CF = CFPilotaBox.Text ?? throw new Exception();
-                pilota.nome = NomePilotaBox.Text ?? throw new Exception();
-                pilota.cognome = CognomePilotaBox.Text ?? throw new Exception();
-                pilota.luogoDiNascita = LuogoNascitaPilotaBox.Text ?? throw new Exception();
+                pilota.CF = assignValue(CFPilotaBox);
+                pilota.nome = assignValue(NomePilotaBox);
+                pilota.cognome = assignValue(CognomePilotaBox);
+                pilota.luogoDiNascita = assignValue(LuogoNascitaPilotaBox);
                 pilota.dataDiNascita = dataNascitaPilota.Value;
-                pilota.residenza = ResidenzaPilotaBox.Text ?? throw new Exception();
-                var recapito = new recapiti_piloti() ?? throw new Exception();
-                recapito.CF = CFPilotaBox.Text ?? throw new Exception();
-                recapito.Telefono = Tel1PilotaBox.Text ?? throw new Exception();
+                pilota.residenza = assignValue(ResidenzaPilotaBox);
+                var recapito = new recapiti_piloti();
+                recapito.CF = assignValue(CFPilotaBox);
+                recapito.Telefono = assignValue(Tel1PilotaBox);
                 pilota.recapiti_pilotis.Add(recapito);
                 if (Tel2.Text.Any())
                 {
                     var recapito2 = new recapiti_piloti();
-                    recapito2.CF = CFPilotaBox.Text;
+                    recapito2.CF = assignValue(CFPilotaBox);
                     recapito2.Telefono = Tel2PilotaBox.Text;
                     pilota.recapiti_pilotis.Add(recapito2);
                 }
@@ -306,20 +311,19 @@ namespace F1DBMS
         }
         private void RevocaIncaricoPilBtn_Click(object sender, EventArgs e)
         {
-            FormRevocaIncarichiPiloti revocaIncPil = new FormRevocaIncarichiPiloti(db);
-            revocaIncPil.Show();
+            new FormRevocaIncarichiPiloti(db).Show();
         }
         private void registraCircuito_Click(object sender, EventArgs e)
         {
             try
             {
                 var newCircuiti = new circuiti();
-                newCircuiti.IDCircuito = idCircuitoCircuito.Text ?? throw new Exception();
-                newCircuiti.nome = nomeCircuito.Text ?? throw new Exception();
-                newCircuiti.stato = statoCircuito.Text ?? throw new Exception();
-                newCircuiti.descrizione = descrizioneCircuito.Text ?? throw new Exception();
+                newCircuiti.IDCircuito = assignValue(idCircuitoCircuito);
+                newCircuiti.nome = assignValue(nomeCircuito);
+                newCircuiti.stato = assignValue(statoCircuito);
+                newCircuiti.descrizione = assignValue(descrizioneCircuito);
                 newCircuiti.lunghezza = Convert.ToInt32(lunghezzaCircuito.Text);
-                newCircuiti.tipologia = tipologiaCircuito.Text ?? throw new Exception();
+                newCircuiti.tipologia = assignValue(tipologiaCircuito);
                 newCircuiti.numeroCurve = Convert.ToInt32(numDiCurveCircuito.Text);
 
                 db.circuitis.InsertOnSubmit(newCircuiti);
@@ -389,8 +393,8 @@ namespace F1DBMS
             try
             {
                 var newContratti = new contratti();
-                newContratti.IDSponsor = contrattiIdSponsor.Text ?? throw new Exception();
-                newContratti.IDTeam = contrattiIdTeam.Text ?? throw new Exception();
+                newContratti.IDSponsor = assignValue(contrattiIdSponsor);
+                newContratti.IDTeam = assignValue(contrattiIdTeam);
                 newContratti.budget = Convert.ToInt32(contrattiBudget);
                 newContratti.dataInizio = contrattiData.Value.Date;
 
@@ -425,16 +429,16 @@ namespace F1DBMS
             try
             {
                 var newSponsor = new sponsor();
-                newSponsor.IDSponsor = sponsorIdSponsor.Text ?? throw new Exception();
-                newSponsor.Nome = sponsorNome.Text ?? throw new Exception();
-                newSponsor.Stato = sponsorStato.Text ?? throw new Exception();
+                newSponsor.IDSponsor = assignValue(sponsorIdSponsor);
+                newSponsor.Nome = assignValue(sponsorNome);
+                newSponsor.Stato = assignValue(sponsorStato);
                 var recapitoSponsor = new recapiti_sponsor();
                 recapitoSponsor.IDSponsor = newSponsor.IDSponsor;
-                recapitoSponsor.Telefono = sponsorTelefono.Text ?? throw new Exception();
+                recapitoSponsor.Telefono = assignValue(sponsorTelefono);
                 newSponsor.recapiti_sponsors.Add(recapitoSponsor);
                 var mailSponsor = new mail_sponsor();
                 mailSponsor.IDSponsor = newSponsor.IDSponsor;
-                mailSponsor.Mail = sponsorMail.Text ?? throw new Exception();
+                mailSponsor.Mail = assignValue(sponsorMail);
 
                 db.sponsors.InsertOnSubmit(newSponsor);
                 db.SubmitChanges();
@@ -467,10 +471,10 @@ namespace F1DBMS
             try
             {
                 var newCampionati = new campionati();
-                newCampionati.IDCampionato = campionatoIdCampionato.Text ?? throw new Exception();
+                newCampionati.IDCampionato = assignValue(campionatoIdCampionato);
                 newCampionati.anno = Convert.ToInt32(campionatiAnno.Text);
-                newCampionati.nome = campionatiNome.Text ?? throw new Exception();
-                newCampionati.descrizione = campionatiDescrizione.Text ?? throw new Exception();
+                newCampionati.nome = assignValue(campionatiNome);
+                newCampionati.descrizione = assignValue(campionatiDescrizione);
                 db.campionatis.InsertOnSubmit(newCampionati);
                 db.SubmitChanges();
                 MessageBox.Show("Campionato registrato con successo!");
@@ -502,9 +506,9 @@ namespace F1DBMS
             try
             {
                 var newComponenti = new componenti();
-                newComponenti.IDComponente = componentiIdComponente.Text ?? throw new Exception();
-                newComponenti.Descrizione = componenteDescrizione.Text ?? throw new Exception();
-                newComponenti.PrezzoUnitario = componentePrezzo.Text ?? throw new Exception();
+                newComponenti.IDComponente = assignValue(componentiIdComponente);
+                newComponenti.Descrizione = assignValue(componenteDescrizione);
+                newComponenti.PrezzoUnitario = assignValue(componentePrezzo);
                 db.componentis.InsertOnSubmit(newComponenti);
                 db.SubmitChanges();
                 MessageBox.Show("Team registrato con successo!");
