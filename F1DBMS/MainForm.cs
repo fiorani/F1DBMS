@@ -41,34 +41,29 @@ namespace F1DBMS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var newTeam = new team();
-            newTeam.IDTeam = IDTeam.Text;
-            newTeam.nome = NomeTeam.Text;
-            newTeam.sedeCentrale = SedeCentrale.Text;
-            newTeam.dataEsordio = DataEsordio.Value.Date;
-            var recapitoTeam = new recapiti_team();
-            recapitoTeam.IDTeam = newTeam.IDTeam;
-            recapitoTeam.Telefono = Recapito1.Text;
-            newTeam.recapiti_teams.Add(recapitoTeam);
-            var mailTeam = new mail_team();
-            mailTeam.IDTeam = newTeam.IDTeam;
-            mailTeam.Mail = Mail1.Text;
             try
             {
-                if(!IDTeam.Text.Equals(String.Empty) && !NomeTeam.Text.Equals(String.Empty) && !SedeCentrale.Text.Equals(String.Empty) && !Recapito1.Text.Equals(String.Empty) && !Mail1.Text.Equals(String.Empty))
-                {
-                    db.teams.InsertOnSubmit(newTeam);
-                    db.SubmitChanges();
-                    MessageBox.Show("Team registrato con successo!");
-                    SedeCentrale.Clear();
-                    NomeTeam.Clear();
-                    Recapito1.Clear();
-                    Mail1.Clear();
-                    IDTeam.Clear();
-                } else
-                {
-                    MessageBox.Show("Errore: Ricontrolla i campi!!!");
-                }
+                var newTeam = new team();
+                newTeam.IDTeam = IDTeam.Text ?? throw new Exception();
+                newTeam.nome = NomeTeam.Text ?? throw new Exception();
+                newTeam.sedeCentrale = SedeCentrale.Text ?? throw new Exception();
+                newTeam.dataEsordio = DataEsordio.Value.Date;
+                var recapitoTeam = new recapiti_team();
+                recapitoTeam.IDTeam = newTeam.IDTeam;
+                recapitoTeam.Telefono = Recapito1.Text ?? throw new Exception();
+                newTeam.recapiti_teams.Add(recapitoTeam);
+                var mailTeam = new mail_team();
+                mailTeam.IDTeam = newTeam.IDTeam;
+                mailTeam.Mail = Mail1.Text ?? throw new Exception();
+                
+                db.teams.InsertOnSubmit(newTeam);
+                db.SubmitChanges();
+                MessageBox.Show("Team registrato con successo!");
+                SedeCentrale.Clear();
+                NomeTeam.Clear();
+                Recapito1.Clear();
+                Mail1.Clear();
+                IDTeam.Clear();
             }
             catch (Exception)
             {
@@ -123,42 +118,36 @@ namespace F1DBMS
 
         private void RegistraDipendente_Click(object sender, EventArgs e)
         {
-            var dipendente = new dipendenti();
-            dipendente.CF = CFBox.Text;
-            dipendente.nome = NomeBox.Text;
-            dipendente.cognome = CognomeBox.Text;
-            dipendente.luogoDiNascita = LuogoNascitaBox.Text;
-            dipendente.dataNascita = DataNascita.Value;
-            dipendente.residenza = ResidenzaBox.Text;
-            var recapito = new recapiti_dipendenti();
-            recapito.CF = CFBox.Text;
-            recapito.Telefono = Tel1.Text;
-            dipendente.recapiti_dipendentis.Add(recapito);
-            if (Tel2.Text.Any())
-            {
-                var recapito2 = new recapiti_dipendenti();
-                recapito2.CF = CFBox.Text;
-                recapito2.Telefono = Tel2.Text;
-                dipendente.recapiti_dipendentis.Add(recapito2);
-            }
             try
             {
-                if (!CFBox.Text.Equals(String.Empty) && !NomeBox.Text.Equals(String.Empty) && !CognomeBox.Text.Equals(String.Empty) && !LuogoNascitaBox.Text.Equals(String.Empty) && !ResidenzaBox.Text.Equals(String.Empty) && !Tel1.Text.Equals(String.Empty))
+                var dipendente = new dipendenti();
+                dipendente.CF = CFBox.Text ?? throw new Exception();
+                dipendente.nome = NomeBox.Text ?? throw new Exception();
+                dipendente.cognome = CognomeBox.Text ?? throw new Exception();
+                dipendente.luogoDiNascita = LuogoNascitaBox.Text ?? throw new Exception();
+                dipendente.dataNascita = DataNascita.Value;
+                dipendente.residenza = ResidenzaBox.Text ?? throw new Exception();
+                var recapito = new recapiti_dipendenti();
+                recapito.CF = CFBox.Text ?? throw new Exception();
+                recapito.Telefono = Tel1.Text ?? throw new Exception();
+                dipendente.recapiti_dipendentis.Add(recapito);
+                if (Tel2.Text.Any())
                 {
-                    db.dipendentis.InsertOnSubmit(dipendente);
-                    db.SubmitChanges();
-                    MessageBox.Show("Dipendente inserito!");
-                    CFBox.Clear();
-                    NomeBox.Clear();
-                    CognomeBox.Clear();
-                    ResidenzaBox.Clear();
-                    LuogoNascitaBox.Clear();
-                    Tel1.Clear();
-                    Tel2.Clear();
-                } else
-                {
-                    MessageBox.Show("Errore: controlla campi!");
+                    var recapito2 = new recapiti_dipendenti();
+                    recapito2.CF = CFBox.Text;
+                    recapito2.Telefono = Tel2.Text;
+                    dipendente.recapiti_dipendentis.Add(recapito2);
                 }
+                db.dipendentis.InsertOnSubmit(dipendente);
+                db.SubmitChanges();
+                MessageBox.Show("Dipendente inserito!");
+                CFBox.Clear();
+                NomeBox.Clear();
+                CognomeBox.Clear();
+                ResidenzaBox.Clear();
+                LuogoNascitaBox.Clear();
+                Tel1.Clear();
+                Tel2.Clear();
             }
             catch (Exception)
             {
@@ -226,42 +215,35 @@ namespace F1DBMS
 
         private void regPilotaBtn_Click(object sender, EventArgs e)
         {
-            var pilota = new piloti();
-            pilota.CF = CFPilotaBox.Text;
-            pilota.nome = NomePilotaBox.Text;
-            pilota.cognome = CognomePilotaBox.Text;
-            pilota.luogoDiNascita = LuogoNascitaPilotaBox.Text;
-            pilota.dataDiNascita = dataNascitaPilota.Value;
-            pilota.residenza = ResidenzaPilotaBox.Text;
-            var recapito = new recapiti_piloti();
-            recapito.CF = CFPilotaBox.Text;
-            recapito.Telefono = Tel1PilotaBox.Text;
-            pilota.recapiti_pilotis.Add(recapito);
-            if (Tel2.Text.Any())
-            {
-                var recapito2 = new recapiti_piloti();
-                recapito2.CF = CFPilotaBox.Text;
-                recapito2.Telefono = Tel2PilotaBox.Text;
-                pilota.recapiti_pilotis.Add(recapito2);
-            }
             try
             {
-                if (!CFPilotaBox.Text.Equals(String.Empty) && !NomePilotaBox.Text.Equals(String.Empty) && !CognomePilotaBox.Text.Equals(String.Empty) && !LuogoNascitaPilotaBox.Text.Equals(String.Empty) && !ResidenzaPilotaBox.Text.Equals(String.Empty) && !Tel1PilotaBox.Text.Equals(String.Empty))
+                var pilota = new piloti();
+                pilota.CF = CFPilotaBox.Text ?? throw new Exception();
+                pilota.nome = NomePilotaBox.Text ?? throw new Exception();
+                pilota.cognome = CognomePilotaBox.Text ?? throw new Exception();
+                pilota.luogoDiNascita = LuogoNascitaPilotaBox.Text ?? throw new Exception();
+                pilota.dataDiNascita = dataNascitaPilota.Value;
+                pilota.residenza = ResidenzaPilotaBox.Text ?? throw new Exception();
+                var recapito = new recapiti_piloti() ?? throw new Exception();
+                recapito.CF = CFPilotaBox.Text ?? throw new Exception();
+                recapito.Telefono = Tel1PilotaBox.Text ?? throw new Exception();
+                pilota.recapiti_pilotis.Add(recapito);
+                if (Tel2.Text.Any())
                 {
-                    db.pilotis.InsertOnSubmit(pilota);
-                    db.SubmitChanges();
-                    MessageBox.Show("Pilota inserito!");
-                    CFPilotaBox.Clear();
-                    NomePilotaBox.Clear();
-                    CognomePilotaBox.Clear();
-                    ResidenzaPilotaBox.Clear();
-                    Tel1PilotaBox.Clear();
-                    Tel2PilotaBox.Clear();
+                    var recapito2 = new recapiti_piloti();
+                    recapito2.CF = CFPilotaBox.Text;
+                    recapito2.Telefono = Tel2PilotaBox.Text;
+                    pilota.recapiti_pilotis.Add(recapito2);
                 }
-                else
-                {
-                    MessageBox.Show("Errore: controlla campi!");
-                }
+                db.pilotis.InsertOnSubmit(pilota);
+                db.SubmitChanges();
+                MessageBox.Show("Pilota inserito!");
+                CFPilotaBox.Clear();
+                NomePilotaBox.Clear();
+                CognomePilotaBox.Clear();
+                ResidenzaPilotaBox.Clear();
+                Tel1PilotaBox.Clear();
+                Tel2PilotaBox.Clear();
             }
             catch (Exception)
             {
@@ -404,18 +386,14 @@ namespace F1DBMS
 
         private void contrattiRegistra_Click(object sender, EventArgs e)
         {
-            var newContratti = new contratti();
-            newContratti.IDSponsor = contrattiIdSponsor.Text;
-            newContratti.IDTeam = contrattiIdTeam.Text;
-            newContratti.budget = Convert.ToInt32(contrattiBudget);
-            newContratti.dataInizio = contrattiData.Value.Date;
-
             try
             {
-                if(newContratti.IDSponsor.Equals(String.Empty) || newContratti.IDTeam.Equals(String.Empty) || newContratti.budget == 0 || newContratti.dataInizio == null)
-                {
-                    throw new Exception();
-                }
+                var newContratti = new contratti();
+                newContratti.IDSponsor = contrattiIdSponsor.Text ?? throw new Exception();
+                newContratti.IDTeam = contrattiIdTeam.Text ?? throw new Exception();
+                newContratti.budget = Convert.ToInt32(contrattiBudget);
+                newContratti.dataInizio = contrattiData.Value.Date;
+
                 db.contrattis.InsertOnSubmit(newContratti);
                 db.SubmitChanges();
                 MessageBox.Show("Team registrato con successo!");
@@ -444,20 +422,20 @@ namespace F1DBMS
 
         private void sponsorRegistra_Click(object sender, EventArgs e)
         {
-            var newSponsor = new sponsor();
-            newSponsor.IDSponsor = sponsorIdSponsor.Text;
-            newSponsor.Nome = sponsorNome.Text;
-            newSponsor.Stato = sponsorStato.Text;
-            var recapitoSponsor = new recapiti_sponsor();
-            recapitoSponsor.IDSponsor = newSponsor.IDSponsor;
-            recapitoSponsor.Telefono = sponsorTelefono.Text;
-            newSponsor.recapiti_sponsors.Add(recapitoSponsor);
-            var mailSponsor = new mail_sponsor();
-            mailSponsor.IDSponsor = newSponsor.IDSponsor;
-            mailSponsor.Mail = sponsorMail.Text;
-
             try
             {
+                var newSponsor = new sponsor();
+                newSponsor.IDSponsor = sponsorIdSponsor.Text ?? throw new Exception();
+                newSponsor.Nome = sponsorNome.Text ?? throw new Exception();
+                newSponsor.Stato = sponsorStato.Text ?? throw new Exception();
+                var recapitoSponsor = new recapiti_sponsor();
+                recapitoSponsor.IDSponsor = newSponsor.IDSponsor;
+                recapitoSponsor.Telefono = sponsorTelefono.Text ?? throw new Exception();
+                newSponsor.recapiti_sponsors.Add(recapitoSponsor);
+                var mailSponsor = new mail_sponsor();
+                mailSponsor.IDSponsor = newSponsor.IDSponsor;
+                mailSponsor.Mail = sponsorMail.Text ?? throw new Exception();
+
                 db.sponsors.InsertOnSubmit(newSponsor);
                 db.SubmitChanges();
                 MessageBox.Show("Team registrato con successo!");
@@ -495,7 +473,7 @@ namespace F1DBMS
                 newCampionati.descrizione = campionatiDescrizione.Text ?? throw new Exception();
                 db.campionatis.InsertOnSubmit(newCampionati);
                 db.SubmitChanges();
-                MessageBox.Show("Team registrato con successo!");
+                MessageBox.Show("Campionato registrato con successo!");
                 campionatiGriglia.DataSource = from t in db.campionatis
                                                select new { t.IDCampionato, t.anno, t.nome, t.descrizione };
             }
@@ -521,13 +499,12 @@ namespace F1DBMS
 
         private void componentiRegistra_Click(object sender, EventArgs e)
         {
-            var newComponenti = new componenti();
-            newComponenti.IDComponente = componentiIdComponente.Text;
-            newComponenti.Descrizione = componenteDescrizione.Text;
-            newComponenti.PrezzoUnitario = componentePrezzo.Text;
-
             try
             {
+                var newComponenti = new componenti();
+                newComponenti.IDComponente = componentiIdComponente.Text ?? throw new Exception();
+                newComponenti.Descrizione = componenteDescrizione.Text ?? throw new Exception();
+                newComponenti.PrezzoUnitario = componentePrezzo.Text ?? throw new Exception();
                 db.componentis.InsertOnSubmit(newComponenti);
                 db.SubmitChanges();
                 MessageBox.Show("Team registrato con successo!");
