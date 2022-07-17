@@ -55,6 +55,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClassesF1.dbml</DependentUpon>
     </Compile>
+    <Compile Include="FormPartecipazioniCampionati.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPartecipazioniCampionati.Designer.cs">
+      <DependentUpon>FormPartecipazioniCampionati.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormInserimentoComponentiVettura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities.cs" />
     <EmbeddedResource Include="FormInserimentoComponentiVettura.resx">
       <DependentUpon>FormInserimentoComponentiVettura.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormInserimentoVettura.resx">
       <DependentUpon>FormInserimentoVettura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPartecipazioniCampionati.resx">
+      <DependentUpon>FormPartecipazioniCampionati.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRevocaIncarichiPiloti.resx">
       <DependentUpon>FormRevocaIncarichiPiloti.cs</DependentUpon>
