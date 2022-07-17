@@ -39,27 +39,22 @@ namespace F1DBMS
 
         }
 
-        private String assignValue(TextBox textBox)
-        {
-            return String.IsNullOrEmpty(textBox.Text) ? throw new Exception() : textBox.Text;
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
                 var newTeam = new team();
-                newTeam.IDTeam = assignValue(IDTeam);
-                newTeam.nome = assignValue(NomeTeam);
-                newTeam.sedeCentrale = assignValue(SedeCentrale);
+                newTeam.IDTeam = Utilities.assignValue(IDTeam);
+                newTeam.nome = Utilities.assignValue(NomeTeam);
+                newTeam.sedeCentrale = Utilities.assignValue(SedeCentrale);
                 newTeam.dataEsordio = DataEsordio.Value.Date;
                 var recapitoTeam = new recapiti_team();
                 recapitoTeam.IDTeam = newTeam.IDTeam;
-                recapitoTeam.Telefono = assignValue(Recapito1);
+                recapitoTeam.Telefono = Utilities.assignValue(Recapito1);
                 newTeam.recapiti_teams.Add(recapitoTeam);
                 var mailTeam = new mail_team();
                 mailTeam.IDTeam = newTeam.IDTeam;
-                mailTeam.Mail = assignValue(Mail1);
+                mailTeam.Mail = Utilities.assignValue(Mail1);
                 
                 db.teams.InsertOnSubmit(newTeam);
                 db.SubmitChanges();
@@ -126,20 +121,20 @@ namespace F1DBMS
             try
             {
                 var dipendente = new dipendenti();
-                dipendente.CF = assignValue(CFBox);
-                dipendente.nome = assignValue(NomeBox);
-                dipendente.cognome = assignValue(CognomeBox);
-                dipendente.luogoDiNascita = assignValue(LuogoNascitaBox);
+                dipendente.CF = Utilities.assignValue(CFBox);
+                dipendente.nome = Utilities.assignValue(NomeBox);
+                dipendente.cognome = Utilities.assignValue(CognomeBox);
+                dipendente.luogoDiNascita = Utilities.assignValue(LuogoNascitaBox);
                 dipendente.dataNascita = DataNascita.Value;
-                dipendente.residenza = assignValue(ResidenzaBox);
+                dipendente.residenza = Utilities.assignValue(ResidenzaBox);
                 var recapito = new recapiti_dipendenti();
-                recapito.CF = assignValue(CFBox);
-                recapito.Telefono = assignValue(Tel1);
+                recapito.CF = Utilities.assignValue(CFBox);
+                recapito.Telefono = Utilities.assignValue(Tel1);
                 dipendente.recapiti_dipendentis.Add(recapito);
                 if (Tel2.Text.Any())
                 {
                     var recapito2 = new recapiti_dipendenti();
-                    recapito2.CF = assignValue(CFBox);
+                    recapito2.CF = Utilities.assignValue(CFBox);
                     recapito2.Telefono = Tel2.Text;
                     dipendente.recapiti_dipendentis.Add(recapito2);
                 }
@@ -223,20 +218,20 @@ namespace F1DBMS
             try
             {
                 var pilota = new piloti();
-                pilota.CF = assignValue(CFPilotaBox);
-                pilota.nome = assignValue(NomePilotaBox);
-                pilota.cognome = assignValue(CognomePilotaBox);
-                pilota.luogoDiNascita = assignValue(LuogoNascitaPilotaBox);
+                pilota.CF = Utilities.assignValue(CFPilotaBox);
+                pilota.nome = Utilities.assignValue(NomePilotaBox);
+                pilota.cognome = Utilities.assignValue(CognomePilotaBox);
+                pilota.luogoDiNascita = Utilities.assignValue(LuogoNascitaPilotaBox);
                 pilota.dataDiNascita = dataNascitaPilota.Value;
-                pilota.residenza = assignValue(ResidenzaPilotaBox);
+                pilota.residenza = Utilities.assignValue(ResidenzaPilotaBox);
                 var recapito = new recapiti_piloti();
-                recapito.CF = assignValue(CFPilotaBox);
-                recapito.Telefono = assignValue(Tel1PilotaBox);
+                recapito.CF = Utilities.assignValue(CFPilotaBox);
+                recapito.Telefono = Utilities.assignValue(Tel1PilotaBox);
                 pilota.recapiti_pilotis.Add(recapito);
                 if (Tel2.Text.Any())
                 {
                     var recapito2 = new recapiti_piloti();
-                    recapito2.CF = assignValue(CFPilotaBox);
+                    recapito2.CF = Utilities.assignValue(CFPilotaBox);
                     recapito2.Telefono = Tel2PilotaBox.Text;
                     pilota.recapiti_pilotis.Add(recapito2);
                 }
@@ -318,12 +313,12 @@ namespace F1DBMS
             try
             {
                 var newCircuiti = new circuiti();
-                newCircuiti.IDCircuito = assignValue(idCircuitoCircuito);
-                newCircuiti.nome = assignValue(nomeCircuito);
-                newCircuiti.stato = assignValue(statoCircuito);
-                newCircuiti.descrizione = assignValue(descrizioneCircuito);
+                newCircuiti.IDCircuito = Utilities.assignValue(idCircuitoCircuito);
+                newCircuiti.nome = Utilities.assignValue(nomeCircuito);
+                newCircuiti.stato = Utilities.assignValue(statoCircuito);
+                newCircuiti.descrizione = Utilities.assignValue(descrizioneCircuito);
                 newCircuiti.lunghezza = Convert.ToInt32(lunghezzaCircuito.Text);
-                newCircuiti.tipologia = assignValue(tipologiaCircuito);
+                newCircuiti.tipologia = Utilities.assignValue(tipologiaCircuito);
                 newCircuiti.numeroCurve = Convert.ToInt32(numDiCurveCircuito.Text);
 
                 db.circuitis.InsertOnSubmit(newCircuiti);
@@ -393,8 +388,8 @@ namespace F1DBMS
             try
             {
                 var newContratti = new contratti();
-                newContratti.IDSponsor = assignValue(contrattiIdSponsor);
-                newContratti.IDTeam = assignValue(contrattiIdTeam);
+                newContratti.IDSponsor = Utilities.assignValue(contrattiIdSponsor);
+                newContratti.IDTeam = Utilities.assignValue(contrattiIdTeam);
                 newContratti.budget = Convert.ToInt32(contrattiBudget);
                 newContratti.dataInizio = contrattiData.Value.Date;
 
@@ -429,16 +424,16 @@ namespace F1DBMS
             try
             {
                 var newSponsor = new sponsor();
-                newSponsor.IDSponsor = assignValue(sponsorIdSponsor);
-                newSponsor.Nome = assignValue(sponsorNome);
-                newSponsor.Stato = assignValue(sponsorStato);
+                newSponsor.IDSponsor = Utilities.assignValue(sponsorIdSponsor);
+                newSponsor.Nome = Utilities.assignValue(sponsorNome);
+                newSponsor.Stato = Utilities.assignValue(sponsorStato);
                 var recapitoSponsor = new recapiti_sponsor();
                 recapitoSponsor.IDSponsor = newSponsor.IDSponsor;
-                recapitoSponsor.Telefono = assignValue(sponsorTelefono);
+                recapitoSponsor.Telefono = Utilities.assignValue(sponsorTelefono);
                 newSponsor.recapiti_sponsors.Add(recapitoSponsor);
                 var mailSponsor = new mail_sponsor();
                 mailSponsor.IDSponsor = newSponsor.IDSponsor;
-                mailSponsor.Mail = assignValue(sponsorMail);
+                mailSponsor.Mail = Utilities.assignValue(sponsorMail);
 
                 db.sponsors.InsertOnSubmit(newSponsor);
                 db.SubmitChanges();
@@ -471,10 +466,10 @@ namespace F1DBMS
             try
             {
                 var newCampionati = new campionati();
-                newCampionati.IDCampionato = assignValue(campionatoIdCampionato);
+                newCampionati.IDCampionato = Utilities.assignValue(campionatoIdCampionato);
                 newCampionati.anno = Convert.ToInt32(campionatiAnno.Text);
-                newCampionati.nome = assignValue(campionatiNome);
-                newCampionati.descrizione = assignValue(campionatiDescrizione);
+                newCampionati.nome = Utilities.assignValue(campionatiNome);
+                newCampionati.descrizione = Utilities.assignValue(campionatiDescrizione);
                 db.campionatis.InsertOnSubmit(newCampionati);
                 db.SubmitChanges();
                 MessageBox.Show("Campionato registrato con successo!");
@@ -506,9 +501,9 @@ namespace F1DBMS
             try
             {
                 var newComponenti = new componenti();
-                newComponenti.IDComponente = assignValue(componentiIdComponente);
-                newComponenti.Descrizione = assignValue(componenteDescrizione);
-                newComponenti.PrezzoUnitario = assignValue(componentePrezzo);
+                newComponenti.IDComponente = Utilities.assignValue(componentiIdComponente);
+                newComponenti.Descrizione = Utilities.assignValue(componenteDescrizione);
+                newComponenti.PrezzoUnitario = Utilities.assignValue(componentePrezzo);
                 db.componentis.InsertOnSubmit(newComponenti);
                 db.SubmitChanges();
                 MessageBox.Show("Team registrato con successo!");
@@ -559,6 +554,25 @@ namespace F1DBMS
             vettureGriglia.DataSource = from t in db.vettures
                                         where t.nome.Equals(VettureRicercaNome.Text)
                                         select t;
+        }
+
+        private void ricercaCFBtn_Click(object sender, EventArgs e)
+        {
+            RegistrazioniGrid.DataSource = from t in db.partecipazioni_pilotis
+                                           where t.CF.Equals(CFBox.Text)
+                                           select t;
+        }
+
+        private void IDCampBtn_Click(object sender, EventArgs e)
+        {
+            RegistrazioniGrid.DataSource = from t in db.partecipazioni_pilotis
+                                           where t.IDCampionato.Equals(IDCampionatoBox.Text)
+                                           select t;
+        }
+
+        private void registraPilBtn_Click(object sender, EventArgs e)
+        {
+            new FormPartecipazioniCampionati(db).Show();
         }
     }
 }
