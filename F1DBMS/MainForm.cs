@@ -56,7 +56,7 @@ namespace F1DBMS
                 var mailTeam = new mail_team();
                 mailTeam.IDTeam = newTeam.IDTeam;
                 mailTeam.Mail = Utilities.assignValue(Mail1);
-                
+
                 db.teams.InsertOnSubmit(newTeam);
                 db.SubmitChanges();
                 MessageBox.Show("Team registrato con successo!");
@@ -83,7 +83,7 @@ namespace F1DBMS
         {
             gridTeam.DataSource = from t in db.teams
                                   where t.IDTeam.Equals(RicercaTeamPerID.Text)
-                                  select t; 
+                                  select t;
             RicercaTeamPerID.Clear();
         }
 
@@ -91,7 +91,7 @@ namespace F1DBMS
         {
             gridTeam.DataSource = from t in db.teams
                                   where t.nome.Equals(RicercaTeamPerNomeBox.Text)
-                                  select t; 
+                                  select t;
             RicercaTeamPerNomeBox.Clear();
         }
 
@@ -106,7 +106,7 @@ namespace F1DBMS
                 {
                     db.recapiti_teams.DeleteAllOnSubmit(recapiti);
                 }
-                if(mails.Any())
+                if (mails.Any())
                 {
                     db.mail_teams.DeleteAllOnSubmit(mails);
                 }
@@ -192,8 +192,7 @@ namespace F1DBMS
 
         private void AggiungiIncaricoBtn_Click(object sender, EventArgs e)
         {
-            FormCreazioneIncarichi formIncarichi = new FormCreazioneIncarichi(db);
-            formIncarichi.Show();
+            new FormCreazioneIncarichi(db).Show();
         }
 
         private void MostraIncarichiDip_Click(object sender, EventArgs e)
@@ -203,8 +202,7 @@ namespace F1DBMS
 
         private void RevocaIncaricoBtn_Click(object sender, EventArgs e)
         {
-            FormRevocaIncarico formRevoca = new FormRevocaIncarico(db);
-            formRevoca.Show();
+            new FormRevocaIncarico(db).Show();
         }
 
         private void MostraIncBtn_Click(object sender, EventArgs e)
@@ -281,7 +279,7 @@ namespace F1DBMS
                 db.pilotis.DeleteAllOnSubmit(pil);
                 db.SubmitChanges();
                 MessageBox.Show("Pilota eliminato correttamente!");
-            } 
+            }
             EliminaPilCFBox.Clear();
         }
 
@@ -292,8 +290,7 @@ namespace F1DBMS
 
         private void InserisciIncaricoPilBtn_Click(object sender, EventArgs e)
         {
-            FormCreazioneIncaichiPiloti creaIncaricoPil = new FormCreazioneIncaichiPiloti(db);
-            creaIncaricoPil.Show();
+            new FormCreazioneIncaichiPiloti(db).Show();
         }
 
 
@@ -336,7 +333,7 @@ namespace F1DBMS
                 tipologiaCircuito.Clear();
                 numDiCurveCircuito.Clear();
             }
-            catch (Exception) 
+            catch (Exception)
             {
                 MessageBox.Show("Ricontrolla i Dati!!!");
             }
@@ -365,9 +362,9 @@ namespace F1DBMS
 
         private void garaTastoRicercaData_Click(object sender, EventArgs e)
         {
-            garaGriglia.DataSource = from t in db.gares 
+            garaGriglia.DataSource = from t in db.gares
                                      where t.data.Equals(dataGara.Value.Date)
-                                     select t;          
+                                     select t;
         }
 
         private void garaTastoRicercaIdCampionato_Click(object sender, EventArgs e)
@@ -579,15 +576,16 @@ namespace F1DBMS
         private void CompBtn_Click(object sender, EventArgs e)
         {
             vettureGriglia.DataSource = from c in db.composizionis
-                                        where c.IDVettura == IDVetCompBox.Text
+                                        where c.IDVettura.Equals(IDVetCompBox.Text)
                                         select c.componenti;
         }
 
         private void classificaCampBtn_Click(object sender, EventArgs e)
         {
-            campionatiGriglia.DataSource = from c in db.campionatis
-                                           where c.IDCampionato == IDCampEsitoBox.Text
-                                           select c.partecipazioni_pilotis.OrderBy(part => part.puntiAttuali);
+            campionatiGriglia.DataSource = from part in db.partecipazioni_pilotis
+                                           where part.IDCampionato.Equals(IDCampEsitoBox.Text)
+                                           orderby part.puntiAttuali descending
+                                           select new {part.IDCampionato, part.CF, part.IDVettura, part.numeroDiGara, part.puntiAttuali};
         }
     }
 }
