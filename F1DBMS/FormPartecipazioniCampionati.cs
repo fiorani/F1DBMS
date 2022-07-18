@@ -53,7 +53,7 @@ namespace F1DBMS
                 var newPart = new partecipazioni_piloti();
                 if(pilGridIndex == -1 || vetGridIndex == -1 || campGridIndex == -1)
                 {
-                    throw new Exception();
+                    throw new AccessViolationException();
                 }
                 var pilRow = PilotaGrid.Rows[pilGridIndex];
                 var vetRow = VetturaGrid.Rows[vetGridIndex];
@@ -62,13 +62,24 @@ namespace F1DBMS
                 newPart.IDVettura = vetRow.Cells["IDVettura"].Value.ToString();
                 newPart.IDCampionato = campRow.Cells["IDCampionato"].Value.ToString();
                 newPart.numeroDiGara = Convert.ToInt32(numPilBox.Text);
-                if((from v in db.vettures
-                   where v.IDVettura == newPart.IDVettura
-                   select v.annoProduzione) == (from c in db.campionatis
-                                  where c.IDCampionato == newPart.IDCampionato
-                                  select c.anno))
-                {
+                
+                var team = from t in db.teams
+                           where t.vettures.Any(v => v.IDVettura == newPart.IDVettura && v.annoProduzione == Convert.ToInt32(campRow.Cells["anno"].Value))
+                           select t;
 
+                var incarico = from i in db.incarichi_pilotis
+                               where i.CF == newPart.CF && i.IDTeam == team.First().IDTeam && i.dataAssunzione.Year <= Convert.ToInt32(campRow.Cells["anno"].Value) && (!i.dataLicenziamento.HasValue || i.dataLicenziamento.GetValueOrDefault().Year >= Convert.ToInt32(campRow.Cells["anno"].Value))
+                               select i;
+
+                if (incarico.Any())
+                {
+                    db.partecipazioni_pilotis.InsertOnSubmit(newPart);
+                    db.SubmitChanges();
+                    MessageBox.Show("Registrazione avvenuta con successo!");
+                    this.Close();
+                } else
+                {
+                    throw new Exception();
                 }
             } catch (Exception)
             {
