@@ -287,18 +287,26 @@ namespace F1DBMS
             this.descrizioneCircuito = new System.Windows.Forms.TextBox();
             this.tipologiaCircuito = new System.Windows.Forms.TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.registraPilBtn = new System.Windows.Forms.Button();
-            this.label62 = new System.Windows.Forms.Label();
-            this.CFPilBox = new System.Windows.Forms.TextBox();
-            this.label63 = new System.Windows.Forms.Label();
-            this.ricercaCFBtn = new System.Windows.Forms.Button();
-            this.label64 = new System.Windows.Forms.Label();
+            this.RegistrazioniGrid = new System.Windows.Forms.DataGridView();
             this.IDCampBtn = new System.Windows.Forms.Button();
             this.label65 = new System.Windows.Forms.Label();
             this.IDCampionatoBox = new System.Windows.Forms.TextBox();
-            this.RegistrazioniGrid = new System.Windows.Forms.DataGridView();
+            this.label64 = new System.Windows.Forms.Label();
+            this.ricercaCFBtn = new System.Windows.Forms.Button();
+            this.label63 = new System.Windows.Forms.Label();
+            this.CFPilBox = new System.Windows.Forms.TextBox();
+            this.label62 = new System.Windows.Forms.Label();
+            this.registraPilBtn = new System.Windows.Forms.Button();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label66 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
+            this.CompBtn = new System.Windows.Forms.Button();
+            this.IDVetCompBox = new System.Windows.Forms.TextBox();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.classificaCampBtn = new System.Windows.Forms.Button();
+            this.IDCampEsitoBox = new System.Windows.Forms.TextBox();
             this.Team.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridTeam)).BeginInit();
@@ -1663,6 +1671,10 @@ namespace F1DBMS
             // 
             // vetturepanel
             // 
+            this.vetturepanel.Controls.Add(this.label67);
+            this.vetturepanel.Controls.Add(this.CompBtn);
+            this.vetturepanel.Controls.Add(this.IDVetCompBox);
+            this.vetturepanel.Controls.Add(this.label66);
             this.vetturepanel.Controls.Add(this.label49);
             this.vetturepanel.Controls.Add(this.label48);
             this.vetturepanel.Controls.Add(this.label47);
@@ -2021,6 +2033,10 @@ namespace F1DBMS
             // 
             // campionatipanel
             // 
+            this.campionatipanel.Controls.Add(this.label69);
+            this.campionatipanel.Controls.Add(this.classificaCampBtn);
+            this.campionatipanel.Controls.Add(this.IDCampEsitoBox);
+            this.campionatipanel.Controls.Add(this.label68);
             this.campionatipanel.Controls.Add(this.label52);
             this.campionatipanel.Controls.Add(this.label51);
             this.campionatipanel.Controls.Add(this.campionatolabelidcampionato);
@@ -3125,75 +3141,13 @@ namespace F1DBMS
             this.tabPage1.Text = "Registrazioni Piloti";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // RegistrazioniGrid
             // 
-            this.button2.Location = new System.Drawing.Point(195, 211);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(144, 35);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Revoca Incarico";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // splitter1
-            // 
-            this.splitter1.Location = new System.Drawing.Point(3, 3);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(355, 971);
-            this.splitter1.TabIndex = 0;
-            this.splitter1.TabStop = false;
-            // 
-            // registraPilBtn
-            // 
-            this.registraPilBtn.Location = new System.Drawing.Point(103, 36);
-            this.registraPilBtn.Name = "registraPilBtn";
-            this.registraPilBtn.Size = new System.Drawing.Size(152, 23);
-            this.registraPilBtn.TabIndex = 1;
-            this.registraPilBtn.Text = "Inserisci partecipazione";
-            this.registraPilBtn.UseVisualStyleBackColor = true;
-            this.registraPilBtn.Click += new System.EventHandler(this.registraPilBtn_Click);
-            // 
-            // label62
-            // 
-            this.label62.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label62.Location = new System.Drawing.Point(23, 71);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(315, 2);
-            this.label62.TabIndex = 52;
-            // 
-            // CFPilBox
-            // 
-            this.CFPilBox.Location = new System.Drawing.Point(103, 85);
-            this.CFPilBox.Name = "CFPilBox";
-            this.CFPilBox.Size = new System.Drawing.Size(240, 20);
-            this.CFPilBox.TabIndex = 53;
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(74, 88);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(23, 13);
-            this.label63.TabIndex = 54;
-            this.label63.Text = "CF:";
-            // 
-            // ricercaCFBtn
-            // 
-            this.ricercaCFBtn.Location = new System.Drawing.Point(103, 112);
-            this.ricercaCFBtn.Name = "ricercaCFBtn";
-            this.ricercaCFBtn.Size = new System.Drawing.Size(152, 23);
-            this.ricercaCFBtn.TabIndex = 55;
-            this.ricercaCFBtn.Text = "Cerca Partecipazioni";
-            this.ricercaCFBtn.UseVisualStyleBackColor = true;
-            this.ricercaCFBtn.Click += new System.EventHandler(this.ricercaCFBtn_Click);
-            // 
-            // label64
-            // 
-            this.label64.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label64.Location = new System.Drawing.Point(23, 147);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(315, 2);
-            this.label64.TabIndex = 56;
+            this.RegistrazioniGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RegistrazioniGrid.Location = new System.Drawing.Point(365, 7);
+            this.RegistrazioniGrid.Name = "RegistrazioniGrid";
+            this.RegistrazioniGrid.Size = new System.Drawing.Size(1335, 894);
+            this.RegistrazioniGrid.TabIndex = 60;
             // 
             // IDCampBtn
             // 
@@ -3221,13 +3175,151 @@ namespace F1DBMS
             this.IDCampionatoBox.Size = new System.Drawing.Size(240, 20);
             this.IDCampionatoBox.TabIndex = 57;
             // 
-            // RegistrazioniGrid
+            // label64
             // 
-            this.RegistrazioniGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.RegistrazioniGrid.Location = new System.Drawing.Point(365, 7);
-            this.RegistrazioniGrid.Name = "RegistrazioniGrid";
-            this.RegistrazioniGrid.Size = new System.Drawing.Size(1335, 894);
-            this.RegistrazioniGrid.TabIndex = 60;
+            this.label64.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label64.Location = new System.Drawing.Point(23, 147);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(315, 2);
+            this.label64.TabIndex = 56;
+            // 
+            // ricercaCFBtn
+            // 
+            this.ricercaCFBtn.Location = new System.Drawing.Point(103, 112);
+            this.ricercaCFBtn.Name = "ricercaCFBtn";
+            this.ricercaCFBtn.Size = new System.Drawing.Size(152, 23);
+            this.ricercaCFBtn.TabIndex = 55;
+            this.ricercaCFBtn.Text = "Cerca Partecipazioni";
+            this.ricercaCFBtn.UseVisualStyleBackColor = true;
+            this.ricercaCFBtn.Click += new System.EventHandler(this.ricercaCFBtn_Click);
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(74, 88);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(23, 13);
+            this.label63.TabIndex = 54;
+            this.label63.Text = "CF:";
+            // 
+            // CFPilBox
+            // 
+            this.CFPilBox.Location = new System.Drawing.Point(103, 85);
+            this.CFPilBox.Name = "CFPilBox";
+            this.CFPilBox.Size = new System.Drawing.Size(240, 20);
+            this.CFPilBox.TabIndex = 53;
+            // 
+            // label62
+            // 
+            this.label62.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label62.Location = new System.Drawing.Point(23, 71);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(315, 2);
+            this.label62.TabIndex = 52;
+            // 
+            // registraPilBtn
+            // 
+            this.registraPilBtn.Location = new System.Drawing.Point(103, 36);
+            this.registraPilBtn.Name = "registraPilBtn";
+            this.registraPilBtn.Size = new System.Drawing.Size(152, 23);
+            this.registraPilBtn.TabIndex = 1;
+            this.registraPilBtn.Text = "Inserisci partecipazione";
+            this.registraPilBtn.UseVisualStyleBackColor = true;
+            this.registraPilBtn.Click += new System.EventHandler(this.registraPilBtn_Click);
+            // 
+            // splitter1
+            // 
+            this.splitter1.Location = new System.Drawing.Point(3, 3);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(355, 971);
+            this.splitter1.TabIndex = 0;
+            this.splitter1.TabStop = false;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(195, 211);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(144, 35);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Revoca Incarico";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label66
+            // 
+            this.label66.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label66.Location = new System.Drawing.Point(29, 374);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(315, 2);
+            this.label66.TabIndex = 52;
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(43, 391);
+            this.label67.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(58, 13);
+            this.label67.TabIndex = 55;
+            this.label67.Text = "ID Vettura:";
+            // 
+            // CompBtn
+            // 
+            this.CompBtn.Location = new System.Drawing.Point(104, 413);
+            this.CompBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.CompBtn.Name = "CompBtn";
+            this.CompBtn.Size = new System.Drawing.Size(152, 23);
+            this.CompBtn.TabIndex = 54;
+            this.CompBtn.Text = "Mostra componenti";
+            this.CompBtn.UseVisualStyleBackColor = true;
+            this.CompBtn.Click += new System.EventHandler(this.CompBtn_Click);
+            // 
+            // IDVetCompBox
+            // 
+            this.IDVetCompBox.AccessibleDescription = "Nome";
+            this.IDVetCompBox.AccessibleName = "Nome";
+            this.IDVetCompBox.Location = new System.Drawing.Point(104, 388);
+            this.IDVetCompBox.Name = "IDVetCompBox";
+            this.IDVetCompBox.Size = new System.Drawing.Size(240, 20);
+            this.IDVetCompBox.TabIndex = 53;
+            // 
+            // label68
+            // 
+            this.label68.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label68.Location = new System.Drawing.Point(31, 299);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(315, 2);
+            this.label68.TabIndex = 51;
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Location = new System.Drawing.Point(21, 317);
+            this.label69.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(80, 13);
+            this.label69.TabIndex = 54;
+            this.label69.Text = "ID Campionato:";
+            // 
+            // classificaCampBtn
+            // 
+            this.classificaCampBtn.Location = new System.Drawing.Point(106, 339);
+            this.classificaCampBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.classificaCampBtn.Name = "classificaCampBtn";
+            this.classificaCampBtn.Size = new System.Drawing.Size(152, 23);
+            this.classificaCampBtn.TabIndex = 53;
+            this.classificaCampBtn.Text = "Mostra classifica";
+            this.classificaCampBtn.UseVisualStyleBackColor = true;
+            this.classificaCampBtn.Click += new System.EventHandler(this.classificaCampBtn_Click);
+            // 
+            // IDCampEsitoBox
+            // 
+            this.IDCampEsitoBox.AccessibleDescription = "Nome";
+            this.IDCampEsitoBox.AccessibleName = "Nome";
+            this.IDCampEsitoBox.Location = new System.Drawing.Point(106, 314);
+            this.IDCampEsitoBox.Name = "IDCampEsitoBox";
+            this.IDCampEsitoBox.Size = new System.Drawing.Size(240, 20);
+            this.IDCampEsitoBox.TabIndex = 52;
             // 
             // MainForm
             // 
@@ -3567,6 +3659,14 @@ namespace F1DBMS
         private System.Windows.Forms.Label label65;
         private System.Windows.Forms.TextBox IDCampionatoBox;
         private System.Windows.Forms.DataGridView RegistrazioniGrid;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.Button CompBtn;
+        private System.Windows.Forms.TextBox IDVetCompBox;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Button classificaCampBtn;
+        private System.Windows.Forms.TextBox IDCampEsitoBox;
+        private System.Windows.Forms.Label label68;
     }
 }
 

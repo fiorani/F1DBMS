@@ -36,7 +36,8 @@ namespace F1DBMS
                                      select gare;
             grigliaCircuito.DataSource = from circ in db.circuitis
                                          select circ;
-
+            RegistrazioniGrid.DataSource = from part in db.partecipazioni_pilotis
+                                           select part;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -573,6 +574,20 @@ namespace F1DBMS
         private void registraPilBtn_Click(object sender, EventArgs e)
         {
             new FormPartecipazioniCampionati(db).Show();
+        }
+
+        private void CompBtn_Click(object sender, EventArgs e)
+        {
+            vettureGriglia.DataSource = from c in db.composizionis
+                                        where c.IDVettura == IDVetCompBox.Text
+                                        select c.componenti;
+        }
+
+        private void classificaCampBtn_Click(object sender, EventArgs e)
+        {
+            campionatiGriglia.DataSource = from c in db.campionatis
+                                           where c.IDCampionato == IDCampEsitoBox.Text
+                                           select c.partecipazioni_pilotis.OrderBy(part => part.puntiAttuali);
         }
     }
 }
