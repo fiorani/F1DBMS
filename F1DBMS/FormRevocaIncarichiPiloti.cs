@@ -19,7 +19,8 @@ namespace F1DBMS
             InitializeComponent();
             db = originDb;
             gridIncaricoPilRevoca.DataSource = from incPil in db.incarichi_pilotis
-                            select incPil;
+                                               where !incPil.dataLicenziamento.HasValue
+                                               select incPil;
             tabellaIncarichiPilIndex = -1;
         }
 
