@@ -287,18 +287,19 @@ namespace F1DBMS
             this.descrizioneCircuito = new System.Windows.Forms.TextBox();
             this.tipologiaCircuito = new System.Windows.Forms.TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
-            this.splitter1 = new System.Windows.Forms.Splitter();
-            this.registraPilBtn = new System.Windows.Forms.Button();
-            this.label62 = new System.Windows.Forms.Label();
-            this.CFPilBox = new System.Windows.Forms.TextBox();
-            this.label63 = new System.Windows.Forms.Label();
-            this.ricercaCFBtn = new System.Windows.Forms.Button();
-            this.label64 = new System.Windows.Forms.Label();
+            this.RegistrazioniGrid = new System.Windows.Forms.DataGridView();
             this.IDCampBtn = new System.Windows.Forms.Button();
             this.label65 = new System.Windows.Forms.Label();
             this.IDCampionatoBox = new System.Windows.Forms.TextBox();
-            this.RegistrazioniGrid = new System.Windows.Forms.DataGridView();
+            this.label64 = new System.Windows.Forms.Label();
+            this.ricercaCFBtn = new System.Windows.Forms.Button();
+            this.label63 = new System.Windows.Forms.Label();
+            this.CFPilBox = new System.Windows.Forms.TextBox();
+            this.label62 = new System.Windows.Forms.Label();
+            this.registraPilBtn = new System.Windows.Forms.Button();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.button2 = new System.Windows.Forms.Button();
+            this.risulltatoPilBtn = new System.Windows.Forms.Button();
             this.Team.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridTeam)).BeginInit();
@@ -351,10 +352,11 @@ namespace F1DBMS
             this.Team.Controls.Add(this.Gare);
             this.Team.Controls.Add(this.Circuiti);
             this.Team.Controls.Add(this.tabPage1);
-            this.Team.Location = new System.Drawing.Point(1, -2);
+            this.Team.Location = new System.Drawing.Point(2, -3);
+            this.Team.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Team.Name = "Team";
             this.Team.SelectedIndex = 0;
-            this.Team.Size = new System.Drawing.Size(2262, 1003);
+            this.Team.Size = new System.Drawing.Size(3393, 1543);
             this.Team.TabIndex = 0;
             // 
             // tabPage2
@@ -391,10 +393,11 @@ namespace F1DBMS
             this.tabPage2.Controls.Add(this.DataEsordio);
             this.tabPage2.Controls.Add(this.SedeCentrale);
             this.tabPage2.Controls.Add(this.NomeTeam);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(2254, 977);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPage2.Size = new System.Drawing.Size(3385, 1510);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Team";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -402,17 +405,19 @@ namespace F1DBMS
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 434);
+            this.label8.Location = new System.Drawing.Point(18, 668);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 13);
+            this.label8.Size = new System.Drawing.Size(74, 20);
             this.label8.TabIndex = 35;
             this.label8.Text = "ID Team:";
             // 
             // EliminaTeamBtn
             // 
-            this.EliminaTeamBtn.Location = new System.Drawing.Point(105, 457);
+            this.EliminaTeamBtn.Location = new System.Drawing.Point(158, 703);
+            this.EliminaTeamBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EliminaTeamBtn.Name = "EliminaTeamBtn";
-            this.EliminaTeamBtn.Size = new System.Drawing.Size(152, 23);
+            this.EliminaTeamBtn.Size = new System.Drawing.Size(228, 35);
             this.EliminaTeamBtn.TabIndex = 34;
             this.EliminaTeamBtn.Text = "Elimina Team";
             this.EliminaTeamBtn.UseVisualStyleBackColor = true;
@@ -423,34 +428,38 @@ namespace F1DBMS
             this.EliminaTeamBox.AccessibleDescription = "ID Team";
             this.EliminaTeamBox.AccessibleName = "Nome";
             this.EliminaTeamBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.EliminaTeamBox.Location = new System.Drawing.Point(66, 431);
+            this.EliminaTeamBox.Location = new System.Drawing.Point(99, 663);
+            this.EliminaTeamBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EliminaTeamBox.Name = "EliminaTeamBox";
-            this.EliminaTeamBox.Size = new System.Drawing.Size(277, 20);
+            this.EliminaTeamBox.Size = new System.Drawing.Size(414, 26);
             this.EliminaTeamBox.TabIndex = 33;
             this.EliminaTeamBox.Tag = "Nome team";
             // 
             // label6
             // 
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Location = new System.Drawing.Point(15, 417);
+            this.label6.Location = new System.Drawing.Point(22, 642);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(326, 2);
+            this.label6.Size = new System.Drawing.Size(489, 3);
             this.label6.TabIndex = 31;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 350);
+            this.label5.Location = new System.Drawing.Point(33, 538);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 13);
+            this.label5.Size = new System.Drawing.Size(55, 20);
             this.label5.TabIndex = 30;
             this.label5.Text = "Nome:";
             // 
             // RicercaTeamPerNomeBtn
             // 
-            this.RicercaTeamPerNomeBtn.Location = new System.Drawing.Point(105, 373);
+            this.RicercaTeamPerNomeBtn.Location = new System.Drawing.Point(158, 574);
+            this.RicercaTeamPerNomeBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RicercaTeamPerNomeBtn.Name = "RicercaTeamPerNomeBtn";
-            this.RicercaTeamPerNomeBtn.Size = new System.Drawing.Size(152, 23);
+            this.RicercaTeamPerNomeBtn.Size = new System.Drawing.Size(228, 35);
             this.RicercaTeamPerNomeBtn.TabIndex = 29;
             this.RicercaTeamPerNomeBtn.Text = "Cerca Team";
             this.RicercaTeamPerNomeBtn.UseVisualStyleBackColor = true;
@@ -461,25 +470,28 @@ namespace F1DBMS
             this.RicercaTeamPerNomeBox.AccessibleDescription = "ID Team";
             this.RicercaTeamPerNomeBox.AccessibleName = "Nome";
             this.RicercaTeamPerNomeBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.RicercaTeamPerNomeBox.Location = new System.Drawing.Point(66, 347);
+            this.RicercaTeamPerNomeBox.Location = new System.Drawing.Point(99, 534);
+            this.RicercaTeamPerNomeBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RicercaTeamPerNomeBox.Name = "RicercaTeamPerNomeBox";
-            this.RicercaTeamPerNomeBox.Size = new System.Drawing.Size(277, 20);
+            this.RicercaTeamPerNomeBox.Size = new System.Drawing.Size(414, 26);
             this.RicercaTeamPerNomeBox.TabIndex = 28;
             this.RicercaTeamPerNomeBox.Tag = "Nome team";
             // 
             // label4
             // 
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Location = new System.Drawing.Point(15, 332);
+            this.label4.Location = new System.Drawing.Point(22, 511);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(326, 2);
+            this.label4.Size = new System.Drawing.Size(489, 3);
             this.label4.TabIndex = 27;
             // 
             // BottoneRicercaPerID
             // 
-            this.BottoneRicercaPerID.Location = new System.Drawing.Point(105, 290);
+            this.BottoneRicercaPerID.Location = new System.Drawing.Point(158, 446);
+            this.BottoneRicercaPerID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BottoneRicercaPerID.Name = "BottoneRicercaPerID";
-            this.BottoneRicercaPerID.Size = new System.Drawing.Size(152, 23);
+            this.BottoneRicercaPerID.Size = new System.Drawing.Size(228, 35);
             this.BottoneRicercaPerID.TabIndex = 26;
             this.BottoneRicercaPerID.Text = "Cerca Team";
             this.BottoneRicercaPerID.UseVisualStyleBackColor = true;
@@ -488,9 +500,10 @@ namespace F1DBMS
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 267);
+            this.label3.Location = new System.Drawing.Point(18, 411);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 13);
+            this.label3.Size = new System.Drawing.Size(74, 20);
             this.label3.TabIndex = 25;
             this.label3.Text = "ID Team:";
             // 
@@ -499,97 +512,108 @@ namespace F1DBMS
             this.RicercaTeamPerID.AccessibleDescription = "ID Team";
             this.RicercaTeamPerID.AccessibleName = "Nome";
             this.RicercaTeamPerID.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.RicercaTeamPerID.Location = new System.Drawing.Point(66, 264);
+            this.RicercaTeamPerID.Location = new System.Drawing.Point(99, 406);
+            this.RicercaTeamPerID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RicercaTeamPerID.Name = "RicercaTeamPerID";
-            this.RicercaTeamPerID.Size = new System.Drawing.Size(277, 20);
+            this.RicercaTeamPerID.Size = new System.Drawing.Size(414, 26);
             this.RicercaTeamPerID.TabIndex = 24;
             this.RicercaTeamPerID.Tag = "Nome team";
             // 
             // label2
             // 
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Location = new System.Drawing.Point(15, 249);
+            this.label2.Location = new System.Drawing.Point(22, 383);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(326, 2);
+            this.label2.Size = new System.Drawing.Size(489, 3);
             this.label2.TabIndex = 23;
             // 
             // label1
             // 
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Location = new System.Drawing.Point(15, 199);
+            this.label1.Location = new System.Drawing.Point(22, 306);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(326, 2);
+            this.label1.Size = new System.Drawing.Size(489, 3);
             this.label1.TabIndex = 22;
             // 
             // Tel1Label
             // 
             this.Tel1Label.AutoSize = true;
-            this.Tel1Label.Location = new System.Drawing.Point(23, 104);
+            this.Tel1Label.Location = new System.Drawing.Point(34, 160);
+            this.Tel1Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Tel1Label.Name = "Tel1Label";
-            this.Tel1Label.Size = new System.Drawing.Size(34, 13);
+            this.Tel1Label.Size = new System.Drawing.Size(47, 20);
             this.Tel1Label.TabIndex = 21;
             this.Tel1Label.Text = "Tel.1:";
             // 
             // Tel2Label
             // 
             this.Tel2Label.AutoSize = true;
-            this.Tel2Label.Location = new System.Drawing.Point(22, 130);
+            this.Tel2Label.Location = new System.Drawing.Point(33, 200);
+            this.Tel2Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Tel2Label.Name = "Tel2Label";
-            this.Tel2Label.Size = new System.Drawing.Size(37, 13);
+            this.Tel2Label.Size = new System.Drawing.Size(51, 20);
             this.Tel2Label.TabIndex = 20;
             this.Tel2Label.Text = "Tel. 2:";
             // 
             // Mail2Label
             // 
             this.Mail2Label.AutoSize = true;
-            this.Mail2Label.Location = new System.Drawing.Point(195, 130);
+            this.Mail2Label.Location = new System.Drawing.Point(292, 200);
+            this.Mail2Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Mail2Label.Name = "Mail2Label";
-            this.Mail2Label.Size = new System.Drawing.Size(38, 13);
+            this.Mail2Label.Size = new System.Drawing.Size(54, 20);
             this.Mail2Label.TabIndex = 19;
             this.Mail2Label.Text = "Mail 2:";
             // 
             // Mail1Label
             // 
             this.Mail1Label.AutoSize = true;
-            this.Mail1Label.Location = new System.Drawing.Point(195, 104);
+            this.Mail1Label.Location = new System.Drawing.Point(292, 160);
+            this.Mail1Label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Mail1Label.Name = "Mail1Label";
-            this.Mail1Label.Size = new System.Drawing.Size(38, 13);
+            this.Mail1Label.Size = new System.Drawing.Size(54, 20);
             this.Mail1Label.TabIndex = 18;
             this.Mail1Label.Text = "Mail 1:";
             // 
             // DataEsordioLabel
             // 
             this.DataEsordioLabel.AutoSize = true;
-            this.DataEsordioLabel.Location = new System.Drawing.Point(178, 78);
+            this.DataEsordioLabel.Location = new System.Drawing.Point(267, 120);
+            this.DataEsordioLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DataEsordioLabel.Name = "DataEsordioLabel";
-            this.DataEsordioLabel.Size = new System.Drawing.Size(70, 13);
+            this.DataEsordioLabel.Size = new System.Drawing.Size(104, 20);
             this.DataEsordioLabel.TabIndex = 17;
             this.DataEsordioLabel.Text = "Data esordio:";
             // 
             // SedeLabel
             // 
             this.SedeLabel.AutoSize = true;
-            this.SedeLabel.Location = new System.Drawing.Point(25, 78);
+            this.SedeLabel.Location = new System.Drawing.Point(38, 120);
+            this.SedeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SedeLabel.Name = "SedeLabel";
-            this.SedeLabel.Size = new System.Drawing.Size(35, 13);
+            this.SedeLabel.Size = new System.Drawing.Size(51, 20);
             this.SedeLabel.TabIndex = 16;
             this.SedeLabel.Text = "Sede:";
             // 
             // Nome
             // 
             this.Nome.AutoSize = true;
-            this.Nome.Location = new System.Drawing.Point(22, 52);
+            this.Nome.Location = new System.Drawing.Point(33, 80);
+            this.Nome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Nome.Name = "Nome";
-            this.Nome.Size = new System.Drawing.Size(38, 13);
+            this.Nome.Size = new System.Drawing.Size(55, 20);
             this.Nome.TabIndex = 15;
             this.Nome.Text = "Nome:";
             // 
             // IDTeamLabel
             // 
             this.IDTeamLabel.AutoSize = true;
-            this.IDTeamLabel.Location = new System.Drawing.Point(12, 26);
+            this.IDTeamLabel.Location = new System.Drawing.Point(18, 40);
+            this.IDTeamLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.IDTeamLabel.Name = "IDTeamLabel";
-            this.IDTeamLabel.Size = new System.Drawing.Size(51, 13);
+            this.IDTeamLabel.Size = new System.Drawing.Size(74, 20);
             this.IDTeamLabel.TabIndex = 14;
             this.IDTeamLabel.Text = "ID Team:";
             // 
@@ -598,17 +622,19 @@ namespace F1DBMS
             this.IDTeam.AccessibleDescription = "ID Team";
             this.IDTeam.AccessibleName = "Nome";
             this.IDTeam.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.IDTeam.Location = new System.Drawing.Point(66, 23);
+            this.IDTeam.Location = new System.Drawing.Point(99, 35);
+            this.IDTeam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.IDTeam.Name = "IDTeam";
-            this.IDTeam.Size = new System.Drawing.Size(277, 20);
+            this.IDTeam.Size = new System.Drawing.Size(414, 26);
             this.IDTeam.TabIndex = 13;
             this.IDTeam.Tag = "Nome team";
             // 
             // showTeams
             // 
-            this.showTeams.Location = new System.Drawing.Point(105, 214);
+            this.showTeams.Location = new System.Drawing.Point(158, 329);
+            this.showTeams.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.showTeams.Name = "showTeams";
-            this.showTeams.Size = new System.Drawing.Size(152, 23);
+            this.showTeams.Size = new System.Drawing.Size(228, 35);
             this.showTeams.TabIndex = 12;
             this.showTeams.Text = "Mostra Teams";
             this.showTeams.UseVisualStyleBackColor = true;
@@ -617,17 +643,19 @@ namespace F1DBMS
             // gridTeam
             // 
             this.gridTeam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridTeam.Location = new System.Drawing.Point(361, 6);
+            this.gridTeam.Location = new System.Drawing.Point(542, 9);
+            this.gridTeam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridTeam.Name = "gridTeam";
             this.gridTeam.RowHeadersWidth = 62;
-            this.gridTeam.Size = new System.Drawing.Size(1338, 895);
+            this.gridTeam.Size = new System.Drawing.Size(2007, 1377);
             this.gridTeam.TabIndex = 11;
             // 
             // RegistraTeamBtn
             // 
-            this.RegistraTeamBtn.Location = new System.Drawing.Point(105, 153);
+            this.RegistraTeamBtn.Location = new System.Drawing.Point(158, 235);
+            this.RegistraTeamBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RegistraTeamBtn.Name = "RegistraTeamBtn";
-            this.RegistraTeamBtn.Size = new System.Drawing.Size(152, 23);
+            this.RegistraTeamBtn.Size = new System.Drawing.Size(228, 35);
             this.RegistraTeamBtn.TabIndex = 10;
             this.RegistraTeamBtn.Text = "Registra Team";
             this.RegistraTeamBtn.UseVisualStyleBackColor = true;
@@ -638,9 +666,10 @@ namespace F1DBMS
             this.textBox6.AccessibleDescription = "Nome";
             this.textBox6.AccessibleName = "Nome";
             this.textBox6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.textBox6.Location = new System.Drawing.Point(239, 127);
+            this.textBox6.Location = new System.Drawing.Point(358, 195);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(104, 20);
+            this.textBox6.Size = new System.Drawing.Size(154, 26);
             this.textBox6.TabIndex = 8;
             this.textBox6.Tag = "Mail 2";
             // 
@@ -649,9 +678,10 @@ namespace F1DBMS
             this.Mail1.AccessibleDescription = "Nome";
             this.Mail1.AccessibleName = "Nome";
             this.Mail1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Mail1.Location = new System.Drawing.Point(239, 101);
+            this.Mail1.Location = new System.Drawing.Point(358, 155);
+            this.Mail1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Mail1.Name = "Mail1";
-            this.Mail1.Size = new System.Drawing.Size(104, 20);
+            this.Mail1.Size = new System.Drawing.Size(154, 26);
             this.Mail1.TabIndex = 7;
             this.Mail1.Tag = "Mail 1";
             // 
@@ -660,9 +690,10 @@ namespace F1DBMS
             this.textBox3.AccessibleDescription = "Nome";
             this.textBox3.AccessibleName = "Nome";
             this.textBox3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.textBox3.Location = new System.Drawing.Point(66, 127);
+            this.textBox3.Location = new System.Drawing.Point(99, 195);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(104, 20);
+            this.textBox3.Size = new System.Drawing.Size(154, 26);
             this.textBox3.TabIndex = 5;
             this.textBox3.Tag = "Recapito 2";
             // 
@@ -671,17 +702,19 @@ namespace F1DBMS
             this.Recapito1.AccessibleDescription = "Nome";
             this.Recapito1.AccessibleName = "Nome";
             this.Recapito1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Recapito1.Location = new System.Drawing.Point(66, 101);
+            this.Recapito1.Location = new System.Drawing.Point(99, 155);
+            this.Recapito1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Recapito1.Name = "Recapito1";
-            this.Recapito1.Size = new System.Drawing.Size(104, 20);
+            this.Recapito1.Size = new System.Drawing.Size(154, 26);
             this.Recapito1.TabIndex = 4;
             this.Recapito1.Tag = "Recapito";
             // 
             // DataEsordio
             // 
-            this.DataEsordio.Location = new System.Drawing.Point(254, 75);
+            this.DataEsordio.Location = new System.Drawing.Point(381, 115);
+            this.DataEsordio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DataEsordio.Name = "DataEsordio";
-            this.DataEsordio.Size = new System.Drawing.Size(89, 20);
+            this.DataEsordio.Size = new System.Drawing.Size(132, 26);
             this.DataEsordio.TabIndex = 3;
             // 
             // SedeCentrale
@@ -689,9 +722,10 @@ namespace F1DBMS
             this.SedeCentrale.AccessibleDescription = "Nome";
             this.SedeCentrale.AccessibleName = "Nome";
             this.SedeCentrale.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.SedeCentrale.Location = new System.Drawing.Point(66, 75);
+            this.SedeCentrale.Location = new System.Drawing.Point(99, 115);
+            this.SedeCentrale.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SedeCentrale.Name = "SedeCentrale";
-            this.SedeCentrale.Size = new System.Drawing.Size(104, 20);
+            this.SedeCentrale.Size = new System.Drawing.Size(154, 26);
             this.SedeCentrale.TabIndex = 2;
             this.SedeCentrale.Tag = "Sede team";
             // 
@@ -700,9 +734,10 @@ namespace F1DBMS
             this.NomeTeam.AccessibleDescription = "Nome";
             this.NomeTeam.AccessibleName = "Nome";
             this.NomeTeam.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.NomeTeam.Location = new System.Drawing.Point(66, 49);
+            this.NomeTeam.Location = new System.Drawing.Point(99, 75);
+            this.NomeTeam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NomeTeam.Name = "NomeTeam";
-            this.NomeTeam.Size = new System.Drawing.Size(277, 20);
+            this.NomeTeam.Size = new System.Drawing.Size(414, 26);
             this.NomeTeam.TabIndex = 1;
             this.NomeTeam.Tag = "Nome team";
             // 
@@ -746,10 +781,11 @@ namespace F1DBMS
             this.Dipendenti.Controls.Add(this.CFLabel);
             this.Dipendenti.Controls.Add(this.CFBox);
             this.Dipendenti.Controls.Add(this.gridDipendenti);
-            this.Dipendenti.Location = new System.Drawing.Point(4, 22);
+            this.Dipendenti.Location = new System.Drawing.Point(4, 29);
+            this.Dipendenti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Dipendenti.Name = "Dipendenti";
-            this.Dipendenti.Padding = new System.Windows.Forms.Padding(3);
-            this.Dipendenti.Size = new System.Drawing.Size(2254, 977);
+            this.Dipendenti.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Dipendenti.Size = new System.Drawing.Size(3385, 1510);
             this.Dipendenti.TabIndex = 2;
             this.Dipendenti.Text = "Dipendenti";
             this.Dipendenti.UseVisualStyleBackColor = true;
@@ -757,16 +793,18 @@ namespace F1DBMS
             // label26
             // 
             this.label26.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label26.Location = new System.Drawing.Point(14, 568);
+            this.label26.Location = new System.Drawing.Point(21, 874);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(328, 2);
+            this.label26.Size = new System.Drawing.Size(492, 3);
             this.label26.TabIndex = 38;
             // 
             // MostraIncBtn
             // 
-            this.MostraIncBtn.Location = new System.Drawing.Point(98, 610);
+            this.MostraIncBtn.Location = new System.Drawing.Point(147, 938);
+            this.MostraIncBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MostraIncBtn.Name = "MostraIncBtn";
-            this.MostraIncBtn.Size = new System.Drawing.Size(152, 23);
+            this.MostraIncBtn.Size = new System.Drawing.Size(228, 35);
             this.MostraIncBtn.TabIndex = 37;
             this.MostraIncBtn.Text = "Mostra incarichi dipendente";
             this.MostraIncBtn.UseVisualStyleBackColor = true;
@@ -775,9 +813,10 @@ namespace F1DBMS
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(69, 587);
+            this.label25.Location = new System.Drawing.Point(104, 903);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(23, 13);
+            this.label25.Size = new System.Drawing.Size(34, 20);
             this.label25.TabIndex = 36;
             this.label25.Text = "CF:";
             // 
@@ -786,16 +825,18 @@ namespace F1DBMS
             this.CFCercaIncDipBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CFCercaIncDipBox.Location = new System.Drawing.Point(98, 584);
+            this.CFCercaIncDipBox.Location = new System.Drawing.Point(147, 898);
+            this.CFCercaIncDipBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CFCercaIncDipBox.Name = "CFCercaIncDipBox";
-            this.CFCercaIncDipBox.Size = new System.Drawing.Size(244, 20);
+            this.CFCercaIncDipBox.Size = new System.Drawing.Size(364, 26);
             this.CFCercaIncDipBox.TabIndex = 35;
             // 
             // EliminaDipBtn
             // 
-            this.EliminaDipBtn.Location = new System.Drawing.Point(98, 533);
+            this.EliminaDipBtn.Location = new System.Drawing.Point(147, 820);
+            this.EliminaDipBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EliminaDipBtn.Name = "EliminaDipBtn";
-            this.EliminaDipBtn.Size = new System.Drawing.Size(152, 23);
+            this.EliminaDipBtn.Size = new System.Drawing.Size(228, 35);
             this.EliminaDipBtn.TabIndex = 34;
             this.EliminaDipBtn.Text = "Elimina Dipendente";
             this.EliminaDipBtn.UseVisualStyleBackColor = true;
@@ -804,9 +845,10 @@ namespace F1DBMS
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(69, 510);
+            this.label22.Location = new System.Drawing.Point(104, 785);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(23, 13);
+            this.label22.Size = new System.Drawing.Size(34, 20);
             this.label22.TabIndex = 33;
             this.label22.Text = "CF:";
             // 
@@ -815,24 +857,27 @@ namespace F1DBMS
             this.EliminaDipBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.EliminaDipBox.Location = new System.Drawing.Point(98, 507);
+            this.EliminaDipBox.Location = new System.Drawing.Point(147, 780);
+            this.EliminaDipBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EliminaDipBox.Name = "EliminaDipBox";
-            this.EliminaDipBox.Size = new System.Drawing.Size(244, 20);
+            this.EliminaDipBox.Size = new System.Drawing.Size(364, 26);
             this.EliminaDipBox.TabIndex = 32;
             // 
             // label21
             // 
             this.label21.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label21.Location = new System.Drawing.Point(14, 493);
+            this.label21.Location = new System.Drawing.Point(21, 758);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(328, 2);
+            this.label21.Size = new System.Drawing.Size(492, 3);
             this.label21.TabIndex = 31;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(98, 458);
+            this.button1.Location = new System.Drawing.Point(147, 705);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 23);
+            this.button1.Size = new System.Drawing.Size(228, 35);
             this.button1.TabIndex = 30;
             this.button1.Text = "Ricerca Dipendente";
             this.button1.UseVisualStyleBackColor = true;
@@ -841,18 +886,20 @@ namespace F1DBMS
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(37, 435);
+            this.label19.Location = new System.Drawing.Point(56, 669);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(55, 13);
+            this.label19.Size = new System.Drawing.Size(82, 20);
             this.label19.TabIndex = 29;
             this.label19.Text = "Cognome:";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(54, 409);
+            this.label20.Location = new System.Drawing.Point(81, 629);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(38, 13);
+            this.label20.Size = new System.Drawing.Size(55, 20);
             this.label20.TabIndex = 28;
             this.label20.Text = "Nome:";
             // 
@@ -861,9 +908,10 @@ namespace F1DBMS
             this.RicercaDipNomeBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.RicercaDipNomeBox.Location = new System.Drawing.Point(98, 406);
+            this.RicercaDipNomeBox.Location = new System.Drawing.Point(147, 625);
+            this.RicercaDipNomeBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RicercaDipNomeBox.Name = "RicercaDipNomeBox";
-            this.RicercaDipNomeBox.Size = new System.Drawing.Size(244, 20);
+            this.RicercaDipNomeBox.Size = new System.Drawing.Size(364, 26);
             this.RicercaDipNomeBox.TabIndex = 27;
             // 
             // RicercaDipCognomeBox
@@ -871,24 +919,27 @@ namespace F1DBMS
             this.RicercaDipCognomeBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.RicercaDipCognomeBox.Location = new System.Drawing.Point(98, 432);
+            this.RicercaDipCognomeBox.Location = new System.Drawing.Point(147, 665);
+            this.RicercaDipCognomeBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RicercaDipCognomeBox.Name = "RicercaDipCognomeBox";
-            this.RicercaDipCognomeBox.Size = new System.Drawing.Size(244, 20);
+            this.RicercaDipCognomeBox.Size = new System.Drawing.Size(364, 26);
             this.RicercaDipCognomeBox.TabIndex = 26;
             // 
             // label18
             // 
             this.label18.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label18.Location = new System.Drawing.Point(14, 391);
+            this.label18.Location = new System.Drawing.Point(21, 602);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(328, 2);
+            this.label18.Size = new System.Drawing.Size(492, 3);
             this.label18.TabIndex = 25;
             // 
             // RicercaDipCFBtn
             // 
-            this.RicercaDipCFBtn.Location = new System.Drawing.Point(98, 356);
+            this.RicercaDipCFBtn.Location = new System.Drawing.Point(147, 548);
+            this.RicercaDipCFBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RicercaDipCFBtn.Name = "RicercaDipCFBtn";
-            this.RicercaDipCFBtn.Size = new System.Drawing.Size(152, 23);
+            this.RicercaDipCFBtn.Size = new System.Drawing.Size(228, 35);
             this.RicercaDipCFBtn.TabIndex = 24;
             this.RicercaDipCFBtn.Text = "Ricerca Dipendente";
             this.RicercaDipCFBtn.UseVisualStyleBackColor = true;
@@ -897,9 +948,10 @@ namespace F1DBMS
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(69, 333);
+            this.label17.Location = new System.Drawing.Point(104, 512);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(23, 13);
+            this.label17.Size = new System.Drawing.Size(34, 20);
             this.label17.TabIndex = 23;
             this.label17.Text = "CF:";
             // 
@@ -908,24 +960,27 @@ namespace F1DBMS
             this.BoxRicercaDipendenteCF.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BoxRicercaDipendenteCF.Location = new System.Drawing.Point(98, 330);
+            this.BoxRicercaDipendenteCF.Location = new System.Drawing.Point(147, 508);
+            this.BoxRicercaDipendenteCF.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BoxRicercaDipendenteCF.Name = "BoxRicercaDipendenteCF";
-            this.BoxRicercaDipendenteCF.Size = new System.Drawing.Size(244, 20);
+            this.BoxRicercaDipendenteCF.Size = new System.Drawing.Size(364, 26);
             this.BoxRicercaDipendenteCF.TabIndex = 22;
             // 
             // label16
             // 
             this.label16.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label16.Location = new System.Drawing.Point(14, 316);
+            this.label16.Location = new System.Drawing.Point(21, 486);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(328, 2);
+            this.label16.Size = new System.Drawing.Size(492, 3);
             this.label16.TabIndex = 21;
             // 
             // MostraDipendenti
             // 
-            this.MostraDipendenti.Location = new System.Drawing.Point(98, 279);
+            this.MostraDipendenti.Location = new System.Drawing.Point(147, 429);
+            this.MostraDipendenti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MostraDipendenti.Name = "MostraDipendenti";
-            this.MostraDipendenti.Size = new System.Drawing.Size(152, 23);
+            this.MostraDipendenti.Size = new System.Drawing.Size(228, 35);
             this.MostraDipendenti.TabIndex = 20;
             this.MostraDipendenti.Text = "Mostra Dipendenti";
             this.MostraDipendenti.UseVisualStyleBackColor = true;
@@ -934,16 +989,18 @@ namespace F1DBMS
             // label15
             // 
             this.label15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label15.Location = new System.Drawing.Point(14, 264);
+            this.label15.Location = new System.Drawing.Point(21, 406);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(328, 2);
+            this.label15.Size = new System.Drawing.Size(492, 3);
             this.label15.TabIndex = 19;
             // 
             // RegistraDipendente
             // 
-            this.RegistraDipendente.Location = new System.Drawing.Point(98, 230);
+            this.RegistraDipendente.Location = new System.Drawing.Point(147, 354);
+            this.RegistraDipendente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RegistraDipendente.Name = "RegistraDipendente";
-            this.RegistraDipendente.Size = new System.Drawing.Size(152, 23);
+            this.RegistraDipendente.Size = new System.Drawing.Size(228, 35);
             this.RegistraDipendente.TabIndex = 18;
             this.RegistraDipendente.Text = "Registra Dipendente";
             this.RegistraDipendente.UseVisualStyleBackColor = true;
@@ -952,9 +1009,10 @@ namespace F1DBMS
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(55, 207);
+            this.label14.Location = new System.Drawing.Point(82, 318);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(37, 13);
+            this.label14.Size = new System.Drawing.Size(51, 20);
             this.label14.TabIndex = 17;
             this.label14.Text = "Tel. 2:";
             // 
@@ -963,17 +1021,19 @@ namespace F1DBMS
             this.Tel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Tel2.Location = new System.Drawing.Point(98, 204);
+            this.Tel2.Location = new System.Drawing.Point(147, 314);
+            this.Tel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Tel2.Name = "Tel2";
-            this.Tel2.Size = new System.Drawing.Size(244, 20);
+            this.Tel2.Size = new System.Drawing.Size(364, 26);
             this.Tel2.TabIndex = 16;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(55, 181);
+            this.label13.Location = new System.Drawing.Point(82, 278);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(37, 13);
+            this.label13.Size = new System.Drawing.Size(51, 20);
             this.label13.TabIndex = 15;
             this.label13.Text = "Tel. 1:";
             // 
@@ -982,17 +1042,19 @@ namespace F1DBMS
             this.Tel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Tel1.Location = new System.Drawing.Point(98, 178);
+            this.Tel1.Location = new System.Drawing.Point(147, 274);
+            this.Tel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Tel1.Name = "Tel1";
-            this.Tel1.Size = new System.Drawing.Size(244, 20);
+            this.Tel1.Size = new System.Drawing.Size(364, 26);
             this.Tel1.TabIndex = 14;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(32, 155);
+            this.label12.Location = new System.Drawing.Point(48, 238);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 13);
+            this.label12.Size = new System.Drawing.Size(89, 20);
             this.label12.TabIndex = 13;
             this.label12.Text = "Residenza:";
             // 
@@ -1001,33 +1063,37 @@ namespace F1DBMS
             this.ResidenzaBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ResidenzaBox.Location = new System.Drawing.Point(98, 152);
+            this.ResidenzaBox.Location = new System.Drawing.Point(147, 234);
+            this.ResidenzaBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ResidenzaBox.Name = "ResidenzaBox";
-            this.ResidenzaBox.Size = new System.Drawing.Size(244, 20);
+            this.ResidenzaBox.Size = new System.Drawing.Size(364, 26);
             this.ResidenzaBox.TabIndex = 12;
             // 
             // DataLabel
             // 
             this.DataLabel.AutoSize = true;
-            this.DataLabel.Location = new System.Drawing.Point(11, 132);
+            this.DataLabel.Location = new System.Drawing.Point(16, 203);
+            this.DataLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DataLabel.Name = "DataLabel";
-            this.DataLabel.Size = new System.Drawing.Size(81, 13);
+            this.DataLabel.Size = new System.Drawing.Size(119, 20);
             this.DataLabel.TabIndex = 11;
             this.DataLabel.Text = "Data di nascita:";
             // 
             // DataNascita
             // 
-            this.DataNascita.Location = new System.Drawing.Point(98, 126);
+            this.DataNascita.Location = new System.Drawing.Point(147, 194);
+            this.DataNascita.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DataNascita.Name = "DataNascita";
-            this.DataNascita.Size = new System.Drawing.Size(244, 20);
+            this.DataNascita.Size = new System.Drawing.Size(364, 26);
             this.DataNascita.TabIndex = 10;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(4, 103);
+            this.label11.Location = new System.Drawing.Point(6, 158);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(88, 13);
+            this.label11.Size = new System.Drawing.Size(129, 20);
             this.label11.TabIndex = 9;
             this.label11.Text = "Luogo di nascita:";
             // 
@@ -1036,26 +1102,29 @@ namespace F1DBMS
             this.LuogoNascitaBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.LuogoNascitaBox.Location = new System.Drawing.Point(98, 100);
+            this.LuogoNascitaBox.Location = new System.Drawing.Point(147, 154);
+            this.LuogoNascitaBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LuogoNascitaBox.Name = "LuogoNascitaBox";
-            this.LuogoNascitaBox.Size = new System.Drawing.Size(244, 20);
+            this.LuogoNascitaBox.Size = new System.Drawing.Size(364, 26);
             this.LuogoNascitaBox.TabIndex = 8;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(37, 77);
+            this.label10.Location = new System.Drawing.Point(56, 118);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 13);
+            this.label10.Size = new System.Drawing.Size(82, 20);
             this.label10.TabIndex = 7;
             this.label10.Text = "Cognome:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(54, 51);
+            this.label9.Location = new System.Drawing.Point(81, 78);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 13);
+            this.label9.Size = new System.Drawing.Size(55, 20);
             this.label9.TabIndex = 6;
             this.label9.Text = "Nome:";
             // 
@@ -1064,9 +1133,10 @@ namespace F1DBMS
             this.NomeBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.NomeBox.Location = new System.Drawing.Point(98, 48);
+            this.NomeBox.Location = new System.Drawing.Point(147, 74);
+            this.NomeBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NomeBox.Name = "NomeBox";
-            this.NomeBox.Size = new System.Drawing.Size(244, 20);
+            this.NomeBox.Size = new System.Drawing.Size(364, 26);
             this.NomeBox.TabIndex = 5;
             // 
             // CognomeBox
@@ -1074,17 +1144,19 @@ namespace F1DBMS
             this.CognomeBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CognomeBox.Location = new System.Drawing.Point(98, 74);
+            this.CognomeBox.Location = new System.Drawing.Point(147, 114);
+            this.CognomeBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CognomeBox.Name = "CognomeBox";
-            this.CognomeBox.Size = new System.Drawing.Size(244, 20);
+            this.CognomeBox.Size = new System.Drawing.Size(364, 26);
             this.CognomeBox.TabIndex = 4;
             // 
             // CFLabel
             // 
             this.CFLabel.AutoSize = true;
-            this.CFLabel.Location = new System.Drawing.Point(69, 25);
+            this.CFLabel.Location = new System.Drawing.Point(104, 38);
+            this.CFLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CFLabel.Name = "CFLabel";
-            this.CFLabel.Size = new System.Drawing.Size(23, 13);
+            this.CFLabel.Size = new System.Drawing.Size(34, 20);
             this.CFLabel.TabIndex = 3;
             this.CFLabel.Text = "CF:";
             // 
@@ -1093,9 +1165,10 @@ namespace F1DBMS
             this.CFBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CFBox.Location = new System.Drawing.Point(98, 22);
+            this.CFBox.Location = new System.Drawing.Point(147, 34);
+            this.CFBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CFBox.Name = "CFBox";
-            this.CFBox.Size = new System.Drawing.Size(244, 20);
+            this.CFBox.Size = new System.Drawing.Size(364, 26);
             this.CFBox.TabIndex = 2;
             // 
             // gridDipendenti
@@ -1104,10 +1177,11 @@ namespace F1DBMS
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridDipendenti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridDipendenti.Location = new System.Drawing.Point(360, 6);
+            this.gridDipendenti.Location = new System.Drawing.Point(540, 9);
+            this.gridDipendenti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridDipendenti.Name = "gridDipendenti";
             this.gridDipendenti.RowHeadersWidth = 62;
-            this.gridDipendenti.Size = new System.Drawing.Size(1888, 965);
+            this.gridDipendenti.Size = new System.Drawing.Size(2832, 1485);
             this.gridDipendenti.TabIndex = 1;
             // 
             // IncarichiDipendenti
@@ -1118,18 +1192,20 @@ namespace F1DBMS
             this.IncarichiDipendenti.Controls.Add(this.label23);
             this.IncarichiDipendenti.Controls.Add(this.GridIncarichiDip);
             this.IncarichiDipendenti.Controls.Add(this.AggiungiIncaricoBtn);
-            this.IncarichiDipendenti.Location = new System.Drawing.Point(4, 22);
+            this.IncarichiDipendenti.Location = new System.Drawing.Point(4, 29);
+            this.IncarichiDipendenti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.IncarichiDipendenti.Name = "IncarichiDipendenti";
-            this.IncarichiDipendenti.Size = new System.Drawing.Size(2254, 977);
+            this.IncarichiDipendenti.Size = new System.Drawing.Size(3385, 1510);
             this.IncarichiDipendenti.TabIndex = 3;
             this.IncarichiDipendenti.Text = "Incarichi Dipendenti";
             this.IncarichiDipendenti.UseVisualStyleBackColor = true;
             // 
             // RevocaIncaricoBtn
             // 
-            this.RevocaIncaricoBtn.Location = new System.Drawing.Point(104, 137);
+            this.RevocaIncaricoBtn.Location = new System.Drawing.Point(156, 211);
+            this.RevocaIncaricoBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RevocaIncaricoBtn.Name = "RevocaIncaricoBtn";
-            this.RevocaIncaricoBtn.Size = new System.Drawing.Size(152, 23);
+            this.RevocaIncaricoBtn.Size = new System.Drawing.Size(228, 35);
             this.RevocaIncaricoBtn.TabIndex = 6;
             this.RevocaIncaricoBtn.Text = "Revoca Incarico";
             this.RevocaIncaricoBtn.UseVisualStyleBackColor = true;
@@ -1138,16 +1214,18 @@ namespace F1DBMS
             // label24
             // 
             this.label24.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label24.Location = new System.Drawing.Point(23, 118);
+            this.label24.Location = new System.Drawing.Point(34, 182);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(315, 2);
+            this.label24.Size = new System.Drawing.Size(472, 3);
             this.label24.TabIndex = 5;
             // 
             // MostraIncarichiDip
             // 
-            this.MostraIncarichiDip.Location = new System.Drawing.Point(104, 82);
+            this.MostraIncarichiDip.Location = new System.Drawing.Point(156, 126);
+            this.MostraIncarichiDip.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MostraIncarichiDip.Name = "MostraIncarichiDip";
-            this.MostraIncarichiDip.Size = new System.Drawing.Size(152, 23);
+            this.MostraIncarichiDip.Size = new System.Drawing.Size(228, 35);
             this.MostraIncarichiDip.TabIndex = 4;
             this.MostraIncarichiDip.Text = "Mostra Incarichi";
             this.MostraIncarichiDip.UseVisualStyleBackColor = true;
@@ -1156,25 +1234,28 @@ namespace F1DBMS
             // label23
             // 
             this.label23.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label23.Location = new System.Drawing.Point(23, 68);
+            this.label23.Location = new System.Drawing.Point(34, 105);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(315, 2);
+            this.label23.Size = new System.Drawing.Size(472, 3);
             this.label23.TabIndex = 3;
             // 
             // GridIncarichiDip
             // 
             this.GridIncarichiDip.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridIncarichiDip.Location = new System.Drawing.Point(365, 3);
+            this.GridIncarichiDip.Location = new System.Drawing.Point(548, 5);
+            this.GridIncarichiDip.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GridIncarichiDip.Name = "GridIncarichiDip";
             this.GridIncarichiDip.RowHeadersWidth = 62;
-            this.GridIncarichiDip.Size = new System.Drawing.Size(1886, 971);
+            this.GridIncarichiDip.Size = new System.Drawing.Size(2829, 1494);
             this.GridIncarichiDip.TabIndex = 2;
             // 
             // AggiungiIncaricoBtn
             // 
-            this.AggiungiIncaricoBtn.Location = new System.Drawing.Point(104, 33);
+            this.AggiungiIncaricoBtn.Location = new System.Drawing.Point(156, 51);
+            this.AggiungiIncaricoBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AggiungiIncaricoBtn.Name = "AggiungiIncaricoBtn";
-            this.AggiungiIncaricoBtn.Size = new System.Drawing.Size(152, 23);
+            this.AggiungiIncaricoBtn.Size = new System.Drawing.Size(228, 35);
             this.AggiungiIncaricoBtn.TabIndex = 1;
             this.AggiungiIncaricoBtn.Text = "Aggiungi Incarico";
             this.AggiungiIncaricoBtn.UseVisualStyleBackColor = true;
@@ -1220,18 +1301,20 @@ namespace F1DBMS
             this.Piloti.Controls.Add(this.NomePilotaBox);
             this.Piloti.Controls.Add(this.CFPilotaBox);
             this.Piloti.Controls.Add(this.gridPiloti);
-            this.Piloti.Location = new System.Drawing.Point(4, 22);
+            this.Piloti.Location = new System.Drawing.Point(4, 29);
+            this.Piloti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Piloti.Name = "Piloti";
-            this.Piloti.Size = new System.Drawing.Size(2254, 977);
+            this.Piloti.Size = new System.Drawing.Size(3385, 1510);
             this.Piloti.TabIndex = 4;
             this.Piloti.Text = "Piloti";
             this.Piloti.UseVisualStyleBackColor = true;
             // 
             // RicercaIncarichiPilBtn
             // 
-            this.RicercaIncarichiPilBtn.Location = new System.Drawing.Point(112, 619);
+            this.RicercaIncarichiPilBtn.Location = new System.Drawing.Point(168, 952);
+            this.RicercaIncarichiPilBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RicercaIncarichiPilBtn.Name = "RicercaIncarichiPilBtn";
-            this.RicercaIncarichiPilBtn.Size = new System.Drawing.Size(152, 23);
+            this.RicercaIncarichiPilBtn.Size = new System.Drawing.Size(228, 35);
             this.RicercaIncarichiPilBtn.TabIndex = 49;
             this.RicercaIncarichiPilBtn.Text = "Mostra incarichi pilota";
             this.RicercaIncarichiPilBtn.UseVisualStyleBackColor = true;
@@ -1240,9 +1323,10 @@ namespace F1DBMS
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(83, 596);
+            this.label43.Location = new System.Drawing.Point(124, 917);
+            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(23, 13);
+            this.label43.Size = new System.Drawing.Size(34, 20);
             this.label43.TabIndex = 48;
             this.label43.Text = "CF:";
             // 
@@ -1251,24 +1335,27 @@ namespace F1DBMS
             this.RicercaIncarichiPilBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.RicercaIncarichiPilBox.Location = new System.Drawing.Point(112, 593);
+            this.RicercaIncarichiPilBox.Location = new System.Drawing.Point(168, 912);
+            this.RicercaIncarichiPilBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RicercaIncarichiPilBox.Name = "RicercaIncarichiPilBox";
-            this.RicercaIncarichiPilBox.Size = new System.Drawing.Size(240, 20);
+            this.RicercaIncarichiPilBox.Size = new System.Drawing.Size(358, 26);
             this.RicercaIncarichiPilBox.TabIndex = 47;
             // 
             // label44
             // 
             this.label44.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label44.Location = new System.Drawing.Point(28, 579);
+            this.label44.Location = new System.Drawing.Point(42, 891);
+            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(328, 2);
+            this.label44.Size = new System.Drawing.Size(492, 3);
             this.label44.TabIndex = 46;
             // 
             // EliminaPilotaBtn
             // 
-            this.EliminaPilotaBtn.Location = new System.Drawing.Point(112, 542);
+            this.EliminaPilotaBtn.Location = new System.Drawing.Point(168, 834);
+            this.EliminaPilotaBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EliminaPilotaBtn.Name = "EliminaPilotaBtn";
-            this.EliminaPilotaBtn.Size = new System.Drawing.Size(152, 23);
+            this.EliminaPilotaBtn.Size = new System.Drawing.Size(228, 35);
             this.EliminaPilotaBtn.TabIndex = 45;
             this.EliminaPilotaBtn.Text = "Elimina Pilota";
             this.EliminaPilotaBtn.UseVisualStyleBackColor = true;
@@ -1277,9 +1364,10 @@ namespace F1DBMS
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(83, 519);
+            this.label42.Location = new System.Drawing.Point(124, 798);
+            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(23, 13);
+            this.label42.Size = new System.Drawing.Size(34, 20);
             this.label42.TabIndex = 44;
             this.label42.Text = "CF:";
             // 
@@ -1288,32 +1376,36 @@ namespace F1DBMS
             this.EliminaPilCFBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.EliminaPilCFBox.Location = new System.Drawing.Point(112, 516);
+            this.EliminaPilCFBox.Location = new System.Drawing.Point(168, 794);
+            this.EliminaPilCFBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EliminaPilCFBox.Name = "EliminaPilCFBox";
-            this.EliminaPilCFBox.Size = new System.Drawing.Size(240, 20);
+            this.EliminaPilCFBox.Size = new System.Drawing.Size(358, 26);
             this.EliminaPilCFBox.TabIndex = 43;
             // 
             // label41
             // 
             this.label41.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label41.Location = new System.Drawing.Point(24, 323);
+            this.label41.Location = new System.Drawing.Point(36, 497);
+            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(328, 2);
+            this.label41.Size = new System.Drawing.Size(492, 3);
             this.label41.TabIndex = 42;
             // 
             // label36
             // 
             this.label36.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label36.Location = new System.Drawing.Point(28, 501);
+            this.label36.Location = new System.Drawing.Point(42, 771);
+            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(328, 2);
+            this.label36.Size = new System.Drawing.Size(492, 3);
             this.label36.TabIndex = 41;
             // 
             // RicercaPilNomeCognomeBtn
             // 
-            this.RicercaPilNomeCognomeBtn.Location = new System.Drawing.Point(112, 466);
+            this.RicercaPilNomeCognomeBtn.Location = new System.Drawing.Point(168, 717);
+            this.RicercaPilNomeCognomeBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RicercaPilNomeCognomeBtn.Name = "RicercaPilNomeCognomeBtn";
-            this.RicercaPilNomeCognomeBtn.Size = new System.Drawing.Size(152, 23);
+            this.RicercaPilNomeCognomeBtn.Size = new System.Drawing.Size(228, 35);
             this.RicercaPilNomeCognomeBtn.TabIndex = 40;
             this.RicercaPilNomeCognomeBtn.Text = "Ricerca Pilota";
             this.RicercaPilNomeCognomeBtn.UseVisualStyleBackColor = true;
@@ -1322,18 +1414,20 @@ namespace F1DBMS
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(51, 443);
+            this.label37.Location = new System.Drawing.Point(76, 682);
+            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(55, 13);
+            this.label37.Size = new System.Drawing.Size(82, 20);
             this.label37.TabIndex = 39;
             this.label37.Text = "Cognome:";
             // 
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(68, 417);
+            this.label38.Location = new System.Drawing.Point(102, 642);
+            this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(38, 13);
+            this.label38.Size = new System.Drawing.Size(55, 20);
             this.label38.TabIndex = 38;
             this.label38.Text = "Nome:";
             // 
@@ -1342,9 +1436,10 @@ namespace F1DBMS
             this.ricercaPilNomeBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ricercaPilNomeBox.Location = new System.Drawing.Point(112, 414);
+            this.ricercaPilNomeBox.Location = new System.Drawing.Point(168, 637);
+            this.ricercaPilNomeBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ricercaPilNomeBox.Name = "ricercaPilNomeBox";
-            this.ricercaPilNomeBox.Size = new System.Drawing.Size(240, 20);
+            this.ricercaPilNomeBox.Size = new System.Drawing.Size(358, 26);
             this.ricercaPilNomeBox.TabIndex = 37;
             // 
             // RicercaPilCognomeBox
@@ -1352,24 +1447,27 @@ namespace F1DBMS
             this.RicercaPilCognomeBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.RicercaPilCognomeBox.Location = new System.Drawing.Point(112, 440);
+            this.RicercaPilCognomeBox.Location = new System.Drawing.Point(168, 677);
+            this.RicercaPilCognomeBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RicercaPilCognomeBox.Name = "RicercaPilCognomeBox";
-            this.RicercaPilCognomeBox.Size = new System.Drawing.Size(240, 20);
+            this.RicercaPilCognomeBox.Size = new System.Drawing.Size(358, 26);
             this.RicercaPilCognomeBox.TabIndex = 36;
             // 
             // label39
             // 
             this.label39.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label39.Location = new System.Drawing.Point(28, 399);
+            this.label39.Location = new System.Drawing.Point(42, 614);
+            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(328, 2);
+            this.label39.Size = new System.Drawing.Size(492, 3);
             this.label39.TabIndex = 35;
             // 
             // ricercaPilCFBtn
             // 
-            this.ricercaPilCFBtn.Location = new System.Drawing.Point(112, 364);
+            this.ricercaPilCFBtn.Location = new System.Drawing.Point(168, 560);
+            this.ricercaPilCFBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ricercaPilCFBtn.Name = "ricercaPilCFBtn";
-            this.ricercaPilCFBtn.Size = new System.Drawing.Size(152, 23);
+            this.ricercaPilCFBtn.Size = new System.Drawing.Size(228, 35);
             this.ricercaPilCFBtn.TabIndex = 34;
             this.ricercaPilCFBtn.Text = "Ricerca Pilota";
             this.ricercaPilCFBtn.UseVisualStyleBackColor = true;
@@ -1378,9 +1476,10 @@ namespace F1DBMS
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(83, 341);
+            this.label40.Location = new System.Drawing.Point(124, 525);
+            this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(23, 13);
+            this.label40.Size = new System.Drawing.Size(34, 20);
             this.label40.TabIndex = 33;
             this.label40.Text = "CF:";
             // 
@@ -1389,23 +1488,26 @@ namespace F1DBMS
             this.RicercaPilCFBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.RicercaPilCFBox.Location = new System.Drawing.Point(112, 338);
+            this.RicercaPilCFBox.Location = new System.Drawing.Point(168, 520);
+            this.RicercaPilCFBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RicercaPilCFBox.Name = "RicercaPilCFBox";
-            this.RicercaPilCFBox.Size = new System.Drawing.Size(240, 20);
+            this.RicercaPilCFBox.Size = new System.Drawing.Size(358, 26);
             this.RicercaPilCFBox.TabIndex = 32;
             // 
             // dataNascitaPilota
             // 
-            this.dataNascitaPilota.Location = new System.Drawing.Point(112, 133);
+            this.dataNascitaPilota.Location = new System.Drawing.Point(168, 205);
+            this.dataNascitaPilota.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataNascitaPilota.Name = "dataNascitaPilota";
-            this.dataNascitaPilota.Size = new System.Drawing.Size(240, 20);
+            this.dataNascitaPilota.Size = new System.Drawing.Size(358, 26);
             this.dataNascitaPilota.TabIndex = 29;
             // 
             // MostraPilotiBtn
             // 
-            this.MostraPilotiBtn.Location = new System.Drawing.Point(112, 288);
+            this.MostraPilotiBtn.Location = new System.Drawing.Point(168, 443);
+            this.MostraPilotiBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MostraPilotiBtn.Name = "MostraPilotiBtn";
-            this.MostraPilotiBtn.Size = new System.Drawing.Size(152, 23);
+            this.MostraPilotiBtn.Size = new System.Drawing.Size(228, 35);
             this.MostraPilotiBtn.TabIndex = 28;
             this.MostraPilotiBtn.Text = "Mostra Piloti";
             this.MostraPilotiBtn.UseVisualStyleBackColor = true;
@@ -1414,16 +1516,18 @@ namespace F1DBMS
             // label35
             // 
             this.label35.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label35.Location = new System.Drawing.Point(28, 274);
+            this.label35.Location = new System.Drawing.Point(42, 422);
+            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(328, 2);
+            this.label35.Size = new System.Drawing.Size(492, 3);
             this.label35.TabIndex = 27;
             // 
             // regPilotaBtn
             // 
-            this.regPilotaBtn.Location = new System.Drawing.Point(112, 239);
+            this.regPilotaBtn.Location = new System.Drawing.Point(168, 368);
+            this.regPilotaBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.regPilotaBtn.Name = "regPilotaBtn";
-            this.regPilotaBtn.Size = new System.Drawing.Size(152, 23);
+            this.regPilotaBtn.Size = new System.Drawing.Size(228, 35);
             this.regPilotaBtn.TabIndex = 26;
             this.regPilotaBtn.Text = "Registra Pilota";
             this.regPilotaBtn.UseVisualStyleBackColor = true;
@@ -1432,9 +1536,10 @@ namespace F1DBMS
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(69, 216);
+            this.label27.Location = new System.Drawing.Point(104, 332);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(37, 13);
+            this.label27.Size = new System.Drawing.Size(51, 20);
             this.label27.TabIndex = 25;
             this.label27.Text = "Tel. 2:";
             // 
@@ -1443,17 +1548,19 @@ namespace F1DBMS
             this.Tel2PilotaBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Tel2PilotaBox.Location = new System.Drawing.Point(112, 213);
+            this.Tel2PilotaBox.Location = new System.Drawing.Point(168, 328);
+            this.Tel2PilotaBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Tel2PilotaBox.Name = "Tel2PilotaBox";
-            this.Tel2PilotaBox.Size = new System.Drawing.Size(240, 20);
+            this.Tel2PilotaBox.Size = new System.Drawing.Size(358, 26);
             this.Tel2PilotaBox.TabIndex = 24;
             // 
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(69, 190);
+            this.label32.Location = new System.Drawing.Point(104, 292);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(37, 13);
+            this.label32.Size = new System.Drawing.Size(51, 20);
             this.label32.TabIndex = 23;
             this.label32.Text = "Tel. 1:";
             // 
@@ -1462,17 +1569,19 @@ namespace F1DBMS
             this.Tel1PilotaBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Tel1PilotaBox.Location = new System.Drawing.Point(112, 187);
+            this.Tel1PilotaBox.Location = new System.Drawing.Point(168, 288);
+            this.Tel1PilotaBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Tel1PilotaBox.Name = "Tel1PilotaBox";
-            this.Tel1PilotaBox.Size = new System.Drawing.Size(240, 20);
+            this.Tel1PilotaBox.Size = new System.Drawing.Size(358, 26);
             this.Tel1PilotaBox.TabIndex = 22;
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(46, 164);
+            this.label33.Location = new System.Drawing.Point(69, 252);
+            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(60, 13);
+            this.label33.Size = new System.Drawing.Size(89, 20);
             this.label33.TabIndex = 21;
             this.label33.Text = "Residenza:";
             // 
@@ -1481,91 +1590,102 @@ namespace F1DBMS
             this.ResidenzaPilotaBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ResidenzaPilotaBox.Location = new System.Drawing.Point(112, 161);
+            this.ResidenzaPilotaBox.Location = new System.Drawing.Point(168, 248);
+            this.ResidenzaPilotaBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ResidenzaPilotaBox.Name = "ResidenzaPilotaBox";
-            this.ResidenzaPilotaBox.Size = new System.Drawing.Size(240, 20);
+            this.ResidenzaPilotaBox.Size = new System.Drawing.Size(358, 26);
             this.ResidenzaPilotaBox.TabIndex = 20;
             // 
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(25, 139);
+            this.label34.Location = new System.Drawing.Point(38, 214);
+            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(81, 13);
+            this.label34.Size = new System.Drawing.Size(119, 20);
             this.label34.TabIndex = 19;
             this.label34.Text = "Data di nascita:";
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(18, 112);
+            this.label28.Location = new System.Drawing.Point(27, 172);
+            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(88, 13);
+            this.label28.Size = new System.Drawing.Size(129, 20);
             this.label28.TabIndex = 13;
             this.label28.Text = "Luogo di nascita:";
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(51, 86);
+            this.label29.Location = new System.Drawing.Point(76, 132);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(55, 13);
+            this.label29.Size = new System.Drawing.Size(82, 20);
             this.label29.TabIndex = 12;
             this.label29.Text = "Cognome:";
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(68, 60);
+            this.label30.Location = new System.Drawing.Point(102, 92);
+            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(38, 13);
+            this.label30.Size = new System.Drawing.Size(55, 20);
             this.label30.TabIndex = 11;
             this.label30.Text = "Nome:";
             // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(83, 34);
+            this.label31.Location = new System.Drawing.Point(124, 52);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(23, 13);
+            this.label31.Size = new System.Drawing.Size(34, 20);
             this.label31.TabIndex = 10;
             this.label31.Text = "CF:";
             // 
             // LuogoNascitaPilotaBox
             // 
-            this.LuogoNascitaPilotaBox.Location = new System.Drawing.Point(112, 109);
+            this.LuogoNascitaPilotaBox.Location = new System.Drawing.Point(168, 168);
+            this.LuogoNascitaPilotaBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LuogoNascitaPilotaBox.Name = "LuogoNascitaPilotaBox";
-            this.LuogoNascitaPilotaBox.Size = new System.Drawing.Size(240, 20);
+            this.LuogoNascitaPilotaBox.Size = new System.Drawing.Size(358, 26);
             this.LuogoNascitaPilotaBox.TabIndex = 5;
             // 
             // CognomePilotaBox
             // 
-            this.CognomePilotaBox.Location = new System.Drawing.Point(112, 83);
+            this.CognomePilotaBox.Location = new System.Drawing.Point(168, 128);
+            this.CognomePilotaBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CognomePilotaBox.Name = "CognomePilotaBox";
-            this.CognomePilotaBox.Size = new System.Drawing.Size(240, 20);
+            this.CognomePilotaBox.Size = new System.Drawing.Size(358, 26);
             this.CognomePilotaBox.TabIndex = 4;
             // 
             // NomePilotaBox
             // 
-            this.NomePilotaBox.Location = new System.Drawing.Point(112, 57);
+            this.NomePilotaBox.Location = new System.Drawing.Point(168, 88);
+            this.NomePilotaBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NomePilotaBox.Name = "NomePilotaBox";
-            this.NomePilotaBox.Size = new System.Drawing.Size(240, 20);
+            this.NomePilotaBox.Size = new System.Drawing.Size(358, 26);
             this.NomePilotaBox.TabIndex = 3;
             // 
             // CFPilotaBox
             // 
-            this.CFPilotaBox.Location = new System.Drawing.Point(112, 31);
+            this.CFPilotaBox.Location = new System.Drawing.Point(168, 48);
+            this.CFPilotaBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CFPilotaBox.Name = "CFPilotaBox";
-            this.CFPilotaBox.Size = new System.Drawing.Size(240, 20);
+            this.CFPilotaBox.Size = new System.Drawing.Size(358, 26);
             this.CFPilotaBox.TabIndex = 2;
             // 
             // gridPiloti
             // 
             this.gridPiloti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridPiloti.Location = new System.Drawing.Point(369, 3);
+            this.gridPiloti.Location = new System.Drawing.Point(554, 5);
+            this.gridPiloti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridPiloti.Name = "gridPiloti";
             this.gridPiloti.RowHeadersWidth = 62;
-            this.gridPiloti.Size = new System.Drawing.Size(1875, 971);
+            this.gridPiloti.Size = new System.Drawing.Size(2812, 1494);
             this.gridPiloti.TabIndex = 1;
             // 
             // IncarichiPIloti
@@ -1576,19 +1696,19 @@ namespace F1DBMS
             this.IncarichiPIloti.Controls.Add(this.label45);
             this.IncarichiPIloti.Controls.Add(this.InserisciIncaricoPilBtn);
             this.IncarichiPIloti.Controls.Add(this.gridIncarichiPiloti);
-            this.IncarichiPIloti.Location = new System.Drawing.Point(4, 22);
+            this.IncarichiPIloti.Location = new System.Drawing.Point(4, 29);
+            this.IncarichiPIloti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.IncarichiPIloti.Name = "IncarichiPIloti";
-            this.IncarichiPIloti.Size = new System.Drawing.Size(2254, 977);
+            this.IncarichiPIloti.Size = new System.Drawing.Size(3385, 1510);
             this.IncarichiPIloti.TabIndex = 5;
             this.IncarichiPIloti.Text = "Incarichi Piloti";
             this.IncarichiPIloti.UseVisualStyleBackColor = true;
             // 
             // RevocaIncaricoPilBtn
             // 
-            this.RevocaIncaricoPilBtn.Location = new System.Drawing.Point(110, 135);
-            this.RevocaIncaricoPilBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.RevocaIncaricoPilBtn.Location = new System.Drawing.Point(165, 208);
             this.RevocaIncaricoPilBtn.Name = "RevocaIncaricoPilBtn";
-            this.RevocaIncaricoPilBtn.Size = new System.Drawing.Size(152, 23);
+            this.RevocaIncaricoPilBtn.Size = new System.Drawing.Size(228, 35);
             this.RevocaIncaricoPilBtn.TabIndex = 10;
             this.RevocaIncaricoPilBtn.Text = "Revoca Incarico";
             this.RevocaIncaricoPilBtn.UseVisualStyleBackColor = true;
@@ -1597,16 +1717,18 @@ namespace F1DBMS
             // label7
             // 
             this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label7.Location = new System.Drawing.Point(24, 118);
+            this.label7.Location = new System.Drawing.Point(36, 182);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(315, 2);
+            this.label7.Size = new System.Drawing.Size(472, 3);
             this.label7.TabIndex = 9;
             // 
             // IncarichiPilBtn
             // 
-            this.IncarichiPilBtn.Location = new System.Drawing.Point(110, 81);
+            this.IncarichiPilBtn.Location = new System.Drawing.Point(165, 125);
+            this.IncarichiPilBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.IncarichiPilBtn.Name = "IncarichiPilBtn";
-            this.IncarichiPilBtn.Size = new System.Drawing.Size(152, 23);
+            this.IncarichiPilBtn.Size = new System.Drawing.Size(228, 35);
             this.IncarichiPilBtn.TabIndex = 8;
             this.IncarichiPilBtn.Text = "Mostra Incarichi";
             this.IncarichiPilBtn.UseVisualStyleBackColor = true;
@@ -1615,16 +1737,18 @@ namespace F1DBMS
             // label45
             // 
             this.label45.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label45.Location = new System.Drawing.Point(24, 65);
+            this.label45.Location = new System.Drawing.Point(36, 100);
+            this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(315, 2);
+            this.label45.Size = new System.Drawing.Size(472, 3);
             this.label45.TabIndex = 7;
             // 
             // InserisciIncaricoPilBtn
             // 
-            this.InserisciIncaricoPilBtn.Location = new System.Drawing.Point(110, 27);
+            this.InserisciIncaricoPilBtn.Location = new System.Drawing.Point(165, 42);
+            this.InserisciIncaricoPilBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.InserisciIncaricoPilBtn.Name = "InserisciIncaricoPilBtn";
-            this.InserisciIncaricoPilBtn.Size = new System.Drawing.Size(152, 23);
+            this.InserisciIncaricoPilBtn.Size = new System.Drawing.Size(228, 35);
             this.InserisciIncaricoPilBtn.TabIndex = 2;
             this.InserisciIncaricoPilBtn.Text = "Aggiungi incarico";
             this.InserisciIncaricoPilBtn.UseVisualStyleBackColor = true;
@@ -1633,19 +1757,21 @@ namespace F1DBMS
             // gridIncarichiPiloti
             // 
             this.gridIncarichiPiloti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridIncarichiPiloti.Location = new System.Drawing.Point(371, 3);
+            this.gridIncarichiPiloti.Location = new System.Drawing.Point(556, 5);
+            this.gridIncarichiPiloti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridIncarichiPiloti.Name = "gridIncarichiPiloti";
             this.gridIncarichiPiloti.RowHeadersWidth = 62;
-            this.gridIncarichiPiloti.Size = new System.Drawing.Size(1880, 971);
+            this.gridIncarichiPiloti.Size = new System.Drawing.Size(2820, 1494);
             this.gridIncarichiPiloti.TabIndex = 1;
             // 
             // Vetture
             // 
             this.Vetture.Controls.Add(this.vettureGriglia);
             this.Vetture.Controls.Add(this.vetturepanel);
-            this.Vetture.Location = new System.Drawing.Point(4, 22);
+            this.Vetture.Location = new System.Drawing.Point(4, 29);
+            this.Vetture.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Vetture.Name = "Vetture";
-            this.Vetture.Size = new System.Drawing.Size(2254, 977);
+            this.Vetture.Size = new System.Drawing.Size(3385, 1510);
             this.Vetture.TabIndex = 6;
             this.Vetture.Text = "Vetture";
             this.Vetture.UseVisualStyleBackColor = true;
@@ -1653,12 +1779,11 @@ namespace F1DBMS
             // vettureGriglia
             // 
             this.vettureGriglia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.vettureGriglia.Location = new System.Drawing.Point(369, 5);
-            this.vettureGriglia.Margin = new System.Windows.Forms.Padding(2);
+            this.vettureGriglia.Location = new System.Drawing.Point(554, 8);
             this.vettureGriglia.Name = "vettureGriglia";
             this.vettureGriglia.RowHeadersWidth = 62;
             this.vettureGriglia.RowTemplate.Height = 28;
-            this.vettureGriglia.Size = new System.Drawing.Size(1331, 899);
+            this.vettureGriglia.Size = new System.Drawing.Size(1996, 1383);
             this.vettureGriglia.TabIndex = 12;
             // 
             // vetturepanel
@@ -1680,90 +1805,88 @@ namespace F1DBMS
             this.vetturepanel.Controls.Add(this.vettureTastoRicercaIdTeam);
             this.vetturepanel.Controls.Add(this.vettureRicercaIdteam);
             this.vetturepanel.Controls.Add(this.vettureRegistra);
-            this.vetturepanel.Location = new System.Drawing.Point(4, 5);
-            this.vetturepanel.Margin = new System.Windows.Forms.Padding(2);
+            this.vetturepanel.Location = new System.Drawing.Point(6, 8);
             this.vetturepanel.Name = "vetturepanel";
-            this.vetturepanel.Size = new System.Drawing.Size(411, 902);
+            this.vetturepanel.Size = new System.Drawing.Size(616, 1388);
             this.vetturepanel.TabIndex = 11;
             // 
             // label49
             // 
             this.label49.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label49.Location = new System.Drawing.Point(29, 300);
+            this.label49.Location = new System.Drawing.Point(44, 462);
+            this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(315, 2);
+            this.label49.Size = new System.Drawing.Size(472, 3);
             this.label49.TabIndex = 51;
             // 
             // label48
             // 
             this.label48.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label48.Location = new System.Drawing.Point(29, 226);
+            this.label48.Location = new System.Drawing.Point(44, 348);
+            this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(315, 2);
+            this.label48.Size = new System.Drawing.Size(472, 3);
             this.label48.TabIndex = 50;
             // 
             // label47
             // 
             this.label47.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label47.Location = new System.Drawing.Point(29, 150);
+            this.label47.Location = new System.Drawing.Point(44, 231);
+            this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(315, 2);
+            this.label47.Size = new System.Drawing.Size(472, 3);
             this.label47.TabIndex = 49;
             // 
             // label46
             // 
             this.label46.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label46.Location = new System.Drawing.Point(27, 72);
+            this.label46.Location = new System.Drawing.Point(40, 111);
+            this.label46.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(315, 2);
+            this.label46.Size = new System.Drawing.Size(472, 3);
             this.label46.TabIndex = 48;
             // 
             // vetturalabelidvettura2
             // 
             this.vetturalabelidvettura2.AutoSize = true;
-            this.vetturalabelidvettura2.Location = new System.Drawing.Point(43, 93);
-            this.vetturalabelidvettura2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.vetturalabelidvettura2.Location = new System.Drawing.Point(64, 143);
             this.vetturalabelidvettura2.Name = "vetturalabelidvettura2";
-            this.vetturalabelidvettura2.Size = new System.Drawing.Size(58, 13);
+            this.vetturalabelidvettura2.Size = new System.Drawing.Size(87, 20);
             this.vetturalabelidvettura2.TabIndex = 42;
             this.vetturalabelidvettura2.Text = "ID Vettura:";
             // 
             // vetturelabelidteam2
             // 
             this.vetturelabelidteam2.AutoSize = true;
-            this.vetturelabelidteam2.Location = new System.Drawing.Point(50, 169);
-            this.vetturelabelidteam2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.vetturelabelidteam2.Location = new System.Drawing.Point(75, 260);
             this.vetturelabelidteam2.Name = "vetturelabelidteam2";
-            this.vetturelabelidteam2.Size = new System.Drawing.Size(51, 13);
+            this.vetturelabelidteam2.Size = new System.Drawing.Size(74, 20);
             this.vetturelabelidteam2.TabIndex = 41;
             this.vetturelabelidteam2.Text = "ID Team:";
             // 
             // vetturelabelanno2
             // 
             this.vetturelabelanno2.AutoSize = true;
-            this.vetturelabelanno2.Location = new System.Drawing.Point(2, 244);
-            this.vetturelabelanno2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.vetturelabelanno2.Location = new System.Drawing.Point(3, 375);
             this.vetturelabelanno2.Name = "vetturelabelanno2";
-            this.vetturelabelanno2.Size = new System.Drawing.Size(101, 13);
+            this.vetturelabelanno2.Size = new System.Drawing.Size(150, 20);
             this.vetturelabelanno2.TabIndex = 40;
             this.vetturelabelanno2.Text = "Anno di produzione:";
             // 
             // vetturelabelnome2
             // 
             this.vetturelabelnome2.AutoSize = true;
-            this.vetturelabelnome2.Location = new System.Drawing.Point(25, 318);
-            this.vetturelabelnome2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.vetturelabelnome2.Location = new System.Drawing.Point(38, 489);
             this.vetturelabelnome2.Name = "vetturelabelnome2";
-            this.vetturelabelnome2.Size = new System.Drawing.Size(74, 13);
+            this.vetturelabelnome2.Size = new System.Drawing.Size(108, 20);
             this.vetturelabelnome2.TabIndex = 39;
             this.vetturelabelnome2.Text = "Nome vettura:";
             // 
             // vetturaTastoRicercaAnno
             // 
-            this.vetturaTastoRicercaAnno.Location = new System.Drawing.Point(104, 266);
-            this.vetturaTastoRicercaAnno.Margin = new System.Windows.Forms.Padding(2);
+            this.vetturaTastoRicercaAnno.Location = new System.Drawing.Point(156, 409);
             this.vetturaTastoRicercaAnno.Name = "vetturaTastoRicercaAnno";
-            this.vetturaTastoRicercaAnno.Size = new System.Drawing.Size(152, 23);
+            this.vetturaTastoRicercaAnno.Size = new System.Drawing.Size(228, 35);
             this.vetturaTastoRicercaAnno.TabIndex = 22;
             this.vetturaTastoRicercaAnno.Text = "Ricerca vetture";
             this.vetturaTastoRicercaAnno.UseVisualStyleBackColor = true;
@@ -1773,17 +1896,17 @@ namespace F1DBMS
             // 
             this.vettureRicercaAnno.AccessibleDescription = "Nome";
             this.vettureRicercaAnno.AccessibleName = "Nome";
-            this.vettureRicercaAnno.Location = new System.Drawing.Point(104, 241);
+            this.vettureRicercaAnno.Location = new System.Drawing.Point(156, 371);
+            this.vettureRicercaAnno.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.vettureRicercaAnno.Name = "vettureRicercaAnno";
-            this.vettureRicercaAnno.Size = new System.Drawing.Size(240, 20);
+            this.vettureRicercaAnno.Size = new System.Drawing.Size(358, 26);
             this.vettureRicercaAnno.TabIndex = 21;
             // 
             // vettureTastoRicercaNome
             // 
-            this.vettureTastoRicercaNome.Location = new System.Drawing.Point(104, 340);
-            this.vettureTastoRicercaNome.Margin = new System.Windows.Forms.Padding(2);
+            this.vettureTastoRicercaNome.Location = new System.Drawing.Point(156, 523);
             this.vettureTastoRicercaNome.Name = "vettureTastoRicercaNome";
-            this.vettureTastoRicercaNome.Size = new System.Drawing.Size(152, 23);
+            this.vettureTastoRicercaNome.Size = new System.Drawing.Size(228, 35);
             this.vettureTastoRicercaNome.TabIndex = 20;
             this.vettureTastoRicercaNome.Text = "Ricerca vetture";
             this.vettureTastoRicercaNome.UseVisualStyleBackColor = true;
@@ -1793,17 +1916,17 @@ namespace F1DBMS
             // 
             this.VettureRicercaNome.AccessibleDescription = "Nome";
             this.VettureRicercaNome.AccessibleName = "Nome";
-            this.VettureRicercaNome.Location = new System.Drawing.Point(104, 315);
+            this.VettureRicercaNome.Location = new System.Drawing.Point(156, 485);
+            this.VettureRicercaNome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.VettureRicercaNome.Name = "VettureRicercaNome";
-            this.VettureRicercaNome.Size = new System.Drawing.Size(240, 20);
+            this.VettureRicercaNome.Size = new System.Drawing.Size(358, 26);
             this.VettureRicercaNome.TabIndex = 19;
             // 
             // vettureTastoRicercaIdVettura
             // 
-            this.vettureTastoRicercaIdVettura.Location = new System.Drawing.Point(104, 115);
-            this.vettureTastoRicercaIdVettura.Margin = new System.Windows.Forms.Padding(2);
+            this.vettureTastoRicercaIdVettura.Location = new System.Drawing.Point(156, 177);
             this.vettureTastoRicercaIdVettura.Name = "vettureTastoRicercaIdVettura";
-            this.vettureTastoRicercaIdVettura.Size = new System.Drawing.Size(152, 23);
+            this.vettureTastoRicercaIdVettura.Size = new System.Drawing.Size(228, 35);
             this.vettureTastoRicercaIdVettura.TabIndex = 18;
             this.vettureTastoRicercaIdVettura.Text = "Ricerca vettura";
             this.vettureTastoRicercaIdVettura.UseVisualStyleBackColor = true;
@@ -1813,17 +1936,17 @@ namespace F1DBMS
             // 
             this.vetturericercaIdVettura.AccessibleDescription = "Nome";
             this.vetturericercaIdVettura.AccessibleName = "Nome";
-            this.vetturericercaIdVettura.Location = new System.Drawing.Point(104, 90);
+            this.vetturericercaIdVettura.Location = new System.Drawing.Point(156, 138);
+            this.vetturericercaIdVettura.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.vetturericercaIdVettura.Name = "vetturericercaIdVettura";
-            this.vetturericercaIdVettura.Size = new System.Drawing.Size(240, 20);
+            this.vetturericercaIdVettura.Size = new System.Drawing.Size(358, 26);
             this.vetturericercaIdVettura.TabIndex = 17;
             // 
             // vettureTastoRicercaIdTeam
             // 
-            this.vettureTastoRicercaIdTeam.Location = new System.Drawing.Point(104, 191);
-            this.vettureTastoRicercaIdTeam.Margin = new System.Windows.Forms.Padding(2);
+            this.vettureTastoRicercaIdTeam.Location = new System.Drawing.Point(156, 294);
             this.vettureTastoRicercaIdTeam.Name = "vettureTastoRicercaIdTeam";
-            this.vettureTastoRicercaIdTeam.Size = new System.Drawing.Size(152, 23);
+            this.vettureTastoRicercaIdTeam.Size = new System.Drawing.Size(228, 35);
             this.vettureTastoRicercaIdTeam.TabIndex = 16;
             this.vettureTastoRicercaIdTeam.Text = "Ricerca vetture";
             this.vettureTastoRicercaIdTeam.UseVisualStyleBackColor = true;
@@ -1833,17 +1956,17 @@ namespace F1DBMS
             // 
             this.vettureRicercaIdteam.AccessibleDescription = "Nome";
             this.vettureRicercaIdteam.AccessibleName = "Nome";
-            this.vettureRicercaIdteam.Location = new System.Drawing.Point(104, 166);
+            this.vettureRicercaIdteam.Location = new System.Drawing.Point(156, 255);
+            this.vettureRicercaIdteam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.vettureRicercaIdteam.Name = "vettureRicercaIdteam";
-            this.vettureRicercaIdteam.Size = new System.Drawing.Size(240, 20);
+            this.vettureRicercaIdteam.Size = new System.Drawing.Size(358, 26);
             this.vettureRicercaIdteam.TabIndex = 15;
             // 
             // vettureRegistra
             // 
-            this.vettureRegistra.Location = new System.Drawing.Point(104, 35);
-            this.vettureRegistra.Margin = new System.Windows.Forms.Padding(2);
+            this.vettureRegistra.Location = new System.Drawing.Point(156, 54);
             this.vettureRegistra.Name = "vettureRegistra";
-            this.vettureRegistra.Size = new System.Drawing.Size(152, 23);
+            this.vettureRegistra.Size = new System.Drawing.Size(228, 35);
             this.vettureRegistra.TabIndex = 14;
             this.vettureRegistra.Text = "Registra vettura";
             this.vettureRegistra.UseVisualStyleBackColor = true;
@@ -1853,9 +1976,10 @@ namespace F1DBMS
             // 
             this.Componenti.Controls.Add(this.componentiGriglia);
             this.Componenti.Controls.Add(this.componentipanel);
-            this.Componenti.Location = new System.Drawing.Point(4, 22);
+            this.Componenti.Location = new System.Drawing.Point(4, 29);
+            this.Componenti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Componenti.Name = "Componenti";
-            this.Componenti.Size = new System.Drawing.Size(2254, 977);
+            this.Componenti.Size = new System.Drawing.Size(3385, 1510);
             this.Componenti.TabIndex = 7;
             this.Componenti.Text = "Componenti";
             this.Componenti.UseVisualStyleBackColor = true;
@@ -1863,12 +1987,11 @@ namespace F1DBMS
             // componentiGriglia
             // 
             this.componentiGriglia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.componentiGriglia.Location = new System.Drawing.Point(364, 5);
-            this.componentiGriglia.Margin = new System.Windows.Forms.Padding(2);
+            this.componentiGriglia.Location = new System.Drawing.Point(546, 8);
             this.componentiGriglia.Name = "componentiGriglia";
             this.componentiGriglia.RowHeadersWidth = 62;
             this.componentiGriglia.RowTemplate.Height = 28;
-            this.componentiGriglia.Size = new System.Drawing.Size(1336, 974);
+            this.componentiGriglia.Size = new System.Drawing.Size(2004, 1498);
             this.componentiGriglia.TabIndex = 12;
             // 
             // componentipanel
@@ -1884,66 +2007,61 @@ namespace F1DBMS
             this.componentipanel.Controls.Add(this.componentiIdComponente);
             this.componentipanel.Controls.Add(this.componenteDescrizione);
             this.componentipanel.Controls.Add(this.componentePrezzo);
-            this.componentipanel.Location = new System.Drawing.Point(2, 2);
-            this.componentipanel.Margin = new System.Windows.Forms.Padding(2);
+            this.componentipanel.Location = new System.Drawing.Point(3, 3);
             this.componentipanel.Name = "componentipanel";
-            this.componentipanel.Size = new System.Drawing.Size(406, 972);
+            this.componentipanel.Size = new System.Drawing.Size(609, 1495);
             this.componentipanel.TabIndex = 11;
             // 
             // label50
             // 
             this.label50.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label50.Location = new System.Drawing.Point(26, 119);
+            this.label50.Location = new System.Drawing.Point(39, 183);
+            this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(315, 2);
+            this.label50.Size = new System.Drawing.Size(472, 3);
             this.label50.TabIndex = 49;
             // 
             // componentelabelidcomponente2
             // 
             this.componentelabelidcomponente2.AutoSize = true;
-            this.componentelabelidcomponente2.Location = new System.Drawing.Point(10, 138);
-            this.componentelabelidcomponente2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.componentelabelidcomponente2.Location = new System.Drawing.Point(15, 212);
             this.componentelabelidcomponente2.Name = "componentelabelidcomponente2";
-            this.componentelabelidcomponente2.Size = new System.Drawing.Size(84, 13);
+            this.componentelabelidcomponente2.Size = new System.Drawing.Size(126, 20);
             this.componentelabelidcomponente2.TabIndex = 40;
             this.componentelabelidcomponente2.Text = "ID Componente:";
             // 
             // componentilabelidcomponente
             // 
             this.componentilabelidcomponente.AutoSize = true;
-            this.componentilabelidcomponente.Location = new System.Drawing.Point(10, 16);
-            this.componentilabelidcomponente.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.componentilabelidcomponente.Location = new System.Drawing.Point(15, 25);
             this.componentilabelidcomponente.Name = "componentilabelidcomponente";
-            this.componentilabelidcomponente.Size = new System.Drawing.Size(84, 13);
+            this.componentilabelidcomponente.Size = new System.Drawing.Size(126, 20);
             this.componentilabelidcomponente.TabIndex = 38;
             this.componentilabelidcomponente.Text = "ID Componente:";
             // 
             // componentelabeldescrizione
             // 
             this.componentelabeldescrizione.AutoSize = true;
-            this.componentelabeldescrizione.Location = new System.Drawing.Point(29, 39);
-            this.componentelabeldescrizione.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.componentelabeldescrizione.Location = new System.Drawing.Point(44, 60);
             this.componentelabeldescrizione.Name = "componentelabeldescrizione";
-            this.componentelabeldescrizione.Size = new System.Drawing.Size(65, 13);
+            this.componentelabeldescrizione.Size = new System.Drawing.Size(96, 20);
             this.componentelabeldescrizione.TabIndex = 37;
             this.componentelabeldescrizione.Text = "Descrizione:";
             // 
             // componentelabelprezzo
             // 
             this.componentelabelprezzo.AutoSize = true;
-            this.componentelabelprezzo.Location = new System.Drawing.Point(13, 63);
-            this.componentelabelprezzo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.componentelabelprezzo.Location = new System.Drawing.Point(20, 97);
             this.componentelabelprezzo.Name = "componentelabelprezzo";
-            this.componentelabelprezzo.Size = new System.Drawing.Size(81, 13);
+            this.componentelabelprezzo.Size = new System.Drawing.Size(121, 20);
             this.componentelabelprezzo.TabIndex = 36;
             this.componentelabelprezzo.Text = "Prezzo Unitario:";
             // 
             // componenteRicercaIdVettura
             // 
-            this.componenteRicercaIdVettura.Location = new System.Drawing.Point(101, 160);
-            this.componenteRicercaIdVettura.Margin = new System.Windows.Forms.Padding(2);
+            this.componenteRicercaIdVettura.Location = new System.Drawing.Point(152, 246);
             this.componenteRicercaIdVettura.Name = "componenteRicercaIdVettura";
-            this.componenteRicercaIdVettura.Size = new System.Drawing.Size(152, 23);
+            this.componenteRicercaIdVettura.Size = new System.Drawing.Size(228, 35);
             this.componenteRicercaIdVettura.TabIndex = 18;
             this.componenteRicercaIdVettura.Text = "Ricerca componente";
             this.componenteRicercaIdVettura.UseVisualStyleBackColor = true;
@@ -1953,17 +2071,17 @@ namespace F1DBMS
             // 
             this.componenteRicercaIdComponente.AccessibleDescription = "Nome";
             this.componenteRicercaIdComponente.AccessibleName = "Nome";
-            this.componenteRicercaIdComponente.Location = new System.Drawing.Point(101, 135);
+            this.componenteRicercaIdComponente.Location = new System.Drawing.Point(152, 208);
+            this.componenteRicercaIdComponente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.componenteRicercaIdComponente.Name = "componenteRicercaIdComponente";
-            this.componenteRicercaIdComponente.Size = new System.Drawing.Size(240, 20);
+            this.componenteRicercaIdComponente.Size = new System.Drawing.Size(358, 26);
             this.componenteRicercaIdComponente.TabIndex = 17;
             // 
             // componentiRegistra
             // 
-            this.componentiRegistra.Location = new System.Drawing.Point(101, 85);
-            this.componentiRegistra.Margin = new System.Windows.Forms.Padding(2);
+            this.componentiRegistra.Location = new System.Drawing.Point(152, 131);
             this.componentiRegistra.Name = "componentiRegistra";
-            this.componentiRegistra.Size = new System.Drawing.Size(152, 23);
+            this.componentiRegistra.Size = new System.Drawing.Size(228, 35);
             this.componentiRegistra.TabIndex = 14;
             this.componentiRegistra.Text = "Registra componente";
             this.componentiRegistra.UseVisualStyleBackColor = true;
@@ -1974,36 +2092,40 @@ namespace F1DBMS
             this.componentiIdComponente.AccessibleDescription = "Nome";
             this.componentiIdComponente.AccessibleName = "nome";
             this.componentiIdComponente.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.componentiIdComponente.Location = new System.Drawing.Point(101, 13);
+            this.componentiIdComponente.Location = new System.Drawing.Point(152, 20);
+            this.componentiIdComponente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.componentiIdComponente.Name = "componentiIdComponente";
-            this.componentiIdComponente.Size = new System.Drawing.Size(240, 20);
+            this.componentiIdComponente.Size = new System.Drawing.Size(358, 26);
             this.componentiIdComponente.TabIndex = 9;
             // 
             // componenteDescrizione
             // 
             this.componenteDescrizione.AccessibleDescription = "Nome";
             this.componenteDescrizione.AccessibleName = "Nome";
-            this.componenteDescrizione.Location = new System.Drawing.Point(101, 36);
+            this.componenteDescrizione.Location = new System.Drawing.Point(152, 55);
+            this.componenteDescrizione.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.componenteDescrizione.Name = "componenteDescrizione";
-            this.componenteDescrizione.Size = new System.Drawing.Size(240, 20);
+            this.componenteDescrizione.Size = new System.Drawing.Size(358, 26);
             this.componenteDescrizione.TabIndex = 8;
             // 
             // componentePrezzo
             // 
             this.componentePrezzo.AccessibleDescription = "Nome";
             this.componentePrezzo.AccessibleName = "Nome";
-            this.componentePrezzo.Location = new System.Drawing.Point(101, 60);
+            this.componentePrezzo.Location = new System.Drawing.Point(152, 92);
+            this.componentePrezzo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.componentePrezzo.Name = "componentePrezzo";
-            this.componentePrezzo.Size = new System.Drawing.Size(240, 20);
+            this.componentePrezzo.Size = new System.Drawing.Size(358, 26);
             this.componentePrezzo.TabIndex = 10;
             // 
             // Campionati
             // 
             this.Campionati.Controls.Add(this.campionatiGriglia);
             this.Campionati.Controls.Add(this.campionatipanel);
-            this.Campionati.Location = new System.Drawing.Point(4, 22);
+            this.Campionati.Location = new System.Drawing.Point(4, 29);
+            this.Campionati.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Campionati.Name = "Campionati";
-            this.Campionati.Size = new System.Drawing.Size(2254, 977);
+            this.Campionati.Size = new System.Drawing.Size(3385, 1510);
             this.Campionati.TabIndex = 8;
             this.Campionati.Text = "Campionati";
             this.Campionati.UseVisualStyleBackColor = true;
@@ -2011,12 +2133,11 @@ namespace F1DBMS
             // campionatiGriglia
             // 
             this.campionatiGriglia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.campionatiGriglia.Location = new System.Drawing.Point(367, 3);
-            this.campionatiGriglia.Margin = new System.Windows.Forms.Padding(2);
+            this.campionatiGriglia.Location = new System.Drawing.Point(550, 5);
             this.campionatiGriglia.Name = "campionatiGriglia";
             this.campionatiGriglia.RowHeadersWidth = 62;
             this.campionatiGriglia.RowTemplate.Height = 28;
-            this.campionatiGriglia.Size = new System.Drawing.Size(1332, 974);
+            this.campionatiGriglia.Size = new System.Drawing.Size(1998, 1498);
             this.campionatiGriglia.TabIndex = 12;
             // 
             // campionatipanel
@@ -2040,34 +2161,34 @@ namespace F1DBMS
             this.campionatipanel.Controls.Add(this.campionatiNome);
             this.campionatipanel.Controls.Add(this.campionatiDescrizione);
             this.campionatipanel.Location = new System.Drawing.Point(0, 0);
-            this.campionatipanel.Margin = new System.Windows.Forms.Padding(2);
             this.campionatipanel.Name = "campionatipanel";
-            this.campionatipanel.Size = new System.Drawing.Size(406, 972);
+            this.campionatipanel.Size = new System.Drawing.Size(609, 1495);
             this.campionatipanel.TabIndex = 11;
             // 
             // label52
             // 
             this.label52.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label52.Location = new System.Drawing.Point(31, 226);
+            this.label52.Location = new System.Drawing.Point(46, 348);
+            this.label52.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(315, 2);
+            this.label52.Size = new System.Drawing.Size(472, 3);
             this.label52.TabIndex = 50;
             // 
             // label51
             // 
             this.label51.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label51.Location = new System.Drawing.Point(31, 153);
+            this.label51.Location = new System.Drawing.Point(46, 235);
+            this.label51.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(315, 2);
+            this.label51.Size = new System.Drawing.Size(472, 3);
             this.label51.TabIndex = 50;
             // 
             // campionatolabelidcampionato
             // 
             this.campionatolabelidcampionato.AutoSize = true;
-            this.campionatolabelidcampionato.Location = new System.Drawing.Point(21, 23);
-            this.campionatolabelidcampionato.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.campionatolabelidcampionato.Location = new System.Drawing.Point(32, 35);
             this.campionatolabelidcampionato.Name = "campionatolabelidcampionato";
-            this.campionatolabelidcampionato.Size = new System.Drawing.Size(80, 13);
+            this.campionatolabelidcampionato.Size = new System.Drawing.Size(120, 20);
             this.campionatolabelidcampionato.TabIndex = 34;
             this.campionatolabelidcampionato.Text = "ID Campionato:";
             // 
@@ -2076,78 +2197,72 @@ namespace F1DBMS
             this.campionatoIdCampionato.AccessibleDescription = "Nome";
             this.campionatoIdCampionato.AccessibleName = "nome";
             this.campionatoIdCampionato.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.campionatoIdCampionato.Location = new System.Drawing.Point(106, 23);
+            this.campionatoIdCampionato.Location = new System.Drawing.Point(159, 35);
+            this.campionatoIdCampionato.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.campionatoIdCampionato.Name = "campionatoIdCampionato";
-            this.campionatoIdCampionato.Size = new System.Drawing.Size(240, 20);
+            this.campionatoIdCampionato.Size = new System.Drawing.Size(358, 26);
             this.campionatoIdCampionato.TabIndex = 33;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(416, 5);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(624, 8);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1281, 974);
+            this.dataGridView1.Size = new System.Drawing.Size(1922, 1498);
             this.dataGridView1.TabIndex = 10;
             // 
             // campionatilabelanno
             // 
             this.campionatilabelanno.AutoSize = true;
-            this.campionatilabelanno.Location = new System.Drawing.Point(66, 47);
-            this.campionatilabelanno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.campionatilabelanno.Location = new System.Drawing.Point(99, 72);
             this.campionatilabelanno.Name = "campionatilabelanno";
-            this.campionatilabelanno.Size = new System.Drawing.Size(35, 13);
+            this.campionatilabelanno.Size = new System.Drawing.Size(51, 20);
             this.campionatilabelanno.TabIndex = 32;
             this.campionatilabelanno.Text = "Anno:";
             // 
             // campionatilabelnome
             // 
             this.campionatilabelnome.AutoSize = true;
-            this.campionatilabelnome.Location = new System.Drawing.Point(63, 73);
-            this.campionatilabelnome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.campionatilabelnome.Location = new System.Drawing.Point(94, 112);
             this.campionatilabelnome.Name = "campionatilabelnome";
-            this.campionatilabelnome.Size = new System.Drawing.Size(38, 13);
+            this.campionatilabelnome.Size = new System.Drawing.Size(55, 20);
             this.campionatilabelnome.TabIndex = 31;
             this.campionatilabelnome.Text = "Nome:";
             // 
             // campionatilabeldescrizione
             // 
             this.campionatilabeldescrizione.AutoSize = true;
-            this.campionatilabeldescrizione.Location = new System.Drawing.Point(36, 97);
-            this.campionatilabeldescrizione.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.campionatilabeldescrizione.Location = new System.Drawing.Point(54, 149);
             this.campionatilabeldescrizione.Name = "campionatilabeldescrizione";
-            this.campionatilabeldescrizione.Size = new System.Drawing.Size(65, 13);
+            this.campionatilabeldescrizione.Size = new System.Drawing.Size(96, 20);
             this.campionatilabeldescrizione.TabIndex = 30;
             this.campionatilabeldescrizione.Text = "Descrizione:";
             // 
             // campionatolabelidcampionato2
             // 
             this.campionatolabelidcampionato2.AutoSize = true;
-            this.campionatolabelidcampionato2.Location = new System.Drawing.Point(21, 170);
-            this.campionatolabelidcampionato2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.campionatolabelidcampionato2.Location = new System.Drawing.Point(32, 262);
             this.campionatolabelidcampionato2.Name = "campionatolabelidcampionato2";
-            this.campionatolabelidcampionato2.Size = new System.Drawing.Size(80, 13);
+            this.campionatolabelidcampionato2.Size = new System.Drawing.Size(120, 20);
             this.campionatolabelidcampionato2.TabIndex = 29;
             this.campionatolabelidcampionato2.Text = "ID Campionato:";
             // 
             // campionatolabelanno2
             // 
             this.campionatolabelanno2.AutoSize = true;
-            this.campionatolabelanno2.Location = new System.Drawing.Point(66, 243);
-            this.campionatolabelanno2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.campionatolabelanno2.Location = new System.Drawing.Point(99, 374);
             this.campionatolabelanno2.Name = "campionatolabelanno2";
-            this.campionatolabelanno2.Size = new System.Drawing.Size(35, 13);
+            this.campionatolabelanno2.Size = new System.Drawing.Size(51, 20);
             this.campionatolabelanno2.TabIndex = 28;
             this.campionatolabelanno2.Text = "Anno:";
             // 
             // campionatiTastoRicercaId
             // 
-            this.campionatiTastoRicercaId.Location = new System.Drawing.Point(106, 192);
-            this.campionatiTastoRicercaId.Margin = new System.Windows.Forms.Padding(2);
+            this.campionatiTastoRicercaId.Location = new System.Drawing.Point(159, 295);
             this.campionatiTastoRicercaId.Name = "campionatiTastoRicercaId";
-            this.campionatiTastoRicercaId.Size = new System.Drawing.Size(152, 23);
+            this.campionatiTastoRicercaId.Size = new System.Drawing.Size(228, 35);
             this.campionatiTastoRicercaId.TabIndex = 18;
             this.campionatiTastoRicercaId.Text = "ricerca campionato";
             this.campionatiTastoRicercaId.UseVisualStyleBackColor = true;
@@ -2157,17 +2272,17 @@ namespace F1DBMS
             // 
             this.campionatiRicercaIdCampionato.AccessibleDescription = "Nome";
             this.campionatiRicercaIdCampionato.AccessibleName = "Nome";
-            this.campionatiRicercaIdCampionato.Location = new System.Drawing.Point(106, 167);
+            this.campionatiRicercaIdCampionato.Location = new System.Drawing.Point(159, 257);
+            this.campionatiRicercaIdCampionato.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.campionatiRicercaIdCampionato.Name = "campionatiRicercaIdCampionato";
-            this.campionatiRicercaIdCampionato.Size = new System.Drawing.Size(240, 20);
+            this.campionatiRicercaIdCampionato.Size = new System.Drawing.Size(358, 26);
             this.campionatiRicercaIdCampionato.TabIndex = 17;
             // 
             // campionatiTastoRicercaAnno
             // 
-            this.campionatiTastoRicercaAnno.Location = new System.Drawing.Point(106, 265);
-            this.campionatiTastoRicercaAnno.Margin = new System.Windows.Forms.Padding(2);
+            this.campionatiTastoRicercaAnno.Location = new System.Drawing.Point(159, 408);
             this.campionatiTastoRicercaAnno.Name = "campionatiTastoRicercaAnno";
-            this.campionatiTastoRicercaAnno.Size = new System.Drawing.Size(152, 23);
+            this.campionatiTastoRicercaAnno.Size = new System.Drawing.Size(228, 35);
             this.campionatiTastoRicercaAnno.TabIndex = 16;
             this.campionatiTastoRicercaAnno.Text = "ricerca campionato";
             this.campionatiTastoRicercaAnno.UseVisualStyleBackColor = true;
@@ -2177,17 +2292,17 @@ namespace F1DBMS
             // 
             this.campionatiRicercaAnno.AccessibleDescription = "Nome";
             this.campionatiRicercaAnno.AccessibleName = "Nome";
-            this.campionatiRicercaAnno.Location = new System.Drawing.Point(106, 240);
+            this.campionatiRicercaAnno.Location = new System.Drawing.Point(159, 369);
+            this.campionatiRicercaAnno.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.campionatiRicercaAnno.Name = "campionatiRicercaAnno";
-            this.campionatiRicercaAnno.Size = new System.Drawing.Size(240, 20);
+            this.campionatiRicercaAnno.Size = new System.Drawing.Size(358, 26);
             this.campionatiRicercaAnno.TabIndex = 15;
             // 
             // campionatiRegistra
             // 
-            this.campionatiRegistra.Location = new System.Drawing.Point(106, 119);
-            this.campionatiRegistra.Margin = new System.Windows.Forms.Padding(2);
+            this.campionatiRegistra.Location = new System.Drawing.Point(159, 183);
             this.campionatiRegistra.Name = "campionatiRegistra";
-            this.campionatiRegistra.Size = new System.Drawing.Size(152, 23);
+            this.campionatiRegistra.Size = new System.Drawing.Size(228, 35);
             this.campionatiRegistra.TabIndex = 14;
             this.campionatiRegistra.Text = "registra campionato";
             this.campionatiRegistra.UseVisualStyleBackColor = true;
@@ -2198,36 +2313,40 @@ namespace F1DBMS
             this.campionatiAnno.AccessibleDescription = "Nome";
             this.campionatiAnno.AccessibleName = "nome";
             this.campionatiAnno.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.campionatiAnno.Location = new System.Drawing.Point(106, 47);
+            this.campionatiAnno.Location = new System.Drawing.Point(159, 72);
+            this.campionatiAnno.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.campionatiAnno.Name = "campionatiAnno";
-            this.campionatiAnno.Size = new System.Drawing.Size(240, 20);
+            this.campionatiAnno.Size = new System.Drawing.Size(358, 26);
             this.campionatiAnno.TabIndex = 9;
             // 
             // campionatiNome
             // 
             this.campionatiNome.AccessibleDescription = "Nome";
             this.campionatiNome.AccessibleName = "Nome";
-            this.campionatiNome.Location = new System.Drawing.Point(106, 70);
+            this.campionatiNome.Location = new System.Drawing.Point(159, 108);
+            this.campionatiNome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.campionatiNome.Name = "campionatiNome";
-            this.campionatiNome.Size = new System.Drawing.Size(240, 20);
+            this.campionatiNome.Size = new System.Drawing.Size(358, 26);
             this.campionatiNome.TabIndex = 8;
             // 
             // campionatiDescrizione
             // 
             this.campionatiDescrizione.AccessibleDescription = "Nome";
             this.campionatiDescrizione.AccessibleName = "Nome";
-            this.campionatiDescrizione.Location = new System.Drawing.Point(106, 94);
+            this.campionatiDescrizione.Location = new System.Drawing.Point(159, 145);
+            this.campionatiDescrizione.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.campionatiDescrizione.Name = "campionatiDescrizione";
-            this.campionatiDescrizione.Size = new System.Drawing.Size(240, 20);
+            this.campionatiDescrizione.Size = new System.Drawing.Size(358, 26);
             this.campionatiDescrizione.TabIndex = 10;
             // 
             // Sponsor
             // 
             this.Sponsor.Controls.Add(this.sponsorGriglia);
             this.Sponsor.Controls.Add(this.sponsorpanel);
-            this.Sponsor.Location = new System.Drawing.Point(4, 22);
+            this.Sponsor.Location = new System.Drawing.Point(4, 29);
+            this.Sponsor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Sponsor.Name = "Sponsor";
-            this.Sponsor.Size = new System.Drawing.Size(2254, 977);
+            this.Sponsor.Size = new System.Drawing.Size(3385, 1510);
             this.Sponsor.TabIndex = 9;
             this.Sponsor.Text = "Sponsor";
             this.Sponsor.UseVisualStyleBackColor = true;
@@ -2235,12 +2354,11 @@ namespace F1DBMS
             // sponsorGriglia
             // 
             this.sponsorGriglia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.sponsorGriglia.Location = new System.Drawing.Point(367, 3);
-            this.sponsorGriglia.Margin = new System.Windows.Forms.Padding(2);
+            this.sponsorGriglia.Location = new System.Drawing.Point(550, 5);
             this.sponsorGriglia.Name = "sponsorGriglia";
             this.sponsorGriglia.RowHeadersWidth = 62;
             this.sponsorGriglia.RowTemplate.Height = 28;
-            this.sponsorGriglia.Size = new System.Drawing.Size(1331, 974);
+            this.sponsorGriglia.Size = new System.Drawing.Size(1996, 1498);
             this.sponsorGriglia.TabIndex = 12;
             // 
             // sponsorpanel
@@ -2265,34 +2383,34 @@ namespace F1DBMS
             this.sponsorpanel.Controls.Add(this.sponsorMail);
             this.sponsorpanel.Controls.Add(this.sponsorTelefono);
             this.sponsorpanel.Location = new System.Drawing.Point(0, 0);
-            this.sponsorpanel.Margin = new System.Windows.Forms.Padding(2);
             this.sponsorpanel.Name = "sponsorpanel";
-            this.sponsorpanel.Size = new System.Drawing.Size(406, 972);
+            this.sponsorpanel.Size = new System.Drawing.Size(609, 1495);
             this.sponsorpanel.TabIndex = 11;
             // 
             // label59
             // 
             this.label59.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label59.Location = new System.Drawing.Point(29, 256);
+            this.label59.Location = new System.Drawing.Point(44, 394);
+            this.label59.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(328, 2);
+            this.label59.Size = new System.Drawing.Size(492, 3);
             this.label59.TabIndex = 29;
             // 
             // label58
             // 
             this.label58.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label58.Location = new System.Drawing.Point(29, 183);
+            this.label58.Location = new System.Drawing.Point(44, 282);
+            this.label58.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(328, 2);
+            this.label58.Size = new System.Drawing.Size(492, 3);
             this.label58.TabIndex = 28;
             // 
             // IdSponsor
             // 
             this.IdSponsor.AutoSize = true;
-            this.IdSponsor.Location = new System.Drawing.Point(34, 33);
-            this.IdSponsor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.IdSponsor.Location = new System.Drawing.Point(51, 51);
             this.IdSponsor.Name = "IdSponsor";
-            this.IdSponsor.Size = new System.Drawing.Size(58, 13);
+            this.IdSponsor.Size = new System.Drawing.Size(87, 20);
             this.IdSponsor.TabIndex = 27;
             this.IdSponsor.Text = "IdSponsor:";
             // 
@@ -2301,77 +2419,71 @@ namespace F1DBMS
             this.sponsorIdSponsor.AccessibleDescription = "Nome";
             this.sponsorIdSponsor.AccessibleName = "nome";
             this.sponsorIdSponsor.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.sponsorIdSponsor.Location = new System.Drawing.Point(94, 30);
+            this.sponsorIdSponsor.Location = new System.Drawing.Point(141, 46);
+            this.sponsorIdSponsor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sponsorIdSponsor.Name = "sponsorIdSponsor";
-            this.sponsorIdSponsor.Size = new System.Drawing.Size(240, 20);
+            this.sponsorIdSponsor.Size = new System.Drawing.Size(358, 26);
             this.sponsorIdSponsor.TabIndex = 26;
             // 
             // sponsorlabelstato
             // 
             this.sponsorlabelstato.AutoSize = true;
-            this.sponsorlabelstato.Location = new System.Drawing.Point(57, 77);
-            this.sponsorlabelstato.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.sponsorlabelstato.Location = new System.Drawing.Point(86, 118);
             this.sponsorlabelstato.Name = "sponsorlabelstato";
-            this.sponsorlabelstato.Size = new System.Drawing.Size(35, 13);
+            this.sponsorlabelstato.Size = new System.Drawing.Size(52, 20);
             this.sponsorlabelstato.TabIndex = 25;
             this.sponsorlabelstato.Text = "Stato:";
             // 
             // sponsorlabeltelefono
             // 
             this.sponsorlabeltelefono.AutoSize = true;
-            this.sponsorlabeltelefono.Location = new System.Drawing.Point(40, 101);
-            this.sponsorlabeltelefono.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.sponsorlabeltelefono.Location = new System.Drawing.Point(60, 155);
             this.sponsorlabeltelefono.Name = "sponsorlabeltelefono";
-            this.sponsorlabeltelefono.Size = new System.Drawing.Size(52, 13);
+            this.sponsorlabeltelefono.Size = new System.Drawing.Size(75, 20);
             this.sponsorlabeltelefono.TabIndex = 24;
             this.sponsorlabeltelefono.Text = "Telefono:";
             // 
             // sponsorlabelmail
             // 
             this.sponsorlabelmail.AutoSize = true;
-            this.sponsorlabelmail.Location = new System.Drawing.Point(63, 127);
-            this.sponsorlabelmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.sponsorlabelmail.Location = new System.Drawing.Point(94, 195);
             this.sponsorlabelmail.Name = "sponsorlabelmail";
-            this.sponsorlabelmail.Size = new System.Drawing.Size(29, 13);
+            this.sponsorlabelmail.Size = new System.Drawing.Size(41, 20);
             this.sponsorlabelmail.TabIndex = 23;
             this.sponsorlabelmail.Text = "Mail:";
             // 
             // sponsorlabelidsponsor
             // 
             this.sponsorlabelidsponsor.AutoSize = true;
-            this.sponsorlabelidsponsor.Location = new System.Drawing.Point(35, 200);
-            this.sponsorlabelidsponsor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.sponsorlabelidsponsor.Location = new System.Drawing.Point(52, 308);
             this.sponsorlabelidsponsor.Name = "sponsorlabelidsponsor";
-            this.sponsorlabelidsponsor.Size = new System.Drawing.Size(58, 13);
+            this.sponsorlabelidsponsor.Size = new System.Drawing.Size(87, 20);
             this.sponsorlabelidsponsor.TabIndex = 22;
             this.sponsorlabelidsponsor.Text = "IdSponsor:";
             // 
             // sponsorlabelnome2
             // 
             this.sponsorlabelnome2.AutoSize = true;
-            this.sponsorlabelnome2.Location = new System.Drawing.Point(54, 273);
-            this.sponsorlabelnome2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.sponsorlabelnome2.Location = new System.Drawing.Point(81, 420);
             this.sponsorlabelnome2.Name = "sponsorlabelnome2";
-            this.sponsorlabelnome2.Size = new System.Drawing.Size(38, 13);
+            this.sponsorlabelnome2.Size = new System.Drawing.Size(55, 20);
             this.sponsorlabelnome2.TabIndex = 21;
             this.sponsorlabelnome2.Text = "Nome:";
             // 
             // sponsorlabelnome
             // 
             this.sponsorlabelnome.AutoSize = true;
-            this.sponsorlabelnome.Location = new System.Drawing.Point(54, 53);
-            this.sponsorlabelnome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.sponsorlabelnome.Location = new System.Drawing.Point(81, 82);
             this.sponsorlabelnome.Name = "sponsorlabelnome";
-            this.sponsorlabelnome.Size = new System.Drawing.Size(38, 13);
+            this.sponsorlabelnome.Size = new System.Drawing.Size(55, 20);
             this.sponsorlabelnome.TabIndex = 19;
             this.sponsorlabelnome.Text = "Nome:";
             // 
             // sponsorTastoRicercaIdSponsor
             // 
-            this.sponsorTastoRicercaIdSponsor.Location = new System.Drawing.Point(94, 222);
-            this.sponsorTastoRicercaIdSponsor.Margin = new System.Windows.Forms.Padding(2);
+            this.sponsorTastoRicercaIdSponsor.Location = new System.Drawing.Point(141, 342);
             this.sponsorTastoRicercaIdSponsor.Name = "sponsorTastoRicercaIdSponsor";
-            this.sponsorTastoRicercaIdSponsor.Size = new System.Drawing.Size(152, 23);
+            this.sponsorTastoRicercaIdSponsor.Size = new System.Drawing.Size(228, 35);
             this.sponsorTastoRicercaIdSponsor.TabIndex = 18;
             this.sponsorTastoRicercaIdSponsor.Text = "ricerca sponsor";
             this.sponsorTastoRicercaIdSponsor.UseVisualStyleBackColor = true;
@@ -2381,17 +2493,17 @@ namespace F1DBMS
             // 
             this.sponsorRicercaIdSponsor.AccessibleDescription = "Nome";
             this.sponsorRicercaIdSponsor.AccessibleName = "Nome";
-            this.sponsorRicercaIdSponsor.Location = new System.Drawing.Point(94, 197);
+            this.sponsorRicercaIdSponsor.Location = new System.Drawing.Point(141, 303);
+            this.sponsorRicercaIdSponsor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sponsorRicercaIdSponsor.Name = "sponsorRicercaIdSponsor";
-            this.sponsorRicercaIdSponsor.Size = new System.Drawing.Size(240, 20);
+            this.sponsorRicercaIdSponsor.Size = new System.Drawing.Size(358, 26);
             this.sponsorRicercaIdSponsor.TabIndex = 17;
             // 
             // sponsorTastoRicercaNome
             // 
-            this.sponsorTastoRicercaNome.Location = new System.Drawing.Point(94, 295);
-            this.sponsorTastoRicercaNome.Margin = new System.Windows.Forms.Padding(2);
+            this.sponsorTastoRicercaNome.Location = new System.Drawing.Point(141, 454);
             this.sponsorTastoRicercaNome.Name = "sponsorTastoRicercaNome";
-            this.sponsorTastoRicercaNome.Size = new System.Drawing.Size(152, 23);
+            this.sponsorTastoRicercaNome.Size = new System.Drawing.Size(228, 35);
             this.sponsorTastoRicercaNome.TabIndex = 16;
             this.sponsorTastoRicercaNome.Text = "ricerca sponsor";
             this.sponsorTastoRicercaNome.UseVisualStyleBackColor = true;
@@ -2401,17 +2513,17 @@ namespace F1DBMS
             // 
             this.sponsorRicercaNome.AccessibleDescription = "Nome";
             this.sponsorRicercaNome.AccessibleName = "Nome";
-            this.sponsorRicercaNome.Location = new System.Drawing.Point(94, 270);
+            this.sponsorRicercaNome.Location = new System.Drawing.Point(141, 415);
+            this.sponsorRicercaNome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sponsorRicercaNome.Name = "sponsorRicercaNome";
-            this.sponsorRicercaNome.Size = new System.Drawing.Size(240, 20);
+            this.sponsorRicercaNome.Size = new System.Drawing.Size(358, 26);
             this.sponsorRicercaNome.TabIndex = 15;
             // 
             // sponsorRegistra
             // 
-            this.sponsorRegistra.Location = new System.Drawing.Point(94, 149);
-            this.sponsorRegistra.Margin = new System.Windows.Forms.Padding(2);
+            this.sponsorRegistra.Location = new System.Drawing.Point(141, 229);
             this.sponsorRegistra.Name = "sponsorRegistra";
-            this.sponsorRegistra.Size = new System.Drawing.Size(152, 23);
+            this.sponsorRegistra.Size = new System.Drawing.Size(228, 35);
             this.sponsorRegistra.TabIndex = 14;
             this.sponsorRegistra.Text = "registra sponsor";
             this.sponsorRegistra.UseVisualStyleBackColor = true;
@@ -2422,45 +2534,50 @@ namespace F1DBMS
             this.sponsorNome.AccessibleDescription = "Nome";
             this.sponsorNome.AccessibleName = "nome";
             this.sponsorNome.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.sponsorNome.Location = new System.Drawing.Point(94, 53);
+            this.sponsorNome.Location = new System.Drawing.Point(141, 82);
+            this.sponsorNome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sponsorNome.Name = "sponsorNome";
-            this.sponsorNome.Size = new System.Drawing.Size(240, 20);
+            this.sponsorNome.Size = new System.Drawing.Size(358, 26);
             this.sponsorNome.TabIndex = 9;
             // 
             // sponsorStato
             // 
             this.sponsorStato.AccessibleDescription = "Nome";
             this.sponsorStato.AccessibleName = "Nome";
-            this.sponsorStato.Location = new System.Drawing.Point(94, 77);
+            this.sponsorStato.Location = new System.Drawing.Point(141, 118);
+            this.sponsorStato.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sponsorStato.Name = "sponsorStato";
-            this.sponsorStato.Size = new System.Drawing.Size(240, 20);
+            this.sponsorStato.Size = new System.Drawing.Size(358, 26);
             this.sponsorStato.TabIndex = 8;
             // 
             // sponsorMail
             // 
             this.sponsorMail.AccessibleDescription = "Nome";
             this.sponsorMail.AccessibleName = "Nome";
-            this.sponsorMail.Location = new System.Drawing.Point(94, 124);
+            this.sponsorMail.Location = new System.Drawing.Point(141, 191);
+            this.sponsorMail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sponsorMail.Name = "sponsorMail";
-            this.sponsorMail.Size = new System.Drawing.Size(240, 20);
+            this.sponsorMail.Size = new System.Drawing.Size(358, 26);
             this.sponsorMail.TabIndex = 12;
             // 
             // sponsorTelefono
             // 
             this.sponsorTelefono.AccessibleDescription = "Nome";
             this.sponsorTelefono.AccessibleName = "Nome";
-            this.sponsorTelefono.Location = new System.Drawing.Point(94, 98);
+            this.sponsorTelefono.Location = new System.Drawing.Point(141, 151);
+            this.sponsorTelefono.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sponsorTelefono.Name = "sponsorTelefono";
-            this.sponsorTelefono.Size = new System.Drawing.Size(240, 20);
+            this.sponsorTelefono.Size = new System.Drawing.Size(358, 26);
             this.sponsorTelefono.TabIndex = 10;
             // 
             // Contratti
             // 
             this.Contratti.Controls.Add(this.contrattiGriglia);
             this.Contratti.Controls.Add(this.contrattipanel);
-            this.Contratti.Location = new System.Drawing.Point(4, 22);
+            this.Contratti.Location = new System.Drawing.Point(4, 29);
+            this.Contratti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Contratti.Name = "Contratti";
-            this.Contratti.Size = new System.Drawing.Size(2254, 977);
+            this.Contratti.Size = new System.Drawing.Size(3385, 1510);
             this.Contratti.TabIndex = 10;
             this.Contratti.Text = "Contratti";
             this.Contratti.UseVisualStyleBackColor = true;
@@ -2468,12 +2585,11 @@ namespace F1DBMS
             // contrattiGriglia
             // 
             this.contrattiGriglia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.contrattiGriglia.Location = new System.Drawing.Point(359, 3);
-            this.contrattiGriglia.Margin = new System.Windows.Forms.Padding(2);
+            this.contrattiGriglia.Location = new System.Drawing.Point(538, 5);
             this.contrattiGriglia.Name = "contrattiGriglia";
             this.contrattiGriglia.RowHeadersWidth = 62;
             this.contrattiGriglia.RowTemplate.Height = 28;
-            this.contrattiGriglia.Size = new System.Drawing.Size(1343, 974);
+            this.contrattiGriglia.Size = new System.Drawing.Size(2014, 1498);
             this.contrattiGriglia.TabIndex = 10;
             // 
             // contrattipanel
@@ -2495,101 +2611,96 @@ namespace F1DBMS
             this.contrattipanel.Controls.Add(this.contrattiIdSponsor);
             this.contrattipanel.Controls.Add(this.contrattiIdTeam);
             this.contrattipanel.Controls.Add(this.contrattiBudget);
-            this.contrattipanel.Location = new System.Drawing.Point(4, 0);
-            this.contrattipanel.Margin = new System.Windows.Forms.Padding(2);
+            this.contrattipanel.Location = new System.Drawing.Point(6, 0);
             this.contrattipanel.Name = "contrattipanel";
-            this.contrattipanel.Size = new System.Drawing.Size(406, 972);
+            this.contrattipanel.Size = new System.Drawing.Size(609, 1495);
             this.contrattipanel.TabIndex = 9;
             // 
             // label57
             // 
             this.label57.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label57.Location = new System.Drawing.Point(27, 222);
+            this.label57.Location = new System.Drawing.Point(40, 342);
+            this.label57.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(315, 2);
+            this.label57.Size = new System.Drawing.Size(472, 3);
             this.label57.TabIndex = 31;
             // 
             // label56
             // 
             this.label56.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label56.Location = new System.Drawing.Point(27, 148);
+            this.label56.Location = new System.Drawing.Point(40, 228);
+            this.label56.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(315, 2);
+            this.label56.Size = new System.Drawing.Size(472, 3);
             this.label56.TabIndex = 30;
             // 
             // contrattiData
             // 
-            this.contrattiData.Location = new System.Drawing.Point(104, 88);
+            this.contrattiData.Location = new System.Drawing.Point(156, 135);
+            this.contrattiData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.contrattiData.Name = "contrattiData";
-            this.contrattiData.Size = new System.Drawing.Size(240, 20);
+            this.contrattiData.Size = new System.Drawing.Size(358, 26);
             this.contrattiData.TabIndex = 29;
             // 
             // contrattilabelidsponsor
             // 
             this.contrattilabelidsponsor.AutoSize = true;
-            this.contrattilabelidsponsor.Location = new System.Drawing.Point(46, 16);
-            this.contrattilabelidsponsor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.contrattilabelidsponsor.Location = new System.Drawing.Point(69, 25);
             this.contrattilabelidsponsor.Name = "contrattilabelidsponsor";
-            this.contrattilabelidsponsor.Size = new System.Drawing.Size(58, 13);
+            this.contrattilabelidsponsor.Size = new System.Drawing.Size(87, 20);
             this.contrattilabelidsponsor.TabIndex = 27;
             this.contrattilabelidsponsor.Text = "IdSponsor:";
             // 
             // contrattilabelidteam
             // 
             this.contrattilabelidteam.AutoSize = true;
-            this.contrattilabelidteam.Location = new System.Drawing.Point(56, 39);
-            this.contrattilabelidteam.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.contrattilabelidteam.Location = new System.Drawing.Point(84, 60);
             this.contrattilabelidteam.Name = "contrattilabelidteam";
-            this.contrattilabelidteam.Size = new System.Drawing.Size(46, 13);
+            this.contrattilabelidteam.Size = new System.Drawing.Size(67, 20);
             this.contrattilabelidteam.TabIndex = 26;
             this.contrattilabelidteam.Text = "IdTeam:";
             // 
             // contrattilabelbudget
             // 
             this.contrattilabelbudget.AutoSize = true;
-            this.contrattilabelbudget.Location = new System.Drawing.Point(58, 63);
-            this.contrattilabelbudget.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.contrattilabelbudget.Location = new System.Drawing.Point(87, 97);
             this.contrattilabelbudget.Name = "contrattilabelbudget";
-            this.contrattilabelbudget.Size = new System.Drawing.Size(44, 13);
+            this.contrattilabelbudget.Size = new System.Drawing.Size(65, 20);
             this.contrattilabelbudget.TabIndex = 25;
             this.contrattilabelbudget.Text = "Budget:";
             // 
             // contrattilabeldatainizio
             // 
             this.contrattilabeldatainizio.AutoSize = true;
-            this.contrattilabeldatainizio.Location = new System.Drawing.Point(42, 88);
-            this.contrattilabeldatainizio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.contrattilabeldatainizio.Location = new System.Drawing.Point(63, 135);
             this.contrattilabeldatainizio.Name = "contrattilabeldatainizio";
-            this.contrattilabeldatainizio.Size = new System.Drawing.Size(60, 13);
+            this.contrattilabeldatainizio.Size = new System.Drawing.Size(89, 20);
             this.contrattilabeldatainizio.TabIndex = 24;
             this.contrattilabeldatainizio.Text = "Data Inizio:";
             // 
             // contrattilabelidteam2
             // 
             this.contrattilabelidteam2.AutoSize = true;
-            this.contrattilabelidteam2.Location = new System.Drawing.Point(56, 166);
-            this.contrattilabelidteam2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.contrattilabelidteam2.Location = new System.Drawing.Point(84, 255);
             this.contrattilabelidteam2.Name = "contrattilabelidteam2";
-            this.contrattilabelidteam2.Size = new System.Drawing.Size(46, 13);
+            this.contrattilabelidteam2.Size = new System.Drawing.Size(67, 20);
             this.contrattilabelidteam2.TabIndex = 23;
             this.contrattilabelidteam2.Text = "IdTeam:";
             // 
             // contrattilabelidsponsor2
             // 
             this.contrattilabelidsponsor2.AutoSize = true;
-            this.contrattilabelidsponsor2.Location = new System.Drawing.Point(46, 243);
-            this.contrattilabelidsponsor2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.contrattilabelidsponsor2.Location = new System.Drawing.Point(69, 374);
             this.contrattilabelidsponsor2.Name = "contrattilabelidsponsor2";
-            this.contrattilabelidsponsor2.Size = new System.Drawing.Size(58, 13);
+            this.contrattilabelidsponsor2.Size = new System.Drawing.Size(87, 20);
             this.contrattilabelidsponsor2.TabIndex = 22;
             this.contrattilabelidsponsor2.Text = "IdSponsor:";
             // 
             // contrattiTastoRicercaIdTeam
             // 
-            this.contrattiTastoRicercaIdTeam.Location = new System.Drawing.Point(104, 188);
-            this.contrattiTastoRicercaIdTeam.Margin = new System.Windows.Forms.Padding(2);
+            this.contrattiTastoRicercaIdTeam.Location = new System.Drawing.Point(156, 289);
             this.contrattiTastoRicercaIdTeam.Name = "contrattiTastoRicercaIdTeam";
-            this.contrattiTastoRicercaIdTeam.Size = new System.Drawing.Size(152, 23);
+            this.contrattiTastoRicercaIdTeam.Size = new System.Drawing.Size(228, 35);
             this.contrattiTastoRicercaIdTeam.TabIndex = 18;
             this.contrattiTastoRicercaIdTeam.Text = "ricerca contratti";
             this.contrattiTastoRicercaIdTeam.UseVisualStyleBackColor = true;
@@ -2599,17 +2710,17 @@ namespace F1DBMS
             // 
             this.contrattiRicercaIdTeam.AccessibleDescription = "Nome";
             this.contrattiRicercaIdTeam.AccessibleName = "Nome";
-            this.contrattiRicercaIdTeam.Location = new System.Drawing.Point(104, 163);
+            this.contrattiRicercaIdTeam.Location = new System.Drawing.Point(156, 251);
+            this.contrattiRicercaIdTeam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.contrattiRicercaIdTeam.Name = "contrattiRicercaIdTeam";
-            this.contrattiRicercaIdTeam.Size = new System.Drawing.Size(240, 20);
+            this.contrattiRicercaIdTeam.Size = new System.Drawing.Size(358, 26);
             this.contrattiRicercaIdTeam.TabIndex = 17;
             // 
             // contrattiTastoRicercaIdSponsor
             // 
-            this.contrattiTastoRicercaIdSponsor.Location = new System.Drawing.Point(104, 265);
-            this.contrattiTastoRicercaIdSponsor.Margin = new System.Windows.Forms.Padding(2);
+            this.contrattiTastoRicercaIdSponsor.Location = new System.Drawing.Point(156, 408);
             this.contrattiTastoRicercaIdSponsor.Name = "contrattiTastoRicercaIdSponsor";
-            this.contrattiTastoRicercaIdSponsor.Size = new System.Drawing.Size(152, 23);
+            this.contrattiTastoRicercaIdSponsor.Size = new System.Drawing.Size(228, 35);
             this.contrattiTastoRicercaIdSponsor.TabIndex = 16;
             this.contrattiTastoRicercaIdSponsor.Text = "ricerca contratti";
             this.contrattiTastoRicercaIdSponsor.UseVisualStyleBackColor = true;
@@ -2619,17 +2730,17 @@ namespace F1DBMS
             // 
             this.contrattiRicercaIdSponsor.AccessibleDescription = "Nome";
             this.contrattiRicercaIdSponsor.AccessibleName = "Nome";
-            this.contrattiRicercaIdSponsor.Location = new System.Drawing.Point(104, 240);
+            this.contrattiRicercaIdSponsor.Location = new System.Drawing.Point(156, 369);
+            this.contrattiRicercaIdSponsor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.contrattiRicercaIdSponsor.Name = "contrattiRicercaIdSponsor";
-            this.contrattiRicercaIdSponsor.Size = new System.Drawing.Size(240, 20);
+            this.contrattiRicercaIdSponsor.Size = new System.Drawing.Size(358, 26);
             this.contrattiRicercaIdSponsor.TabIndex = 15;
             // 
             // contrattiRegistra
             // 
-            this.contrattiRegistra.Location = new System.Drawing.Point(104, 114);
-            this.contrattiRegistra.Margin = new System.Windows.Forms.Padding(2);
+            this.contrattiRegistra.Location = new System.Drawing.Point(156, 175);
             this.contrattiRegistra.Name = "contrattiRegistra";
-            this.contrattiRegistra.Size = new System.Drawing.Size(152, 23);
+            this.contrattiRegistra.Size = new System.Drawing.Size(228, 35);
             this.contrattiRegistra.TabIndex = 14;
             this.contrattiRegistra.Text = "registra contratti";
             this.contrattiRegistra.UseVisualStyleBackColor = true;
@@ -2640,36 +2751,40 @@ namespace F1DBMS
             this.contrattiIdSponsor.AccessibleDescription = "Nome";
             this.contrattiIdSponsor.AccessibleName = "nome";
             this.contrattiIdSponsor.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.contrattiIdSponsor.Location = new System.Drawing.Point(104, 13);
+            this.contrattiIdSponsor.Location = new System.Drawing.Point(156, 20);
+            this.contrattiIdSponsor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.contrattiIdSponsor.Name = "contrattiIdSponsor";
-            this.contrattiIdSponsor.Size = new System.Drawing.Size(240, 20);
+            this.contrattiIdSponsor.Size = new System.Drawing.Size(358, 26);
             this.contrattiIdSponsor.TabIndex = 9;
             // 
             // contrattiIdTeam
             // 
             this.contrattiIdTeam.AccessibleDescription = "Nome";
             this.contrattiIdTeam.AccessibleName = "Nome";
-            this.contrattiIdTeam.Location = new System.Drawing.Point(104, 36);
+            this.contrattiIdTeam.Location = new System.Drawing.Point(156, 55);
+            this.contrattiIdTeam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.contrattiIdTeam.Name = "contrattiIdTeam";
-            this.contrattiIdTeam.Size = new System.Drawing.Size(240, 20);
+            this.contrattiIdTeam.Size = new System.Drawing.Size(358, 26);
             this.contrattiIdTeam.TabIndex = 8;
             // 
             // contrattiBudget
             // 
             this.contrattiBudget.AccessibleDescription = "Nome";
             this.contrattiBudget.AccessibleName = "Nome";
-            this.contrattiBudget.Location = new System.Drawing.Point(104, 60);
+            this.contrattiBudget.Location = new System.Drawing.Point(156, 92);
+            this.contrattiBudget.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.contrattiBudget.Name = "contrattiBudget";
-            this.contrattiBudget.Size = new System.Drawing.Size(240, 20);
+            this.contrattiBudget.Size = new System.Drawing.Size(358, 26);
             this.contrattiBudget.TabIndex = 10;
             // 
             // Gare
             // 
             this.Gare.Controls.Add(this.garaGriglia);
             this.Gare.Controls.Add(this.garepanel);
-            this.Gare.Location = new System.Drawing.Point(4, 22);
+            this.Gare.Location = new System.Drawing.Point(4, 29);
+            this.Gare.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Gare.Name = "Gare";
-            this.Gare.Size = new System.Drawing.Size(2254, 977);
+            this.Gare.Size = new System.Drawing.Size(3385, 1510);
             this.Gare.TabIndex = 11;
             this.Gare.Text = "Gare";
             this.Gare.UseVisualStyleBackColor = true;
@@ -2677,12 +2792,11 @@ namespace F1DBMS
             // garaGriglia
             // 
             this.garaGriglia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.garaGriglia.Location = new System.Drawing.Point(361, 5);
-            this.garaGriglia.Margin = new System.Windows.Forms.Padding(2);
+            this.garaGriglia.Location = new System.Drawing.Point(542, 8);
             this.garaGriglia.Name = "garaGriglia";
             this.garaGriglia.RowHeadersWidth = 62;
             this.garaGriglia.RowTemplate.Height = 28;
-            this.garaGriglia.Size = new System.Drawing.Size(1339, 974);
+            this.garaGriglia.Size = new System.Drawing.Size(2008, 1498);
             this.garaGriglia.TabIndex = 8;
             // 
             // garepanel
@@ -2700,79 +2814,78 @@ namespace F1DBMS
             this.garepanel.Controls.Add(this.garaTastoRicercaIdCampionato);
             this.garepanel.Controls.Add(this.garaRicercaIdCampionato);
             this.garepanel.Controls.Add(this.gararegistra);
-            this.garepanel.Location = new System.Drawing.Point(2, 2);
-            this.garepanel.Margin = new System.Windows.Forms.Padding(2);
+            this.garepanel.Location = new System.Drawing.Point(3, 3);
             this.garepanel.Name = "garepanel";
-            this.garepanel.Size = new System.Drawing.Size(406, 972);
+            this.garepanel.Size = new System.Drawing.Size(609, 1495);
             this.garepanel.TabIndex = 7;
             // 
             // dataGara
             // 
-            this.dataGara.Location = new System.Drawing.Point(106, 87);
+            this.dataGara.Location = new System.Drawing.Point(159, 134);
+            this.dataGara.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGara.Name = "dataGara";
-            this.dataGara.Size = new System.Drawing.Size(239, 20);
+            this.dataGara.Size = new System.Drawing.Size(356, 26);
             this.dataGara.TabIndex = 31;
             // 
             // label55
             // 
             this.label55.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label55.Location = new System.Drawing.Point(30, 219);
+            this.label55.Location = new System.Drawing.Point(45, 337);
+            this.label55.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(315, 2);
+            this.label55.Size = new System.Drawing.Size(472, 3);
             this.label55.TabIndex = 30;
             // 
             // label54
             // 
             this.label54.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label54.Location = new System.Drawing.Point(30, 146);
+            this.label54.Location = new System.Drawing.Point(45, 225);
+            this.label54.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(315, 2);
+            this.label54.Size = new System.Drawing.Size(472, 3);
             this.label54.TabIndex = 29;
             // 
             // label53
             // 
             this.label53.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label53.Location = new System.Drawing.Point(30, 73);
+            this.label53.Location = new System.Drawing.Point(45, 112);
+            this.label53.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(315, 2);
+            this.label53.Size = new System.Drawing.Size(472, 3);
             this.label53.TabIndex = 28;
             // 
             // garalabelidcircuito2
             // 
             this.garalabelidcircuito2.AutoSize = true;
-            this.garalabelidcircuito2.Location = new System.Drawing.Point(50, 236);
-            this.garalabelidcircuito2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.garalabelidcircuito2.Location = new System.Drawing.Point(75, 363);
             this.garalabelidcircuito2.Name = "garalabelidcircuito2";
-            this.garalabelidcircuito2.Size = new System.Drawing.Size(54, 13);
+            this.garalabelidcircuito2.Size = new System.Drawing.Size(80, 20);
             this.garalabelidcircuito2.TabIndex = 27;
             this.garalabelidcircuito2.Text = "IdCircuito:";
             // 
             // garalabelidcampionato
             // 
             this.garalabelidcampionato.AutoSize = true;
-            this.garalabelidcampionato.Location = new System.Drawing.Point(29, 163);
-            this.garalabelidcampionato.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.garalabelidcampionato.Location = new System.Drawing.Point(44, 251);
             this.garalabelidcampionato.Name = "garalabelidcampionato";
-            this.garalabelidcampionato.Size = new System.Drawing.Size(75, 13);
+            this.garalabelidcampionato.Size = new System.Drawing.Size(113, 20);
             this.garalabelidcampionato.TabIndex = 26;
             this.garalabelidcampionato.Text = "IdCampionato:";
             // 
             // garalabeldata2
             // 
             this.garalabeldata2.AutoSize = true;
-            this.garalabeldata2.Location = new System.Drawing.Point(70, 90);
-            this.garalabeldata2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.garalabeldata2.Location = new System.Drawing.Point(105, 138);
             this.garalabeldata2.Name = "garalabeldata2";
-            this.garalabeldata2.Size = new System.Drawing.Size(33, 13);
+            this.garalabeldata2.Size = new System.Drawing.Size(48, 20);
             this.garalabeldata2.TabIndex = 25;
             this.garalabeldata2.Text = "Data:";
             // 
             // garaTastoRicercaIdCircuito
             // 
-            this.garaTastoRicercaIdCircuito.Location = new System.Drawing.Point(105, 258);
-            this.garaTastoRicercaIdCircuito.Margin = new System.Windows.Forms.Padding(2);
+            this.garaTastoRicercaIdCircuito.Location = new System.Drawing.Point(158, 397);
             this.garaTastoRicercaIdCircuito.Name = "garaTastoRicercaIdCircuito";
-            this.garaTastoRicercaIdCircuito.Size = new System.Drawing.Size(152, 23);
+            this.garaTastoRicercaIdCircuito.Size = new System.Drawing.Size(228, 35);
             this.garaTastoRicercaIdCircuito.TabIndex = 20;
             this.garaTastoRicercaIdCircuito.Text = "Ricerca gare";
             this.garaTastoRicercaIdCircuito.UseVisualStyleBackColor = true;
@@ -2782,17 +2895,17 @@ namespace F1DBMS
             // 
             this.garaRicercaIdCircuito.AccessibleDescription = "Nome";
             this.garaRicercaIdCircuito.AccessibleName = "Nome";
-            this.garaRicercaIdCircuito.Location = new System.Drawing.Point(105, 233);
+            this.garaRicercaIdCircuito.Location = new System.Drawing.Point(158, 358);
+            this.garaRicercaIdCircuito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.garaRicercaIdCircuito.Name = "garaRicercaIdCircuito";
-            this.garaRicercaIdCircuito.Size = new System.Drawing.Size(240, 20);
+            this.garaRicercaIdCircuito.Size = new System.Drawing.Size(358, 26);
             this.garaRicercaIdCircuito.TabIndex = 19;
             // 
             // garaTastoRicercaData
             // 
-            this.garaTastoRicercaData.Location = new System.Drawing.Point(105, 112);
-            this.garaTastoRicercaData.Margin = new System.Windows.Forms.Padding(2);
+            this.garaTastoRicercaData.Location = new System.Drawing.Point(158, 172);
             this.garaTastoRicercaData.Name = "garaTastoRicercaData";
-            this.garaTastoRicercaData.Size = new System.Drawing.Size(152, 23);
+            this.garaTastoRicercaData.Size = new System.Drawing.Size(228, 35);
             this.garaTastoRicercaData.TabIndex = 18;
             this.garaTastoRicercaData.Text = "Ricerca gara";
             this.garaTastoRicercaData.UseVisualStyleBackColor = true;
@@ -2800,10 +2913,9 @@ namespace F1DBMS
             // 
             // garaTastoRicercaIdCampionato
             // 
-            this.garaTastoRicercaIdCampionato.Location = new System.Drawing.Point(105, 185);
-            this.garaTastoRicercaIdCampionato.Margin = new System.Windows.Forms.Padding(2);
+            this.garaTastoRicercaIdCampionato.Location = new System.Drawing.Point(158, 285);
             this.garaTastoRicercaIdCampionato.Name = "garaTastoRicercaIdCampionato";
-            this.garaTastoRicercaIdCampionato.Size = new System.Drawing.Size(152, 23);
+            this.garaTastoRicercaIdCampionato.Size = new System.Drawing.Size(228, 35);
             this.garaTastoRicercaIdCampionato.TabIndex = 16;
             this.garaTastoRicercaIdCampionato.Text = "Ricerca gare";
             this.garaTastoRicercaIdCampionato.UseVisualStyleBackColor = true;
@@ -2813,17 +2925,17 @@ namespace F1DBMS
             // 
             this.garaRicercaIdCampionato.AccessibleDescription = "Nome";
             this.garaRicercaIdCampionato.AccessibleName = "Nome";
-            this.garaRicercaIdCampionato.Location = new System.Drawing.Point(105, 160);
+            this.garaRicercaIdCampionato.Location = new System.Drawing.Point(158, 246);
+            this.garaRicercaIdCampionato.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.garaRicercaIdCampionato.Name = "garaRicercaIdCampionato";
-            this.garaRicercaIdCampionato.Size = new System.Drawing.Size(240, 20);
+            this.garaRicercaIdCampionato.Size = new System.Drawing.Size(358, 26);
             this.garaRicercaIdCampionato.TabIndex = 15;
             // 
             // gararegistra
             // 
-            this.gararegistra.Location = new System.Drawing.Point(105, 39);
-            this.gararegistra.Margin = new System.Windows.Forms.Padding(2);
+            this.gararegistra.Location = new System.Drawing.Point(158, 60);
             this.gararegistra.Name = "gararegistra";
-            this.gararegistra.Size = new System.Drawing.Size(152, 23);
+            this.gararegistra.Size = new System.Drawing.Size(228, 35);
             this.gararegistra.TabIndex = 14;
             this.gararegistra.Text = "registra gare";
             this.gararegistra.UseVisualStyleBackColor = true;
@@ -2833,9 +2945,10 @@ namespace F1DBMS
             // 
             this.Circuiti.Controls.Add(this.grigliaCircuito);
             this.Circuiti.Controls.Add(this.panelcircuito);
-            this.Circuiti.Location = new System.Drawing.Point(4, 22);
+            this.Circuiti.Location = new System.Drawing.Point(4, 29);
+            this.Circuiti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Circuiti.Name = "Circuiti";
-            this.Circuiti.Size = new System.Drawing.Size(2254, 977);
+            this.Circuiti.Size = new System.Drawing.Size(3385, 1510);
             this.Circuiti.TabIndex = 12;
             this.Circuiti.Text = "Circuiti";
             this.Circuiti.UseVisualStyleBackColor = true;
@@ -2843,12 +2956,11 @@ namespace F1DBMS
             // grigliaCircuito
             // 
             this.grigliaCircuito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grigliaCircuito.Location = new System.Drawing.Point(363, 5);
-            this.grigliaCircuito.Margin = new System.Windows.Forms.Padding(2);
+            this.grigliaCircuito.Location = new System.Drawing.Point(544, 8);
             this.grigliaCircuito.Name = "grigliaCircuito";
             this.grigliaCircuito.RowHeadersWidth = 62;
             this.grigliaCircuito.RowTemplate.Height = 28;
-            this.grigliaCircuito.Size = new System.Drawing.Size(1340, 974);
+            this.grigliaCircuito.Size = new System.Drawing.Size(2010, 1498);
             this.grigliaCircuito.TabIndex = 6;
             // 
             // panelcircuito
@@ -2876,35 +2988,35 @@ namespace F1DBMS
             this.panelcircuito.Controls.Add(this.lunghezzaCircuito);
             this.panelcircuito.Controls.Add(this.descrizioneCircuito);
             this.panelcircuito.Controls.Add(this.tipologiaCircuito);
-            this.panelcircuito.Location = new System.Drawing.Point(4, 2);
-            this.panelcircuito.Margin = new System.Windows.Forms.Padding(2);
+            this.panelcircuito.Location = new System.Drawing.Point(6, 3);
             this.panelcircuito.Name = "panelcircuito";
-            this.panelcircuito.Size = new System.Drawing.Size(406, 972);
+            this.panelcircuito.Size = new System.Drawing.Size(609, 1495);
             this.panelcircuito.TabIndex = 5;
             // 
             // label61
             // 
             this.label61.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label61.Location = new System.Drawing.Point(24, 301);
+            this.label61.Location = new System.Drawing.Point(36, 463);
+            this.label61.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(315, 2);
+            this.label61.Size = new System.Drawing.Size(472, 3);
             this.label61.TabIndex = 52;
             // 
             // label60
             // 
             this.label60.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label60.Location = new System.Drawing.Point(24, 228);
+            this.label60.Location = new System.Drawing.Point(36, 351);
+            this.label60.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(315, 2);
+            this.label60.Size = new System.Drawing.Size(472, 3);
             this.label60.TabIndex = 51;
             // 
             // idcircuitolabel
             // 
             this.idcircuitolabel.AutoSize = true;
-            this.idcircuitolabel.Location = new System.Drawing.Point(32, 31);
-            this.idcircuitolabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.idcircuitolabel.Location = new System.Drawing.Point(48, 48);
             this.idcircuitolabel.Name = "idcircuitolabel";
-            this.idcircuitolabel.Size = new System.Drawing.Size(54, 13);
+            this.idcircuitolabel.Size = new System.Drawing.Size(80, 20);
             this.idcircuitolabel.TabIndex = 28;
             this.idcircuitolabel.Text = "IdCircuito:";
             // 
@@ -2913,97 +3025,89 @@ namespace F1DBMS
             this.idCircuitoCircuito.AccessibleDescription = "Nome";
             this.idCircuitoCircuito.AccessibleName = "nome";
             this.idCircuitoCircuito.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.idCircuitoCircuito.Location = new System.Drawing.Point(90, 31);
+            this.idCircuitoCircuito.Location = new System.Drawing.Point(135, 48);
+            this.idCircuitoCircuito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.idCircuitoCircuito.Name = "idCircuitoCircuito";
-            this.idCircuitoCircuito.Size = new System.Drawing.Size(240, 20);
+            this.idCircuitoCircuito.Size = new System.Drawing.Size(358, 26);
             this.idCircuitoCircuito.TabIndex = 27;
             // 
             // stato2labelcircuito
             // 
             this.stato2labelcircuito.AutoSize = true;
-            this.stato2labelcircuito.Location = new System.Drawing.Point(50, 318);
-            this.stato2labelcircuito.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.stato2labelcircuito.Location = new System.Drawing.Point(75, 489);
             this.stato2labelcircuito.Name = "stato2labelcircuito";
-            this.stato2labelcircuito.Size = new System.Drawing.Size(35, 13);
+            this.stato2labelcircuito.Size = new System.Drawing.Size(52, 20);
             this.stato2labelcircuito.TabIndex = 26;
             this.stato2labelcircuito.Text = "Stato:";
             // 
             // nome2labelcircuito
             // 
             this.nome2labelcircuito.AutoSize = true;
-            this.nome2labelcircuito.Location = new System.Drawing.Point(47, 245);
-            this.nome2labelcircuito.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.nome2labelcircuito.Location = new System.Drawing.Point(70, 377);
             this.nome2labelcircuito.Name = "nome2labelcircuito";
-            this.nome2labelcircuito.Size = new System.Drawing.Size(38, 13);
+            this.nome2labelcircuito.Size = new System.Drawing.Size(55, 20);
             this.nome2labelcircuito.TabIndex = 25;
             this.nome2labelcircuito.Text = "Nome:";
             // 
             // nuemrodicurvelabelcircuito
             // 
             this.nuemrodicurvelabelcircuito.AutoSize = true;
-            this.nuemrodicurvelabelcircuito.Location = new System.Drawing.Point(6, 175);
-            this.nuemrodicurvelabelcircuito.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.nuemrodicurvelabelcircuito.Location = new System.Drawing.Point(9, 269);
             this.nuemrodicurvelabelcircuito.Name = "nuemrodicurvelabelcircuito";
-            this.nuemrodicurvelabelcircuito.Size = new System.Drawing.Size(77, 13);
+            this.nuemrodicurvelabelcircuito.Size = new System.Drawing.Size(111, 20);
             this.nuemrodicurvelabelcircuito.TabIndex = 24;
             this.nuemrodicurvelabelcircuito.Text = "Numero curve:";
             // 
             // tipologialabelcircuito
             // 
             this.tipologialabelcircuito.AutoSize = true;
-            this.tipologialabelcircuito.Location = new System.Drawing.Point(32, 149);
-            this.tipologialabelcircuito.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.tipologialabelcircuito.Location = new System.Drawing.Point(48, 229);
             this.tipologialabelcircuito.Name = "tipologialabelcircuito";
-            this.tipologialabelcircuito.Size = new System.Drawing.Size(53, 13);
+            this.tipologialabelcircuito.Size = new System.Drawing.Size(76, 20);
             this.tipologialabelcircuito.TabIndex = 23;
             this.tipologialabelcircuito.Text = "Tipologia:";
             // 
             // lunghezzalabelcircuito
             // 
             this.lunghezzalabelcircuito.AutoSize = true;
-            this.lunghezzalabelcircuito.Location = new System.Drawing.Point(24, 129);
-            this.lunghezzalabelcircuito.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lunghezzalabelcircuito.Location = new System.Drawing.Point(36, 198);
             this.lunghezzalabelcircuito.Name = "lunghezzalabelcircuito";
-            this.lunghezzalabelcircuito.Size = new System.Drawing.Size(62, 13);
+            this.lunghezzalabelcircuito.Size = new System.Drawing.Size(92, 20);
             this.lunghezzalabelcircuito.TabIndex = 22;
             this.lunghezzalabelcircuito.Text = "Lunghezza:";
             // 
             // descrizionelabelcircuito
             // 
             this.descrizionelabelcircuito.AutoSize = true;
-            this.descrizionelabelcircuito.Location = new System.Drawing.Point(21, 105);
-            this.descrizionelabelcircuito.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.descrizionelabelcircuito.Location = new System.Drawing.Point(32, 162);
             this.descrizionelabelcircuito.Name = "descrizionelabelcircuito";
-            this.descrizionelabelcircuito.Size = new System.Drawing.Size(65, 13);
+            this.descrizionelabelcircuito.Size = new System.Drawing.Size(96, 20);
             this.descrizionelabelcircuito.TabIndex = 21;
             this.descrizionelabelcircuito.Text = "Descrizione:";
             // 
             // statolabelcircuito
             // 
             this.statolabelcircuito.AutoSize = true;
-            this.statolabelcircuito.Location = new System.Drawing.Point(48, 80);
-            this.statolabelcircuito.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.statolabelcircuito.Location = new System.Drawing.Point(72, 123);
             this.statolabelcircuito.Name = "statolabelcircuito";
-            this.statolabelcircuito.Size = new System.Drawing.Size(35, 13);
+            this.statolabelcircuito.Size = new System.Drawing.Size(52, 20);
             this.statolabelcircuito.TabIndex = 20;
             this.statolabelcircuito.Text = "Stato:";
             // 
             // nomelabelcircuito
             // 
             this.nomelabelcircuito.AutoSize = true;
-            this.nomelabelcircuito.Location = new System.Drawing.Point(49, 55);
-            this.nomelabelcircuito.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.nomelabelcircuito.Location = new System.Drawing.Point(74, 85);
             this.nomelabelcircuito.Name = "nomelabelcircuito";
-            this.nomelabelcircuito.Size = new System.Drawing.Size(38, 13);
+            this.nomelabelcircuito.Size = new System.Drawing.Size(55, 20);
             this.nomelabelcircuito.TabIndex = 19;
             this.nomelabelcircuito.Text = "Nome:";
             // 
             // tastoRicercaNomeCircuito
             // 
-            this.tastoRicercaNomeCircuito.Location = new System.Drawing.Point(90, 267);
-            this.tastoRicercaNomeCircuito.Margin = new System.Windows.Forms.Padding(2);
+            this.tastoRicercaNomeCircuito.Location = new System.Drawing.Point(135, 411);
             this.tastoRicercaNomeCircuito.Name = "tastoRicercaNomeCircuito";
-            this.tastoRicercaNomeCircuito.Size = new System.Drawing.Size(152, 23);
+            this.tastoRicercaNomeCircuito.Size = new System.Drawing.Size(228, 35);
             this.tastoRicercaNomeCircuito.TabIndex = 18;
             this.tastoRicercaNomeCircuito.Text = "ricerca circuito";
             this.tastoRicercaNomeCircuito.UseVisualStyleBackColor = true;
@@ -3013,17 +3117,17 @@ namespace F1DBMS
             // 
             this.ricercaNomeCircuito.AccessibleDescription = "Nome";
             this.ricercaNomeCircuito.AccessibleName = "Nome";
-            this.ricercaNomeCircuito.Location = new System.Drawing.Point(90, 242);
+            this.ricercaNomeCircuito.Location = new System.Drawing.Point(135, 372);
+            this.ricercaNomeCircuito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ricercaNomeCircuito.Name = "ricercaNomeCircuito";
-            this.ricercaNomeCircuito.Size = new System.Drawing.Size(240, 20);
+            this.ricercaNomeCircuito.Size = new System.Drawing.Size(358, 26);
             this.ricercaNomeCircuito.TabIndex = 17;
             // 
             // tastoRicercaStatoCircuito
             // 
-            this.tastoRicercaStatoCircuito.Location = new System.Drawing.Point(90, 340);
-            this.tastoRicercaStatoCircuito.Margin = new System.Windows.Forms.Padding(2);
+            this.tastoRicercaStatoCircuito.Location = new System.Drawing.Point(135, 523);
             this.tastoRicercaStatoCircuito.Name = "tastoRicercaStatoCircuito";
-            this.tastoRicercaStatoCircuito.Size = new System.Drawing.Size(152, 23);
+            this.tastoRicercaStatoCircuito.Size = new System.Drawing.Size(228, 35);
             this.tastoRicercaStatoCircuito.TabIndex = 16;
             this.tastoRicercaStatoCircuito.Text = "ricerca circuito";
             this.tastoRicercaStatoCircuito.UseVisualStyleBackColor = true;
@@ -3033,17 +3137,17 @@ namespace F1DBMS
             // 
             this.ricercaStatoCircuito.AccessibleDescription = "Nome";
             this.ricercaStatoCircuito.AccessibleName = "Nome";
-            this.ricercaStatoCircuito.Location = new System.Drawing.Point(90, 315);
+            this.ricercaStatoCircuito.Location = new System.Drawing.Point(135, 485);
+            this.ricercaStatoCircuito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ricercaStatoCircuito.Name = "ricercaStatoCircuito";
-            this.ricercaStatoCircuito.Size = new System.Drawing.Size(240, 20);
+            this.ricercaStatoCircuito.Size = new System.Drawing.Size(358, 26);
             this.ricercaStatoCircuito.TabIndex = 15;
             // 
             // registraCircuito
             // 
-            this.registraCircuito.Location = new System.Drawing.Point(90, 197);
-            this.registraCircuito.Margin = new System.Windows.Forms.Padding(2);
+            this.registraCircuito.Location = new System.Drawing.Point(135, 303);
             this.registraCircuito.Name = "registraCircuito";
-            this.registraCircuito.Size = new System.Drawing.Size(152, 23);
+            this.registraCircuito.Size = new System.Drawing.Size(228, 35);
             this.registraCircuito.TabIndex = 14;
             this.registraCircuito.Text = "registra circuito";
             this.registraCircuito.UseVisualStyleBackColor = true;
@@ -3054,58 +3158,65 @@ namespace F1DBMS
             this.nomeCircuito.AccessibleDescription = "Nome";
             this.nomeCircuito.AccessibleName = "nome";
             this.nomeCircuito.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.nomeCircuito.Location = new System.Drawing.Point(90, 55);
+            this.nomeCircuito.Location = new System.Drawing.Point(135, 85);
+            this.nomeCircuito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.nomeCircuito.Name = "nomeCircuito";
-            this.nomeCircuito.Size = new System.Drawing.Size(240, 20);
+            this.nomeCircuito.Size = new System.Drawing.Size(358, 26);
             this.nomeCircuito.TabIndex = 9;
             // 
             // numDiCurveCircuito
             // 
             this.numDiCurveCircuito.AccessibleDescription = "Nome";
             this.numDiCurveCircuito.AccessibleName = "Nome";
-            this.numDiCurveCircuito.Location = new System.Drawing.Point(90, 172);
+            this.numDiCurveCircuito.Location = new System.Drawing.Point(135, 265);
+            this.numDiCurveCircuito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numDiCurveCircuito.Name = "numDiCurveCircuito";
-            this.numDiCurveCircuito.Size = new System.Drawing.Size(240, 20);
+            this.numDiCurveCircuito.Size = new System.Drawing.Size(358, 26);
             this.numDiCurveCircuito.TabIndex = 13;
             // 
             // statoCircuito
             // 
             this.statoCircuito.AccessibleDescription = "Nome";
             this.statoCircuito.AccessibleName = "Nome";
-            this.statoCircuito.Location = new System.Drawing.Point(90, 78);
+            this.statoCircuito.Location = new System.Drawing.Point(135, 120);
+            this.statoCircuito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.statoCircuito.Name = "statoCircuito";
-            this.statoCircuito.Size = new System.Drawing.Size(240, 20);
+            this.statoCircuito.Size = new System.Drawing.Size(358, 26);
             this.statoCircuito.TabIndex = 8;
             // 
             // lunghezzaCircuito
             // 
             this.lunghezzaCircuito.AccessibleDescription = "Nome";
             this.lunghezzaCircuito.AccessibleName = "Nome";
-            this.lunghezzaCircuito.Location = new System.Drawing.Point(90, 125);
+            this.lunghezzaCircuito.Location = new System.Drawing.Point(135, 192);
+            this.lunghezzaCircuito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lunghezzaCircuito.Name = "lunghezzaCircuito";
-            this.lunghezzaCircuito.Size = new System.Drawing.Size(240, 20);
+            this.lunghezzaCircuito.Size = new System.Drawing.Size(358, 26);
             this.lunghezzaCircuito.TabIndex = 12;
             // 
             // descrizioneCircuito
             // 
             this.descrizioneCircuito.AccessibleDescription = "Nome";
             this.descrizioneCircuito.AccessibleName = "Nome";
-            this.descrizioneCircuito.Location = new System.Drawing.Point(90, 101);
+            this.descrizioneCircuito.Location = new System.Drawing.Point(135, 155);
+            this.descrizioneCircuito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.descrizioneCircuito.Name = "descrizioneCircuito";
-            this.descrizioneCircuito.Size = new System.Drawing.Size(240, 20);
+            this.descrizioneCircuito.Size = new System.Drawing.Size(358, 26);
             this.descrizioneCircuito.TabIndex = 10;
             // 
             // tipologiaCircuito
             // 
             this.tipologiaCircuito.AccessibleDescription = "Nome";
             this.tipologiaCircuito.AccessibleName = "Nome";
-            this.tipologiaCircuito.Location = new System.Drawing.Point(90, 149);
+            this.tipologiaCircuito.Location = new System.Drawing.Point(135, 229);
+            this.tipologiaCircuito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tipologiaCircuito.Name = "tipologiaCircuito";
-            this.tipologiaCircuito.Size = new System.Drawing.Size(240, 20);
+            this.tipologiaCircuito.Size = new System.Drawing.Size(358, 26);
             this.tipologiaCircuito.TabIndex = 11;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.risulltatoPilBtn);
             this.tabPage1.Controls.Add(this.RegistrazioniGrid);
             this.tabPage1.Controls.Add(this.IDCampBtn);
             this.tabPage1.Controls.Add(this.label65);
@@ -3117,13 +3228,120 @@ namespace F1DBMS
             this.tabPage1.Controls.Add(this.label62);
             this.tabPage1.Controls.Add(this.registraPilBtn);
             this.tabPage1.Controls.Add(this.splitter1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(2254, 977);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPage1.Size = new System.Drawing.Size(3385, 1510);
             this.tabPage1.TabIndex = 13;
             this.tabPage1.Text = "Registrazioni Piloti";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // RegistrazioniGrid
+            // 
+            this.RegistrazioniGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RegistrazioniGrid.Location = new System.Drawing.Point(548, 11);
+            this.RegistrazioniGrid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.RegistrazioniGrid.Name = "RegistrazioniGrid";
+            this.RegistrazioniGrid.RowHeadersWidth = 62;
+            this.RegistrazioniGrid.Size = new System.Drawing.Size(2002, 1375);
+            this.RegistrazioniGrid.TabIndex = 60;
+            // 
+            // IDCampBtn
+            // 
+            this.IDCampBtn.Location = new System.Drawing.Point(154, 289);
+            this.IDCampBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.IDCampBtn.Name = "IDCampBtn";
+            this.IDCampBtn.Size = new System.Drawing.Size(228, 35);
+            this.IDCampBtn.TabIndex = 59;
+            this.IDCampBtn.Text = "Cerca Partecipazioni";
+            this.IDCampBtn.UseVisualStyleBackColor = true;
+            this.IDCampBtn.Click += new System.EventHandler(this.IDCampBtn_Click);
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Location = new System.Drawing.Point(27, 258);
+            this.label65.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(117, 20);
+            this.label65.TabIndex = 58;
+            this.label65.Text = "ID campionato:";
+            // 
+            // IDCampionatoBox
+            // 
+            this.IDCampionatoBox.Location = new System.Drawing.Point(154, 248);
+            this.IDCampionatoBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.IDCampionatoBox.Name = "IDCampionatoBox";
+            this.IDCampionatoBox.Size = new System.Drawing.Size(358, 26);
+            this.IDCampionatoBox.TabIndex = 57;
+            // 
+            // label64
+            // 
+            this.label64.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label64.Location = new System.Drawing.Point(34, 226);
+            this.label64.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(472, 3);
+            this.label64.TabIndex = 56;
+            // 
+            // ricercaCFBtn
+            // 
+            this.ricercaCFBtn.Location = new System.Drawing.Point(154, 172);
+            this.ricercaCFBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ricercaCFBtn.Name = "ricercaCFBtn";
+            this.ricercaCFBtn.Size = new System.Drawing.Size(228, 35);
+            this.ricercaCFBtn.TabIndex = 55;
+            this.ricercaCFBtn.Text = "Cerca Partecipazioni";
+            this.ricercaCFBtn.UseVisualStyleBackColor = true;
+            this.ricercaCFBtn.Click += new System.EventHandler(this.ricercaCFBtn_Click);
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(111, 135);
+            this.label63.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(34, 20);
+            this.label63.TabIndex = 54;
+            this.label63.Text = "CF:";
+            // 
+            // CFPilBox
+            // 
+            this.CFPilBox.Location = new System.Drawing.Point(154, 131);
+            this.CFPilBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CFPilBox.Name = "CFPilBox";
+            this.CFPilBox.Size = new System.Drawing.Size(358, 26);
+            this.CFPilBox.TabIndex = 53;
+            // 
+            // label62
+            // 
+            this.label62.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label62.Location = new System.Drawing.Point(34, 109);
+            this.label62.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(472, 3);
+            this.label62.TabIndex = 52;
+            // 
+            // registraPilBtn
+            // 
+            this.registraPilBtn.Location = new System.Drawing.Point(154, 55);
+            this.registraPilBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.registraPilBtn.Name = "registraPilBtn";
+            this.registraPilBtn.Size = new System.Drawing.Size(228, 35);
+            this.registraPilBtn.TabIndex = 1;
+            this.registraPilBtn.Text = "Inserisci partecipazione";
+            this.registraPilBtn.UseVisualStyleBackColor = true;
+            this.registraPilBtn.Click += new System.EventHandler(this.registraPilBtn_Click);
+            // 
+            // splitter1
+            // 
+            this.splitter1.Location = new System.Drawing.Point(4, 5);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(532, 1500);
+            this.splitter1.TabIndex = 0;
+            this.splitter1.TabStop = false;
             // 
             // button2
             // 
@@ -3135,106 +3353,24 @@ namespace F1DBMS
             this.button2.Text = "Revoca Incarico";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // splitter1
+            // risulltatoPilBtn
             // 
-            this.splitter1.Location = new System.Drawing.Point(3, 3);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(355, 971);
-            this.splitter1.TabIndex = 0;
-            this.splitter1.TabStop = false;
-            // 
-            // registraPilBtn
-            // 
-            this.registraPilBtn.Location = new System.Drawing.Point(103, 36);
-            this.registraPilBtn.Name = "registraPilBtn";
-            this.registraPilBtn.Size = new System.Drawing.Size(152, 23);
-            this.registraPilBtn.TabIndex = 1;
-            this.registraPilBtn.Text = "Inserisci partecipazione";
-            this.registraPilBtn.UseVisualStyleBackColor = true;
-            this.registraPilBtn.Click += new System.EventHandler(this.registraPilBtn_Click);
-            // 
-            // label62
-            // 
-            this.label62.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label62.Location = new System.Drawing.Point(23, 71);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(315, 2);
-            this.label62.TabIndex = 52;
-            // 
-            // CFPilBox
-            // 
-            this.CFPilBox.Location = new System.Drawing.Point(103, 85);
-            this.CFPilBox.Name = "CFPilBox";
-            this.CFPilBox.Size = new System.Drawing.Size(240, 20);
-            this.CFPilBox.TabIndex = 53;
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(74, 88);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(23, 13);
-            this.label63.TabIndex = 54;
-            this.label63.Text = "CF:";
-            // 
-            // ricercaCFBtn
-            // 
-            this.ricercaCFBtn.Location = new System.Drawing.Point(103, 112);
-            this.ricercaCFBtn.Name = "ricercaCFBtn";
-            this.ricercaCFBtn.Size = new System.Drawing.Size(152, 23);
-            this.ricercaCFBtn.TabIndex = 55;
-            this.ricercaCFBtn.Text = "Cerca Partecipazioni";
-            this.ricercaCFBtn.UseVisualStyleBackColor = true;
-            this.ricercaCFBtn.Click += new System.EventHandler(this.ricercaCFBtn_Click);
-            // 
-            // label64
-            // 
-            this.label64.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label64.Location = new System.Drawing.Point(23, 147);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(315, 2);
-            this.label64.TabIndex = 56;
-            // 
-            // IDCampBtn
-            // 
-            this.IDCampBtn.Location = new System.Drawing.Point(103, 188);
-            this.IDCampBtn.Name = "IDCampBtn";
-            this.IDCampBtn.Size = new System.Drawing.Size(152, 23);
-            this.IDCampBtn.TabIndex = 59;
-            this.IDCampBtn.Text = "Cerca Partecipazioni";
-            this.IDCampBtn.UseVisualStyleBackColor = true;
-            this.IDCampBtn.Click += new System.EventHandler(this.IDCampBtn_Click);
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(18, 168);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(79, 13);
-            this.label65.TabIndex = 58;
-            this.label65.Text = "ID campionato:";
-            // 
-            // IDCampionatoBox
-            // 
-            this.IDCampionatoBox.Location = new System.Drawing.Point(103, 161);
-            this.IDCampionatoBox.Name = "IDCampionatoBox";
-            this.IDCampionatoBox.Size = new System.Drawing.Size(240, 20);
-            this.IDCampionatoBox.TabIndex = 57;
-            // 
-            // RegistrazioniGrid
-            // 
-            this.RegistrazioniGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.RegistrazioniGrid.Location = new System.Drawing.Point(365, 7);
-            this.RegistrazioniGrid.Name = "RegistrazioniGrid";
-            this.RegistrazioniGrid.Size = new System.Drawing.Size(1335, 894);
-            this.RegistrazioniGrid.TabIndex = 60;
+            this.risulltatoPilBtn.Location = new System.Drawing.Point(154, 365);
+            this.risulltatoPilBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.risulltatoPilBtn.Name = "risulltatoPilBtn";
+            this.risulltatoPilBtn.Size = new System.Drawing.Size(228, 35);
+            this.risulltatoPilBtn.TabIndex = 61;
+            this.risulltatoPilBtn.Text = "Inserisci risultato";
+            this.risulltatoPilBtn.UseVisualStyleBackColor = true;
+            this.risulltatoPilBtn.Click += new System.EventHandler(this.risulltatoPilBtn_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1709, 924);
+            this.ClientSize = new System.Drawing.Size(2564, 1422);
             this.Controls.Add(this.Team);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainForm";
             this.Text = "F1 DBMS";
             this.Team.ResumeLayout(false);
@@ -3567,6 +3703,7 @@ namespace F1DBMS
         private System.Windows.Forms.Label label65;
         private System.Windows.Forms.TextBox IDCampionatoBox;
         private System.Windows.Forms.DataGridView RegistrazioniGrid;
+        private System.Windows.Forms.Button risulltatoPilBtn;
     }
 }
 

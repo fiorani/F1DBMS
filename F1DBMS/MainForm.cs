@@ -574,5 +574,10 @@ namespace F1DBMS
         {
             new FormPartecipazioniCampionati(db).Show();
         }
+
+        private void risulltatoPilBtn_Click(object sender, EventArgs e)
+        {
+            new FormRisultatoGara(db).Show();
+        }
     }
 }
