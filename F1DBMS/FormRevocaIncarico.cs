@@ -20,6 +20,7 @@ namespace F1DBMS
             InitializeComponent();
             db = originDb;
             SelezionaIncRevoca.DataSource = from incDip in db.incarichi_dipendentis
+                                            where !incDip.dataLicenziamento.HasValue
                                             select incDip;
             rigaTabellaIncarico = -1;
         }
