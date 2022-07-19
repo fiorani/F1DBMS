@@ -255,6 +255,8 @@ namespace F1DBMS
             this.Gare = new System.Windows.Forms.TabPage();
             this.garaGriglia = new System.Windows.Forms.DataGridView();
             this.garepanel = new System.Windows.Forms.Panel();
+            this.esitiGareBtn = new System.Windows.Forms.Button();
+            this.label71 = new System.Windows.Forms.Label();
             this.dataGara = new System.Windows.Forms.DateTimePicker();
             this.label55 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
@@ -2781,6 +2783,8 @@ namespace F1DBMS
             // 
             // garepanel
             // 
+            this.garepanel.Controls.Add(this.esitiGareBtn);
+            this.garepanel.Controls.Add(this.label71);
             this.garepanel.Controls.Add(this.dataGara);
             this.garepanel.Controls.Add(this.label55);
             this.garepanel.Controls.Add(this.label54);
@@ -2799,6 +2803,25 @@ namespace F1DBMS
             this.garepanel.Name = "garepanel";
             this.garepanel.Size = new System.Drawing.Size(406, 972);
             this.garepanel.TabIndex = 7;
+            // 
+            // esitiGareBtn
+            // 
+            this.esitiGareBtn.Location = new System.Drawing.Point(105, 305);
+            this.esitiGareBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.esitiGareBtn.Name = "esitiGareBtn";
+            this.esitiGareBtn.Size = new System.Drawing.Size(152, 23);
+            this.esitiGareBtn.TabIndex = 33;
+            this.esitiGareBtn.Text = "Ricerca esito gara";
+            this.esitiGareBtn.UseVisualStyleBackColor = true;
+            this.esitiGareBtn.Click += new System.EventHandler(this.esitiGareBtn_Click);
+            // 
+            // label71
+            // 
+            this.label71.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label71.Location = new System.Drawing.Point(30, 292);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(315, 2);
+            this.label71.TabIndex = 31;
             // 
             // dataGara
             // 
@@ -3691,6 +3714,8 @@ namespace F1DBMS
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.Button esitoGaraBtn;
         private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.Button esitiGareBtn;
+        private System.Windows.Forms.Label label71;
     }
 }
 

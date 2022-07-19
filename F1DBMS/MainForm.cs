@@ -592,5 +592,10 @@ namespace F1DBMS
         {
             new FormRisultatoGara(db).Show();
         }
+
+        private void esitiGareBtn_Click(object sender, EventArgs e)
+        {
+            new FormRicercaEsitoGara(db).Show();
+        }
     }
 }
