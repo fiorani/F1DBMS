@@ -150,6 +150,10 @@ namespace F1DBMS
             this.Vetture = new System.Windows.Forms.TabPage();
             this.vettureGriglia = new System.Windows.Forms.DataGridView();
             this.vetturepanel = new System.Windows.Forms.Panel();
+            this.label67 = new System.Windows.Forms.Label();
+            this.CompBtn = new System.Windows.Forms.Button();
+            this.IDVetCompBox = new System.Windows.Forms.TextBox();
+            this.label66 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
@@ -184,6 +188,10 @@ namespace F1DBMS
             this.Campionati = new System.Windows.Forms.TabPage();
             this.campionatiGriglia = new System.Windows.Forms.DataGridView();
             this.campionatipanel = new System.Windows.Forms.Panel();
+            this.label69 = new System.Windows.Forms.Label();
+            this.classificaCampBtn = new System.Windows.Forms.Button();
+            this.IDCampEsitoBox = new System.Windows.Forms.TextBox();
+            this.label68 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.campionatolabelidcampionato = new System.Windows.Forms.Label();
@@ -299,7 +307,10 @@ namespace F1DBMS
             this.registraPilBtn = new System.Windows.Forms.Button();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.button2 = new System.Windows.Forms.Button();
+<<<<<<< HEAD
             this.risulltatoPilBtn = new System.Windows.Forms.Button();
+=======
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.Team.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridTeam)).BeginInit();
@@ -356,8 +367,13 @@ namespace F1DBMS
             this.Team.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Team.Name = "Team";
             this.Team.SelectedIndex = 0;
+<<<<<<< HEAD
             this.Team.Size = new System.Drawing.Size(3393, 1543);
             this.Team.TabIndex = 0;
+=======
+            this.Team.Size = new System.Drawing.Size(2262, 1003);
+            this.Team.TabIndex = 8;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // tabPage2
             // 
@@ -417,8 +433,13 @@ namespace F1DBMS
             this.EliminaTeamBtn.Location = new System.Drawing.Point(158, 703);
             this.EliminaTeamBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EliminaTeamBtn.Name = "EliminaTeamBtn";
+<<<<<<< HEAD
             this.EliminaTeamBtn.Size = new System.Drawing.Size(228, 35);
             this.EliminaTeamBtn.TabIndex = 34;
+=======
+            this.EliminaTeamBtn.Size = new System.Drawing.Size(152, 23);
+            this.EliminaTeamBtn.TabIndex = 15;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.EliminaTeamBtn.Text = "Elimina Team";
             this.EliminaTeamBtn.UseVisualStyleBackColor = true;
             this.EliminaTeamBtn.Click += new System.EventHandler(this.EliminaTeamBtn_Click);
@@ -431,8 +452,13 @@ namespace F1DBMS
             this.EliminaTeamBox.Location = new System.Drawing.Point(99, 663);
             this.EliminaTeamBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EliminaTeamBox.Name = "EliminaTeamBox";
+<<<<<<< HEAD
             this.EliminaTeamBox.Size = new System.Drawing.Size(414, 26);
             this.EliminaTeamBox.TabIndex = 33;
+=======
+            this.EliminaTeamBox.Size = new System.Drawing.Size(277, 20);
+            this.EliminaTeamBox.TabIndex = 14;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.EliminaTeamBox.Tag = "Nome team";
             // 
             // label6
@@ -459,8 +485,13 @@ namespace F1DBMS
             this.RicercaTeamPerNomeBtn.Location = new System.Drawing.Point(158, 574);
             this.RicercaTeamPerNomeBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RicercaTeamPerNomeBtn.Name = "RicercaTeamPerNomeBtn";
+<<<<<<< HEAD
             this.RicercaTeamPerNomeBtn.Size = new System.Drawing.Size(228, 35);
             this.RicercaTeamPerNomeBtn.TabIndex = 29;
+=======
+            this.RicercaTeamPerNomeBtn.Size = new System.Drawing.Size(152, 23);
+            this.RicercaTeamPerNomeBtn.TabIndex = 13;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.RicercaTeamPerNomeBtn.Text = "Cerca Team";
             this.RicercaTeamPerNomeBtn.UseVisualStyleBackColor = true;
             this.RicercaTeamPerNomeBtn.Click += new System.EventHandler(this.RicercaTeamPerNomeBtn_Click);
@@ -473,8 +504,13 @@ namespace F1DBMS
             this.RicercaTeamPerNomeBox.Location = new System.Drawing.Point(99, 534);
             this.RicercaTeamPerNomeBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RicercaTeamPerNomeBox.Name = "RicercaTeamPerNomeBox";
+<<<<<<< HEAD
             this.RicercaTeamPerNomeBox.Size = new System.Drawing.Size(414, 26);
             this.RicercaTeamPerNomeBox.TabIndex = 28;
+=======
+            this.RicercaTeamPerNomeBox.Size = new System.Drawing.Size(277, 20);
+            this.RicercaTeamPerNomeBox.TabIndex = 12;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.RicercaTeamPerNomeBox.Tag = "Nome team";
             // 
             // label4
@@ -491,8 +527,13 @@ namespace F1DBMS
             this.BottoneRicercaPerID.Location = new System.Drawing.Point(158, 446);
             this.BottoneRicercaPerID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BottoneRicercaPerID.Name = "BottoneRicercaPerID";
+<<<<<<< HEAD
             this.BottoneRicercaPerID.Size = new System.Drawing.Size(228, 35);
             this.BottoneRicercaPerID.TabIndex = 26;
+=======
+            this.BottoneRicercaPerID.Size = new System.Drawing.Size(152, 23);
+            this.BottoneRicercaPerID.TabIndex = 11;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.BottoneRicercaPerID.Text = "Cerca Team";
             this.BottoneRicercaPerID.UseVisualStyleBackColor = true;
             this.BottoneRicercaPerID.Click += new System.EventHandler(this.BottoneRicercaPerID_Click);
@@ -515,8 +556,13 @@ namespace F1DBMS
             this.RicercaTeamPerID.Location = new System.Drawing.Point(99, 406);
             this.RicercaTeamPerID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RicercaTeamPerID.Name = "RicercaTeamPerID";
+<<<<<<< HEAD
             this.RicercaTeamPerID.Size = new System.Drawing.Size(414, 26);
             this.RicercaTeamPerID.TabIndex = 24;
+=======
+            this.RicercaTeamPerID.Size = new System.Drawing.Size(277, 20);
+            this.RicercaTeamPerID.TabIndex = 10;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.RicercaTeamPerID.Tag = "Nome team";
             // 
             // label2
@@ -625,8 +671,13 @@ namespace F1DBMS
             this.IDTeam.Location = new System.Drawing.Point(99, 35);
             this.IDTeam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.IDTeam.Name = "IDTeam";
+<<<<<<< HEAD
             this.IDTeam.Size = new System.Drawing.Size(414, 26);
             this.IDTeam.TabIndex = 13;
+=======
+            this.IDTeam.Size = new System.Drawing.Size(277, 20);
+            this.IDTeam.TabIndex = 0;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.IDTeam.Tag = "Nome team";
             // 
             // showTeams
@@ -634,8 +685,13 @@ namespace F1DBMS
             this.showTeams.Location = new System.Drawing.Point(158, 329);
             this.showTeams.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.showTeams.Name = "showTeams";
+<<<<<<< HEAD
             this.showTeams.Size = new System.Drawing.Size(228, 35);
             this.showTeams.TabIndex = 12;
+=======
+            this.showTeams.Size = new System.Drawing.Size(152, 23);
+            this.showTeams.TabIndex = 9;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.showTeams.Text = "Mostra Teams";
             this.showTeams.UseVisualStyleBackColor = true;
             this.showTeams.Click += new System.EventHandler(this.showTeams_Click);
@@ -647,16 +703,26 @@ namespace F1DBMS
             this.gridTeam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridTeam.Name = "gridTeam";
             this.gridTeam.RowHeadersWidth = 62;
+<<<<<<< HEAD
             this.gridTeam.Size = new System.Drawing.Size(2007, 1377);
             this.gridTeam.TabIndex = 11;
+=======
+            this.gridTeam.Size = new System.Drawing.Size(1338, 895);
+            this.gridTeam.TabIndex = 16;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // RegistraTeamBtn
             // 
             this.RegistraTeamBtn.Location = new System.Drawing.Point(158, 235);
             this.RegistraTeamBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RegistraTeamBtn.Name = "RegistraTeamBtn";
+<<<<<<< HEAD
             this.RegistraTeamBtn.Size = new System.Drawing.Size(228, 35);
             this.RegistraTeamBtn.TabIndex = 10;
+=======
+            this.RegistraTeamBtn.Size = new System.Drawing.Size(152, 23);
+            this.RegistraTeamBtn.TabIndex = 8;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.RegistraTeamBtn.Text = "Registra Team";
             this.RegistraTeamBtn.UseVisualStyleBackColor = true;
             this.RegistraTeamBtn.Click += new System.EventHandler(this.button1_Click);
@@ -669,8 +735,13 @@ namespace F1DBMS
             this.textBox6.Location = new System.Drawing.Point(358, 195);
             this.textBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox6.Name = "textBox6";
+<<<<<<< HEAD
             this.textBox6.Size = new System.Drawing.Size(154, 26);
             this.textBox6.TabIndex = 8;
+=======
+            this.textBox6.Size = new System.Drawing.Size(104, 20);
+            this.textBox6.TabIndex = 7;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.textBox6.Tag = "Mail 2";
             // 
             // Mail1
@@ -681,8 +752,13 @@ namespace F1DBMS
             this.Mail1.Location = new System.Drawing.Point(358, 155);
             this.Mail1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Mail1.Name = "Mail1";
+<<<<<<< HEAD
             this.Mail1.Size = new System.Drawing.Size(154, 26);
             this.Mail1.TabIndex = 7;
+=======
+            this.Mail1.Size = new System.Drawing.Size(104, 20);
+            this.Mail1.TabIndex = 5;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.Mail1.Tag = "Mail 1";
             // 
             // textBox3
@@ -693,8 +769,13 @@ namespace F1DBMS
             this.textBox3.Location = new System.Drawing.Point(99, 195);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox3.Name = "textBox3";
+<<<<<<< HEAD
             this.textBox3.Size = new System.Drawing.Size(154, 26);
             this.textBox3.TabIndex = 5;
+=======
+            this.textBox3.Size = new System.Drawing.Size(104, 20);
+            this.textBox3.TabIndex = 6;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.textBox3.Tag = "Recapito 2";
             // 
             // Recapito1
@@ -804,8 +885,13 @@ namespace F1DBMS
             this.MostraIncBtn.Location = new System.Drawing.Point(147, 938);
             this.MostraIncBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MostraIncBtn.Name = "MostraIncBtn";
+<<<<<<< HEAD
             this.MostraIncBtn.Size = new System.Drawing.Size(228, 35);
             this.MostraIncBtn.TabIndex = 37;
+=======
+            this.MostraIncBtn.Size = new System.Drawing.Size(152, 23);
+            this.MostraIncBtn.TabIndex = 18;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.MostraIncBtn.Text = "Mostra incarichi dipendente";
             this.MostraIncBtn.UseVisualStyleBackColor = true;
             this.MostraIncBtn.Click += new System.EventHandler(this.MostraIncBtn_Click);
@@ -828,16 +914,26 @@ namespace F1DBMS
             this.CFCercaIncDipBox.Location = new System.Drawing.Point(147, 898);
             this.CFCercaIncDipBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CFCercaIncDipBox.Name = "CFCercaIncDipBox";
+<<<<<<< HEAD
             this.CFCercaIncDipBox.Size = new System.Drawing.Size(364, 26);
             this.CFCercaIncDipBox.TabIndex = 35;
+=======
+            this.CFCercaIncDipBox.Size = new System.Drawing.Size(244, 20);
+            this.CFCercaIncDipBox.TabIndex = 17;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // EliminaDipBtn
             // 
             this.EliminaDipBtn.Location = new System.Drawing.Point(147, 820);
             this.EliminaDipBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EliminaDipBtn.Name = "EliminaDipBtn";
+<<<<<<< HEAD
             this.EliminaDipBtn.Size = new System.Drawing.Size(228, 35);
             this.EliminaDipBtn.TabIndex = 34;
+=======
+            this.EliminaDipBtn.Size = new System.Drawing.Size(152, 23);
+            this.EliminaDipBtn.TabIndex = 16;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.EliminaDipBtn.Text = "Elimina Dipendente";
             this.EliminaDipBtn.UseVisualStyleBackColor = true;
             this.EliminaDipBtn.Click += new System.EventHandler(this.EliminaDipBtn_Click);
@@ -860,8 +956,13 @@ namespace F1DBMS
             this.EliminaDipBox.Location = new System.Drawing.Point(147, 780);
             this.EliminaDipBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EliminaDipBox.Name = "EliminaDipBox";
+<<<<<<< HEAD
             this.EliminaDipBox.Size = new System.Drawing.Size(364, 26);
             this.EliminaDipBox.TabIndex = 32;
+=======
+            this.EliminaDipBox.Size = new System.Drawing.Size(244, 20);
+            this.EliminaDipBox.TabIndex = 15;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // label21
             // 
@@ -877,8 +978,13 @@ namespace F1DBMS
             this.button1.Location = new System.Drawing.Point(147, 705);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
+<<<<<<< HEAD
             this.button1.Size = new System.Drawing.Size(228, 35);
             this.button1.TabIndex = 30;
+=======
+            this.button1.Size = new System.Drawing.Size(152, 23);
+            this.button1.TabIndex = 14;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.button1.Text = "Ricerca Dipendente";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
@@ -911,8 +1017,13 @@ namespace F1DBMS
             this.RicercaDipNomeBox.Location = new System.Drawing.Point(147, 625);
             this.RicercaDipNomeBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RicercaDipNomeBox.Name = "RicercaDipNomeBox";
+<<<<<<< HEAD
             this.RicercaDipNomeBox.Size = new System.Drawing.Size(364, 26);
             this.RicercaDipNomeBox.TabIndex = 27;
+=======
+            this.RicercaDipNomeBox.Size = new System.Drawing.Size(244, 20);
+            this.RicercaDipNomeBox.TabIndex = 12;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // RicercaDipCognomeBox
             // 
@@ -922,8 +1033,13 @@ namespace F1DBMS
             this.RicercaDipCognomeBox.Location = new System.Drawing.Point(147, 665);
             this.RicercaDipCognomeBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RicercaDipCognomeBox.Name = "RicercaDipCognomeBox";
+<<<<<<< HEAD
             this.RicercaDipCognomeBox.Size = new System.Drawing.Size(364, 26);
             this.RicercaDipCognomeBox.TabIndex = 26;
+=======
+            this.RicercaDipCognomeBox.Size = new System.Drawing.Size(244, 20);
+            this.RicercaDipCognomeBox.TabIndex = 13;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // label18
             // 
@@ -939,8 +1055,13 @@ namespace F1DBMS
             this.RicercaDipCFBtn.Location = new System.Drawing.Point(147, 548);
             this.RicercaDipCFBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RicercaDipCFBtn.Name = "RicercaDipCFBtn";
+<<<<<<< HEAD
             this.RicercaDipCFBtn.Size = new System.Drawing.Size(228, 35);
             this.RicercaDipCFBtn.TabIndex = 24;
+=======
+            this.RicercaDipCFBtn.Size = new System.Drawing.Size(152, 23);
+            this.RicercaDipCFBtn.TabIndex = 11;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.RicercaDipCFBtn.Text = "Ricerca Dipendente";
             this.RicercaDipCFBtn.UseVisualStyleBackColor = true;
             this.RicercaDipCFBtn.Click += new System.EventHandler(this.RicercaDipCFBtn_Click);
@@ -963,8 +1084,13 @@ namespace F1DBMS
             this.BoxRicercaDipendenteCF.Location = new System.Drawing.Point(147, 508);
             this.BoxRicercaDipendenteCF.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BoxRicercaDipendenteCF.Name = "BoxRicercaDipendenteCF";
+<<<<<<< HEAD
             this.BoxRicercaDipendenteCF.Size = new System.Drawing.Size(364, 26);
             this.BoxRicercaDipendenteCF.TabIndex = 22;
+=======
+            this.BoxRicercaDipendenteCF.Size = new System.Drawing.Size(244, 20);
+            this.BoxRicercaDipendenteCF.TabIndex = 10;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // label16
             // 
@@ -980,8 +1106,13 @@ namespace F1DBMS
             this.MostraDipendenti.Location = new System.Drawing.Point(147, 429);
             this.MostraDipendenti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MostraDipendenti.Name = "MostraDipendenti";
+<<<<<<< HEAD
             this.MostraDipendenti.Size = new System.Drawing.Size(228, 35);
             this.MostraDipendenti.TabIndex = 20;
+=======
+            this.MostraDipendenti.Size = new System.Drawing.Size(152, 23);
+            this.MostraDipendenti.TabIndex = 9;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.MostraDipendenti.Text = "Mostra Dipendenti";
             this.MostraDipendenti.UseVisualStyleBackColor = true;
             this.MostraDipendenti.Click += new System.EventHandler(this.MostraDipendenti_Click);
@@ -1000,8 +1131,13 @@ namespace F1DBMS
             this.RegistraDipendente.Location = new System.Drawing.Point(147, 354);
             this.RegistraDipendente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RegistraDipendente.Name = "RegistraDipendente";
+<<<<<<< HEAD
             this.RegistraDipendente.Size = new System.Drawing.Size(228, 35);
             this.RegistraDipendente.TabIndex = 18;
+=======
+            this.RegistraDipendente.Size = new System.Drawing.Size(152, 23);
+            this.RegistraDipendente.TabIndex = 8;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.RegistraDipendente.Text = "Registra Dipendente";
             this.RegistraDipendente.UseVisualStyleBackColor = true;
             this.RegistraDipendente.Click += new System.EventHandler(this.RegistraDipendente_Click);
@@ -1024,8 +1160,13 @@ namespace F1DBMS
             this.Tel2.Location = new System.Drawing.Point(147, 314);
             this.Tel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Tel2.Name = "Tel2";
+<<<<<<< HEAD
             this.Tel2.Size = new System.Drawing.Size(364, 26);
             this.Tel2.TabIndex = 16;
+=======
+            this.Tel2.Size = new System.Drawing.Size(244, 20);
+            this.Tel2.TabIndex = 7;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // label13
             // 
@@ -1045,8 +1186,13 @@ namespace F1DBMS
             this.Tel1.Location = new System.Drawing.Point(147, 274);
             this.Tel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Tel1.Name = "Tel1";
+<<<<<<< HEAD
             this.Tel1.Size = new System.Drawing.Size(364, 26);
             this.Tel1.TabIndex = 14;
+=======
+            this.Tel1.Size = new System.Drawing.Size(244, 20);
+            this.Tel1.TabIndex = 6;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // label12
             // 
@@ -1066,8 +1212,13 @@ namespace F1DBMS
             this.ResidenzaBox.Location = new System.Drawing.Point(147, 234);
             this.ResidenzaBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ResidenzaBox.Name = "ResidenzaBox";
+<<<<<<< HEAD
             this.ResidenzaBox.Size = new System.Drawing.Size(364, 26);
             this.ResidenzaBox.TabIndex = 12;
+=======
+            this.ResidenzaBox.Size = new System.Drawing.Size(244, 20);
+            this.ResidenzaBox.TabIndex = 5;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // DataLabel
             // 
@@ -1084,8 +1235,13 @@ namespace F1DBMS
             this.DataNascita.Location = new System.Drawing.Point(147, 194);
             this.DataNascita.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DataNascita.Name = "DataNascita";
+<<<<<<< HEAD
             this.DataNascita.Size = new System.Drawing.Size(364, 26);
             this.DataNascita.TabIndex = 10;
+=======
+            this.DataNascita.Size = new System.Drawing.Size(244, 20);
+            this.DataNascita.TabIndex = 4;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // label11
             // 
@@ -1105,8 +1261,13 @@ namespace F1DBMS
             this.LuogoNascitaBox.Location = new System.Drawing.Point(147, 154);
             this.LuogoNascitaBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LuogoNascitaBox.Name = "LuogoNascitaBox";
+<<<<<<< HEAD
             this.LuogoNascitaBox.Size = new System.Drawing.Size(364, 26);
             this.LuogoNascitaBox.TabIndex = 8;
+=======
+            this.LuogoNascitaBox.Size = new System.Drawing.Size(244, 20);
+            this.LuogoNascitaBox.TabIndex = 3;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // label10
             // 
@@ -1136,8 +1297,13 @@ namespace F1DBMS
             this.NomeBox.Location = new System.Drawing.Point(147, 74);
             this.NomeBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NomeBox.Name = "NomeBox";
+<<<<<<< HEAD
             this.NomeBox.Size = new System.Drawing.Size(364, 26);
             this.NomeBox.TabIndex = 5;
+=======
+            this.NomeBox.Size = new System.Drawing.Size(244, 20);
+            this.NomeBox.TabIndex = 1;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // CognomeBox
             // 
@@ -1147,8 +1313,13 @@ namespace F1DBMS
             this.CognomeBox.Location = new System.Drawing.Point(147, 114);
             this.CognomeBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CognomeBox.Name = "CognomeBox";
+<<<<<<< HEAD
             this.CognomeBox.Size = new System.Drawing.Size(364, 26);
             this.CognomeBox.TabIndex = 4;
+=======
+            this.CognomeBox.Size = new System.Drawing.Size(244, 20);
+            this.CognomeBox.TabIndex = 2;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // CFLabel
             // 
@@ -1168,8 +1339,13 @@ namespace F1DBMS
             this.CFBox.Location = new System.Drawing.Point(147, 34);
             this.CFBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CFBox.Name = "CFBox";
+<<<<<<< HEAD
             this.CFBox.Size = new System.Drawing.Size(364, 26);
             this.CFBox.TabIndex = 2;
+=======
+            this.CFBox.Size = new System.Drawing.Size(244, 20);
+            this.CFBox.TabIndex = 0;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // gridDipendenti
             // 
@@ -1181,8 +1357,13 @@ namespace F1DBMS
             this.gridDipendenti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridDipendenti.Name = "gridDipendenti";
             this.gridDipendenti.RowHeadersWidth = 62;
+<<<<<<< HEAD
             this.gridDipendenti.Size = new System.Drawing.Size(2832, 1485);
             this.gridDipendenti.TabIndex = 1;
+=======
+            this.gridDipendenti.Size = new System.Drawing.Size(1888, 965);
+            this.gridDipendenti.TabIndex = 19;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // IncarichiDipendenti
             // 
@@ -1205,8 +1386,13 @@ namespace F1DBMS
             this.RevocaIncaricoBtn.Location = new System.Drawing.Point(156, 211);
             this.RevocaIncaricoBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RevocaIncaricoBtn.Name = "RevocaIncaricoBtn";
+<<<<<<< HEAD
             this.RevocaIncaricoBtn.Size = new System.Drawing.Size(228, 35);
             this.RevocaIncaricoBtn.TabIndex = 6;
+=======
+            this.RevocaIncaricoBtn.Size = new System.Drawing.Size(152, 23);
+            this.RevocaIncaricoBtn.TabIndex = 2;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.RevocaIncaricoBtn.Text = "Revoca Incarico";
             this.RevocaIncaricoBtn.UseVisualStyleBackColor = true;
             this.RevocaIncaricoBtn.Click += new System.EventHandler(this.RevocaIncaricoBtn_Click);
@@ -1225,8 +1411,13 @@ namespace F1DBMS
             this.MostraIncarichiDip.Location = new System.Drawing.Point(156, 126);
             this.MostraIncarichiDip.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MostraIncarichiDip.Name = "MostraIncarichiDip";
+<<<<<<< HEAD
             this.MostraIncarichiDip.Size = new System.Drawing.Size(228, 35);
             this.MostraIncarichiDip.TabIndex = 4;
+=======
+            this.MostraIncarichiDip.Size = new System.Drawing.Size(152, 23);
+            this.MostraIncarichiDip.TabIndex = 1;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.MostraIncarichiDip.Text = "Mostra Incarichi";
             this.MostraIncarichiDip.UseVisualStyleBackColor = true;
             this.MostraIncarichiDip.Click += new System.EventHandler(this.MostraIncarichiDip_Click);
@@ -1247,16 +1438,26 @@ namespace F1DBMS
             this.GridIncarichiDip.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GridIncarichiDip.Name = "GridIncarichiDip";
             this.GridIncarichiDip.RowHeadersWidth = 62;
+<<<<<<< HEAD
             this.GridIncarichiDip.Size = new System.Drawing.Size(2829, 1494);
             this.GridIncarichiDip.TabIndex = 2;
+=======
+            this.GridIncarichiDip.Size = new System.Drawing.Size(1886, 971);
+            this.GridIncarichiDip.TabIndex = 3;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // AggiungiIncaricoBtn
             // 
             this.AggiungiIncaricoBtn.Location = new System.Drawing.Point(156, 51);
             this.AggiungiIncaricoBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AggiungiIncaricoBtn.Name = "AggiungiIncaricoBtn";
+<<<<<<< HEAD
             this.AggiungiIncaricoBtn.Size = new System.Drawing.Size(228, 35);
             this.AggiungiIncaricoBtn.TabIndex = 1;
+=======
+            this.AggiungiIncaricoBtn.Size = new System.Drawing.Size(152, 23);
+            this.AggiungiIncaricoBtn.TabIndex = 0;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.AggiungiIncaricoBtn.Text = "Aggiungi Incarico";
             this.AggiungiIncaricoBtn.UseVisualStyleBackColor = true;
             this.AggiungiIncaricoBtn.Click += new System.EventHandler(this.AggiungiIncaricoBtn_Click);
@@ -1314,8 +1515,13 @@ namespace F1DBMS
             this.RicercaIncarichiPilBtn.Location = new System.Drawing.Point(168, 952);
             this.RicercaIncarichiPilBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RicercaIncarichiPilBtn.Name = "RicercaIncarichiPilBtn";
+<<<<<<< HEAD
             this.RicercaIncarichiPilBtn.Size = new System.Drawing.Size(228, 35);
             this.RicercaIncarichiPilBtn.TabIndex = 49;
+=======
+            this.RicercaIncarichiPilBtn.Size = new System.Drawing.Size(152, 23);
+            this.RicercaIncarichiPilBtn.TabIndex = 18;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.RicercaIncarichiPilBtn.Text = "Mostra incarichi pilota";
             this.RicercaIncarichiPilBtn.UseVisualStyleBackColor = true;
             this.RicercaIncarichiPilBtn.Click += new System.EventHandler(this.RicercaIncarichiPilBtn_Click);
@@ -1338,8 +1544,13 @@ namespace F1DBMS
             this.RicercaIncarichiPilBox.Location = new System.Drawing.Point(168, 912);
             this.RicercaIncarichiPilBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RicercaIncarichiPilBox.Name = "RicercaIncarichiPilBox";
+<<<<<<< HEAD
             this.RicercaIncarichiPilBox.Size = new System.Drawing.Size(358, 26);
             this.RicercaIncarichiPilBox.TabIndex = 47;
+=======
+            this.RicercaIncarichiPilBox.Size = new System.Drawing.Size(240, 20);
+            this.RicercaIncarichiPilBox.TabIndex = 17;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // label44
             // 
@@ -1355,8 +1566,13 @@ namespace F1DBMS
             this.EliminaPilotaBtn.Location = new System.Drawing.Point(168, 834);
             this.EliminaPilotaBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EliminaPilotaBtn.Name = "EliminaPilotaBtn";
+<<<<<<< HEAD
             this.EliminaPilotaBtn.Size = new System.Drawing.Size(228, 35);
             this.EliminaPilotaBtn.TabIndex = 45;
+=======
+            this.EliminaPilotaBtn.Size = new System.Drawing.Size(152, 23);
+            this.EliminaPilotaBtn.TabIndex = 16;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.EliminaPilotaBtn.Text = "Elimina Pilota";
             this.EliminaPilotaBtn.UseVisualStyleBackColor = true;
             this.EliminaPilotaBtn.Click += new System.EventHandler(this.EliminaPilotaBtn_Click);
@@ -1379,8 +1595,13 @@ namespace F1DBMS
             this.EliminaPilCFBox.Location = new System.Drawing.Point(168, 794);
             this.EliminaPilCFBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EliminaPilCFBox.Name = "EliminaPilCFBox";
+<<<<<<< HEAD
             this.EliminaPilCFBox.Size = new System.Drawing.Size(358, 26);
             this.EliminaPilCFBox.TabIndex = 43;
+=======
+            this.EliminaPilCFBox.Size = new System.Drawing.Size(240, 20);
+            this.EliminaPilCFBox.TabIndex = 15;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // label41
             // 
@@ -1405,8 +1626,13 @@ namespace F1DBMS
             this.RicercaPilNomeCognomeBtn.Location = new System.Drawing.Point(168, 717);
             this.RicercaPilNomeCognomeBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RicercaPilNomeCognomeBtn.Name = "RicercaPilNomeCognomeBtn";
+<<<<<<< HEAD
             this.RicercaPilNomeCognomeBtn.Size = new System.Drawing.Size(228, 35);
             this.RicercaPilNomeCognomeBtn.TabIndex = 40;
+=======
+            this.RicercaPilNomeCognomeBtn.Size = new System.Drawing.Size(152, 23);
+            this.RicercaPilNomeCognomeBtn.TabIndex = 14;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.RicercaPilNomeCognomeBtn.Text = "Ricerca Pilota";
             this.RicercaPilNomeCognomeBtn.UseVisualStyleBackColor = true;
             this.RicercaPilNomeCognomeBtn.Click += new System.EventHandler(this.RicercaPilNomeCognomeBtn_Click);
@@ -1439,8 +1665,13 @@ namespace F1DBMS
             this.ricercaPilNomeBox.Location = new System.Drawing.Point(168, 637);
             this.ricercaPilNomeBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ricercaPilNomeBox.Name = "ricercaPilNomeBox";
+<<<<<<< HEAD
             this.ricercaPilNomeBox.Size = new System.Drawing.Size(358, 26);
             this.ricercaPilNomeBox.TabIndex = 37;
+=======
+            this.ricercaPilNomeBox.Size = new System.Drawing.Size(240, 20);
+            this.ricercaPilNomeBox.TabIndex = 12;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // RicercaPilCognomeBox
             // 
@@ -1450,8 +1681,13 @@ namespace F1DBMS
             this.RicercaPilCognomeBox.Location = new System.Drawing.Point(168, 677);
             this.RicercaPilCognomeBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RicercaPilCognomeBox.Name = "RicercaPilCognomeBox";
+<<<<<<< HEAD
             this.RicercaPilCognomeBox.Size = new System.Drawing.Size(358, 26);
             this.RicercaPilCognomeBox.TabIndex = 36;
+=======
+            this.RicercaPilCognomeBox.Size = new System.Drawing.Size(240, 20);
+            this.RicercaPilCognomeBox.TabIndex = 13;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // label39
             // 
@@ -1467,8 +1703,13 @@ namespace F1DBMS
             this.ricercaPilCFBtn.Location = new System.Drawing.Point(168, 560);
             this.ricercaPilCFBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ricercaPilCFBtn.Name = "ricercaPilCFBtn";
+<<<<<<< HEAD
             this.ricercaPilCFBtn.Size = new System.Drawing.Size(228, 35);
             this.ricercaPilCFBtn.TabIndex = 34;
+=======
+            this.ricercaPilCFBtn.Size = new System.Drawing.Size(152, 23);
+            this.ricercaPilCFBtn.TabIndex = 11;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.ricercaPilCFBtn.Text = "Ricerca Pilota";
             this.ricercaPilCFBtn.UseVisualStyleBackColor = true;
             this.ricercaPilCFBtn.Click += new System.EventHandler(this.ricercaPilCFBtn_Click);
@@ -1491,24 +1732,39 @@ namespace F1DBMS
             this.RicercaPilCFBox.Location = new System.Drawing.Point(168, 520);
             this.RicercaPilCFBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RicercaPilCFBox.Name = "RicercaPilCFBox";
+<<<<<<< HEAD
             this.RicercaPilCFBox.Size = new System.Drawing.Size(358, 26);
             this.RicercaPilCFBox.TabIndex = 32;
+=======
+            this.RicercaPilCFBox.Size = new System.Drawing.Size(240, 20);
+            this.RicercaPilCFBox.TabIndex = 10;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // dataNascitaPilota
             // 
             this.dataNascitaPilota.Location = new System.Drawing.Point(168, 205);
             this.dataNascitaPilota.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataNascitaPilota.Name = "dataNascitaPilota";
+<<<<<<< HEAD
             this.dataNascitaPilota.Size = new System.Drawing.Size(358, 26);
             this.dataNascitaPilota.TabIndex = 29;
+=======
+            this.dataNascitaPilota.Size = new System.Drawing.Size(240, 20);
+            this.dataNascitaPilota.TabIndex = 4;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // MostraPilotiBtn
             // 
             this.MostraPilotiBtn.Location = new System.Drawing.Point(168, 443);
             this.MostraPilotiBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MostraPilotiBtn.Name = "MostraPilotiBtn";
+<<<<<<< HEAD
             this.MostraPilotiBtn.Size = new System.Drawing.Size(228, 35);
             this.MostraPilotiBtn.TabIndex = 28;
+=======
+            this.MostraPilotiBtn.Size = new System.Drawing.Size(152, 23);
+            this.MostraPilotiBtn.TabIndex = 9;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.MostraPilotiBtn.Text = "Mostra Piloti";
             this.MostraPilotiBtn.UseVisualStyleBackColor = true;
             this.MostraPilotiBtn.Click += new System.EventHandler(this.MostraPilotiBtn_Click);
@@ -1527,8 +1783,13 @@ namespace F1DBMS
             this.regPilotaBtn.Location = new System.Drawing.Point(168, 368);
             this.regPilotaBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.regPilotaBtn.Name = "regPilotaBtn";
+<<<<<<< HEAD
             this.regPilotaBtn.Size = new System.Drawing.Size(228, 35);
             this.regPilotaBtn.TabIndex = 26;
+=======
+            this.regPilotaBtn.Size = new System.Drawing.Size(152, 23);
+            this.regPilotaBtn.TabIndex = 8;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.regPilotaBtn.Text = "Registra Pilota";
             this.regPilotaBtn.UseVisualStyleBackColor = true;
             this.regPilotaBtn.Click += new System.EventHandler(this.regPilotaBtn_Click);
@@ -1551,8 +1812,13 @@ namespace F1DBMS
             this.Tel2PilotaBox.Location = new System.Drawing.Point(168, 328);
             this.Tel2PilotaBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Tel2PilotaBox.Name = "Tel2PilotaBox";
+<<<<<<< HEAD
             this.Tel2PilotaBox.Size = new System.Drawing.Size(358, 26);
             this.Tel2PilotaBox.TabIndex = 24;
+=======
+            this.Tel2PilotaBox.Size = new System.Drawing.Size(240, 20);
+            this.Tel2PilotaBox.TabIndex = 7;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // label32
             // 
@@ -1572,8 +1838,13 @@ namespace F1DBMS
             this.Tel1PilotaBox.Location = new System.Drawing.Point(168, 288);
             this.Tel1PilotaBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Tel1PilotaBox.Name = "Tel1PilotaBox";
+<<<<<<< HEAD
             this.Tel1PilotaBox.Size = new System.Drawing.Size(358, 26);
             this.Tel1PilotaBox.TabIndex = 22;
+=======
+            this.Tel1PilotaBox.Size = new System.Drawing.Size(240, 20);
+            this.Tel1PilotaBox.TabIndex = 6;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // label33
             // 
@@ -1593,8 +1864,13 @@ namespace F1DBMS
             this.ResidenzaPilotaBox.Location = new System.Drawing.Point(168, 248);
             this.ResidenzaPilotaBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ResidenzaPilotaBox.Name = "ResidenzaPilotaBox";
+<<<<<<< HEAD
             this.ResidenzaPilotaBox.Size = new System.Drawing.Size(358, 26);
             this.ResidenzaPilotaBox.TabIndex = 20;
+=======
+            this.ResidenzaPilotaBox.Size = new System.Drawing.Size(240, 20);
+            this.ResidenzaPilotaBox.TabIndex = 5;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // label34
             // 
@@ -1651,32 +1927,52 @@ namespace F1DBMS
             this.LuogoNascitaPilotaBox.Location = new System.Drawing.Point(168, 168);
             this.LuogoNascitaPilotaBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LuogoNascitaPilotaBox.Name = "LuogoNascitaPilotaBox";
+<<<<<<< HEAD
             this.LuogoNascitaPilotaBox.Size = new System.Drawing.Size(358, 26);
             this.LuogoNascitaPilotaBox.TabIndex = 5;
+=======
+            this.LuogoNascitaPilotaBox.Size = new System.Drawing.Size(240, 20);
+            this.LuogoNascitaPilotaBox.TabIndex = 3;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // CognomePilotaBox
             // 
             this.CognomePilotaBox.Location = new System.Drawing.Point(168, 128);
             this.CognomePilotaBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CognomePilotaBox.Name = "CognomePilotaBox";
+<<<<<<< HEAD
             this.CognomePilotaBox.Size = new System.Drawing.Size(358, 26);
             this.CognomePilotaBox.TabIndex = 4;
+=======
+            this.CognomePilotaBox.Size = new System.Drawing.Size(240, 20);
+            this.CognomePilotaBox.TabIndex = 2;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // NomePilotaBox
             // 
             this.NomePilotaBox.Location = new System.Drawing.Point(168, 88);
             this.NomePilotaBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NomePilotaBox.Name = "NomePilotaBox";
+<<<<<<< HEAD
             this.NomePilotaBox.Size = new System.Drawing.Size(358, 26);
             this.NomePilotaBox.TabIndex = 3;
+=======
+            this.NomePilotaBox.Size = new System.Drawing.Size(240, 20);
+            this.NomePilotaBox.TabIndex = 1;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // CFPilotaBox
             // 
             this.CFPilotaBox.Location = new System.Drawing.Point(168, 48);
             this.CFPilotaBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CFPilotaBox.Name = "CFPilotaBox";
+<<<<<<< HEAD
             this.CFPilotaBox.Size = new System.Drawing.Size(358, 26);
             this.CFPilotaBox.TabIndex = 2;
+=======
+            this.CFPilotaBox.Size = new System.Drawing.Size(240, 20);
+            this.CFPilotaBox.TabIndex = 0;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // gridPiloti
             // 
@@ -1685,8 +1981,13 @@ namespace F1DBMS
             this.gridPiloti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridPiloti.Name = "gridPiloti";
             this.gridPiloti.RowHeadersWidth = 62;
+<<<<<<< HEAD
             this.gridPiloti.Size = new System.Drawing.Size(2812, 1494);
             this.gridPiloti.TabIndex = 1;
+=======
+            this.gridPiloti.Size = new System.Drawing.Size(1875, 971);
+            this.gridPiloti.TabIndex = 19;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // IncarichiPIloti
             // 
@@ -1708,8 +2009,13 @@ namespace F1DBMS
             // 
             this.RevocaIncaricoPilBtn.Location = new System.Drawing.Point(165, 208);
             this.RevocaIncaricoPilBtn.Name = "RevocaIncaricoPilBtn";
+<<<<<<< HEAD
             this.RevocaIncaricoPilBtn.Size = new System.Drawing.Size(228, 35);
             this.RevocaIncaricoPilBtn.TabIndex = 10;
+=======
+            this.RevocaIncaricoPilBtn.Size = new System.Drawing.Size(152, 23);
+            this.RevocaIncaricoPilBtn.TabIndex = 2;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.RevocaIncaricoPilBtn.Text = "Revoca Incarico";
             this.RevocaIncaricoPilBtn.UseVisualStyleBackColor = true;
             this.RevocaIncaricoPilBtn.Click += new System.EventHandler(this.RevocaIncaricoPilBtn_Click);
@@ -1728,8 +2034,13 @@ namespace F1DBMS
             this.IncarichiPilBtn.Location = new System.Drawing.Point(165, 125);
             this.IncarichiPilBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.IncarichiPilBtn.Name = "IncarichiPilBtn";
+<<<<<<< HEAD
             this.IncarichiPilBtn.Size = new System.Drawing.Size(228, 35);
             this.IncarichiPilBtn.TabIndex = 8;
+=======
+            this.IncarichiPilBtn.Size = new System.Drawing.Size(152, 23);
+            this.IncarichiPilBtn.TabIndex = 1;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.IncarichiPilBtn.Text = "Mostra Incarichi";
             this.IncarichiPilBtn.UseVisualStyleBackColor = true;
             this.IncarichiPilBtn.Click += new System.EventHandler(this.IncarichiPilBtn_Click);
@@ -1748,8 +2059,13 @@ namespace F1DBMS
             this.InserisciIncaricoPilBtn.Location = new System.Drawing.Point(165, 42);
             this.InserisciIncaricoPilBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.InserisciIncaricoPilBtn.Name = "InserisciIncaricoPilBtn";
+<<<<<<< HEAD
             this.InserisciIncaricoPilBtn.Size = new System.Drawing.Size(228, 35);
             this.InserisciIncaricoPilBtn.TabIndex = 2;
+=======
+            this.InserisciIncaricoPilBtn.Size = new System.Drawing.Size(152, 23);
+            this.InserisciIncaricoPilBtn.TabIndex = 0;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.InserisciIncaricoPilBtn.Text = "Aggiungi incarico";
             this.InserisciIncaricoPilBtn.UseVisualStyleBackColor = true;
             this.InserisciIncaricoPilBtn.Click += new System.EventHandler(this.InserisciIncaricoPilBtn_Click);
@@ -1761,8 +2077,13 @@ namespace F1DBMS
             this.gridIncarichiPiloti.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridIncarichiPiloti.Name = "gridIncarichiPiloti";
             this.gridIncarichiPiloti.RowHeadersWidth = 62;
+<<<<<<< HEAD
             this.gridIncarichiPiloti.Size = new System.Drawing.Size(2820, 1494);
             this.gridIncarichiPiloti.TabIndex = 1;
+=======
+            this.gridIncarichiPiloti.Size = new System.Drawing.Size(1880, 971);
+            this.gridIncarichiPiloti.TabIndex = 3;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // Vetture
             // 
@@ -1788,6 +2109,10 @@ namespace F1DBMS
             // 
             // vetturepanel
             // 
+            this.vetturepanel.Controls.Add(this.label67);
+            this.vetturepanel.Controls.Add(this.CompBtn);
+            this.vetturepanel.Controls.Add(this.IDVetCompBox);
+            this.vetturepanel.Controls.Add(this.label66);
             this.vetturepanel.Controls.Add(this.label49);
             this.vetturepanel.Controls.Add(this.label48);
             this.vetturepanel.Controls.Add(this.label47);
@@ -1809,6 +2134,44 @@ namespace F1DBMS
             this.vetturepanel.Name = "vetturepanel";
             this.vetturepanel.Size = new System.Drawing.Size(616, 1388);
             this.vetturepanel.TabIndex = 11;
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(43, 391);
+            this.label67.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(58, 13);
+            this.label67.TabIndex = 55;
+            this.label67.Text = "ID Vettura:";
+            // 
+            // CompBtn
+            // 
+            this.CompBtn.Location = new System.Drawing.Point(104, 413);
+            this.CompBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.CompBtn.Name = "CompBtn";
+            this.CompBtn.Size = new System.Drawing.Size(152, 23);
+            this.CompBtn.TabIndex = 10;
+            this.CompBtn.Text = "Mostra componenti";
+            this.CompBtn.UseVisualStyleBackColor = true;
+            this.CompBtn.Click += new System.EventHandler(this.CompBtn_Click);
+            // 
+            // IDVetCompBox
+            // 
+            this.IDVetCompBox.AccessibleDescription = "Nome";
+            this.IDVetCompBox.AccessibleName = "Nome";
+            this.IDVetCompBox.Location = new System.Drawing.Point(104, 388);
+            this.IDVetCompBox.Name = "IDVetCompBox";
+            this.IDVetCompBox.Size = new System.Drawing.Size(240, 20);
+            this.IDVetCompBox.TabIndex = 9;
+            // 
+            // label66
+            // 
+            this.label66.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label66.Location = new System.Drawing.Point(29, 374);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(315, 2);
+            this.label66.TabIndex = 52;
             // 
             // label49
             // 
@@ -1886,8 +2249,13 @@ namespace F1DBMS
             // 
             this.vetturaTastoRicercaAnno.Location = new System.Drawing.Point(156, 409);
             this.vetturaTastoRicercaAnno.Name = "vetturaTastoRicercaAnno";
+<<<<<<< HEAD
             this.vetturaTastoRicercaAnno.Size = new System.Drawing.Size(228, 35);
             this.vetturaTastoRicercaAnno.TabIndex = 22;
+=======
+            this.vetturaTastoRicercaAnno.Size = new System.Drawing.Size(152, 23);
+            this.vetturaTastoRicercaAnno.TabIndex = 6;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.vetturaTastoRicercaAnno.Text = "Ricerca vetture";
             this.vetturaTastoRicercaAnno.UseVisualStyleBackColor = true;
             this.vetturaTastoRicercaAnno.Click += new System.EventHandler(this.vetturaTastoRicercaAnno_Click);
@@ -1899,15 +2267,25 @@ namespace F1DBMS
             this.vettureRicercaAnno.Location = new System.Drawing.Point(156, 371);
             this.vettureRicercaAnno.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.vettureRicercaAnno.Name = "vettureRicercaAnno";
+<<<<<<< HEAD
             this.vettureRicercaAnno.Size = new System.Drawing.Size(358, 26);
             this.vettureRicercaAnno.TabIndex = 21;
+=======
+            this.vettureRicercaAnno.Size = new System.Drawing.Size(240, 20);
+            this.vettureRicercaAnno.TabIndex = 5;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // vettureTastoRicercaNome
             // 
             this.vettureTastoRicercaNome.Location = new System.Drawing.Point(156, 523);
             this.vettureTastoRicercaNome.Name = "vettureTastoRicercaNome";
+<<<<<<< HEAD
             this.vettureTastoRicercaNome.Size = new System.Drawing.Size(228, 35);
             this.vettureTastoRicercaNome.TabIndex = 20;
+=======
+            this.vettureTastoRicercaNome.Size = new System.Drawing.Size(152, 23);
+            this.vettureTastoRicercaNome.TabIndex = 8;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.vettureTastoRicercaNome.Text = "Ricerca vetture";
             this.vettureTastoRicercaNome.UseVisualStyleBackColor = true;
             this.vettureTastoRicercaNome.Click += new System.EventHandler(this.vettureTastoRicercaNome_Click);
@@ -1919,15 +2297,25 @@ namespace F1DBMS
             this.VettureRicercaNome.Location = new System.Drawing.Point(156, 485);
             this.VettureRicercaNome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.VettureRicercaNome.Name = "VettureRicercaNome";
+<<<<<<< HEAD
             this.VettureRicercaNome.Size = new System.Drawing.Size(358, 26);
             this.VettureRicercaNome.TabIndex = 19;
+=======
+            this.VettureRicercaNome.Size = new System.Drawing.Size(240, 20);
+            this.VettureRicercaNome.TabIndex = 7;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // vettureTastoRicercaIdVettura
             // 
             this.vettureTastoRicercaIdVettura.Location = new System.Drawing.Point(156, 177);
             this.vettureTastoRicercaIdVettura.Name = "vettureTastoRicercaIdVettura";
+<<<<<<< HEAD
             this.vettureTastoRicercaIdVettura.Size = new System.Drawing.Size(228, 35);
             this.vettureTastoRicercaIdVettura.TabIndex = 18;
+=======
+            this.vettureTastoRicercaIdVettura.Size = new System.Drawing.Size(152, 23);
+            this.vettureTastoRicercaIdVettura.TabIndex = 2;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.vettureTastoRicercaIdVettura.Text = "Ricerca vettura";
             this.vettureTastoRicercaIdVettura.UseVisualStyleBackColor = true;
             this.vettureTastoRicercaIdVettura.Click += new System.EventHandler(this.vettureTastoRicercaIdVettura_Click);
@@ -1939,15 +2327,25 @@ namespace F1DBMS
             this.vetturericercaIdVettura.Location = new System.Drawing.Point(156, 138);
             this.vetturericercaIdVettura.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.vetturericercaIdVettura.Name = "vetturericercaIdVettura";
+<<<<<<< HEAD
             this.vetturericercaIdVettura.Size = new System.Drawing.Size(358, 26);
             this.vetturericercaIdVettura.TabIndex = 17;
+=======
+            this.vetturericercaIdVettura.Size = new System.Drawing.Size(240, 20);
+            this.vetturericercaIdVettura.TabIndex = 1;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // vettureTastoRicercaIdTeam
             // 
             this.vettureTastoRicercaIdTeam.Location = new System.Drawing.Point(156, 294);
             this.vettureTastoRicercaIdTeam.Name = "vettureTastoRicercaIdTeam";
+<<<<<<< HEAD
             this.vettureTastoRicercaIdTeam.Size = new System.Drawing.Size(228, 35);
             this.vettureTastoRicercaIdTeam.TabIndex = 16;
+=======
+            this.vettureTastoRicercaIdTeam.Size = new System.Drawing.Size(152, 23);
+            this.vettureTastoRicercaIdTeam.TabIndex = 4;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.vettureTastoRicercaIdTeam.Text = "Ricerca vetture";
             this.vettureTastoRicercaIdTeam.UseVisualStyleBackColor = true;
             this.vettureTastoRicercaIdTeam.Click += new System.EventHandler(this.vettureTastoRicercaIdTeam_Click);
@@ -1959,15 +2357,25 @@ namespace F1DBMS
             this.vettureRicercaIdteam.Location = new System.Drawing.Point(156, 255);
             this.vettureRicercaIdteam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.vettureRicercaIdteam.Name = "vettureRicercaIdteam";
+<<<<<<< HEAD
             this.vettureRicercaIdteam.Size = new System.Drawing.Size(358, 26);
             this.vettureRicercaIdteam.TabIndex = 15;
+=======
+            this.vettureRicercaIdteam.Size = new System.Drawing.Size(240, 20);
+            this.vettureRicercaIdteam.TabIndex = 3;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // vettureRegistra
             // 
             this.vettureRegistra.Location = new System.Drawing.Point(156, 54);
             this.vettureRegistra.Name = "vettureRegistra";
+<<<<<<< HEAD
             this.vettureRegistra.Size = new System.Drawing.Size(228, 35);
             this.vettureRegistra.TabIndex = 14;
+=======
+            this.vettureRegistra.Size = new System.Drawing.Size(152, 23);
+            this.vettureRegistra.TabIndex = 0;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.vettureRegistra.Text = "Registra vettura";
             this.vettureRegistra.UseVisualStyleBackColor = true;
             this.vettureRegistra.Click += new System.EventHandler(this.vettureRegistra_Click);
@@ -2061,8 +2469,13 @@ namespace F1DBMS
             // 
             this.componenteRicercaIdVettura.Location = new System.Drawing.Point(152, 246);
             this.componenteRicercaIdVettura.Name = "componenteRicercaIdVettura";
+<<<<<<< HEAD
             this.componenteRicercaIdVettura.Size = new System.Drawing.Size(228, 35);
             this.componenteRicercaIdVettura.TabIndex = 18;
+=======
+            this.componenteRicercaIdVettura.Size = new System.Drawing.Size(152, 23);
+            this.componenteRicercaIdVettura.TabIndex = 5;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.componenteRicercaIdVettura.Text = "Ricerca componente";
             this.componenteRicercaIdVettura.UseVisualStyleBackColor = true;
             this.componenteRicercaIdVettura.Click += new System.EventHandler(this.componenteRicercaIdVettura_Click);
@@ -2074,15 +2487,25 @@ namespace F1DBMS
             this.componenteRicercaIdComponente.Location = new System.Drawing.Point(152, 208);
             this.componenteRicercaIdComponente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.componenteRicercaIdComponente.Name = "componenteRicercaIdComponente";
+<<<<<<< HEAD
             this.componenteRicercaIdComponente.Size = new System.Drawing.Size(358, 26);
             this.componenteRicercaIdComponente.TabIndex = 17;
+=======
+            this.componenteRicercaIdComponente.Size = new System.Drawing.Size(240, 20);
+            this.componenteRicercaIdComponente.TabIndex = 4;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // componentiRegistra
             // 
             this.componentiRegistra.Location = new System.Drawing.Point(152, 131);
             this.componentiRegistra.Name = "componentiRegistra";
+<<<<<<< HEAD
             this.componentiRegistra.Size = new System.Drawing.Size(228, 35);
             this.componentiRegistra.TabIndex = 14;
+=======
+            this.componentiRegistra.Size = new System.Drawing.Size(152, 23);
+            this.componentiRegistra.TabIndex = 3;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.componentiRegistra.Text = "Registra componente";
             this.componentiRegistra.UseVisualStyleBackColor = true;
             this.componentiRegistra.Click += new System.EventHandler(this.componentiRegistra_Click);
@@ -2095,8 +2518,13 @@ namespace F1DBMS
             this.componentiIdComponente.Location = new System.Drawing.Point(152, 20);
             this.componentiIdComponente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.componentiIdComponente.Name = "componentiIdComponente";
+<<<<<<< HEAD
             this.componentiIdComponente.Size = new System.Drawing.Size(358, 26);
             this.componentiIdComponente.TabIndex = 9;
+=======
+            this.componentiIdComponente.Size = new System.Drawing.Size(240, 20);
+            this.componentiIdComponente.TabIndex = 0;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // componenteDescrizione
             // 
@@ -2105,8 +2533,13 @@ namespace F1DBMS
             this.componenteDescrizione.Location = new System.Drawing.Point(152, 55);
             this.componenteDescrizione.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.componenteDescrizione.Name = "componenteDescrizione";
+<<<<<<< HEAD
             this.componenteDescrizione.Size = new System.Drawing.Size(358, 26);
             this.componenteDescrizione.TabIndex = 8;
+=======
+            this.componenteDescrizione.Size = new System.Drawing.Size(240, 20);
+            this.componenteDescrizione.TabIndex = 1;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // componentePrezzo
             // 
@@ -2115,8 +2548,13 @@ namespace F1DBMS
             this.componentePrezzo.Location = new System.Drawing.Point(152, 92);
             this.componentePrezzo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.componentePrezzo.Name = "componentePrezzo";
+<<<<<<< HEAD
             this.componentePrezzo.Size = new System.Drawing.Size(358, 26);
             this.componentePrezzo.TabIndex = 10;
+=======
+            this.componentePrezzo.Size = new System.Drawing.Size(240, 20);
+            this.componentePrezzo.TabIndex = 2;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // Campionati
             // 
@@ -2142,6 +2580,10 @@ namespace F1DBMS
             // 
             // campionatipanel
             // 
+            this.campionatipanel.Controls.Add(this.label69);
+            this.campionatipanel.Controls.Add(this.classificaCampBtn);
+            this.campionatipanel.Controls.Add(this.IDCampEsitoBox);
+            this.campionatipanel.Controls.Add(this.label68);
             this.campionatipanel.Controls.Add(this.label52);
             this.campionatipanel.Controls.Add(this.label51);
             this.campionatipanel.Controls.Add(this.campionatolabelidcampionato);
@@ -2164,6 +2606,44 @@ namespace F1DBMS
             this.campionatipanel.Name = "campionatipanel";
             this.campionatipanel.Size = new System.Drawing.Size(609, 1495);
             this.campionatipanel.TabIndex = 11;
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Location = new System.Drawing.Point(21, 317);
+            this.label69.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(80, 13);
+            this.label69.TabIndex = 54;
+            this.label69.Text = "ID Campionato:";
+            // 
+            // classificaCampBtn
+            // 
+            this.classificaCampBtn.Location = new System.Drawing.Point(106, 339);
+            this.classificaCampBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.classificaCampBtn.Name = "classificaCampBtn";
+            this.classificaCampBtn.Size = new System.Drawing.Size(152, 23);
+            this.classificaCampBtn.TabIndex = 10;
+            this.classificaCampBtn.Text = "Mostra classifica";
+            this.classificaCampBtn.UseVisualStyleBackColor = true;
+            this.classificaCampBtn.Click += new System.EventHandler(this.classificaCampBtn_Click);
+            // 
+            // IDCampEsitoBox
+            // 
+            this.IDCampEsitoBox.AccessibleDescription = "Nome";
+            this.IDCampEsitoBox.AccessibleName = "Nome";
+            this.IDCampEsitoBox.Location = new System.Drawing.Point(106, 314);
+            this.IDCampEsitoBox.Name = "IDCampEsitoBox";
+            this.IDCampEsitoBox.Size = new System.Drawing.Size(240, 20);
+            this.IDCampEsitoBox.TabIndex = 9;
+            // 
+            // label68
+            // 
+            this.label68.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label68.Location = new System.Drawing.Point(31, 299);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(315, 2);
+            this.label68.TabIndex = 51;
             // 
             // label52
             // 
@@ -2200,8 +2680,13 @@ namespace F1DBMS
             this.campionatoIdCampionato.Location = new System.Drawing.Point(159, 35);
             this.campionatoIdCampionato.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.campionatoIdCampionato.Name = "campionatoIdCampionato";
+<<<<<<< HEAD
             this.campionatoIdCampionato.Size = new System.Drawing.Size(358, 26);
             this.campionatoIdCampionato.TabIndex = 33;
+=======
+            this.campionatoIdCampionato.Size = new System.Drawing.Size(240, 20);
+            this.campionatoIdCampionato.TabIndex = 0;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // dataGridView1
             // 
@@ -2262,8 +2747,13 @@ namespace F1DBMS
             // 
             this.campionatiTastoRicercaId.Location = new System.Drawing.Point(159, 295);
             this.campionatiTastoRicercaId.Name = "campionatiTastoRicercaId";
+<<<<<<< HEAD
             this.campionatiTastoRicercaId.Size = new System.Drawing.Size(228, 35);
             this.campionatiTastoRicercaId.TabIndex = 18;
+=======
+            this.campionatiTastoRicercaId.Size = new System.Drawing.Size(152, 23);
+            this.campionatiTastoRicercaId.TabIndex = 6;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.campionatiTastoRicercaId.Text = "ricerca campionato";
             this.campionatiTastoRicercaId.UseVisualStyleBackColor = true;
             this.campionatiTastoRicercaId.Click += new System.EventHandler(this.campionatiTastoRicercaId_Click);
@@ -2275,15 +2765,25 @@ namespace F1DBMS
             this.campionatiRicercaIdCampionato.Location = new System.Drawing.Point(159, 257);
             this.campionatiRicercaIdCampionato.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.campionatiRicercaIdCampionato.Name = "campionatiRicercaIdCampionato";
+<<<<<<< HEAD
             this.campionatiRicercaIdCampionato.Size = new System.Drawing.Size(358, 26);
             this.campionatiRicercaIdCampionato.TabIndex = 17;
+=======
+            this.campionatiRicercaIdCampionato.Size = new System.Drawing.Size(240, 20);
+            this.campionatiRicercaIdCampionato.TabIndex = 5;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // campionatiTastoRicercaAnno
             // 
             this.campionatiTastoRicercaAnno.Location = new System.Drawing.Point(159, 408);
             this.campionatiTastoRicercaAnno.Name = "campionatiTastoRicercaAnno";
+<<<<<<< HEAD
             this.campionatiTastoRicercaAnno.Size = new System.Drawing.Size(228, 35);
             this.campionatiTastoRicercaAnno.TabIndex = 16;
+=======
+            this.campionatiTastoRicercaAnno.Size = new System.Drawing.Size(152, 23);
+            this.campionatiTastoRicercaAnno.TabIndex = 8;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.campionatiTastoRicercaAnno.Text = "ricerca campionato";
             this.campionatiTastoRicercaAnno.UseVisualStyleBackColor = true;
             this.campionatiTastoRicercaAnno.Click += new System.EventHandler(this.campionatiTastoRicercaAnno_Click);
@@ -2295,15 +2795,25 @@ namespace F1DBMS
             this.campionatiRicercaAnno.Location = new System.Drawing.Point(159, 369);
             this.campionatiRicercaAnno.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.campionatiRicercaAnno.Name = "campionatiRicercaAnno";
+<<<<<<< HEAD
             this.campionatiRicercaAnno.Size = new System.Drawing.Size(358, 26);
             this.campionatiRicercaAnno.TabIndex = 15;
+=======
+            this.campionatiRicercaAnno.Size = new System.Drawing.Size(240, 20);
+            this.campionatiRicercaAnno.TabIndex = 7;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // campionatiRegistra
             // 
             this.campionatiRegistra.Location = new System.Drawing.Point(159, 183);
             this.campionatiRegistra.Name = "campionatiRegistra";
+<<<<<<< HEAD
             this.campionatiRegistra.Size = new System.Drawing.Size(228, 35);
             this.campionatiRegistra.TabIndex = 14;
+=======
+            this.campionatiRegistra.Size = new System.Drawing.Size(152, 23);
+            this.campionatiRegistra.TabIndex = 4;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.campionatiRegistra.Text = "registra campionato";
             this.campionatiRegistra.UseVisualStyleBackColor = true;
             this.campionatiRegistra.Click += new System.EventHandler(this.campionatiRegistra_Click);
@@ -2316,8 +2826,13 @@ namespace F1DBMS
             this.campionatiAnno.Location = new System.Drawing.Point(159, 72);
             this.campionatiAnno.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.campionatiAnno.Name = "campionatiAnno";
+<<<<<<< HEAD
             this.campionatiAnno.Size = new System.Drawing.Size(358, 26);
             this.campionatiAnno.TabIndex = 9;
+=======
+            this.campionatiAnno.Size = new System.Drawing.Size(240, 20);
+            this.campionatiAnno.TabIndex = 1;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // campionatiNome
             // 
@@ -2326,8 +2841,13 @@ namespace F1DBMS
             this.campionatiNome.Location = new System.Drawing.Point(159, 108);
             this.campionatiNome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.campionatiNome.Name = "campionatiNome";
+<<<<<<< HEAD
             this.campionatiNome.Size = new System.Drawing.Size(358, 26);
             this.campionatiNome.TabIndex = 8;
+=======
+            this.campionatiNome.Size = new System.Drawing.Size(240, 20);
+            this.campionatiNome.TabIndex = 2;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // campionatiDescrizione
             // 
@@ -2336,8 +2856,13 @@ namespace F1DBMS
             this.campionatiDescrizione.Location = new System.Drawing.Point(159, 145);
             this.campionatiDescrizione.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.campionatiDescrizione.Name = "campionatiDescrizione";
+<<<<<<< HEAD
             this.campionatiDescrizione.Size = new System.Drawing.Size(358, 26);
             this.campionatiDescrizione.TabIndex = 10;
+=======
+            this.campionatiDescrizione.Size = new System.Drawing.Size(240, 20);
+            this.campionatiDescrizione.TabIndex = 3;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // Sponsor
             // 
@@ -2358,8 +2883,13 @@ namespace F1DBMS
             this.sponsorGriglia.Name = "sponsorGriglia";
             this.sponsorGriglia.RowHeadersWidth = 62;
             this.sponsorGriglia.RowTemplate.Height = 28;
+<<<<<<< HEAD
             this.sponsorGriglia.Size = new System.Drawing.Size(1996, 1498);
             this.sponsorGriglia.TabIndex = 12;
+=======
+            this.sponsorGriglia.Size = new System.Drawing.Size(1331, 974);
+            this.sponsorGriglia.TabIndex = 13;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // sponsorpanel
             // 
@@ -2422,8 +2952,13 @@ namespace F1DBMS
             this.sponsorIdSponsor.Location = new System.Drawing.Point(141, 46);
             this.sponsorIdSponsor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sponsorIdSponsor.Name = "sponsorIdSponsor";
+<<<<<<< HEAD
             this.sponsorIdSponsor.Size = new System.Drawing.Size(358, 26);
             this.sponsorIdSponsor.TabIndex = 26;
+=======
+            this.sponsorIdSponsor.Size = new System.Drawing.Size(240, 20);
+            this.sponsorIdSponsor.TabIndex = 0;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // sponsorlabelstato
             // 
@@ -2483,8 +3018,13 @@ namespace F1DBMS
             // 
             this.sponsorTastoRicercaIdSponsor.Location = new System.Drawing.Point(141, 342);
             this.sponsorTastoRicercaIdSponsor.Name = "sponsorTastoRicercaIdSponsor";
+<<<<<<< HEAD
             this.sponsorTastoRicercaIdSponsor.Size = new System.Drawing.Size(228, 35);
             this.sponsorTastoRicercaIdSponsor.TabIndex = 18;
+=======
+            this.sponsorTastoRicercaIdSponsor.Size = new System.Drawing.Size(152, 23);
+            this.sponsorTastoRicercaIdSponsor.TabIndex = 7;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.sponsorTastoRicercaIdSponsor.Text = "ricerca sponsor";
             this.sponsorTastoRicercaIdSponsor.UseVisualStyleBackColor = true;
             this.sponsorTastoRicercaIdSponsor.Click += new System.EventHandler(this.sponsorTastoRicercaIdSponsor_Click);
@@ -2496,15 +3036,25 @@ namespace F1DBMS
             this.sponsorRicercaIdSponsor.Location = new System.Drawing.Point(141, 303);
             this.sponsorRicercaIdSponsor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sponsorRicercaIdSponsor.Name = "sponsorRicercaIdSponsor";
+<<<<<<< HEAD
             this.sponsorRicercaIdSponsor.Size = new System.Drawing.Size(358, 26);
             this.sponsorRicercaIdSponsor.TabIndex = 17;
+=======
+            this.sponsorRicercaIdSponsor.Size = new System.Drawing.Size(240, 20);
+            this.sponsorRicercaIdSponsor.TabIndex = 6;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // sponsorTastoRicercaNome
             // 
             this.sponsorTastoRicercaNome.Location = new System.Drawing.Point(141, 454);
             this.sponsorTastoRicercaNome.Name = "sponsorTastoRicercaNome";
+<<<<<<< HEAD
             this.sponsorTastoRicercaNome.Size = new System.Drawing.Size(228, 35);
             this.sponsorTastoRicercaNome.TabIndex = 16;
+=======
+            this.sponsorTastoRicercaNome.Size = new System.Drawing.Size(152, 23);
+            this.sponsorTastoRicercaNome.TabIndex = 9;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.sponsorTastoRicercaNome.Text = "ricerca sponsor";
             this.sponsorTastoRicercaNome.UseVisualStyleBackColor = true;
             this.sponsorTastoRicercaNome.Click += new System.EventHandler(this.sponsorTastoRicercaNome_Click);
@@ -2516,15 +3066,25 @@ namespace F1DBMS
             this.sponsorRicercaNome.Location = new System.Drawing.Point(141, 415);
             this.sponsorRicercaNome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sponsorRicercaNome.Name = "sponsorRicercaNome";
+<<<<<<< HEAD
             this.sponsorRicercaNome.Size = new System.Drawing.Size(358, 26);
             this.sponsorRicercaNome.TabIndex = 15;
+=======
+            this.sponsorRicercaNome.Size = new System.Drawing.Size(240, 20);
+            this.sponsorRicercaNome.TabIndex = 8;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // sponsorRegistra
             // 
             this.sponsorRegistra.Location = new System.Drawing.Point(141, 229);
             this.sponsorRegistra.Name = "sponsorRegistra";
+<<<<<<< HEAD
             this.sponsorRegistra.Size = new System.Drawing.Size(228, 35);
             this.sponsorRegistra.TabIndex = 14;
+=======
+            this.sponsorRegistra.Size = new System.Drawing.Size(152, 23);
+            this.sponsorRegistra.TabIndex = 5;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.sponsorRegistra.Text = "registra sponsor";
             this.sponsorRegistra.UseVisualStyleBackColor = true;
             this.sponsorRegistra.Click += new System.EventHandler(this.sponsorRegistra_Click);
@@ -2537,8 +3097,13 @@ namespace F1DBMS
             this.sponsorNome.Location = new System.Drawing.Point(141, 82);
             this.sponsorNome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sponsorNome.Name = "sponsorNome";
+<<<<<<< HEAD
             this.sponsorNome.Size = new System.Drawing.Size(358, 26);
             this.sponsorNome.TabIndex = 9;
+=======
+            this.sponsorNome.Size = new System.Drawing.Size(240, 20);
+            this.sponsorNome.TabIndex = 1;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // sponsorStato
             // 
@@ -2547,8 +3112,13 @@ namespace F1DBMS
             this.sponsorStato.Location = new System.Drawing.Point(141, 118);
             this.sponsorStato.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sponsorStato.Name = "sponsorStato";
+<<<<<<< HEAD
             this.sponsorStato.Size = new System.Drawing.Size(358, 26);
             this.sponsorStato.TabIndex = 8;
+=======
+            this.sponsorStato.Size = new System.Drawing.Size(240, 20);
+            this.sponsorStato.TabIndex = 2;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // sponsorMail
             // 
@@ -2557,8 +3127,13 @@ namespace F1DBMS
             this.sponsorMail.Location = new System.Drawing.Point(141, 191);
             this.sponsorMail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sponsorMail.Name = "sponsorMail";
+<<<<<<< HEAD
             this.sponsorMail.Size = new System.Drawing.Size(358, 26);
             this.sponsorMail.TabIndex = 12;
+=======
+            this.sponsorMail.Size = new System.Drawing.Size(240, 20);
+            this.sponsorMail.TabIndex = 4;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // sponsorTelefono
             // 
@@ -2567,8 +3142,13 @@ namespace F1DBMS
             this.sponsorTelefono.Location = new System.Drawing.Point(141, 151);
             this.sponsorTelefono.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sponsorTelefono.Name = "sponsorTelefono";
+<<<<<<< HEAD
             this.sponsorTelefono.Size = new System.Drawing.Size(358, 26);
             this.sponsorTelefono.TabIndex = 10;
+=======
+            this.sponsorTelefono.Size = new System.Drawing.Size(240, 20);
+            this.sponsorTelefono.TabIndex = 3;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // Contratti
             // 
@@ -2589,8 +3169,13 @@ namespace F1DBMS
             this.contrattiGriglia.Name = "contrattiGriglia";
             this.contrattiGriglia.RowHeadersWidth = 62;
             this.contrattiGriglia.RowTemplate.Height = 28;
+<<<<<<< HEAD
             this.contrattiGriglia.Size = new System.Drawing.Size(2014, 1498);
             this.contrattiGriglia.TabIndex = 10;
+=======
+            this.contrattiGriglia.Size = new System.Drawing.Size(1343, 974);
+            this.contrattiGriglia.TabIndex = 13;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // contrattipanel
             // 
@@ -2639,8 +3224,13 @@ namespace F1DBMS
             this.contrattiData.Location = new System.Drawing.Point(156, 135);
             this.contrattiData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.contrattiData.Name = "contrattiData";
+<<<<<<< HEAD
             this.contrattiData.Size = new System.Drawing.Size(358, 26);
             this.contrattiData.TabIndex = 29;
+=======
+            this.contrattiData.Size = new System.Drawing.Size(240, 20);
+            this.contrattiData.TabIndex = 3;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // contrattilabelidsponsor
             // 
@@ -2700,8 +3290,13 @@ namespace F1DBMS
             // 
             this.contrattiTastoRicercaIdTeam.Location = new System.Drawing.Point(156, 289);
             this.contrattiTastoRicercaIdTeam.Name = "contrattiTastoRicercaIdTeam";
+<<<<<<< HEAD
             this.contrattiTastoRicercaIdTeam.Size = new System.Drawing.Size(228, 35);
             this.contrattiTastoRicercaIdTeam.TabIndex = 18;
+=======
+            this.contrattiTastoRicercaIdTeam.Size = new System.Drawing.Size(152, 23);
+            this.contrattiTastoRicercaIdTeam.TabIndex = 6;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.contrattiTastoRicercaIdTeam.Text = "ricerca contratti";
             this.contrattiTastoRicercaIdTeam.UseVisualStyleBackColor = true;
             this.contrattiTastoRicercaIdTeam.Click += new System.EventHandler(this.contrattiTastoRicercaIdTeam_Click);
@@ -2713,15 +3308,25 @@ namespace F1DBMS
             this.contrattiRicercaIdTeam.Location = new System.Drawing.Point(156, 251);
             this.contrattiRicercaIdTeam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.contrattiRicercaIdTeam.Name = "contrattiRicercaIdTeam";
+<<<<<<< HEAD
             this.contrattiRicercaIdTeam.Size = new System.Drawing.Size(358, 26);
             this.contrattiRicercaIdTeam.TabIndex = 17;
+=======
+            this.contrattiRicercaIdTeam.Size = new System.Drawing.Size(240, 20);
+            this.contrattiRicercaIdTeam.TabIndex = 5;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // contrattiTastoRicercaIdSponsor
             // 
             this.contrattiTastoRicercaIdSponsor.Location = new System.Drawing.Point(156, 408);
             this.contrattiTastoRicercaIdSponsor.Name = "contrattiTastoRicercaIdSponsor";
+<<<<<<< HEAD
             this.contrattiTastoRicercaIdSponsor.Size = new System.Drawing.Size(228, 35);
             this.contrattiTastoRicercaIdSponsor.TabIndex = 16;
+=======
+            this.contrattiTastoRicercaIdSponsor.Size = new System.Drawing.Size(152, 23);
+            this.contrattiTastoRicercaIdSponsor.TabIndex = 8;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.contrattiTastoRicercaIdSponsor.Text = "ricerca contratti";
             this.contrattiTastoRicercaIdSponsor.UseVisualStyleBackColor = true;
             this.contrattiTastoRicercaIdSponsor.Click += new System.EventHandler(this.contrattiTastoRicercaIdSponsor_Click);
@@ -2733,15 +3338,25 @@ namespace F1DBMS
             this.contrattiRicercaIdSponsor.Location = new System.Drawing.Point(156, 369);
             this.contrattiRicercaIdSponsor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.contrattiRicercaIdSponsor.Name = "contrattiRicercaIdSponsor";
+<<<<<<< HEAD
             this.contrattiRicercaIdSponsor.Size = new System.Drawing.Size(358, 26);
             this.contrattiRicercaIdSponsor.TabIndex = 15;
+=======
+            this.contrattiRicercaIdSponsor.Size = new System.Drawing.Size(240, 20);
+            this.contrattiRicercaIdSponsor.TabIndex = 7;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // contrattiRegistra
             // 
             this.contrattiRegistra.Location = new System.Drawing.Point(156, 175);
             this.contrattiRegistra.Name = "contrattiRegistra";
+<<<<<<< HEAD
             this.contrattiRegistra.Size = new System.Drawing.Size(228, 35);
             this.contrattiRegistra.TabIndex = 14;
+=======
+            this.contrattiRegistra.Size = new System.Drawing.Size(152, 23);
+            this.contrattiRegistra.TabIndex = 4;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.contrattiRegistra.Text = "registra contratti";
             this.contrattiRegistra.UseVisualStyleBackColor = true;
             this.contrattiRegistra.Click += new System.EventHandler(this.contrattiRegistra_Click);
@@ -2754,8 +3369,13 @@ namespace F1DBMS
             this.contrattiIdSponsor.Location = new System.Drawing.Point(156, 20);
             this.contrattiIdSponsor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.contrattiIdSponsor.Name = "contrattiIdSponsor";
+<<<<<<< HEAD
             this.contrattiIdSponsor.Size = new System.Drawing.Size(358, 26);
             this.contrattiIdSponsor.TabIndex = 9;
+=======
+            this.contrattiIdSponsor.Size = new System.Drawing.Size(240, 20);
+            this.contrattiIdSponsor.TabIndex = 0;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // contrattiIdTeam
             // 
@@ -2764,8 +3384,13 @@ namespace F1DBMS
             this.contrattiIdTeam.Location = new System.Drawing.Point(156, 55);
             this.contrattiIdTeam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.contrattiIdTeam.Name = "contrattiIdTeam";
+<<<<<<< HEAD
             this.contrattiIdTeam.Size = new System.Drawing.Size(358, 26);
             this.contrattiIdTeam.TabIndex = 8;
+=======
+            this.contrattiIdTeam.Size = new System.Drawing.Size(240, 20);
+            this.contrattiIdTeam.TabIndex = 1;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // contrattiBudget
             // 
@@ -2774,8 +3399,13 @@ namespace F1DBMS
             this.contrattiBudget.Location = new System.Drawing.Point(156, 92);
             this.contrattiBudget.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.contrattiBudget.Name = "contrattiBudget";
+<<<<<<< HEAD
             this.contrattiBudget.Size = new System.Drawing.Size(358, 26);
             this.contrattiBudget.TabIndex = 10;
+=======
+            this.contrattiBudget.Size = new System.Drawing.Size(240, 20);
+            this.contrattiBudget.TabIndex = 2;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // Gare
             // 
@@ -2792,12 +3422,22 @@ namespace F1DBMS
             // garaGriglia
             // 
             this.garaGriglia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+<<<<<<< HEAD
             this.garaGriglia.Location = new System.Drawing.Point(542, 8);
             this.garaGriglia.Name = "garaGriglia";
             this.garaGriglia.RowHeadersWidth = 62;
             this.garaGriglia.RowTemplate.Height = 28;
             this.garaGriglia.Size = new System.Drawing.Size(2008, 1498);
             this.garaGriglia.TabIndex = 8;
+=======
+            this.garaGriglia.Location = new System.Drawing.Point(363, -2);
+            this.garaGriglia.Margin = new System.Windows.Forms.Padding(2);
+            this.garaGriglia.Name = "garaGriglia";
+            this.garaGriglia.RowHeadersWidth = 62;
+            this.garaGriglia.RowTemplate.Height = 28;
+            this.garaGriglia.Size = new System.Drawing.Size(1339, 974);
+            this.garaGriglia.TabIndex = 7;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // garepanel
             // 
@@ -2824,8 +3464,13 @@ namespace F1DBMS
             this.dataGara.Location = new System.Drawing.Point(159, 134);
             this.dataGara.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGara.Name = "dataGara";
+<<<<<<< HEAD
             this.dataGara.Size = new System.Drawing.Size(356, 26);
             this.dataGara.TabIndex = 31;
+=======
+            this.dataGara.Size = new System.Drawing.Size(239, 20);
+            this.dataGara.TabIndex = 1;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // label55
             // 
@@ -2885,8 +3530,13 @@ namespace F1DBMS
             // 
             this.garaTastoRicercaIdCircuito.Location = new System.Drawing.Point(158, 397);
             this.garaTastoRicercaIdCircuito.Name = "garaTastoRicercaIdCircuito";
+<<<<<<< HEAD
             this.garaTastoRicercaIdCircuito.Size = new System.Drawing.Size(228, 35);
             this.garaTastoRicercaIdCircuito.TabIndex = 20;
+=======
+            this.garaTastoRicercaIdCircuito.Size = new System.Drawing.Size(152, 23);
+            this.garaTastoRicercaIdCircuito.TabIndex = 6;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.garaTastoRicercaIdCircuito.Text = "Ricerca gare";
             this.garaTastoRicercaIdCircuito.UseVisualStyleBackColor = true;
             this.garaTastoRicercaIdCircuito.Click += new System.EventHandler(this.garaTastoRicercaIdCircuito_Click);
@@ -2898,15 +3548,25 @@ namespace F1DBMS
             this.garaRicercaIdCircuito.Location = new System.Drawing.Point(158, 358);
             this.garaRicercaIdCircuito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.garaRicercaIdCircuito.Name = "garaRicercaIdCircuito";
+<<<<<<< HEAD
             this.garaRicercaIdCircuito.Size = new System.Drawing.Size(358, 26);
             this.garaRicercaIdCircuito.TabIndex = 19;
+=======
+            this.garaRicercaIdCircuito.Size = new System.Drawing.Size(240, 20);
+            this.garaRicercaIdCircuito.TabIndex = 5;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // garaTastoRicercaData
             // 
             this.garaTastoRicercaData.Location = new System.Drawing.Point(158, 172);
             this.garaTastoRicercaData.Name = "garaTastoRicercaData";
+<<<<<<< HEAD
             this.garaTastoRicercaData.Size = new System.Drawing.Size(228, 35);
             this.garaTastoRicercaData.TabIndex = 18;
+=======
+            this.garaTastoRicercaData.Size = new System.Drawing.Size(152, 23);
+            this.garaTastoRicercaData.TabIndex = 2;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.garaTastoRicercaData.Text = "Ricerca gara";
             this.garaTastoRicercaData.UseVisualStyleBackColor = true;
             this.garaTastoRicercaData.Click += new System.EventHandler(this.garaTastoRicercaData_Click);
@@ -2915,8 +3575,13 @@ namespace F1DBMS
             // 
             this.garaTastoRicercaIdCampionato.Location = new System.Drawing.Point(158, 285);
             this.garaTastoRicercaIdCampionato.Name = "garaTastoRicercaIdCampionato";
+<<<<<<< HEAD
             this.garaTastoRicercaIdCampionato.Size = new System.Drawing.Size(228, 35);
             this.garaTastoRicercaIdCampionato.TabIndex = 16;
+=======
+            this.garaTastoRicercaIdCampionato.Size = new System.Drawing.Size(152, 23);
+            this.garaTastoRicercaIdCampionato.TabIndex = 4;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.garaTastoRicercaIdCampionato.Text = "Ricerca gare";
             this.garaTastoRicercaIdCampionato.UseVisualStyleBackColor = true;
             this.garaTastoRicercaIdCampionato.Click += new System.EventHandler(this.garaTastoRicercaIdCampionato_Click);
@@ -2928,15 +3593,25 @@ namespace F1DBMS
             this.garaRicercaIdCampionato.Location = new System.Drawing.Point(158, 246);
             this.garaRicercaIdCampionato.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.garaRicercaIdCampionato.Name = "garaRicercaIdCampionato";
+<<<<<<< HEAD
             this.garaRicercaIdCampionato.Size = new System.Drawing.Size(358, 26);
             this.garaRicercaIdCampionato.TabIndex = 15;
+=======
+            this.garaRicercaIdCampionato.Size = new System.Drawing.Size(240, 20);
+            this.garaRicercaIdCampionato.TabIndex = 3;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // gararegistra
             // 
             this.gararegistra.Location = new System.Drawing.Point(158, 60);
             this.gararegistra.Name = "gararegistra";
+<<<<<<< HEAD
             this.gararegistra.Size = new System.Drawing.Size(228, 35);
             this.gararegistra.TabIndex = 14;
+=======
+            this.gararegistra.Size = new System.Drawing.Size(152, 23);
+            this.gararegistra.TabIndex = 0;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.gararegistra.Text = "registra gare";
             this.gararegistra.UseVisualStyleBackColor = true;
             this.gararegistra.Click += new System.EventHandler(this.gararegistra_Click);
@@ -2960,8 +3635,13 @@ namespace F1DBMS
             this.grigliaCircuito.Name = "grigliaCircuito";
             this.grigliaCircuito.RowHeadersWidth = 62;
             this.grigliaCircuito.RowTemplate.Height = 28;
+<<<<<<< HEAD
             this.grigliaCircuito.Size = new System.Drawing.Size(2010, 1498);
             this.grigliaCircuito.TabIndex = 6;
+=======
+            this.grigliaCircuito.Size = new System.Drawing.Size(1340, 974);
+            this.grigliaCircuito.TabIndex = 12;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // panelcircuito
             // 
@@ -3028,8 +3708,13 @@ namespace F1DBMS
             this.idCircuitoCircuito.Location = new System.Drawing.Point(135, 48);
             this.idCircuitoCircuito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.idCircuitoCircuito.Name = "idCircuitoCircuito";
+<<<<<<< HEAD
             this.idCircuitoCircuito.Size = new System.Drawing.Size(358, 26);
             this.idCircuitoCircuito.TabIndex = 27;
+=======
+            this.idCircuitoCircuito.Size = new System.Drawing.Size(240, 20);
+            this.idCircuitoCircuito.TabIndex = 0;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // stato2labelcircuito
             // 
@@ -3107,8 +3792,13 @@ namespace F1DBMS
             // 
             this.tastoRicercaNomeCircuito.Location = new System.Drawing.Point(135, 411);
             this.tastoRicercaNomeCircuito.Name = "tastoRicercaNomeCircuito";
+<<<<<<< HEAD
             this.tastoRicercaNomeCircuito.Size = new System.Drawing.Size(228, 35);
             this.tastoRicercaNomeCircuito.TabIndex = 18;
+=======
+            this.tastoRicercaNomeCircuito.Size = new System.Drawing.Size(152, 23);
+            this.tastoRicercaNomeCircuito.TabIndex = 9;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.tastoRicercaNomeCircuito.Text = "ricerca circuito";
             this.tastoRicercaNomeCircuito.UseVisualStyleBackColor = true;
             this.tastoRicercaNomeCircuito.Click += new System.EventHandler(this.tastoRicercaNomeCircuito_Click);
@@ -3120,15 +3810,25 @@ namespace F1DBMS
             this.ricercaNomeCircuito.Location = new System.Drawing.Point(135, 372);
             this.ricercaNomeCircuito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ricercaNomeCircuito.Name = "ricercaNomeCircuito";
+<<<<<<< HEAD
             this.ricercaNomeCircuito.Size = new System.Drawing.Size(358, 26);
             this.ricercaNomeCircuito.TabIndex = 17;
+=======
+            this.ricercaNomeCircuito.Size = new System.Drawing.Size(240, 20);
+            this.ricercaNomeCircuito.TabIndex = 8;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // tastoRicercaStatoCircuito
             // 
             this.tastoRicercaStatoCircuito.Location = new System.Drawing.Point(135, 523);
             this.tastoRicercaStatoCircuito.Name = "tastoRicercaStatoCircuito";
+<<<<<<< HEAD
             this.tastoRicercaStatoCircuito.Size = new System.Drawing.Size(228, 35);
             this.tastoRicercaStatoCircuito.TabIndex = 16;
+=======
+            this.tastoRicercaStatoCircuito.Size = new System.Drawing.Size(152, 23);
+            this.tastoRicercaStatoCircuito.TabIndex = 11;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.tastoRicercaStatoCircuito.Text = "ricerca circuito";
             this.tastoRicercaStatoCircuito.UseVisualStyleBackColor = true;
             this.tastoRicercaStatoCircuito.Click += new System.EventHandler(this.tastoRicercaStatoCircuito_Click);
@@ -3140,15 +3840,25 @@ namespace F1DBMS
             this.ricercaStatoCircuito.Location = new System.Drawing.Point(135, 485);
             this.ricercaStatoCircuito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ricercaStatoCircuito.Name = "ricercaStatoCircuito";
+<<<<<<< HEAD
             this.ricercaStatoCircuito.Size = new System.Drawing.Size(358, 26);
             this.ricercaStatoCircuito.TabIndex = 15;
+=======
+            this.ricercaStatoCircuito.Size = new System.Drawing.Size(240, 20);
+            this.ricercaStatoCircuito.TabIndex = 10;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // registraCircuito
             // 
             this.registraCircuito.Location = new System.Drawing.Point(135, 303);
             this.registraCircuito.Name = "registraCircuito";
+<<<<<<< HEAD
             this.registraCircuito.Size = new System.Drawing.Size(228, 35);
             this.registraCircuito.TabIndex = 14;
+=======
+            this.registraCircuito.Size = new System.Drawing.Size(152, 23);
+            this.registraCircuito.TabIndex = 7;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.registraCircuito.Text = "registra circuito";
             this.registraCircuito.UseVisualStyleBackColor = true;
             this.registraCircuito.Click += new System.EventHandler(this.registraCircuito_Click);
@@ -3161,8 +3871,13 @@ namespace F1DBMS
             this.nomeCircuito.Location = new System.Drawing.Point(135, 85);
             this.nomeCircuito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.nomeCircuito.Name = "nomeCircuito";
+<<<<<<< HEAD
             this.nomeCircuito.Size = new System.Drawing.Size(358, 26);
             this.nomeCircuito.TabIndex = 9;
+=======
+            this.nomeCircuito.Size = new System.Drawing.Size(240, 20);
+            this.nomeCircuito.TabIndex = 1;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // numDiCurveCircuito
             // 
@@ -3171,8 +3886,13 @@ namespace F1DBMS
             this.numDiCurveCircuito.Location = new System.Drawing.Point(135, 265);
             this.numDiCurveCircuito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numDiCurveCircuito.Name = "numDiCurveCircuito";
+<<<<<<< HEAD
             this.numDiCurveCircuito.Size = new System.Drawing.Size(358, 26);
             this.numDiCurveCircuito.TabIndex = 13;
+=======
+            this.numDiCurveCircuito.Size = new System.Drawing.Size(240, 20);
+            this.numDiCurveCircuito.TabIndex = 6;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // statoCircuito
             // 
@@ -3181,8 +3901,13 @@ namespace F1DBMS
             this.statoCircuito.Location = new System.Drawing.Point(135, 120);
             this.statoCircuito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.statoCircuito.Name = "statoCircuito";
+<<<<<<< HEAD
             this.statoCircuito.Size = new System.Drawing.Size(358, 26);
             this.statoCircuito.TabIndex = 8;
+=======
+            this.statoCircuito.Size = new System.Drawing.Size(240, 20);
+            this.statoCircuito.TabIndex = 2;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // lunghezzaCircuito
             // 
@@ -3191,8 +3916,13 @@ namespace F1DBMS
             this.lunghezzaCircuito.Location = new System.Drawing.Point(135, 192);
             this.lunghezzaCircuito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lunghezzaCircuito.Name = "lunghezzaCircuito";
+<<<<<<< HEAD
             this.lunghezzaCircuito.Size = new System.Drawing.Size(358, 26);
             this.lunghezzaCircuito.TabIndex = 12;
+=======
+            this.lunghezzaCircuito.Size = new System.Drawing.Size(240, 20);
+            this.lunghezzaCircuito.TabIndex = 4;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // descrizioneCircuito
             // 
@@ -3201,8 +3931,13 @@ namespace F1DBMS
             this.descrizioneCircuito.Location = new System.Drawing.Point(135, 155);
             this.descrizioneCircuito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.descrizioneCircuito.Name = "descrizioneCircuito";
+<<<<<<< HEAD
             this.descrizioneCircuito.Size = new System.Drawing.Size(358, 26);
             this.descrizioneCircuito.TabIndex = 10;
+=======
+            this.descrizioneCircuito.Size = new System.Drawing.Size(240, 20);
+            this.descrizioneCircuito.TabIndex = 3;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // tipologiaCircuito
             // 
@@ -3211,8 +3946,13 @@ namespace F1DBMS
             this.tipologiaCircuito.Location = new System.Drawing.Point(135, 229);
             this.tipologiaCircuito.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tipologiaCircuito.Name = "tipologiaCircuito";
+<<<<<<< HEAD
             this.tipologiaCircuito.Size = new System.Drawing.Size(358, 26);
             this.tipologiaCircuito.TabIndex = 11;
+=======
+            this.tipologiaCircuito.Size = new System.Drawing.Size(240, 20);
+            this.tipologiaCircuito.TabIndex = 5;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // tabPage1
             // 
@@ -3238,6 +3978,7 @@ namespace F1DBMS
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // RegistrazioniGrid
+<<<<<<< HEAD
             // 
             this.RegistrazioniGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.RegistrazioniGrid.Location = new System.Drawing.Point(548, 11);
@@ -3345,6 +4086,103 @@ namespace F1DBMS
             // 
             // button2
             // 
+=======
+            // 
+            this.RegistrazioniGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RegistrazioniGrid.Location = new System.Drawing.Point(365, 7);
+            this.RegistrazioniGrid.Name = "RegistrazioniGrid";
+            this.RegistrazioniGrid.Size = new System.Drawing.Size(1335, 894);
+            this.RegistrazioniGrid.TabIndex = 5;
+            // 
+            // IDCampBtn
+            // 
+            this.IDCampBtn.Location = new System.Drawing.Point(103, 188);
+            this.IDCampBtn.Name = "IDCampBtn";
+            this.IDCampBtn.Size = new System.Drawing.Size(152, 23);
+            this.IDCampBtn.TabIndex = 4;
+            this.IDCampBtn.Text = "Cerca Partecipazioni";
+            this.IDCampBtn.UseVisualStyleBackColor = true;
+            this.IDCampBtn.Click += new System.EventHandler(this.IDCampBtn_Click);
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Location = new System.Drawing.Point(18, 168);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(79, 13);
+            this.label65.TabIndex = 58;
+            this.label65.Text = "ID campionato:";
+            // 
+            // IDCampionatoBox
+            // 
+            this.IDCampionatoBox.Location = new System.Drawing.Point(103, 161);
+            this.IDCampionatoBox.Name = "IDCampionatoBox";
+            this.IDCampionatoBox.Size = new System.Drawing.Size(240, 20);
+            this.IDCampionatoBox.TabIndex = 3;
+            // 
+            // label64
+            // 
+            this.label64.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label64.Location = new System.Drawing.Point(23, 147);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(315, 2);
+            this.label64.TabIndex = 56;
+            // 
+            // ricercaCFBtn
+            // 
+            this.ricercaCFBtn.Location = new System.Drawing.Point(103, 112);
+            this.ricercaCFBtn.Name = "ricercaCFBtn";
+            this.ricercaCFBtn.Size = new System.Drawing.Size(152, 23);
+            this.ricercaCFBtn.TabIndex = 2;
+            this.ricercaCFBtn.Text = "Cerca Partecipazioni";
+            this.ricercaCFBtn.UseVisualStyleBackColor = true;
+            this.ricercaCFBtn.Click += new System.EventHandler(this.ricercaCFBtn_Click);
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(74, 88);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(23, 13);
+            this.label63.TabIndex = 54;
+            this.label63.Text = "CF:";
+            // 
+            // CFPilBox
+            // 
+            this.CFPilBox.Location = new System.Drawing.Point(103, 85);
+            this.CFPilBox.Name = "CFPilBox";
+            this.CFPilBox.Size = new System.Drawing.Size(240, 20);
+            this.CFPilBox.TabIndex = 1;
+            // 
+            // label62
+            // 
+            this.label62.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label62.Location = new System.Drawing.Point(23, 71);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(315, 2);
+            this.label62.TabIndex = 52;
+            // 
+            // registraPilBtn
+            // 
+            this.registraPilBtn.Location = new System.Drawing.Point(103, 36);
+            this.registraPilBtn.Name = "registraPilBtn";
+            this.registraPilBtn.Size = new System.Drawing.Size(152, 23);
+            this.registraPilBtn.TabIndex = 0;
+            this.registraPilBtn.Text = "Inserisci partecipazione";
+            this.registraPilBtn.UseVisualStyleBackColor = true;
+            this.registraPilBtn.Click += new System.EventHandler(this.registraPilBtn_Click);
+            // 
+            // splitter1
+            // 
+            this.splitter1.Location = new System.Drawing.Point(3, 3);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(355, 971);
+            this.splitter1.TabIndex = 0;
+            this.splitter1.TabStop = false;
+            // 
+            // button2
+            // 
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             this.button2.Location = new System.Drawing.Point(195, 211);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
@@ -3352,6 +4190,7 @@ namespace F1DBMS
             this.button2.TabIndex = 10;
             this.button2.Text = "Revoca Incarico";
             this.button2.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
             // 
             // risulltatoPilBtn
             // 
@@ -3363,6 +4202,8 @@ namespace F1DBMS
             this.risulltatoPilBtn.Text = "Inserisci risultato";
             this.risulltatoPilBtn.UseVisualStyleBackColor = true;
             this.risulltatoPilBtn.Click += new System.EventHandler(this.risulltatoPilBtn_Click);
+=======
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
             // 
             // MainForm
             // 
@@ -3703,7 +4544,18 @@ namespace F1DBMS
         private System.Windows.Forms.Label label65;
         private System.Windows.Forms.TextBox IDCampionatoBox;
         private System.Windows.Forms.DataGridView RegistrazioniGrid;
+<<<<<<< HEAD
         private System.Windows.Forms.Button risulltatoPilBtn;
+=======
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.Button CompBtn;
+        private System.Windows.Forms.TextBox IDVetCompBox;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Button classificaCampBtn;
+        private System.Windows.Forms.TextBox IDCampEsitoBox;
+        private System.Windows.Forms.Label label68;
+>>>>>>> f26798c74a22a6643a428e8e6ace1d3976a2b1f2
     }
 }
 

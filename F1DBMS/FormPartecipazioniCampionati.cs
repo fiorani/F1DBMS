@@ -51,10 +51,13 @@ namespace F1DBMS
             try
             {
                 var newPart = new partecipazioni_piloti();
+                var newAdes = new adesioni();
+
                 if(pilGridIndex == -1 || vetGridIndex == -1 || campGridIndex == -1)
                 {
                     throw new Exception();
                 }
+                
                 var pilRow = PilotaGrid.Rows[pilGridIndex];
                 var vetRow = VetturaGrid.Rows[vetGridIndex];
                 var campRow = CampionatoGrid.Rows[campGridIndex];
@@ -62,13 +65,29 @@ namespace F1DBMS
                 newPart.IDVettura = vetRow.Cells["IDVettura"].Value.ToString();
                 newPart.IDCampionato = campRow.Cells["IDCampionato"].Value.ToString();
                 newPart.numeroDiGara = Convert.ToInt32(numPilBox.Text);
-                if((from v in db.vettures
-                   where v.IDVettura == newPart.IDVettura
-                   select v.annoProduzione) == (from c in db.campionatis
-                                  where c.IDCampionato == newPart.IDCampionato
-                                  select c.anno))
-                {
+                newPart.puntiAttuali = 0;
 
+                var team = from t in db.teams
+                           where t.vettures.Any(v => v.IDVettura == newPart.IDVettura && v.annoProduzione == Convert.ToInt32(campRow.Cells["anno"].Value))
+                           select t;
+
+                var incarico = from i in db.incarichi_pilotis
+                               where i.CF == newPart.CF && i.IDTeam == team.First().IDTeam && i.dataAssunzione.Year <= Convert.ToInt32(campRow.Cells["anno"].Value) && (!i.dataLicenziamento.HasValue || i.dataLicenziamento.GetValueOrDefault().Year >= Convert.ToInt32(campRow.Cells["anno"].Value))
+                               select i;
+
+                newAdes.IDCampionato = campRow.Cells["IDCampionato"].Value.ToString();
+                newAdes.IDTeam = team.First().IDTeam;
+
+                if (incarico.Any())
+                {
+                    db.partecipazioni_pilotis.InsertOnSubmit(newPart);
+                    db.adesionis.InsertOnSubmit(newAdes);
+                    db.SubmitChanges();
+                    MessageBox.Show("Registrazione avvenuta con successo!");
+                    this.Close();
+                } else
+                {
+                    throw new Exception();
                 }
             } catch (Exception)
             {
