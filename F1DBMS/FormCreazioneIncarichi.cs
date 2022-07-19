@@ -28,30 +28,34 @@ namespace F1DBMS
 
         private void SottoscriviIncaricoBtn_Click(object sender, EventArgs e)
         {
-            if(rigaTabellaDipendente >= 0 && rigaTabellaTeam >= 0 && !StipendioBox.Text.Equals(String.Empty) && RuoloComboBox.SelectedItem != null)
+            try
             {
+                if (rigaTabellaDipendente < 0 || rigaTabellaTeam < 0 || RuoloComboBox.SelectedItem == null)
+                {
+                    throw new Exception();
+                }
                 incarichi_dipendenti newIncarico = new incarichi_dipendenti();
                 newIncarico.CF = SelezionaDipPerIncarico.Rows[rigaTabellaDipendente].Cells["CF"].Value.ToString();
                 newIncarico.IDTeam = SelezionaTeamPerInc.Rows[rigaTabellaTeam].Cells["IDTeam"].Value.ToString();
                 newIncarico.dataAssunzione = dataInizioIncarico.Value.Date;
                 newIncarico.Ruolo = RuoloComboBox.SelectedItem.ToString();
-                newIncarico.stipendio = StipendioBox.Text;
+                newIncarico.stipendio = Utilities.assignValue(StipendioBox);
                 newIncarico.dataLicenziamento = null;
-                try
+                
+                if(db.incarichi_dipendentis.Any(dip => (dip.CF.Equals(newIncarico.CF) && !dip.dataLicenziamento.HasValue) || (dip.CF.Equals(newIncarico.CF) && dip.dataLicenziamento.HasValue && dip.dataLicenziamento.Value.CompareTo(newIncarico.dataAssunzione) > 0)))
                 {
-                    /* mancano i controlli LINQ sull'overlap di date */
-                    db.incarichi_dipendentis.InsertOnSubmit(newIncarico);
-                    db.SubmitChanges();
-                    MessageBox.Show("Incarico sottoscritto!");
-                    this.Close();
-                } catch (Exception)
-                {
-                    MessageBox.Show("Ricontrolla Campi!");
+                    throw new Exception();
                 }
-            } else
+
+                db.incarichi_dipendentis.InsertOnSubmit(newIncarico);
+                db.SubmitChanges();
+                MessageBox.Show("Incarico sottoscritto!");
+                this.Close();
+            } catch (Exception)
             {
                 MessageBox.Show("Ricontrolla Campi!");
             }
+           
         }
 
         private void SelezionaDipPerIncarico_CellClick(object sender, DataGridViewCellEventArgs e)
