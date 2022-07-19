@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace F1DBMS
 {
     public partial class FormCreazioneIncaichiPiloti : Form
@@ -15,7 +14,6 @@ namespace F1DBMS
         private readonly DataClassesF1DataContext db;
         private int rigaGridPilota = -1;
         private int rigaGridTeam = -1;
-
         public FormCreazioneIncaichiPiloti(DataClassesF1DataContext originDb)
         {
             InitializeComponent();
@@ -25,38 +23,38 @@ namespace F1DBMS
             gridTeamIncaricoPil.DataSource = from team in db.teams
                                              select team;
         }
-
         private void SottoscriviIncPilBtn_Click(object sender, EventArgs e)
         {
-            if(rigaGridPilota >= 0 && rigaGridTeam >= 0 && !StipendioPilBox.Equals(String.Empty))
+            try
             {
+                if (rigaGridPilota < 0 || rigaGridTeam < 0 || StipendioPilBox.Equals(String.Empty))
+                {
+                    throw new Exception();
+                }
                 var incaricoPil = new incarichi_piloti();
                 incaricoPil.CF = gridSelezionaPilIncarico.Rows[rigaGridPilota].Cells["CF"].Value.ToString();
                 incaricoPil.IDTeam = gridTeamIncaricoPil.Rows[rigaGridTeam].Cells["IDTeam"].Value.ToString();
                 incaricoPil.dataAssunzione = dataInizioIncaricoPil.Value.Date;
-                incaricoPil.stipendio = StipendioPilBox.Text;
+                incaricoPil.stipendio = Utilities.assignValue(StipendioPilBox);
                 incaricoPil.dataLicenziamento = null;
-                try
+                
+                if(db.incarichi_pilotis.Any(pil => (pil.CF.Equals(incaricoPil.CF) && !pil.dataLicenziamento.HasValue) || (pil.CF.Equals(incaricoPil.CF) && pil.dataLicenziamento.HasValue && pil.dataLicenziamento.Value.CompareTo(incaricoPil.dataAssunzione) < 0)))
                 {
-                    db.incarichi_pilotis.InsertOnSubmit(incaricoPil);
-                    db.SubmitChanges();
-                    MessageBox.Show("Incarico sottoscritto!");
-                    this.Close();
-                } catch(Exception)
-                {
-                    MessageBox.Show("Ricontrolla Campi!");
+                    throw new Exception();
                 }
-            }  else
+                db.incarichi_pilotis.InsertOnSubmit(incaricoPil);
+                db.SubmitChanges();
+                MessageBox.Show("Incarico sottoscritto!");
+                this.Close();
+            } catch(Exception)
             {
                 MessageBox.Show("Ricontrolla Campi!");
             }
         }
-
         private void gridSelezionaPilIncarico_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             rigaGridPilota = e.RowIndex;
         }
-
         private void gridTeamIncaricoPil_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             rigaGridTeam = e.RowIndex;
