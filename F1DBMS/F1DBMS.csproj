@@ -97,6 +97,12 @@
     <Compile Include="FormRevocaIncarico.Designer.cs">
       <DependentUpon>FormRevocaIncarico.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRicercaEsitoGara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRicercaEsitoGara.Designer.cs">
+      <DependentUpon>FormRicercaEsitoGara.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRisultatoGara.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRevocaIncarico.resx">
       <DependentUpon>FormRevocaIncarico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRicercaEsitoGara.resx">
+      <DependentUpon>FormRicercaEsitoGara.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRisultatoGara.resx">
       <DependentUpon>FormRisultatoGara.cs</DependentUpon>
