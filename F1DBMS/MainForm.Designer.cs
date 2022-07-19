@@ -295,6 +295,8 @@ namespace F1DBMS
             this.descrizioneCircuito = new System.Windows.Forms.TextBox();
             this.tipologiaCircuito = new System.Windows.Forms.TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.esitoGaraBtn = new System.Windows.Forms.Button();
+            this.label70 = new System.Windows.Forms.Label();
             this.RegistrazioniGrid = new System.Windows.Forms.DataGridView();
             this.IDCampBtn = new System.Windows.Forms.Button();
             this.label65 = new System.Windows.Forms.Label();
@@ -3198,6 +3200,8 @@ namespace F1DBMS
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.esitoGaraBtn);
+            this.tabPage1.Controls.Add(this.label70);
             this.tabPage1.Controls.Add(this.RegistrazioniGrid);
             this.tabPage1.Controls.Add(this.IDCampBtn);
             this.tabPage1.Controls.Add(this.label65);
@@ -3216,6 +3220,24 @@ namespace F1DBMS
             this.tabPage1.TabIndex = 13;
             this.tabPage1.Text = "Registrazioni Piloti";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // esitoGaraBtn
+            // 
+            this.esitoGaraBtn.Location = new System.Drawing.Point(103, 238);
+            this.esitoGaraBtn.Name = "esitoGaraBtn";
+            this.esitoGaraBtn.Size = new System.Drawing.Size(152, 23);
+            this.esitoGaraBtn.TabIndex = 60;
+            this.esitoGaraBtn.Text = "Registra esito gara";
+            this.esitoGaraBtn.UseVisualStyleBackColor = true;
+            this.esitoGaraBtn.Click += new System.EventHandler(this.esitoGaraBtn_Click);
+            // 
+            // label70
+            // 
+            this.label70.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label70.Location = new System.Drawing.Point(28, 223);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(315, 2);
+            this.label70.TabIndex = 59;
             // 
             // RegistrazioniGrid
             // 
@@ -3667,6 +3689,8 @@ namespace F1DBMS
         private System.Windows.Forms.Button classificaCampBtn;
         private System.Windows.Forms.TextBox IDCampEsitoBox;
         private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.Button esitoGaraBtn;
+        private System.Windows.Forms.Label label70;
     }
 }
 

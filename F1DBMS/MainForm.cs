@@ -587,5 +587,10 @@ namespace F1DBMS
                                            orderby part.puntiAttuali descending
                                            select new {part.IDCampionato, part.CF, part.IDVettura, part.numeroDiGara, part.puntiAttuali};
         }
+
+        private void esitoGaraBtn_Click(object sender, EventArgs e)
+        {
+            new FormRisultatoGara(db).Show();
+        }
     }
 }
