@@ -100,6 +100,8 @@ namespace F1DBMS
             var teams = db.teams.Where(t => t.IDTeam.Equals(EliminaTeamBox.Text));
             var recapiti = db.recapiti_teams.Where(r => r.IDTeam.Equals(EliminaTeamBox.Text));
             var mails = db.mail_teams.Where(r => r.IDTeam.Equals(EliminaTeamBox.Text));
+            var incarichiDip = db.incarichi_dipendentis.Where(i => i.IDTeam.Equals(EliminaTeamBox.Text));
+            var incarichiPil = db.incarichi_pilotis.Where(i => i.IDTeam.Equals(EliminaTeamBox.Text));
             if (teams.Any())
             {
                 if (recapiti.Any())
@@ -109,6 +111,14 @@ namespace F1DBMS
                 if (mails.Any())
                 {
                     db.mail_teams.DeleteAllOnSubmit(mails);
+                }
+                if (incarichiDip.Any())
+                {
+                    db.incarichi_dipendentis.DeleteAllOnSubmit(incarichiDip);
+                }
+                if (incarichiPil.Any())
+                {
+                    db.incarichi_pilotis.DeleteAllOnSubmit(incarichiPil);
                 }
                 db.teams.DeleteAllOnSubmit(teams);
                 db.SubmitChanges();

@@ -83,6 +83,13 @@ namespace F1DBMS
                         }
                     }
                 }
+
+                /* aggiorno i punti attuali*/
+                (from p in db.partecipazioni_pilotis
+                 where p.CF == newPart.CF
+                 select p).ToList().ForEach(p => p.puntiAttuali = this.getPoints(newPart.posizione));
+
+
                 db.classifiche_pilotis.InsertOnSubmit(newPart);
                 db.SubmitChanges();
             }
@@ -106,5 +113,24 @@ namespace F1DBMS
         {
             pilGridIndex = e.RowIndex;
         }
+    
+        private int getPoints(string result)
+        {
+            switch (result)
+            {
+                case "1": return 30;
+                case "2": return 25;    
+                case "3": return 20;
+                case "4": return 15;
+                case "5": return 10;
+                case "6": return 5;
+                case "7": return 4;
+                case "8": return 3;
+                case "9": return 2;
+                default: return 1;
+            }
+        }
     }
+
+
 }
