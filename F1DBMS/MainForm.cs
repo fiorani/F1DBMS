@@ -398,7 +398,7 @@ namespace F1DBMS
                 var newContratti = new contratti();
                 newContratti.IDSponsor = Utilities.assignValue(contrattiIdSponsor);
                 newContratti.IDTeam = Utilities.assignValue(contrattiIdTeam);
-                newContratti.budget = Convert.ToInt32(contrattiBudget);
+                newContratti.budget = Convert.ToInt32(contrattiBudget.Text);
                 newContratti.dataInizio = contrattiData.Value.Date;
 
                 db.contrattis.InsertOnSubmit(newContratti);
